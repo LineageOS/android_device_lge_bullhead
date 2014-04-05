@@ -78,4 +78,6 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 734003200
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
+BOARD_HAL_STATIC_LIBRARIES := libdumpstate.bullhead
+
 -include vendor/lge/bullhead/BoardConfigVendor.mk
