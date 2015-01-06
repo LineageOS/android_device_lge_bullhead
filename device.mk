@@ -462,6 +462,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.data_no_toggle=1
 
+# Allow tethering without provisioning app
+PRODUCT_PROPERTY_OVERRIDES += \
+    net.tethering.noprovisioning=true
+
 # Adjust STK popup operation
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.process_sups_ind=1
