@@ -80,4 +80,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.bullhead
 
+TARGET_RECOVERY_FSTAB = device/lge/bullhead/fstab.bullhead
+
 -include vendor/lge/bullhead/BoardConfigVendor.mk
