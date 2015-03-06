@@ -54,6 +54,7 @@ BOARD_EGL_CFG := device/lge/bullhead/egl.cfg
 
 USE_OPENGL_RENDERER := true
 TARGET_USES_ION := true
+TARGET_USES_C2D_COMPOSITION := true
 
 HAVE_ADRENO_SOURCE:= false
 
