@@ -46,6 +46,12 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
 PRODUCT_CHARACTERISTICS := nosdcard
 
+PRODUCT_PACKAGES += \
+    gralloc.msm8992 \
+    hwcomposer.msm8992 \
+    libgenlock \
+    memtrack.msm8992
+
 DEVICE_PACKAGE_OVERLAYS := \
     device/lge/bullhead/overlay
 
