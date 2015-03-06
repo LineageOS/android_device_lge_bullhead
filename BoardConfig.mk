@@ -53,6 +53,7 @@ TARGET_NO_RPC := true
 BOARD_EGL_CFG := device/lge/bullhead/egl.cfg
 
 USE_OPENGL_RENDERER := true
+TARGET_USES_ION := true
 
 HAVE_ADRENO_SOURCE:= false
 
