@@ -21,7 +21,7 @@
 
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/lge/bullhead-kernel/zImage-dtb
+LOCAL_KERNEL := device/lge/bullhead-kernel/Image-dtb
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
