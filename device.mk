@@ -41,6 +41,15 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
     device/lge/bullhead/media_codecs.xml:system/etc/media_codecs.xml
 
+# Input device files
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/lge/bullhead/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl
+
+# Prebuilt input device calibration files
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/touch_dev.idc:system/usr/idc/touch_dev.idc
+
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
