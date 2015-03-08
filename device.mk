@@ -96,7 +96,7 @@ DEVICE_PACKAGE_OVERLAYS := \
     device/lge/bullhead/overlay
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=196608
+    ro.opengles.version=196609
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=480
