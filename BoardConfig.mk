@@ -88,6 +88,7 @@ BOARD_SEPOLICY_DIRS += \
 BOARD_SEPOLICY_UNION += \
 	file.te \
 	surfaceflinger.te \
+	ueventd.te \
 	file_contexts
 
 -include vendor/lge/bullhead/BoardConfigVendor.mk
