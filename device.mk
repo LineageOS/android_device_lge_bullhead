@@ -136,6 +136,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.custom_ecc=1
 
+# Request modem to send PLMN name always irrespective
+# of display condition in EFSPN.
+# RIL uses this property.
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.always_send_plmn=true
+
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
