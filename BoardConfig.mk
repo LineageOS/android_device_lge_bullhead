@@ -82,4 +82,10 @@ BOARD_HAL_STATIC_LIBRARIES := libdumpstate.bullhead
 
 TARGET_RECOVERY_FSTAB = device/lge/bullhead/fstab.bullhead
 
+BOARD_SEPOLICY_DIRS += \
+	device/lge/bullhead/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+	file_contexts
+
 -include vendor/lge/bullhead/BoardConfigVendor.mk
