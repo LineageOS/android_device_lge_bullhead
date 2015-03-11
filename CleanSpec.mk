@@ -48,3 +48,4 @@ $(call add-clean-step, rm -rf $(OUT_DIR)/target/product/bullhead/system/build.pr
 $(call add-clean-step, rm -rf $(OUT_DIR)/target/product/bullhead/system/build.prop)
 $(call add-clean-step, rm -rf $(OUT_DIR)/target/product/bullhead/system/build.prop)
 $(call add-clean-step, rm -rf $(OUT_DIR)/target/product/bullhead/system/build.prop)
+$(call add-clean-step, rm -rf $(OUT_DIR)/target/product/bullhead/system/build.prop)
