@@ -155,6 +155,18 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.radio.snapshot_enabled=1 \
     persist.radio.snapshot_timer=2
 
+# Modem debugger
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+PRODUCT_PACKAGES += \
+    QXDMLogger
+
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/init.bullhead.diag.rc.userdebug:root/init.bullhead.diag.rc
+else
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/init.bullhead.diag.rc.user:root/init.bullhead.diag.rc
+endif
+
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 

@@ -15,6 +15,7 @@
 #
 
 import init.bullhead.usb.rc
+import init.bullhead.diag.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
