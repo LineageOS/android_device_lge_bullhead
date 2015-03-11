@@ -132,6 +132,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.apm_sim_not_pwdn=1
 
+# Setup custom emergency number list based on the MCC. This is needed by RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.custom_ecc=1
+
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
