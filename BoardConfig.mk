@@ -86,6 +86,8 @@ BOARD_SEPOLICY_DIRS += \
 	device/lge/bullhead/sepolicy
 
 BOARD_SEPOLICY_UNION += \
+	file.te \
+	surfaceflinger.te \
 	file_contexts
 
 -include vendor/lge/bullhead/BoardConfigVendor.mk
