@@ -280,4 +280,7 @@
         <item>hsupa:4094,87380,704512,4096,16384,110208</item>
     </string-array>
 
+    <!-- reference volume index for music stream to limit headphone volume and display warning -->
+    <integer name="config_safe_media_volume_index">6</integer>
+
 </resources>
