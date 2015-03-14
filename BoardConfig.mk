@@ -86,6 +86,8 @@ BOARD_HAL_STATIC_LIBRARIES := libdumpstate.bullhead
 
 TARGET_RECOVERY_FSTAB = device/lge/bullhead/fstab.bullhead
 
+BOARD_CHARGER_ENABLE_SUSPEND := true
+
 BOARD_SEPOLICY_DIRS += \
     device/lge/bullhead/sepolicy
 
