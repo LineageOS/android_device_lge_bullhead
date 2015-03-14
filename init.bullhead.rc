@@ -117,6 +117,11 @@ on property:init.svc.per_mgr=running
 on property:sys.shutdown.requested=*
     stop per_proxy
 
+service charger /sbin/healthd -c
+    class charger
+    critical
+    seclabel u:r:healthd:s0
+
 # bugreport is triggered by holding down volume down, volume up and power
 service bugreport /system/bin/dumpstate -d -p -B \
         -o /data/data/com.android.shell/files/bugreports/bugreport
