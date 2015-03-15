@@ -507,4 +507,7 @@
          phone object irrespective of this config -->
     <bool name="config_switch_phone_on_voice_reg_state_change">false</bool>
 
+    <!-- Flag specifying whether VoLTE is availasble on device -->
+    <bool name="config_device_volte_available">true</bool>
+
 </resources>
