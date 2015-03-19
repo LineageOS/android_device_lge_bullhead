@@ -28,4 +28,8 @@
          For verizon we will use RIL_RADIO_TECHNOLOGY_1xRTT:6 -->
     <integer name="config_volte_replacement_rat">6</integer>
 
+    <string-array translatable="false" name="config_default_vm_number">
+        <item>*86</item>
+    </string-array>
+
 </resources>
