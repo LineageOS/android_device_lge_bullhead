@@ -64,6 +64,8 @@ on boot
     chmod 0664 /sys/devices/virtual/graphics/fb1/product_description
 
 on post-fs-data
+    write /sys/kernel/boot_adsp/boot 1
+
     mkdir /data/media 0770 media_rw media_rw
 
     # Ecc_Handler qcril.db

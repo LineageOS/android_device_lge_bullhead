@@ -41,6 +41,12 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
     device/lge/bullhead/media_codecs.xml:system/etc/media_codecs.xml
 
+# Audio
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/audio_policy.conf:system/etc/audio_policy.conf \
+    device/lge/bullhead/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    device/lge/bullhead/mixer_paths.xml:system/etc/mixer_paths.xml
+
 # Input device files
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
@@ -96,6 +102,13 @@ PRODUCT_PACKAGES += \
     libgenlock \
     memtrack.msm8992 \
     lights.bullhead
+
+PRODUCT_PACKAGES += \
+    audio.primary.msm8992 \
+    audio.a2dp.default \
+    audio.usb.default \
+    audio.r_submix.default \
+    libaudio-resampler
 
 DEVICE_PACKAGE_OVERLAYS := \
     device/lge/bullhead/overlay
