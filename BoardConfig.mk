@@ -91,6 +91,11 @@ BOARD_SEPOLICY_UNION += \
 	ueventd.te \
 	file_contexts
 
+# Bluetooth
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_QCOM := true
+#BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/bullhead/bluetooth
+
 TARGET_USES_64_BIT_BINDER := true
 
 -include vendor/lge/bullhead/BoardConfigVendor.mk
