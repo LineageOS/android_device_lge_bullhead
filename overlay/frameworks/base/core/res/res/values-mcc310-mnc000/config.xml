@@ -5,7 +5,7 @@
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
-** You may obtain a copy of the License at
+** You my obtain a copy of the License at
 **
 **     http://www.apache.org/licenses/LICENSE-2.0
 **
@@ -19,27 +19,20 @@
 
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- If Voice Radio Technology is RIL_RADIO_TECHNOLOGY_LTE:14 this is the value
-         that should be used instead. A value of RIL_RADIO_TECHNOLOGY_UNKNOWN:0 means
-         there is no replacement value and VoLTE is assumed to be supported
-
-         For verizon we will use RIL_RADIO_TECHNOLOGY_1xRTT:6 -->
-    <integer name="config_volte_replacement_rat">6</integer>
-
-    <string-array translatable="false" name="config_default_vm_number">
-        <item>*86</item>
-    </string-array>
+    <!-- Configure mobile network MTU. Carrier specific value is set here.
+    -->
+    <integer name="config_mobile_mtu">1422</integer>
 
     <!-- Array of ConnectivityManager.TYPE_xxxx values allowable for tethering -->
     <!-- Common options are [1, 4] for TYPE_WIFI and TYPE_MOBILE_DUN or
     <!== [0,1,5,7] for TYPE_MOBILE, TYPE_WIFI, TYPE_MOBILE_HIPRI and TYPE_BLUETOOTH -->
     <integer-array translatable="false" name="config_tether_upstream_types">
-        <item>1</item>
-        <item>4</item>
-        <item>7</item>
-        <item>9</item>
+      <item>1</item>
+      <item>4</item>
+      <item>7</item>
+      <item>9</item>
     </integer-array>
 
 </resources>
