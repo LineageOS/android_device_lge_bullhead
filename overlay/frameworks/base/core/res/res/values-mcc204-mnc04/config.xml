@@ -26,4 +26,7 @@
         <item>*86;BAE0000000000000</item>
     </string-array>
 
+    <!-- Use ERI text for network name on CDMA LTE -->
+    <bool name="config_LTE_eri_for_network_name">false</bool>
+
 </resources>
