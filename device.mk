@@ -51,8 +51,11 @@ PRODUCT_COPY_FILES += \
     device/lge/bullhead/touch_dev.idc:system/usr/idc/touch_dev.idc
 
 # These are the hardware-specific features
+#PRODUCT_COPY_FILES += \
+#    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
+# Temporary workaround until we get bluetooth working
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
+    device/lge/bullhead/handheld_core_hardware_nobt.xml:system/etc/permissions/handheld_core_hardware.xml
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
