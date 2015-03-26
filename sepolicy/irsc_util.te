@@ -1,0 +1,11 @@
+type irsc_util, domain;
+type irsc_util_exec, exec_type, file_type;
+init_daemon_domain(irsc_util)
+
+userdebug_or_eng(`
+  domain_auto_trans(shell, irsc_util_exec, irsc_util)
+  domain_auto_trans(adbd, irsc_util_exec, irsc_util)
+')
+
+allow irsc_util irsc_util:socket {create ioctl};
+allow irsc_util devpts:chr_file {read write getattr ioctl};

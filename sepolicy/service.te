@@ -1,0 +1,10 @@
+#type atfwd_service,             service_manager_type;
+type per_mgr_service,           service_manager_type;
+#type dpmservice,                service_manager_type;
+#type cne_service,               service_manager_type;
+#type wbc_service,               service_manager_type;
+#type dun_service,               service_manager_type;
+#type imscm_service,             service_manager_type;
+#type color_service,             service_manager_type;
+#type wfdservice_service,        service_manager_type;
+#type usf_service,               service_manager_type;

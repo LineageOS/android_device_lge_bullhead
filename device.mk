@@ -89,6 +89,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/spn-conf.xml:system/etc/spn-conf.xml
 
+# For GPS
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/sec_config:system/etc/sec_config
+
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_AAPT_CONFIG := normal
