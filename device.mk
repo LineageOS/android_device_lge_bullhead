@@ -179,6 +179,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.text_large_cache_height=1024
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.frp.pst=/dev/block/platform/msm_sdcc.1/by-name/persistent
+
+PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so
 
 PRODUCT_PROPERTY_OVERRIDES += \
