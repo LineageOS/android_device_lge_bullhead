@@ -114,6 +114,10 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     libaudio-resampler
 
+PRODUCT_PACKAGES += \
+    librmnetctl \
+    rmnetcli
+
 DEVICE_PACKAGE_OVERLAYS := \
     device/lge/bullhead/overlay
 
