@@ -122,6 +122,18 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     rmnetcli
 
+# GPS module
+PRODUCT_PACKAGES += \
+    libgps.utils \
+    libloc_core \
+    libloc_eng \
+    libloc_api_v02 \
+    gps.msm8992
+
+# GPS configuration
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/gps.conf:system/etc/gps.conf
+
 DEVICE_PACKAGE_OVERLAYS := \
     device/lge/bullhead/overlay
 

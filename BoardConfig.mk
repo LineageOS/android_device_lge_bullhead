@@ -90,6 +90,8 @@ TARGET_RECOVERY_FSTAB = device/lge/bullhead/fstab.bullhead
 
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
+
 BOARD_SEPOLICY_DIRS += \
     device/lge/bullhead/sepolicy
 
