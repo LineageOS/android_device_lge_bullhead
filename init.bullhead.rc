@@ -38,6 +38,15 @@ on early-boot
     setrlimit 8 67108864 67108864
 
 on boot
+    # Bluetooth
+    chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
+    chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
+    chmod 0660 /sys/class/rfkill/rfkill0/state
+    chown bluetooth net_bt /dev/ttyHS0
+    chmod 0660 /dev/ttyHS0
+    chown bluetooth net_bt /sys/class/rfkill/rfkill0/device/extldo
+    chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
+
     # Enable DEBUG_SUSPEND, DEBUG_EXIT_SUSPEND, and DEBUG_WAKEUP
     write /sys/module/wakelock/parameters/debug_mask 7
 
@@ -85,6 +94,18 @@ service rmt_storage /system/bin/rmt_storage
     class core
     user root
     group system
+
+service start_hci_filter /system/bin/wcnss_filter
+    class late_start
+    user root
+    group bluetooth
+    disabled
+
+on property:wc_transport.start_hci=true
+    start start_hci_filter
+
+on property:wc_transport.start_hci=false
+    stop start_hci_filter
 
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /system/bin/qmuxd

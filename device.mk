@@ -181,6 +181,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.radio.snapshot_enabled=1 \
     persist.radio.snapshot_timer=2
 
+# Set bluetooth soc to rome
+PRODUCT_PROPERTY_OVERRIDES += \
+    qcom.bluetooth.soc=rome
+
 # set default USB configuration
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
