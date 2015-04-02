@@ -18,18 +18,10 @@ wakelock_use(qmux)
 
 # Access to /sys/devices/virtual/smdpkt/smdcntl*/open_timeout
 allow qmux sysfs_smdcntl_open_timeout:file rw_file_perms;
-# TODO constrain further, by labeling /sys/devices/virtual/hsicctl/hsicctl0/modem_file
-# e.g. allow qmux sysfs_hsicctl_modem_wait:file rw_file_perms;
-allow qmux sysfs:file rw_file_perms;
+#allow qmux sysfs:file rw_file_perms;
 
 #Allow qmuxd to operate in platform specific transports
-allow qmux sysfs_smd_open_timeout:file w_file_perms;
-allow qmux sysfs_wake_lock:file { append open };
+#allow qmux sysfs_smd_open_timeout:file w_file_perms;
+#allow qmux sysfs_wake_lock:file { append open };
 
-#Allow qmuxd to write in hsic specific transport
-allow qmux sysfs:file w_file_perms;
-
-allow qmux self:capability { setuid setgid setpcap dac_override };
-
-allow qmux sysfs_hsic_modem_wait:file w_file_perms;
-r_dir_file(qmux, sysfs_ssr);
+#allow qmux self:capability { setuid setgid setpcap dac_override };
