@@ -58,6 +58,7 @@
 /dev/hsicctl14            0640   radio      radio
 /dev/hsicctl15            0640   radio      radio
 /dev/hsicctl16            0640   radio      radio
+/dev/qseecom              0660   system     drmrpc
 # SSR devices
 /dev/subsys_*             0640   system     system
 /sys/devices/virtual/smdpkt/smdcntl*       open_timeout   0664 radio radio
