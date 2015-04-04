@@ -97,6 +97,7 @@ BOARD_SEPOLICY_UNION += \
     file.te \
     device.te \
     domain.te \
+    bluetooth.te \
     healthd.te \
     irsc_util.te \
     netmgrd.te \

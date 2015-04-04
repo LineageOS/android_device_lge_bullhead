@@ -51,6 +51,7 @@
 /dev/smd([0-9])+                       u:object_r:smd_device:s0
 /dev/smem_log                          u:object_r:shared_log_device:s0
 
+/dev/ttyHS0                            u:object_r:ttyHS0_device:s0
 
 # rmt_storage is a qualcomm specific daemon responsible
 # for servicing modem filesystem requests.

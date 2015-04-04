@@ -41,3 +41,5 @@ type thermal_engine_device, dev_type;
 
 #SSR device
 type ssr_device, dev_type;
+
+type ttyHS0_device, dev_type;
