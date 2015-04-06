@@ -46,7 +46,7 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/audio_policy.conf:system/etc/audio_policy.conf \
-    device/lge/bullhead/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    device/lge/bullhead/audio_effects.conf:system/etc/audio_effects.conf \
     device/lge/bullhead/mixer_paths.xml:system/etc/mixer_paths.xml
 
 # Input device files
@@ -101,7 +101,7 @@ PRODUCT_COPY_FILES += \
 
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
-    device/lge/bullhead/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
+    device/lge/bullhead/msm_irqbalance.conf:vendor/etc/msm_irqbalance.conf
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
@@ -185,7 +185,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/platform/msm_sdcc.1/by-name/persistent
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so
+    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_cdma_sub=0
@@ -243,6 +243,7 @@ endif
 
 # setup dm-verity configs.
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/msm_sdcc.1/by-name/system
+PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/platform/msm_sdcc.1/by-name/vendor
 $(call inherit-product, build/target/product/verity.mk)
 
 # setup dalvik vm configs.
