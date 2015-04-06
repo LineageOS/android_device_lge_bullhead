@@ -185,6 +185,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=rome
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.bt.bdaddr_path=/persist/bdaddr.txt
+
 # set default USB configuration
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
