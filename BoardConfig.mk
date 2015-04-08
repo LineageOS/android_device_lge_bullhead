@@ -108,6 +108,7 @@ BOARD_SEPOLICY_UNION += \
     rild.te \
     rmt.te \
     service.te \
+    start_hci_filter.te \
     system_server.te \
     time.te \
     thermal-engine.te \
