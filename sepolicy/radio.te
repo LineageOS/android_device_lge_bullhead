@@ -12,4 +12,4 @@ allow radio persist_hiddenmenu_file:dir rw_dir_perms;
 allow radio persist_hiddenmenu_file:file create_file_perms;
 
 # Connect to ims service.
-allow radio ims:unix_stream_socket connectto;
+#HACK allow radio ims:unix_stream_socket connectto;

@@ -6,7 +6,7 @@ init_daemon_domain(start_hci_filter);
 
 allow start_hci_filter self:capability { setuid setgid dac_override };
 
-allow start_hci_filter default_prop:property_service set;
+#HACK allow start_hci_filter default_prop:property_service set;
 
 allow start_hci_filter proc:file { read write open };
 allow start_hci_filter proc_sysrq:file { read write open };
