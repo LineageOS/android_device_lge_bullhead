@@ -59,6 +59,9 @@
 /dev/hsicctl15            0640   radio      radio
 /dev/hsicctl16            0640   radio      radio
 /dev/qseecom              0660   system     drmrpc
+# permissions for audio
+/dev/msm_audio_cal        0660   system     audio
+/dev/msm_rtac             0660   system     audio
 # SSR devices
 /dev/subsys_*             0640   system     system
 /sys/devices/virtual/smdpkt/smdcntl*       open_timeout   0664 radio radio
