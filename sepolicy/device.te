@@ -43,3 +43,6 @@ type thermal_engine_device, dev_type;
 type ssr_device, dev_type;
 
 type ttyHS0_device, dev_type;
+
+# Fingerprint device
+type fpc_device, dev_type;

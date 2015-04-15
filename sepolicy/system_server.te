@@ -21,3 +21,6 @@ qmux_socket(system_server)
 allow system_server self:netlink_socket create_socket_perms;
 
 allow system_server rtc:chr_file rw_file_perms;
+
+# Fingerprint device
+allow system_server fpc_device:chr_file rw_file_perms;
