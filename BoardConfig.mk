@@ -107,30 +107,6 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 BOARD_SEPOLICY_DIRS += \
     device/lge/bullhead/sepolicy
 
-BOARD_SEPOLICY_UNION += \
-    file.te \
-    device.te \
-    domain.te \
-    bluetooth.te \
-    healthd.te \
-    irsc_util.te \
-    netmgrd.te \
-    peripheral_manager.te \
-    qmux.te \
-    rild.te \
-    rmt.te \
-    service.te \
-    start_hci_filter.te \
-    system_server.te \
-    time.te \
-    thermal-engine.te \
-    surfaceflinger.te \
-    servicemanager.te \
-    ueventd.te \
-    service_contexts \
-    file_contexts \
-    te_macros
-
 TARGET_USES_64_BIT_BINDER := true
 
 #Enable peripheral manager
