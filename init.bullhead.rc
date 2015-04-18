@@ -15,6 +15,7 @@
 #
 
 import init.bullhead.usb.rc
+import init.bullhead.power.rc
 import init.bullhead.diag.rc
 import init.bullhead.fp.rc
 
