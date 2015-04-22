@@ -99,6 +99,10 @@ PRODUCT_COPY_FILES += \
     device/lge/bullhead/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/qca_cld/WCNSS_cfg.dat \
     device/lge/bullhead/wifi/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
 
+# MSM IRQ Balancer configuration file
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
+
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_AAPT_CONFIG := normal
