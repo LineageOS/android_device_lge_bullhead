@@ -223,6 +223,12 @@ service qseecomd /system/bin/qseecomd
     user root
     group root
 
+service msm_irqbalance /system/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
+    socket msm_irqbalance seqpacket 660 root system
+    class core
+    user root
+    group root
+
 service charger /sbin/healthd -c
     class charger
     critical
