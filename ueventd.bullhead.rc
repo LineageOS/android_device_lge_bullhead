@@ -62,4 +62,4 @@
 # SSR devices
 /dev/subsys_*             0640   system     system
 /sys/devices/virtual/smdpkt/smdcntl*       open_timeout   0664 radio radio
-/dev/block/platform/msm_sdcc.1/by-name/persistent 0600 system system
+/dev/block/platform/soc.0/f9824900.sdhci/by-name/persistent 0600 system system

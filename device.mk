@@ -186,7 +186,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.text_large_cache_height=1024
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.frp.pst=/dev/block/platform/msm_sdcc.1/by-name/persistent
+    ro.frp.pst=/dev/block/platform/soc.0/f9824900.sdhci/by-name/persistent
 
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
@@ -246,8 +246,8 @@ PRODUCT_COPY_FILES += \
 endif
 
 # setup dm-verity configs.
-PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/msm_sdcc.1/by-name/system
-PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/platform/msm_sdcc.1/by-name/vendor
+PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc.0/f9824900.sdhci/by-name/system
+PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/platform/soc.0/f9824900.sdhci/by-name/vendor
 $(call inherit-product, build/target/product/verity.mk)
 
 # setup dalvik vm configs.
