@@ -79,6 +79,9 @@ on boot
 on post-fs-data
     write /sys/kernel/boot_adsp/boot 1
 
+    # Create /data/time folder for time-services
+    mkdir /data/time/ 0700 system system
+
     # Ecc_Handler qcril.db
     mkdir /data/misc/radio 0770 radio radio
     symlink /system/etc/qcril.db /data/misc/radio/qcril.db
@@ -226,6 +229,11 @@ service qseecomd /system/bin/qseecomd
 service msm_irqbalance /system/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
     socket msm_irqbalance seqpacket 660 root system
     class core
+    user root
+    group root
+
+service time_daemon /system/bin/time_daemon
+    class late_start
     user root
     group root
 
