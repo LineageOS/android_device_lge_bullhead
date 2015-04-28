@@ -144,6 +144,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/gps.conf:system/etc/gps.conf
 
+# Fingerprint Sensor
+PRODUCT_PACKAGES += \
+    fingerprint.bullhead
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     libwpa_client \
