@@ -65,6 +65,7 @@
 /dev/ttyHS0                            u:object_r:ttyHS0_device:s0
 /dev/subsys_modem                      u:object_r:subsys_modem_device:s0
 /dev/msm_thermal_query                 u:object_r:thermal_device:s0
+/dev/qseecom                           u:object_r:tee_device:s0
 
 # System files
 /system/bin/perfd                  u:object_r:perfd_exec:s0
