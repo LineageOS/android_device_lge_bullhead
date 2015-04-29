@@ -1,3 +1,7 @@
+# Data files
+/data/misc/perfd(/.*)?         u:object_r:mpctl_data_file:s0
+/data/misc/perfd/mpctl         u:object_r:mpctl_socket:s0
+
 # GPU device
 /dev/kgsl-3d0                  u:object_r:gpu_device:s0
 /dev/kgsl                      u:object_r:gpu_device:s0
@@ -96,6 +100,7 @@
 /sys/devices/virtual/hsicctl/hsicctl[0-9]/modem_wait                u:object_r:sysfs_hsic_modem_wait:s0
 /sys/devices/virtual/thermal(/.*)?                                  u:object_r:sysfs_thermal:s0
 /sys/module/msm_thermal(/.*)?                                       u:object_r:sysfs_thermal:s0
+/sys/module/msm_performance(/.*)?                                   u:object_r:sysfs_performance:s0
 /sys/devices/virtual/graphics/fb([0-2])+/hpd                        u:object_r:sysfs_graphics:s0
 /sys/devices/virtual/graphics/fb([0-2])+/res_info                   u:object_r:sysfs_graphics:s0
 /sys/devices/virtual/graphics/fb([0-2])+/s3d_mode                   u:object_r:sysfs_graphics:s0

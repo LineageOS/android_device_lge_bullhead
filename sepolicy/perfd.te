@@ -2,3 +2,25 @@ type perfd, domain;
 type perfd_exec, exec_type, file_type;
 
 init_daemon_domain(perfd)
+
+# Note: fsetid is deliberately not included above. fsetid checks are
+# triggered by chmod on a directory or file owned by a group other
+# than one of the groups assigned to the current process to see if
+# the setgid bit should be cleared, regardless of whether the setgid
+# bit was even set.  We do not appear to truly need this capability
+# for perfd to operate.
+dontaudit perfd self:capability fsetid;
+
+# Data file accesses.
+allow perfd mpctl_data_file:dir create_dir_perms;
+allow perfd mpctl_data_file:file create_file_perms;
+
+# Socket creation under /data/misc/perfd
+type_transition perfd mpctl_data_file:sock_file mpctl_socket;
+allow perfd mpctl_socket:sock_file create_file_perms;
+
+allow perfd sysfs_performance:dir search;
+allow perfd sysfs_performance:file rw_file_perms;
+
+allow perfd sysfs_thermal:dir search;
+allow perfd sysfs_thermal:file rw_file_perms;
