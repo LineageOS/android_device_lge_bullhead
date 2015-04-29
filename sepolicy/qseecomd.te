@@ -2,6 +2,8 @@
 allow tee self:capability { setuid setgid };
 
 allow tee block_device:dir r_dir_perms;
+allow tee drm_block_device:blk_file rw_file_perms;
+allow tee ssd_block_device:blk_file rw_file_perms;
 
 # Need to figure out how many scsi generic devices are preset
 # before being able to identify which one is rpmb device
