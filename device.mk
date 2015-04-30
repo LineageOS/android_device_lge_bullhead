@@ -188,6 +188,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/platform/soc.0/f9824900.sdhci/by-name/persistent
 
+# for perfd
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.min_freq_0=384000
+    ro.min_freq_4=384000
+
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 
