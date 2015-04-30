@@ -60,7 +60,7 @@
 # shared memory drivers
 /dev/smdcntl([0-9])+                   u:object_r:radio_device:s0
 /dev/smd([0-9])+                       u:object_r:smd_device:s0
-/dev/smem_log                          u:object_r:shared_log_device:s0
+/dev/smem_log                          u:object_r:smem_log_device:s0
 
 /dev/ttyHS0                            u:object_r:ttyHS0_device:s0
 /dev/subsys_modem                      u:object_r:subsys_modem_device:s0
