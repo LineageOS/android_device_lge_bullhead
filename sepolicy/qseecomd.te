@@ -26,6 +26,9 @@ allow tee firmware_file:file r_file_perms;
 allow tee graphics_device:chr_file r_file_perms;
 allow tee graphics_device:dir r_dir_perms;
 
+unix_socket_connect(tee, property, init)
+allow tee qseecomtee_prop:property_service set;
+
 binder_call(tee, surfaceflinger)
 binder_use(tee)
 

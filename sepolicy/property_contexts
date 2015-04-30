@@ -1,1 +1,3 @@
 wc_transport.    u:object_r:wc_transport_prop:s0
+sys.listeners.   u:object_r:qseecomtee_prop:s0
+sys.keymaster.   u:object_r:qseecomtee_prop:s0
