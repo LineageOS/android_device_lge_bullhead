@@ -252,6 +252,14 @@ service charger /sbin/healthd -c
     critical
     seclabel u:r:healthd:s0
 
+on property:persist.radio.atfwd.start=false
+    stop atfwd
+
+service atfwd /system/bin/ATFWD-daemon
+    class late_start
+    user system
+    group system radio
+
 # bugreport is triggered by holding down volume down, volume up and power
 service bugreport /system/bin/dumpstate -d -p -B \
         -o /data/data/com.android.shell/files/bugreports/bugreport
