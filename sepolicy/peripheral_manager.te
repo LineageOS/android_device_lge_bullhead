@@ -8,8 +8,8 @@ init_daemon_domain(per_mgr);
 #Needed for binder transactions
 binder_use(per_mgr);
 binder_service(per_mgr);
-allow per_mgr self:socket { create ioctl bind read write };
-allow per_mgr per_mgr_service:service_manager add;
+allow per_mgr self:socket create_socket_perms;
+allow per_mgr per_mgr_service:service_manager { add find };
 
 #Rules for peripheral manager clients
 #Rules for RILD
@@ -32,3 +32,5 @@ allow per_mgr sysfs_ssr:lnk_file { read open };
 
 #Needed by pm-proxy to talk to peripheral manager
 binder_call(per_mgr, per_mgr);
+
+allow per_mgr subsys_modem_device:chr_file r_file_perms;

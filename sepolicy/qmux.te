@@ -18,10 +18,3 @@ wakelock_use(qmux)
 
 # Access to /sys/devices/virtual/smdpkt/smdcntl*/open_timeout
 allow qmux sysfs_smdcntl_open_timeout:file rw_file_perms;
-#allow qmux sysfs:file rw_file_perms;
-
-#Allow qmuxd to operate in platform specific transports
-#allow qmux sysfs_smd_open_timeout:file w_file_perms;
-#allow qmux sysfs_wake_lock:file { append open };
-
-#allow qmux self:capability { setuid setgid setpcap dac_override };

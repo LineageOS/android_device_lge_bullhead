@@ -46,3 +46,5 @@ type ttyHS0_device, dev_type;
 
 # Fingerprint device
 type fpc_device, dev_type;
+
+type subsys_modem_device, dev_type;

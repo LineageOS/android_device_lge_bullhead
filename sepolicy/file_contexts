@@ -20,6 +20,9 @@
 /dev/socket/qmux_gps(/.*)?             u:object_r:qmuxd_socket:s0
 /dev/socket/qmux_radio(/.*)?           u:object_r:qmuxd_socket:s0
 
+/dev/socket/thermal-send-client u:object_r:thermal_socket:s0
+/dev/socket/thermal-recv-client u:object_r:thermal_socket:s0
+/dev/socket/thermal-recv-passive-client u:object_r:thermal_socket:s0
 
 # factory reset protection partition
 /dev/block/platform/soc\.0/f9824900\.sdhci/by-name/persistent          u:object_r:frp_block_device:s0
@@ -28,6 +31,8 @@
 #/dev/block/mmcblk0                     u:object_r:root_block_device:s0
 /dev/block/mmcblk0                     u:object_r:mmc_block_device:s0
 /dev/block/mmcblk0rpmb                 u:object_r:drm_block_device:s0
+/dev/block/platform/soc\.0/f9824900\.sdhci/by-name/cache       u:object_r:cache_block_device:s0
+/dev/block/platform/soc\.0/f9824900\.sdhci/by-name/userdata    u:object_r:userdata_block_device:s0
 /dev/block/platform/soc\.0/f9824900\.sdhci/by-name/modemst1     u:object_r:modem_block_device:s0
 /dev/block/platform/soc\.0/f9824900\.sdhci/by-name/modemst2     u:object_r:modem_block_device:s0
 /dev/block/platform/soc\.0/f9824900\.sdhci/by-name/fsc          u:object_r:modem_block_device:s0
@@ -56,26 +61,20 @@
 /dev/smem_log                          u:object_r:shared_log_device:s0
 
 /dev/ttyHS0                            u:object_r:ttyHS0_device:s0
+/dev/subsys_modem                      u:object_r:subsys_modem_device:s0
+/dev/msm_thermal_query                 u:object_r:thermal_device:s0
 
 # rmt_storage is a qualcomm specific daemon responsible
 # for servicing modem filesystem requests.
 /system/bin/rmt_storage            u:object_r:rmt_exec:s0
-#/system/bin/bdAddrLoader           u:object_r:bluetooth_loader_exec:s0
-#/system/bin/bridgemgrd             u:object_r:bridge_exec:s0
 /system/bin/qmuxd                  u:object_r:qmux_exec:s0
 /system/bin/netmgrd                u:object_r:netmgrd_exec:s0
-#/system/bin/mpdecision             u:object_r:mpdecision_exec:s0
-#/system/bin/sensors\.qcom          u:object_r:sensors_exec:s0
-#/system/bin/mm-qcamera-daemon      u:object_r:camera_exec:s0
-#/system/bin/qseecomd               u:object_r:tee_exec:s0
-#/system/bin/subsystem_ramdump      u:object_r:ssr_exec:s0
-#/system/bin/thermal-engine-hh      u:object_r:thermald_exec:s0
-#/system/vendor/bin/vss_init        u:object_r:vss_exec:s0
-#/system/bin/time_daemon            u:object_r:time_exec:s0
 /system/bin/irsc_util              u:object_r:irsc_util_exec:s0
 /system/bin/pm-service             u:object_r:per_mgr_exec:s0
 /system/bin/pm-proxy               u:object_r:per_mgr_exec:s0
 /system/bin/wcnss_filter           u:object_r:start_hci_filter_exec:s0
+/system/bin/qseecomd               u:object_r:tee_exec:s0
+/system/bin/thermal-engine         u:object_r:thermal-engine_exec:s0
 
 # Sysfs files used by qmuxd
 /sys/devices/virtual/smdpkt/smdcntl([0-9])+/open_timeout u:object_r:sysfs_smdcntl_open_timeout:s0

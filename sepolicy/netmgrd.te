@@ -47,16 +47,9 @@ allow netmgrd netd_socket:sock_file write;
 allow netmgrd net_data_file:file r_file_perms;
 allow netmgrd net_data_file:dir r_dir_perms;
 
-#Allow nemtgrd to use esoc api's to determine target
 allow netmgrd shell_exec:file { execute r_file_perms execute_no_trans };
-#allow netmgrd sysfs_esoc:lnk_file read;
-
 
 r_dir_file(netmgrd, sysfs_ssr);
-
-#Allow communication with netd
-#allow netmgrd wpa_exec:file rx_file_perms;
-#allow netmgrd { wcnss_service_exec wpa_exec }:file rx_file_perms;
 
 allow netmgrd sysfs:file write;
 
