@@ -177,6 +177,16 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm8992 \
+    libcamera \
+    libmmcamera_interface \
+    libmmcamera_interface2 \
+    libmmjpeg_interface \
+    libqomx_core \
+    mm-qcamera-app
+
 DEVICE_PACKAGE_OVERLAYS := \
     device/lge/bullhead/overlay
 

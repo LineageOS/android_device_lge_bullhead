@@ -280,6 +280,11 @@ service charger /sbin/healthd -c
     critical
     seclabel u:r:healthd:s0
 
+service qcamerasvr /system/bin/mm-qcamera-daemon
+    class late_start
+    user camera
+    group camera system inet input graphics
+
 on property:persist.radio.atfwd.start=false
     stop atfwd
 
