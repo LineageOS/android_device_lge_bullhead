@@ -194,6 +194,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.min_freq_4=384000
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.extension_library=libqti-perfd-client.so
+
+PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 
 PRODUCT_PROPERTY_OVERRIDES += \
