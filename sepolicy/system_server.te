@@ -6,6 +6,8 @@ allow system_server self:netlink_socket create_socket_perms;
 
 allow system_server rtc:chr_file rw_file_perms;
 
+allow system_server per_mgr_service:service_manager find;
+
 # Fingerprint device
 allow system_server fpc_device:chr_file rw_file_perms;
 
