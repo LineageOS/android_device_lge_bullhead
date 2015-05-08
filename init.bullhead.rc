@@ -33,6 +33,9 @@ on init
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
 
+    # NXP HAL expects /dev/pn54x
+    symlink /dev/pn548 /dev/pn54x
+
 on fs
     mount_all ./fstab.bullhead
 
@@ -105,6 +108,10 @@ on post-fs-data
 
     # Create /data/time folder for time-services
     mkdir /data/time/ 0700 system system
+
+    # NFC: create data/nfc for nv storage
+    mkdir /data/nfc 0770 nfc nfc
+    mkdir /data/nfc/param 0770 nfc nfc
 
     # Ecc_Handler qcril.db
     mkdir /data/misc/radio 0770 radio radio
