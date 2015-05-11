@@ -88,6 +88,10 @@ on post-fs-data
     mkdir /data/misc/radio 0770 radio radio
     symlink /system/etc/qcril.db /data/misc/radio/qcril.db
 
+    #Create directories for Location services
+    mkdir /data/misc/location 0770 gps gps
+    mkdir /data/misc/location/gpsone_d 0770 system gps
+
     #Create PERFD deamon related dirs
     mkdir /data/misc/perfd 0755 root system
     chmod 2755 /data/misc/perfd
