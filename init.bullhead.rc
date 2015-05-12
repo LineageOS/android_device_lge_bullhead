@@ -78,10 +78,6 @@ on boot
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
 
-    mkdir /dev/video
-    symlink /dev/video32 /dev/video/venus_dec
-    symlink /dev/video33 /dev/video/venus_enc
-
 on post-fs-data
     write /sys/kernel/boot_adsp/boot 1
 
