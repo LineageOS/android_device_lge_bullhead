@@ -122,6 +122,15 @@ PRODUCT_PACKAGES += \
     lights.bullhead
 
 PRODUCT_PACKAGES += \
+    libc2dcolorconvert \
+    libstagefrighthw \
+    libOmxCore \
+    libmm-omxcore \
+    libOmxVdec \
+    libOmxVdecHevc \
+    libOmxVenc
+
+PRODUCT_PACKAGES += \
     audio.primary.msm8992 \
     audio.a2dp.default \
     audio.usb.default \
