@@ -77,3 +77,6 @@ type sysfs_usb_uicc, sysfs_type, fs_type;
 
 #type for uart
 type sysfs_msmuart_file, sysfs_type, fs_type;
+
+#type for proc files
+type proc_irq, fs_type;
