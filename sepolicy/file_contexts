@@ -66,8 +66,8 @@
 /dev/subsys_modem                      u:object_r:subsys_modem_device:s0
 /dev/msm_thermal_query                 u:object_r:thermal_device:s0
 
-# rmt_storage is a qualcomm specific daemon responsible
-# for servicing modem filesystem requests.
+# System files
+/system/bin/perfd                  u:object_r:perfd_exec:s0
 /system/bin/rmt_storage            u:object_r:rmt_exec:s0
 /system/bin/qmuxd                  u:object_r:qmux_exec:s0
 /system/bin/netmgrd                u:object_r:netmgrd_exec:s0
