@@ -5,7 +5,7 @@ type thermal-engine_exec, exec_type, file_type;
 # Started by init
 init_daemon_domain(thermal-engine)
 
-allow thermal-engine shared_log_device:chr_file rw_file_perms;
+allow thermal-engine smem_log_device:chr_file rw_file_perms;
 
 allow thermal-engine thermal_device:chr_file rw_file_perms;
 

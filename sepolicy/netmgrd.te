@@ -17,7 +17,7 @@ allow netmgrd self:capability { setuid setgid net_admin net_raw setpcap };
 # Started by init
 init_daemon_domain(netmgrd)
 
-allow netmgrd shared_log_device:chr_file rw_file_perms;
+allow netmgrd smem_log_device:chr_file rw_file_perms;
 
 # Access to /proc/sys/net/*
 allow netmgrd proc_net:file rw_file_perms;

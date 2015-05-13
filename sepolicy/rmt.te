@@ -22,9 +22,6 @@ allow rmt self:capability sys_admin;
 
 allow rmt ssd_block_device:blk_file rw_file_perms;
 
-# Allow shared memory logging access
-allow rmt shared_log_device:chr_file rw_file_perms;
-
 allow rmt self:socket create_socket_perms;
 
 # Wake lock access
