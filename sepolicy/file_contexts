@@ -67,6 +67,8 @@
 /dev/smd([0-9])+                       u:object_r:smd_device:s0
 /dev/smem_log                          u:object_r:smem_log_device:s0
 
+/dev/msm_audio_cal                     u:object_r:audio_device:s0
+
 /dev/ttyHS0                            u:object_r:ttyHS0_device:s0
 /dev/subsys_modem                      u:object_r:subsys_modem_device:s0
 /dev/msm_thermal_query                 u:object_r:thermal_device:s0
