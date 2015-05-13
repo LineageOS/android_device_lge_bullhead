@@ -49,6 +49,11 @@ PRODUCT_COPY_FILES += \
     device/lge/bullhead/audio_effects.conf:system/etc/audio_effects.conf \
     device/lge/bullhead/mixer_paths.xml:system/etc/mixer_paths.xml
 
+#Sound Trigger
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
+    device/lge/bullhead/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml
+
 # Input device files
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
