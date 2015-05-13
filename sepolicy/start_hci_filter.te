@@ -7,4 +7,9 @@ init_daemon_domain(start_hci_filter);
 allow start_hci_filter self:capability { setuid setgid dac_override };
 
 allow start_hci_filter proc_sysrq:file rw_file_perms;
+
 allow start_hci_filter ttyHS0_device:chr_file rw_file_perms;
+
+allow start_hci_filter sysfs_msmuart_file:file rw_file_perms;
+
+unix_socket_connect(start_hci_filter, property, init)

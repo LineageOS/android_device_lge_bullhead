@@ -72,3 +72,6 @@ type sysfs_socinfo, fs_type, sysfs_type;
 
 #Define the sysfs files for usb_uicc_daemon
 type sysfs_usb_uicc, sysfs_type, fs_type;
+
+#type for uart
+type sysfs_msmuart_file, sysfs_type, fs_type;
