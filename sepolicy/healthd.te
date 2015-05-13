@@ -1,6 +1,2 @@
-#allow healthd sysfs_battery_supply:dir search;
-#allow healthd sysfs_battery_supply:file { read open };
-#allow healthd sysfs_usb_supply:dir search;
-#allow healthd sysfs_usb_supply:file { read open };
 allow healthd sysfs_thermal:dir search;
 allow healthd sysfs_thermal:file { open read };
