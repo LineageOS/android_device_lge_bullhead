@@ -1,1 +1,2 @@
 type wc_transport_prop, property_type;
+type qseecomtee_prop, property_type;
