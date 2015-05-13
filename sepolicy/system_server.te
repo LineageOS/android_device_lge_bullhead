@@ -8,3 +8,7 @@ allow system_server rtc:chr_file rw_file_perms;
 
 # Fingerprint device
 allow system_server fpc_device:chr_file rw_file_perms;
+
+#Needed by libmdmdetect to get subsystem info and to check their states
+allow system_server sysfs_ssr:dir r_dir_perms;
+allow system_server sysfs_ssr:lnk_file r_file_perms;
