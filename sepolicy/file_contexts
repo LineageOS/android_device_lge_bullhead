@@ -24,6 +24,8 @@
 /dev/socket/thermal-recv-client u:object_r:thermal_socket:s0
 /dev/socket/thermal-recv-passive-client u:object_r:thermal_socket:s0
 
+/dev/socket/msm_irqbalance u:object_r:msm_irqbalance_socket:s0
+
 # factory reset protection partition
 /dev/block/platform/soc\.0/f9824900\.sdhci/by-name/persistent          u:object_r:frp_block_device:s0
 
@@ -75,6 +77,7 @@
 /system/bin/wcnss_filter           u:object_r:start_hci_filter_exec:s0
 /system/bin/qseecomd               u:object_r:tee_exec:s0
 /system/bin/thermal-engine         u:object_r:thermal-engine_exec:s0
+/system/bin/msm_irqbalance         u:object_r:msm_irqbalanced_exec:s0
 
 # Sysfs files used by qmuxd
 /sys/devices/virtual/smdpkt/smdcntl([0-9])+/open_timeout u:object_r:sysfs_smdcntl_open_timeout:s0
