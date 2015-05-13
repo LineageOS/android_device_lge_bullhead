@@ -31,7 +31,7 @@ allow rild ssr_device:chr_file { open read };
 allow rild mediaserver_service:service_manager find;
 allow rild per_mgr_service:service_manager find;
 
-#allow rild time_daemon:unix_stream_socket connectto;
+allow rild time_daemon:unix_stream_socket connectto;
 
 allow rild ssr_device:chr_file { open read };
 
