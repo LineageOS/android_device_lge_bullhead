@@ -2,3 +2,6 @@ allow bluetooth sysfs:file rw_file_perms;
 
 allow bluetooth ttyHS0_device:chr_file rw_file_perms;
 allow bluetooth start_hci_filter:unix_stream_socket connectto;
+
+unix_socket_connect(bluetooth, property, init)
+allow bluetooth wc_transport_prop:property_service set;
