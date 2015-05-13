@@ -25,6 +25,9 @@ type dropbox_data_file, file_type, data_file_type;
 type adspd_data_file, file_type, data_file_type;
 type audio_cutback_data_file, file_type, data_file_type;
 
+type mpctl_data_file, file_type, data_file_type;
+type mpctl_socket, file_type;
+
 type sysfs_rmnet, fs_type, sysfs_type;
 type sysfs_smdcntl_open_timeout, fs_type, sysfs_type;
 type sysfs_xhci_msm_hsic, fs_type, sysfs_type;
@@ -60,6 +63,9 @@ type sysfs_smd_open_timeout, sysfs_type, fs_type;
 #type for thermal-engine
 type sysfs_thermal, sysfs_type, fs_type;
 type thermal_socket, file_type;
+
+#type for perfd
+type sysfs_performance, sysfs_type, fs_type;
 
 # Storage RFS file types
 type rfs_data_file, file_type;
