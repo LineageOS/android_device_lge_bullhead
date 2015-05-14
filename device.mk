@@ -35,6 +35,7 @@ PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.power.rc:root/init.bullhead.power.rc \
     device/lge/bullhead/fstab.bullhead:root/fstab.bullhead \
     device/lge/bullhead/ueventd.bullhead.rc:root/ueventd.bullhead.rc \
+    device/lge/bullhead/init.bullhead.sensorhub.rc:root/init.bullhead.sensorhub.rc \
     device/lge/bullhead/init.bullhead.fp.rc:root/init.bullhead.fp.rc
 
 PRODUCT_COPY_FILES += \
@@ -186,6 +187,12 @@ PRODUCT_PACKAGES += \
     libmmjpeg_interface \
     libqomx_core \
     mm-qcamera-app
+
+# Sensor & activity_recognition HAL
+PRODUCT_PACKAGES += \
+    sensors.bullhead \
+    activity_recognition.bullhead \
+    sensortool.bullhead
 
 DEVICE_PACKAGE_OVERLAYS := \
     device/lge/bullhead/overlay

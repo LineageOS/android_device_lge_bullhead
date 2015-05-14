@@ -18,6 +18,7 @@ import init.bullhead.usb.rc
 import init.bullhead.power.rc
 import init.bullhead.diag.rc
 import init.bullhead.fp.rc
+import init.bullhead.sensorhub.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
