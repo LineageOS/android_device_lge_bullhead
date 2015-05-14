@@ -41,6 +41,12 @@ on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
+    # Allow subsystem (modem etc) debugging
+    write /sys/module/subsystem_restart/parameters/enable_debug ${persist.sys.ssr.enable_debug}
+    write /sys/module/pil_msa/parameters/pbl_mba_boot_timeout_ms ${persist.sys.mba_boot_timeout}
+    write /sys/module/pil_msa/parameters/modem_auth_timeout_ms ${persist.sys.modem_auth_timeout}
+    write /sys/module/peripheral_loader/parameters/proxy_timeout_ms ${persist.sys.pil_proxy_timeout}
+
 on boot
     symlink /dev/block/platform/soc.0/f9824900.sdhci /dev/block/bootdevice
 
@@ -79,6 +85,16 @@ on boot
     chmod 2770 /dev/socket/qmux_bluetooth
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
+
+    # Subsytem Restart
+    write /sys/bus/msm_subsys/devices/subsys0/restart_level "related"
+    write /sys/bus/msm_subsys/devices/subsys1/restart_level "related"
+    write /sys/bus/msm_subsys/devices/subsys2/restart_level "related"
+    write /sys/bus/msm_subsys/devices/subsys3/restart_level "related"
+
+    # Subsytem Ramdump collection
+    write /sys/module/subsystem_restart/parameters/enable_ramdumps 1
+    write /sys/module/msm_poweroff/parameters/download_mode 0
 
 on post-fs-data
     write /sys/kernel/boot_adsp/boot 1
@@ -263,6 +279,15 @@ service atfwd /system/bin/ATFWD-daemon
     class late_start
     user system
     group system radio
+
+on property:ro.debuggable=1
+    start ss_ramdump
+
+service ss_ramdump /system/bin/subsystem_ramdump
+    class main
+    user system
+    group system
+    disabled
 
 # bugreport is triggered by holding down volume down, volume up and power
 service bugreport /system/bin/dumpstate -d -p -B \
