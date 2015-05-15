@@ -29,6 +29,12 @@ endif
 PRODUCT_COPY_FILES := \
     $(LOCAL_KERNEL):kernel
 
+########## stlport hack !!! revert-me !!!!
+PRODUCT_COPY_FILES += \
+    vendor/lge/bullhead/stlport/lib/libstlport.so:system/lib/libstlport.so \
+    vendor/lge/bullhead/stlport/lib64/libstlport.so:system/lib64/libstlport.so
+##########
+
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.rc:root/init.bullhead.rc \
     device/lge/bullhead/init.bullhead.usb.rc:root/init.bullhead.usb.rc \
