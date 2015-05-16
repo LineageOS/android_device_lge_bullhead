@@ -82,6 +82,7 @@
 /system/bin/msm_irqbalance         u:object_r:msm_irqbalanced_exec:s0
 /system/bin/ATFWD-daemon           u:object_r:atfwd_exec:s0
 /system/bin/subsystem_ramdump      u:object_r:ssr_exec:s0
+/vendor/bin/qti                    u:object_r:qti_exec:s0
 
 # Sysfs files used by qmuxd
 /sys/devices/virtual/smdpkt/smdcntl([0-9])+/open_timeout u:object_r:sysfs_smdcntl_open_timeout:s0
