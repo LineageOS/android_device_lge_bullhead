@@ -13,6 +13,8 @@
 /dev/smd7                 0660   bluetooth  bluetooth
 /dev/smd8                 0660   system     system
 /dev/smd_cxm_qmi          0640   radio      radio
+/dev/rmnet_ctrl           0660   usb        usb
+/dev/dpl_ctrl             0660   usb        usb
 #permissions for CSVT
 /dev/smd11                0660   system     system
 /dev/smd21                0660   system     system

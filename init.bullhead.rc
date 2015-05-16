@@ -156,6 +156,11 @@ service qmuxd /system/bin/qmuxd
     user radio
     group radio audio bluetooth gps
 
+service qti /system/vendor/bin/qti
+    class main
+    user radio
+    group radio net_raw diag usb net_admin
+
 service netmgrd /system/bin/netmgrd
     class main
     group radio
