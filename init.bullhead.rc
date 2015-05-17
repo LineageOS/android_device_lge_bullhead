@@ -96,6 +96,9 @@ on boot
     write /sys/module/subsystem_restart/parameters/enable_ramdumps 1
     write /sys/module/msm_poweroff/parameters/download_mode 0
 
+    # Adjust socket buffer to enlarge TCP receive window for high bandwidth
+    write /proc/sys/net/ipv4/tcp_adv_win_scale 2
+
 on post-fs-data
     write /sys/kernel/boot_adsp/boot 1
 
