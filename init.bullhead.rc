@@ -135,6 +135,9 @@ on post-fs-data
 
     rm /data/misc/perfd/default_values
 
+    # Subsytem Ramdump collection
+    mkdir /data/ramdump 0700 root root
+
     setprop vold.post_fs_data_done 1
 
 on charger
@@ -314,8 +317,8 @@ on property:ro.debuggable=1
 
 service ss_ramdump /system/bin/subsystem_ramdump
     class main
-    user system
-    group system
+    user root
+    group root
     disabled
 
 service cnd /system/bin/cnd

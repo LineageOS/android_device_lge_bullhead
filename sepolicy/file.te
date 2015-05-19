@@ -24,6 +24,7 @@ type quipc_data_file, data_file_type, file_type;
 type dropbox_data_file, file_type, data_file_type;
 type adspd_data_file, file_type, data_file_type;
 type audio_cutback_data_file, file_type, data_file_type;
+type ramdump_data_file, file_type, data_file_type;
 
 type mpctl_data_file, file_type, data_file_type;
 type mpctl_socket, file_type;
