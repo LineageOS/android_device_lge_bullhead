@@ -74,3 +74,5 @@
 /dev/ramdump*             0640   system     system
 /sys/devices/virtual/smdpkt/smdcntl*       open_timeout   0664 radio radio
 /dev/block/platform/soc.0/f9824900.sdhci/by-name/persistent 0600 system system
+# sensor HUB
+/dev/spidev7.0            0640   system     system
