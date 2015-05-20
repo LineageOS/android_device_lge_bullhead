@@ -100,6 +100,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/sec_config:system/etc/sec_config
 
+# NFC config files
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    device/lge/bullhead/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
+
 # For WiFi
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
@@ -163,6 +168,7 @@ PRODUCT_COPY_FILES += \
 
 # NFC packages
 PRODUCT_PACKAGES += \
+    nfc_nci.bullhead \
     NfcNci \
     Tag
 

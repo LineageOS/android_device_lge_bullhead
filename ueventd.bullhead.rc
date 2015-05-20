@@ -12,6 +12,7 @@
 /dev/rtc0                 0660   system     system
 /dev/diag                 0660   radio      radio
 /dev/ttyUSB0              0660   system     system
+/dev/pn548                0660   nfc        nfc
 /dev/smd0                 0660   system     system
 /dev/smd4                 0660   system     system
 /dev/smd7                 0660   bluetooth  bluetooth
