@@ -121,3 +121,7 @@
 
 # Fingerprint device
 /dev/fpc1020                                                        u:object_r:fpc_device:s0
+
+# Persist files
+/persist(/.*)?                                                      u:object_r:persist_file:s0
+/persist/wlan_mac\.bin                                              u:object_r:persist_wifi_file:s0
