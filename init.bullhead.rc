@@ -320,3 +320,7 @@ service bugreport /system/bin/dumpstate -d -p -B \
     disabled
     oneshot
     keycodes 114 115 116
+
+service fingerprintd /system/bin/fingerprintd
+    class late_start
+    user system
