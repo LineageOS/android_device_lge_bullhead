@@ -63,6 +63,8 @@
 /dev/msm_thermal_query                 u:object_r:thermal_device:s0
 /dev/qseecom                           u:object_r:tee_device:s0
 
+/dev/spich                             u:object_r:sensors_device:s0
+
 # System files
 /system/bin/perfd                  u:object_r:perfd_exec:s0
 /system/bin/rmt_storage            u:object_r:rmt_exec:s0
