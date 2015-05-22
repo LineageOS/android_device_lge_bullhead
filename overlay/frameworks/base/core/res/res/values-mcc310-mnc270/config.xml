@@ -43,8 +43,8 @@
      "name,apn,proxy,port,username,password,server,mmsc,mmsproxy,mmsport,mcc,mnc,auth,type"
      note that empty fields can be ommitted: "name,apn,,,,,,,,,310,260,,DUN" -->
     <string-array translatable="false" name="config_tether_apndata">
-        <item>T-Mobile Tethering,pcweb.tmobile.com,,,,,,,,,310,260,,DUN</item>
-        <item>[ApnSettingV3]MetroPCS Tethering,pcweb.metropcs.com,,,,,,,,,310,260,,DUN,,,true,0,,,,,,,gid,6D</item>
+        <item>T-Mobile Tethering,pcweb.tmobile.com,,,,,,,,,310,270,,DUN</item>
+        <item>[ApnSettingV3]MetroPCS Tethering,pcweb.metropcs.com,,,,,,,,,310,270,,DUN,,,true,0,,,,,,,gid,6D</item>
     </string-array>
 
     <!-- Values for GPS configuration (T-Mobile) -->
