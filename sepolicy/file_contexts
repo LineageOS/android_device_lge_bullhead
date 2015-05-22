@@ -7,20 +7,16 @@
 /dev/kgsl-3d0                  u:object_r:gpu_device:s0
 /dev/kgsl                      u:object_r:gpu_device:s0
 
-# Sysfs files used by surfaceflinger
-/sys/devices/virtual/graphics/fb1/hpd          -- u:object_r:sysfs_surfaceflinger:s0
-/sys/devices/virtual/graphics/fb1/vendor_name  -- u:object_r:sysfs_surfaceflinger:s0
-/sys/devices/virtual/graphics/fb1/product_description       -- u:object_r:sysfs_surfaceflinger:s0
-
 # Should only be on userdebug device
 /dev/diag                       u:object_r:diag_device:s0
-/dev/ttydiag2                   u:object_r:diag_device:s0
 
 # Qualcomm MSM Interface (QMI) devices
-/dev/socket/qmux_audio(/.*)?           u:object_r:qmuxd_socket:s0
-/dev/socket/qmux_bluetooth(/.*)?       u:object_r:qmuxd_socket:s0
-/dev/socket/qmux_gps(/.*)?             u:object_r:qmuxd_socket:s0
-/dev/socket/qmux_radio(/.*)?           u:object_r:qmuxd_socket:s0
+/dev/socket/qmux_audio/qmux_connect_socket      u:object_r:qmuxd_socket:s0
+/dev/socket/qmux_bluetooth/qmux_connect_socket  u:object_r:qmuxd_socket:s0
+/dev/socket/qmux_gps/qmux_connect_socket        u:object_r:qmuxd_socket:s0
+/dev/socket/qmux_radio/rild_oem0                u:object_r:qmuxd_socket:s0
+/dev/socket/qmux_radio/rild_ims0                u:object_r:qmuxd_socket:s0
+/dev/socket/qmux_radio/qmux_connect_socket      u:object_r:qmuxd_socket:s0
 
 /dev/socket/thermal-send-client u:object_r:thermal_socket:s0
 /dev/socket/thermal-recv-client u:object_r:thermal_socket:s0
@@ -32,7 +28,6 @@
 /dev/block/platform/soc\.0/f9824900\.sdhci/by-name/persistent          u:object_r:frp_block_device:s0
 
 # Block labeling
-#/dev/block/mmcblk0                     u:object_r:root_block_device:s0
 /dev/block/mmcblk0                     u:object_r:mmc_block_device:s0
 /dev/block/mmcblk0rpmb                 u:object_r:drm_block_device:s0
 /dev/block/platform/soc\.0/f9824900\.sdhci/by-name/cache       u:object_r:cache_block_device:s0
@@ -48,9 +43,6 @@
 
 /dev/rmnet_ctrl.*                      u:object_r:rmnet_device:s0
 /dev/dpl_ctrl                          u:object_r:rmnet_device:s0
-
-# high speed inter-chip controls
-/dev/hsicctl[0-3]                      u:object_r:radio_device:s0
 
 ## Radio related
 # modem driver
@@ -91,26 +83,18 @@
 
 /sys/class/graphics/fb0/mdp/caps                                    u:object_r:sysfs_graphics:s0
 /sys/class/thermal(/.*)?                                            u:object_r:sysfs_thermal:s0
-/sys/devices/[^/]+bcl[^/]+(/.*)?                                    u:object_r:sysfs_thermal:s0
 /sys/devices/platform/battery_current_limit                         u:object_r:sysfs_thermal:s0
 /sys/devices/virtual/graphics/fb([0-2])+/idle_time                  u:object_r:sysfs_graphics:s0
 /sys/devices/virtual/graphics/fb([0-2])+/dynamic_fps                u:object_r:sysfs_graphics:s0
-/sys/devices/virtual/graphics/fb([0-2])+/product_description        u:object_r:sysfs_graphics:s0
-/sys/devices/virtual/graphics/fb([0-2])+/vendor_name                u:object_r:sysfs_graphics:s0
-/sys/devices/virtual/hsicctl/hsicctl1[0-9]/modem_wait               u:object_r:sysfs_hsic_modem_wait:s0
-/sys/devices/virtual/hsicctl/hsicctl[0-9]/modem_wait                u:object_r:sysfs_hsic_modem_wait:s0
 /sys/devices/virtual/thermal(/.*)?                                  u:object_r:sysfs_thermal:s0
 /sys/module/msm_thermal(/.*)?                                       u:object_r:sysfs_thermal:s0
 /sys/module/msm_performance(/.*)?                                   u:object_r:sysfs_performance:s0
 /sys/devices/virtual/graphics/fb([0-2])+/hpd                        u:object_r:sysfs_graphics:s0
 /sys/devices/virtual/graphics/fb([0-2])+/res_info                   u:object_r:sysfs_graphics:s0
 /sys/devices/virtual/graphics/fb([0-2])+/s3d_mode                   u:object_r:sysfs_graphics:s0
-/sys/class/graphics/fb([0-2])+/mdp/caps                             u:object_r:sysfs_graphics:s0
-/sys/class/graphics/fb([0-2])+/ad                                   u:object_r:sysfs_graphics:s0
-/sys/bus/platform/drivers/xhci_msm_hsic(/.*)?                       u:object_r:sysfs_hsic:s0
 /sys/devices/msm_hsic_host/host_ready                               u:object_r:sysfs_hsic_host_rdy:s0
 /sys/bus/msm_subsys(/.*)?                                           u:object_r:sysfs_ssr:s0
-/sys/module/ccid_bridge(/.*)?                                       u:object_r:sysfs_usb_uicc:s0
+/sys/module/ccid_bridge/parameters/bulk_msg_timeout                 u:object_r:sysfs_usb_uicc:s0
 /sys/bus/msm_subsys/devices/subsys0/restart_level                   u:object_r:sysfs_ssr_toggle:s0
 /sys/bus/msm_subsys/devices/subsys1/restart_level                   u:object_r:sysfs_ssr_toggle:s0
 /sys/bus/msm_subsys/devices/subsys2/restart_level                   u:object_r:sysfs_ssr_toggle:s0
