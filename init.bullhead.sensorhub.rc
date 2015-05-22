@@ -1,21 +1,6 @@
 
 on post-fs
-    write /sys/class/gpio/export 59
-    write /sys/class/gpio/export 60
-    write /sys/class/gpio/export 65
-    write /sys/class/gpio/export 66
-    chown system system /sys/class/gpio/gpio59
-    chown system system /sys/class/gpio/gpio59/value
-    chown system system /sys/class/gpio/gpio59/direction
-    chown system system /sys/class/gpio/gpio60
-    chown system system /sys/class/gpio/gpio60/value
-    chown system system /sys/class/gpio/gpio60/direction
-    chown system system /sys/class/gpio/gpio65
-    chown system system /sys/class/gpio/gpio65/value
-    chown system system /sys/class/gpio/gpio65/direction
-    chown system system /sys/class/gpio/gpio66
-    chown system system /sys/class/gpio/gpio66/value
-    chown system system /sys/class/gpio/gpio66/direction
+    chown system system /sys/class/gpio/export
     ## set gpio75 as input to power the hall sensor when connected to AP
     write /sys/class/gpio/export 75
     write /sys/class/gpio/gpio75/direction in

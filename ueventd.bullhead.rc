@@ -77,3 +77,11 @@
 /dev/block/platform/soc.0/f9824900.sdhci/by-name/persistent 0600 system system
 # sensor HUB
 /dev/spidev7.0            0640   system     system
+/sys/devices/soc.0/fd510000.pinctrl/gpio/gpio59 value       0640   system   system
+/sys/devices/soc.0/fd510000.pinctrl/gpio/gpio59 direction   0640   system   system
+/sys/devices/soc.0/fd510000.pinctrl/gpio/gpio60 value       0640   system   system
+/sys/devices/soc.0/fd510000.pinctrl/gpio/gpio60 direction   0640   system   system
+/sys/devices/soc.0/fd510000.pinctrl/gpio/gpio65 value       0640   system   system
+/sys/devices/soc.0/fd510000.pinctrl/gpio/gpio65 direction   0640   system   system
+/sys/devices/soc.0/fd510000.pinctrl/gpio/gpio66 value       0640   system   system
+/sys/devices/soc.0/fd510000.pinctrl/gpio/gpio66 direction   0640   system   system
