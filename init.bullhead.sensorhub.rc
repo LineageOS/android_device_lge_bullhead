@@ -16,6 +16,9 @@ on post-fs
     chown system system /sys/class/gpio/gpio66
     chown system system /sys/class/gpio/gpio66/value
     chown system system /sys/class/gpio/gpio66/direction
+    ## set gpio75 as input to power the hall sensor when connected to AP
+    write /sys/class/gpio/export 75
+    write /sys/class/gpio/gpio75/direction in
     ## The FW must be flashed before the HAL starts
     ## A complete flash happens only on FW update
     ## it takes ~2s to check if FW is up to date
