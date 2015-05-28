@@ -1,18 +1,10 @@
 
 on post-fs
-    chown system system /sys/class/gpio/export
     ## set gpio75 as input to power the hall sensor when connected to AP
     write /sys/class/gpio/export 75
     write /sys/class/gpio/gpio75/direction in
-    ## The FW must be flashed before the HAL starts
-    ## A complete flash happens only on FW update
-    ## it takes ~2s to check if FW is up to date
-    ## flashing will happen only on OTAs and takes ~35s
-    rm /data/flash-sh-fw.done
     start flash-sh-fw
-    wait /data/flash-sh-fw.done 60
-    rm /data/flash-sh-fw.done
 
-service flash-sh-fw /system/bin/logwrapper /system/bin/sensortool.bullhead -f /vendor/firmware/nano4x1.bin -w /data/flash-sh-fw.done
+service flash-sh-fw /system/bin/logwrapper /system/bin/sensortool.bullhead -f /vendor/firmware/nano4x1.bin
     oneshot
     disabled
