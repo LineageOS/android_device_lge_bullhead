@@ -1,6 +1,6 @@
 /* IPC Security Config */
 /* <GPS QMI Service ID - 16>:<GPS QMI Instance ID - all instances>:<Client Group ID> */
-16:4294967295:1000
+16:4294967295:1000:3004
 704:4294967295:1000
 701:4294967295:1001
 /* SS CTL service to be used by system and net_raw processes */
@@ -9,6 +9,8 @@
 50:4294967295:1001
 /* QMI-SLIM service permitted to gps and net_raw */
 55:4294967295:1021:3004
+/* <LOWI QMI Service ID - 38>:<LOWI QMI Instance ID - all instances>:<Client Group ID> */
+56:4294967295:1021:3004
 /* Allow RCS service to aquire net_raw permission */
 18:4294967295:1001:3004
 /* Allow QMID service to aquire net_raw permission */
