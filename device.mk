@@ -201,6 +201,10 @@ PRODUCT_PACKAGES += \
     activity_recognition.bullhead \
     sensortool.bullhead
 
+PRODUCT_PACKAGES += \
+    keystore.msm8992 \
+    gatekeeper.msm8992
+
 DEVICE_PACKAGE_OVERLAYS := \
     device/lge/bullhead/overlay
 
