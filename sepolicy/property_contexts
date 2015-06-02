@@ -2,3 +2,4 @@ wc_transport.    u:object_r:wc_transport_prop:s0
 sys.listeners.   u:object_r:qseecomtee_prop:s0
 sys.keymaster.   u:object_r:qseecomtee_prop:s0
 radio.atfwd.     u:object_r:radio_atfwd_prop:s0
+sys.ims.         u:object_r:qcom_ims_prop:s0

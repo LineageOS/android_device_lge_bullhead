@@ -1,0 +1,9 @@
+# For IP Multimedia Subsystem Connection Manager (IMSCM)
+type imscm, domain;
+type imscm_exec, exec_type, file_type;
+
+# Started by init
+init_daemon_domain(imscm)
+
+# To make VT call
+binder_use(imscm)
