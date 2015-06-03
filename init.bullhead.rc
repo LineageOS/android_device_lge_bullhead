@@ -137,6 +137,9 @@ on boot
 on post-fs-data
     write /sys/kernel/boot_adsp/boot 1
 
+    #Update touch firmware if required
+    write /sys/bus/i2c/devices/2-0020/check_fw 1
+
     mkdir /persist/data 0700 system system
     mkdir /persist/data/sfs 0700 system system
     mkdir /persist/data/tz 0700 system system
