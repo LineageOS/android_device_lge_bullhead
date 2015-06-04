@@ -1,3 +1,19 @@
+#
+# Copyright 2015 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
 on charger
     # low power governing
     write /sys/devices/system/cpu/cpu1/online 0
@@ -8,69 +24,15 @@ on charger
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor powersave
 
 on boot
+    # Use only little cpus on booting time
     write /sys/devices/system/cpu/cpu4/online 0
     write /sys/devices/system/cpu/cpu5/online 0
 
-on property:dev.bootcomplete=1
-    # ensure at most one A57 is online when thermal hotplug is disabled
-    write /sys/devices/system/cpu/cpu5/online 0
-    # in case CPU4 is online, limit its frequency
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 960000
-    # Limit A57 max freq from msm_perf module in case CPU 4 is offline
-    write /sys/module/msm_performance/parameters/cpu_max_freq "4:960000 5:960000"
-    # disable thermal bcl hotplug to switch governor
-    write /sys/module/msm_thermal/core_control/enabled 0
-    # configure governor settings for little cluster
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load 1
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_migration_notif 1
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay 19000
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 90
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 20000
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 960000
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy 1
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads 80
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 40000
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis 80000
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 384000
-    # online CPU4
-    write /sys/devices/system/cpu/cpu4/online 1
-    # Best effort limiting for first time boot if msm_performance module is absent
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 960000
-    # configure governor settings for big cluster
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor interactive
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_sched_load 1
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_migration_notif 1
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay 19000
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load 90
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 20000
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 1248000
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy 1
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads 85
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 40000
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 384000
-    # restore A57's max
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1824000
-    # re-enable thermal and BCL hotplug
-    write /sys/module/msm_thermal/core_control/enabled 1
-    # plugin remaining A57s
-    write /sys/devices/system/cpu/cpu5/online 1
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
-    # Restore CPU 4 max freq from msm_performance
-    write /sys/module/msm_performance/parameters/cpu_max_freq "4:4294967295 5:4294967295"
-    # input boost configuration
-    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1248000"
-    write /sys/module/cpu_boost/parameters/input_boost_ms 40
-    # Setting b.L scheduler parameters
-    write /proc/sys/kernel/sched_migration_fixup 1
-    write /proc/sys/kernel/sched_small_task 30
-    write /proc/sys/kernel/sched_upmigrate 99
-    write /proc/sys/kernel/sched_downmigrate 85
-    write /proc/sys/kernel/sched_freq_inc_notify 400000
-    write /proc/sys/kernel/sched_freq_dec_notify 400000
-    # enable rps static configuration
-    write /sys/class/net/rmnet_ipa0/queues/rx-0/rps_cpus 8
+service init-power-sh /system/bin/init.bullhead.power.sh
+    class late_start
+    user root
+    disabled
+    oneshot
 
-    # Disable sched_boost
-    write /proc/sys/kernel/sched_boost 0
-
+on property:sys.boot_completed=1
+    start init-power-sh
