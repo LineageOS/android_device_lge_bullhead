@@ -49,7 +49,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/audio_policy.conf:system/etc/audio_policy.conf \
     device/lge/bullhead/audio_effects.conf:system/etc/audio_effects.conf \
-    device/lge/bullhead/mixer_paths.xml:system/etc/mixer_paths.xml
+    device/lge/bullhead/mixer_paths.xml:system/etc/mixer_paths.xml \
+    device/lge/bullhead/audio_platform_info.xml:system/etc/audio_platform_info.xml
 
 #Sound Trigger
 PRODUCT_COPY_FILES += \
@@ -238,6 +239,15 @@ DEVICE_PACKAGE_OVERLAYS := \
 # Enable AAC 5.1 output
 PRODUCT_PROPERTY_OVERRIDES += \
     media.aac_51_output_enabled=true
+
+# Audio
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.audio.dualmic.config=endfire \
+    persist.audio.fluence.voicecall=true \
+    persist.audio.fluence.voicecomm=true \
+    persist.audio.fluence.voicerec=false \
+    persist.audio.fluence.speaker=true \
+    persist.speaker.prot.enable=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \

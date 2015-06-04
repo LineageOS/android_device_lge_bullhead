@@ -142,6 +142,9 @@ on post-fs-data
     mkdir /data/misc/perfd 0755 root system
     chmod 2755 /data/misc/perfd
 
+    # Audio
+    mkdir /data/misc/audio 0770 audio audio
+
     rm /data/misc/perfd/default_values
 
     # Subsytem Ramdump collection
