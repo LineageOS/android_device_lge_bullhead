@@ -175,7 +175,7 @@ service iprenew_bt-pan /system/bin/dhcpcd -n
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /system/bin/qmuxd
     class main
-    user root
+    user radio
     group radio audio bluetooth gps
 
 service qti /system/vendor/bin/qti
