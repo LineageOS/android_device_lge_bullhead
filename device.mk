@@ -117,6 +117,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/msm_irqbalance.conf:vendor/etc/msm_irqbalance.conf
 
+# Power configuration file
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/init.bullhead.power.sh:system/bin/init.bullhead.power.sh
+
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_AAPT_CONFIG := normal
