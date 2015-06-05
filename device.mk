@@ -289,9 +289,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=0
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.atfwd.start=false
-
 # Update 1x signal strength after 2s
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.radio.snapshot_enabled=1 \
