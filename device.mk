@@ -61,6 +61,20 @@ PRODUCT_COPY_FILES += \
     device/lge/bullhead/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     device/lge/bullhead/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl
 
+# for launcher layout
+PRODUCT_PACKAGES += \
+    BullheadLayout
+
+# Delegation for OEM customization
+PRODUCT_OEM_PROPERTIES := \
+    ro.config.ringtone \
+    ro.config.notification_sound \
+    ro.config.alarm_alert \
+    ro.config.wallpaper \
+    ro.config.wallpaper_component \
+    ro.oem.* \
+    oem.*
+
 # Prebuilt input device calibration files
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/touch_dev.idc:system/usr/idc/touch_dev.idc
