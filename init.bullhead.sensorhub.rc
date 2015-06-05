@@ -5,6 +5,6 @@ on post-fs
     write /sys/class/gpio/gpio75/direction in
     start flash-sh-fw
 
-service flash-sh-fw /system/bin/logwrapper /system/bin/sensortool.bullhead -f /vendor/firmware/nano4x1.bin
+service flash-sh-fw /system/bin/sensortool.bullhead -f /vendor/firmware/nano4x1.bin
     oneshot
     disabled
