@@ -8,7 +8,7 @@ function write() {
 }
 
 function copy() {
-    cat $1 > $1
+    cat $1 > $2
 }
 
 function get-set-forall() {
