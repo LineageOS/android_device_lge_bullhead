@@ -1,7 +1,8 @@
 # Data files
 /data/misc/perfd(/.*)?         u:object_r:mpctl_data_file:s0
 /data/misc/perfd/mpctl         u:object_r:mpctl_socket:s0
-/data/time(/.*)?                        u:object_r:time_data_file:s0
+/data/misc/radio(/.*)?         u:object_r:radio_data_file:s0
+/data/time(/.*)?               u:object_r:time_data_file:s0
 /data/ramdump(/.*)?            u:object_r:ramdump_data_file:s0
 
 # GPU device

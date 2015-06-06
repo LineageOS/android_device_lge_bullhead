@@ -17,6 +17,9 @@ allow rild per_mgr_service:service_manager find;
 
 allow rild time_daemon:unix_stream_socket connectto;
 
+# rild reads qcril.db linked to /system/etc/qcril.db
+allow rild radio_data_file:lnk_file read;
+
 userdebug_or_eng(`
   allow rild ssr_device:chr_file { open read };
 
