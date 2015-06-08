@@ -128,6 +128,11 @@ on boot
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth
     write /proc/sys/net/ipv4/tcp_adv_win_scale 2
 
+    # Mark the copy complete flag to not completed
+    write /data/misc/radio/copy_complete 0
+    chown radio radio /data/misc/radio/copy_complete
+    chmod 0660 /data/misc/radio/copy_complete
+
 on post-fs-data
     write /sys/kernel/boot_adsp/boot 1
 
@@ -384,6 +389,11 @@ service imscmservice /system/bin/imscmservice
     class main
     user system
     group radio net_raw diag log
+
+service bullhead-sh /system/bin/init.bullhead.sh
+    class late_start
+    user root
+    oneshot
 
 # bugreport is triggered by holding down volume down, volume up and power
 service bugreport /system/bin/dumpstate -d -p -B \
