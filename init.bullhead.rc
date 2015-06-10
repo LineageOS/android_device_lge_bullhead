@@ -379,6 +379,7 @@ service bugreport /system/bin/dumpstate -d -p -B \
 service fingerprintd /system/bin/fingerprintd
     class late_start
     user system
+    group system input
 
 on verity-logging
     exec u:r:slideshow:s0 -- /sbin/slideshow warning/verity_red_1 warning/verity_red_2
