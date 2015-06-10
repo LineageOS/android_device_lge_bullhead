@@ -25,7 +25,4 @@ allow thermal-engine sysfs_thermal:dir r_dir_perms;
 allow thermal-engine sysfs_thermal:file rw_file_perms;
 allow thermal-engine sysfs_thermal:lnk_file read;
 
-# Writes to /sys/module/msm_thermal/core_control/cpus_offlined
-allow thermal-engine sysfs_mpdecision:file rw_file_perms;
-
 r_dir_file(thermal-engine, sysfs_ssr)
