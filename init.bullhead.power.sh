@@ -36,6 +36,18 @@ write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 960000
 # Limit A57 max freq from msm_perf module in case CPU 4 is offline
 write /sys/module/msm_performance/parameters/cpu_max_freq "4:960000 5:960000"
 
+# Disable CPU retention
+write /sys/module/lpm_levels/system/a53/cpu0/retention/idle_enabled 0
+write /sys/module/lpm_levels/system/a53/cpu1/retention/idle_enabled 0
+write /sys/module/lpm_levels/system/a53/cpu2/retention/idle_enabled 0
+write /sys/module/lpm_levels/system/a53/cpu3/retention/idle_enabled 0
+write /sys/module/lpm_levels/system/a57/cpu4/retention/idle_enabled 0
+write /sys/module/lpm_levels/system/a57/cpu5/retention/idle_enabled 0
+
+# Disable L2 retention
+write /sys/module/lpm_levels/system/a53/a53-l2-retention/idle_enabled 0
+write /sys/module/lpm_levels/system/a57/a57-l2-retention/idle_enabled 0
+
 # configure governor settings for little cluster
 write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
 write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load 1
