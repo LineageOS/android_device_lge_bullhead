@@ -48,7 +48,7 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/audio_policy.conf:system/etc/audio_policy.conf \
-    device/lge/bullhead/audio_effects.conf:system/etc/audio_effects.conf \
+    device/lge/bullhead/audio_effects.conf:vendor/etc/audio_effects.conf \
     device/lge/bullhead/mixer_paths.xml:system/etc/mixer_paths.xml \
     device/lge/bullhead/audio_platform_info.xml:system/etc/audio_platform_info.xml
 
@@ -169,7 +169,11 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.usb.default \
     audio.r_submix.default \
-    libaudio-resampler
+    libaudio-resampler \
+    libqcomvoiceprocessing \
+    libqcomvisualizer \
+    libqcompostprocbundle
+
 
 PRODUCT_PACKAGES += \
     librmnetctl \
