@@ -107,7 +107,6 @@
 /sys/devices/virtual/graphics/fb([0-2])+/s3d_mode                   u:object_r:sysfs_graphics:s0
 /sys/devices/msm_hsic_host/host_ready                               u:object_r:sysfs_hsic_host_rdy:s0
 /sys/bus/msm_subsys(/.*)?                                           u:object_r:sysfs_ssr:s0
-/sys/module/ccid_bridge/parameters/bulk_msg_timeout                 u:object_r:sysfs_usb_uicc:s0
 /sys/bus/msm_subsys/devices/subsys0/restart_level                   u:object_r:sysfs_ssr_toggle:s0
 /sys/bus/msm_subsys/devices/subsys1/restart_level                   u:object_r:sysfs_ssr_toggle:s0
 /sys/bus/msm_subsys/devices/subsys2/restart_level                   u:object_r:sysfs_ssr_toggle:s0
@@ -120,5 +119,7 @@
 /dev/fpc1020                                                        u:object_r:fpc_device:s0
 
 # Persist files
-/persist(/.*)?                                                      u:object_r:persist_file:s0
-/persist/wlan_mac\.bin                                              u:object_r:persist_wifi_file:s0
+/persist(/.*)?                     u:object_r:persist_file:s0
+/persist/data(/.*)?                u:object_r:persist_data_file:s0
+/persist/data/tz(/.*)?             u:object_r:persist_drm_file:s0
+/persist/wlan_mac\.bin             u:object_r:persist_wifi_file:s0
