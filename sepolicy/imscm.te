@@ -7,3 +7,6 @@ init_daemon_domain(imscm)
 
 # To make VT call
 binder_use(imscm)
+
+#Add connectionmanager service
+allow imscm imscm_service:service_manager add;
