@@ -20,15 +20,16 @@ function get-set-forall() {
 
 ################################################################################
 
+# take the A57s offline when thermal hotplug is disabled
+write /sys/devices/system/cpu/cpu4/online 0
+write /sys/devices/system/cpu/cpu5/online 0
+
 # disable thermal bcl hotplug to switch governor
 write /sys/module/msm_thermal/core_control/enabled 0
 get-set-forall /sys/devices/soc.0/qcom,bcl.*/mode disable
 bcl_hotplug_mask=`get-set-forall /sys/devices/soc.0/qcom,bcl.*/hotplug_mask 0`
 bcl_hotplug_soc_mask=`get-set-forall /sys/devices/soc.0/qcom,bcl.*/hotplug_soc_mask 0`
 get-set-forall /sys/devices/soc.0/qcom,bcl.*/mode enable
-
-# ensure at most one A57 is online when thermal hotplug is disabled
-write /sys/devices/system/cpu/cpu5/online 0
 
 # Best effort limiting for first time boot if msm_performance module is absent
 write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 960000
