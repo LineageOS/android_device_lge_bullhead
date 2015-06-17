@@ -90,6 +90,7 @@
 /system/bin/ims_rtp_daemon         u:object_r:ims_exec:s0
 /system/bin/imscmservice           u:object_r:imscm_exec:s0
 /system/bin/cnd                    u:object_r:cnd_exec:s0
+/system/bin/init.bullhead.power.sh u:object_r:init-power-sh_exec:s0
 
 # Sysfs files used by qmuxd
 /sys/devices/virtual/smdpkt/smdcntl([0-9])+/open_timeout u:object_r:sysfs_smdcntl_open_timeout:s0
@@ -114,6 +115,8 @@
 /sys/bus/msm_subsys/devices/subsys4/restart_level                   u:object_r:sysfs_ssr_toggle:s0
 /sys/devices/soc0/.*                                                u:object_r:sysfs_socinfo:s0
 /sys/module/msm_serial_hs/parameters/debug_mask                     u:object_r:sysfs_msmuart_file:s0
+/sys/devices/soc.0/qcom,bcl[^/]*(/.*)?                              u:object_r:sysfs_thermal:s0
+/sys/module/lpm_levels(/.*)?                                        u:object_r:sysfs_power_management:s0
 
 # Fingerprint device
 /dev/fpc1020                                                        u:object_r:fpc_device:s0

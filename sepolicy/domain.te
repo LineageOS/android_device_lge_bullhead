@@ -3,3 +3,6 @@ userdebug_or_eng(`
 ')
 
 r_dir_file(domain, sysfs_socinfo);
+r_dir_file(domain, sysfs_thermal);
+r_dir_file(domain, sysfs_power_management);
+r_dir_file(domain, sysfs_devices_system_cpu);
