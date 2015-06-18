@@ -75,6 +75,10 @@ on boot
     # don't run as a service to avoid race conditions
     exec /system/bin/init.bullhead.power.sh
 
+    # update foreground cpuset now that processors are up
+    write /dev/cpuset/foreground/cpus 0-5
+    write /dev/cpuset/background/cpus 0
+
     # Bluetooth
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
