@@ -15,7 +15,6 @@
 #
 
 import init.bullhead.usb.rc
-import init.bullhead.power.rc
 import init.bullhead.diag.rc
 import init.bullhead.fp.rc
 import init.bullhead.sensorhub.rc
@@ -23,6 +22,15 @@ import init.bullhead.sensorhub.rc
 on early-init
     mount debugfs debugfs /sys/kernel/debug
     chown system system /sys/kernel/debug/kgsl/proc
+
+on charger
+    # low power governing
+    write /sys/devices/system/cpu/cpu1/online 0
+    write /sys/devices/system/cpu/cpu2/online 0
+    write /sys/devices/system/cpu/cpu3/online 0
+    write /sys/devices/system/cpu/cpu4/online 0
+    write /sys/devices/system/cpu/cpu5/online 0
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor powersave
 
 on init
     # Load persistent dm-verity state
@@ -62,6 +70,10 @@ on early-boot
 
 on boot
     symlink /dev/block/platform/soc.0/f9824900.sdhci /dev/block/bootdevice
+
+    # execute script to set initial CPU settings
+    # don't run as a service to avoid race conditions
+    exec /system/bin/init.bullhead.power.sh
 
     # Bluetooth
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
