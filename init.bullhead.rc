@@ -129,6 +129,7 @@ on boot
     write /proc/sys/net/ipv4/tcp_adv_win_scale 2
 
     # Mark the copy complete flag to not completed
+    mkdir /data/misc/radio 0770 radio radio
     write /data/misc/radio/copy_complete 0
     chown radio radio /data/misc/radio/copy_complete
     chmod 0660 /data/misc/radio/copy_complete
@@ -148,9 +149,10 @@ on post-fs-data
     mkdir /data/nfc 0770 nfc nfc
     mkdir /data/nfc/param 0770 nfc nfc
 
-    # Ecc_Handler qcril.db
-    mkdir /data/misc/radio 0770 radio radio
-    symlink /system/etc/qcril.db /data/misc/radio/qcril.db
+    # use qcril.db to handle Ecc and load MBN
+    copy /system/etc/qcril.db /data/misc/radio/qcril.db
+    chown radio radio /data/misc/radio/qcril.db
+    chmod 0600 /data/misc/radio/qcril.db
 
     # Create folder for mm-qcamera-daemon
     mkdir /data/misc/camera 0770 camera camera
