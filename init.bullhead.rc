@@ -168,8 +168,6 @@ on post-fs-data
 
     setprop vold.post_fs_data_done 1
 
-on charger
-
 service irsc_util /system/bin/irsc_util "/etc/sec_config"
     class main
     user root
