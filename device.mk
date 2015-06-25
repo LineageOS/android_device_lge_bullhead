@@ -136,6 +136,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.power.sh:system/bin/init.bullhead.power.sh
 
+# MBN
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/init.bullhead.sh:system/bin/init.bullhead.sh
+
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_AAPT_CONFIG := normal
