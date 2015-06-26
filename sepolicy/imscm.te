@@ -10,3 +10,5 @@ binder_use(imscm)
 
 #Add connectionmanager service
 allow imscm imscm_service:service_manager add;
+
+binder_service(imscm)
