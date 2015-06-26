@@ -119,7 +119,8 @@
 /sys/bus/msm_subsys/devices/subsys4/restart_level                   u:object_r:sysfs_ssr_toggle:s0
 /sys/devices/soc0/.*                                                u:object_r:sysfs_socinfo:s0
 /sys/module/msm_serial_hs/parameters/debug_mask                     u:object_r:sysfs_msmuart_file:s0
-/sys/devices/soc.0/qcom,bcl[^/]*(/.*)?                              u:object_r:sysfs_thermal:s0
+/sys/devices/soc\.0/qcom,bcl[^/]*(/.*)?                             u:object_r:sysfs_thermal:s0
+/sys/devices/soc\.0/fdb00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk u:object_r:sysfs_thermal:s0
 /sys/module/lpm_levels(/.*)?                                        u:object_r:sysfs_power_management:s0
 
 # Fingerprint device
