@@ -136,3 +136,4 @@
 /persist/data(/.*)?                u:object_r:persist_data_file:s0
 /persist/data/tz(/.*)?             u:object_r:persist_drm_file:s0
 /persist/wlan_mac\.bin             u:object_r:persist_wifi_file:s0
+/persist/sensorcal\.json           u:object_r:persist_sensortool_file:s0

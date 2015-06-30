@@ -28,6 +28,7 @@ type persist_file, file_type;
 type persist_data_file, file_type;
 type persist_drm_file, file_type;
 type persist_wifi_file, file_type;
+type persist_sensortool_file, file_type;
 
 #File types required by mdm-helper
 type sysfs_ssr,  sysfs_type, fs_type;
