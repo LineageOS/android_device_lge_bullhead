@@ -59,7 +59,7 @@
 # qmi protocol driver
 /dev/qmi[0-2]                          u:object_r:radio_device:s0
 # shared memory drivers
-/dev/smdcntl([0-9])+                   u:object_r:radio_device:s0
+/dev/smdcntl([0-9])+                   u:object_r:smd_device:s0
 /dev/smd([0-9])+                       u:object_r:smd_device:s0
 /dev/smem_log                          u:object_r:smem_log_device:s0
 
