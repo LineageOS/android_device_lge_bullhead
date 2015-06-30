@@ -64,6 +64,8 @@
 
 /dev/msm_audio_cal                     u:object_r:audio_device:s0
 /dev/msm_rtac                          u:object_r:audio_device:s0
+/dev/v4l-subdev[0-9]*                  u:object_r:video_device:s0
+/dev/media([0-9])+                     u:object_r:camera_device:s0
 
 /dev/ttyHS0                            u:object_r:ttyHS0_device:s0
 /dev/subsys_modem                      u:object_r:subsys_modem_device:s0
@@ -88,6 +90,8 @@
 /system/bin/ATFWD-daemon           u:object_r:atfwd_exec:s0
 /system/bin/subsystem_ramdump      u:object_r:ssr_exec:s0
 /system/bin/sensortool\.bullhead   u:object_r:sensortool_exec:s0
+/system/bin/mm-qcamera-daemon      u:object_r:camera_exec:s0
+
 /vendor/bin/qti                    u:object_r:qti_exec:s0
 /system/bin/imsdatadaemon          u:object_r:ims_exec:s0
 /system/bin/imsqmidaemon           u:object_r:ims_exec:s0
