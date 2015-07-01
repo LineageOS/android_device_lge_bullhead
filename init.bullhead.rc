@@ -125,13 +125,13 @@ on boot
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth
     write /proc/sys/net/ipv4/tcp_adv_win_scale 2
 
+on post-fs-data
     # Mark the copy complete flag to not completed
     mkdir /data/misc/radio 0770 radio radio
     write /data/misc/radio/copy_complete 0
     chown radio radio /data/misc/radio/copy_complete
     chmod 0660 /data/misc/radio/copy_complete
 
-on post-fs-data
     write /sys/kernel/boot_adsp/boot 1
 
     #Update touch firmware if required
@@ -401,7 +401,8 @@ service imscmservice /system/bin/imscmservice
 
 service bullhead-sh /system/bin/init.bullhead.sh
     class late_start
-    user root
+    user radio
+    group system
     oneshot
 
 # bugreport is triggered by holding down volume down, volume up and power
