@@ -31,6 +31,8 @@
     <bool name="config_show_cdma" translatable="false">true</bool>
     <!-- CDMA activation goes through HFA [DO NOT TRANSLATE] -->
     <bool name="config_use_hfa_for_provisioning" translatable="false">true</bool>
+    <!-- Don't display swap button after merging calls into Cdma conference. -->
+    <bool name="support_swap_after_merge">false</bool>
     <!-- Display carrier settings -->
     <bool name="config_carrier_settings_enable">true</bool>
     <!-- carrier settings menu -->
