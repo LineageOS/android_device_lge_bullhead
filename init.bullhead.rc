@@ -164,6 +164,8 @@ on post-fs-data
 
     #Create directories for Location services
     mkdir /data/misc/location 0770 gps gps
+    mkdir /data/misc/location/mq 0770 gps gps
+    mkdir /data/misc/location/xtwifi 0770 gps gps
     mkdir /data/misc/location/gpsone_d 0770 system gps
 
     #Create PERFD deamon related dirs
@@ -311,6 +313,11 @@ service iprenew_eth0 /system/bin/dhcpcd -n
     class late_start
     disabled
     oneshot
+
+service loc_launcher /system/bin/loc_launcher
+    #loc_launcher will start as root and set its uid to gps
+    class late_start
+    group gps inet net_raw diag net_admin wifi
 
 service cnss-daemon /system/bin/cnss-daemon -n -l
     class late_start
