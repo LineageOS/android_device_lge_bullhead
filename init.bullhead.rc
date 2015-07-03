@@ -130,8 +130,6 @@ on boot
     write /data/misc/radio/copy_complete 0
     chown radio radio /data/misc/radio/copy_complete
     chmod 0660 /data/misc/radio/copy_complete
-    # Remove previous content
-    exec -- rm -rf /data/misc/radio/modem_config
 
 on post-fs-data
     write /sys/kernel/boot_adsp/boot 1
