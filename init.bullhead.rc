@@ -24,6 +24,9 @@ on early-init
     chown system system /sys/kernel/debug/kgsl/proc
 
 on charger
+    # execute script to set initial CPU settings
+    exec /system/bin/init.bullhead.power.sh
+
     # low power governing
     write /sys/devices/system/cpu/cpu1/online 0
     write /sys/devices/system/cpu/cpu2/online 0
