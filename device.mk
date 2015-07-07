@@ -175,8 +175,8 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     libqcomvoiceprocessing \
     libqcomvisualizer \
-    libqcompostprocbundle
-
+    libqcompostprocbundle \
+    libvolumelistener
 
 PRODUCT_PACKAGES += \
     librmnetctl \
