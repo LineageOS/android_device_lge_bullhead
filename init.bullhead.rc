@@ -91,6 +91,9 @@ on boot
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/device/extldo
     chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
 
+    # Fingerprint
+    chown system system /sys/bus/spi/drivers/fpc1020/spi1.2/clk_enable
+
     # create symlink for fb1 as HDMI
     symlink /dev/graphics/fb1 /dev/graphics/hdmi
 
