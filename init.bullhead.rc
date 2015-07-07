@@ -163,14 +163,18 @@ on post-fs-data
     mkdir /data/misc/location/xtwifi 0770 gps gps
     mkdir /data/misc/location/gpsone_d 0770 system gps
 
-    #Create PERFD deamon related dirs
-    mkdir /data/misc/perfd 0755 root system
-    chmod 2755 /data/misc/perfd
-
     # Audio
     mkdir /data/misc/audio 0770 audio audio
 
-    rm /data/misc/perfd/default_values
+    # perf daemon
+    setprop ro.min_freq_0 384000
+    setprop ro.min_freq_4 384000
+    mkdir /data/misc/perfd 0755 root system
+    chmod 2755 /data/misc/perfd
+    mkdir /data/system/perfd 0770 root system
+    rm /data/system/perfd/default_values
+    chmod 2770 /data/system/perfd
+
 
     # Subsytem Ramdump collection
     mkdir /data/ramdump 0700 root root
@@ -212,6 +216,10 @@ service qmuxd /system/bin/qmuxd
     class main
     user radio
     group radio audio bluetooth gps
+
+service perfd /system/bin/perfd
+    class main
+    user root
 
 service qti /system/vendor/bin/qti
     class main
@@ -332,10 +340,6 @@ service time_daemon /system/bin/time_daemon
     class late_start
     user root
     group root
-
-service perfd /system/bin/perfd
-    class main
-    user root
 
 service charger /sbin/healthd -c
     class charger
