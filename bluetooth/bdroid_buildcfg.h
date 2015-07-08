@@ -18,4 +18,7 @@
 #define _BDROID_BUILDCFG_H
 
 #define BTA_DISABLE_DELAY 1000 /* in milliseconds */
+
+#define BTM_WBS_INCLUDED TRUE /* Enable WBS */
+#define BTIF_HF_WBS_PREFERRED TRUE /* Use WBS */
 #endif
