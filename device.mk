@@ -257,6 +257,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.speaker=true \
     persist.speaker.prot.enable=true
 
+# Reduce client buffer size for fast audio output tracks
+PRODUCT_PROPERTY_OVERRIDES += \
+    af.fast_track_multiplier=1
+
+# Low latency audio buffer size in frames
+PRODUCT_PROPERTY_OVERRIDES += \
+    audio_hal.period_size=192
+
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=15
