@@ -200,7 +200,7 @@ service rmt_storage /system/bin/rmt_storage
 service start_hci_filter /system/bin/wcnss_filter
     class late_start
     user bluetooth
-    group bluetooth
+    group bluetooth system
     disabled
 
 on property:wc_transport.start_hci=true
