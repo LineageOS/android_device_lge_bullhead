@@ -42,4 +42,8 @@
         <device name="SND_DEVICE_OUT_VOICE_TTY_FULL_HEADPHONES" backend="headphones" interface="SLIMBUS_5_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_TTY_VCO_HEADPHONES" backend="headphones" interface="SLIMBUS_5_RX"/>
     </backend_names>
+    <config_params>
+        <!-- If sound card name is not known, remove this entry -->
+        <param key="snd_card_name" value="msm8994-tomtom-snd-card"/>
+    </config_params>
 </audio_platform_info>
