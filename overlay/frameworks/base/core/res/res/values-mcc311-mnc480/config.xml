@@ -72,9 +72,4 @@
     <string translatable="false" name="config_mobile_hotspot_provision_app_no_ui">com.lge.entitlement.SILENT_ENTITLEMENT_CHECK</string>
     <string translatable="false" name="config_mobile_hotspot_provision_response">com.lge.entitlement.SILENT_ENTITLEMENT_CHECK_RESULT</string>
 
-    <!-- Flag specifying whether VT should be available for carrier: independent of
-         carrier provisioning. If false: hard disabled. If true: then depends on carrier
-         provisioning, availability etc -->
-    <bool name="config_carrier_vt_available">true</bool>
-
 </resources>
