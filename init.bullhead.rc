@@ -189,14 +189,9 @@ on post-fs-data
     mkdir /data/misc/audio 0770 audio audio
 
     # perf daemon
-    setprop ro.min_freq_0 384000
-    setprop ro.min_freq_4 384000
     mkdir /data/misc/perfd 0755 root system
     chmod 2755 /data/misc/perfd
-    mkdir /data/system/perfd 0770 root system
-    rm /data/system/perfd/default_values
-    chmod 2770 /data/system/perfd
-
+    rm /data/misc/perfd/default_values
 
     # Subsytem Ramdump collection
     mkdir /data/ramdump 0700 root root
