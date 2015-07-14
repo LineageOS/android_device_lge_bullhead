@@ -43,6 +43,9 @@ on charger
     write /sys/module/lpm_levels/system/a53/a53-l2-retention/idle_enabled 0
     write /sys/module/lpm_levels/system/a57/a57-l2-retention/idle_enabled 0
 
+    # allow CPUs to go in deeper idle state than C0
+    write /sys/module/lpm_levels/parameters/sleep_disabled 0
+
 on init
     # Load persistent dm-verity state
     verity_load_state
