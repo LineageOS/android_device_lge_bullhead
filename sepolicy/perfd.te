@@ -26,3 +26,6 @@ allow perfd sysfs_thermal:dir search;
 allow perfd sysfs_thermal:file rw_file_perms;
 
 allow perfd proc_kernel_sched:file r_file_perms;
+
+# allow writing to /sys/devices/system/cpu/*
+allow perfd sysfs_devices_system_cpu:file rw_file_perms;
