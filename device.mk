@@ -35,6 +35,7 @@ PRODUCT_COPY_FILES += \
     device/lge/bullhead/fstab.bullhead:root/fstab.bullhead \
     device/lge/bullhead/ueventd.bullhead.rc:root/ueventd.bullhead.rc \
     device/lge/bullhead/init.bullhead.sensorhub.rc:root/init.bullhead.sensorhub.rc \
+    device/lge/bullhead/init.bullhead.ramdump.rc:root/init.bullhead.ramdump.rc \
     device/lge/bullhead/init.bullhead.fp.rc:root/init.bullhead.fp.rc
 
 PRODUCT_COPY_FILES += \

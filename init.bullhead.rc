@@ -18,6 +18,7 @@ import init.bullhead.usb.rc
 import init.bullhead.diag.rc
 import init.bullhead.fp.rc
 import init.bullhead.sensorhub.rc
+import init.bullhead.ramdump.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -146,6 +147,12 @@ on boot
 
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth
     write /proc/sys/net/ipv4/tcp_adv_win_scale 2
+
+    # Leds
+    chown system system /sys/class/leds/red/on_off_ms
+    chown system system /sys/class/leds/green/on_off_ms
+    chown system system /sys/class/leds/blue/on_off_ms
+    chown system system /sys/class/leds/red/rgb_start
 
 on post-fs-data
     # Mark the copy complete flag to not completed
