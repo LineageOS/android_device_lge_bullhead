@@ -13,3 +13,9 @@ allow init-power-sh sysfs_performance:file w_file_perms;
 allow init-power-sh sysfs_thermal:dir search;
 allow init-power-sh sysfs_thermal:file w_file_perms;
 allow init-power-sh sysfs_power_management:file w_file_perms;
+
+# interactive files in /sys receive the default sysfs context when created
+# after the restorecon of /sys/. Allow init-power-sh to restorecon sysfs files
+# and symlinks to sysfs_devices_system_cpu
+allow init-power-sh sysfs:{ dir file lnk_file } relabelfrom;
+allow init-power-sh sysfs_devices_system_cpu:{ dir file lnk_file } relabelto;

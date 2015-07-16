@@ -31,6 +31,11 @@ bcl_hotplug_mask=`get-set-forall /sys/devices/soc.0/qcom,bcl.*/hotplug_mask 0`
 bcl_hotplug_soc_mask=`get-set-forall /sys/devices/soc.0/qcom,bcl.*/hotplug_soc_mask 0`
 get-set-forall /sys/devices/soc.0/qcom,bcl.*/mode enable
 
+# some files in /sys/devices/system/cpu are created after the restorecon of
+# /sys/. These files receive the default label "sysfs".
+# Restorecon again to give new files the correct label.
+restorecon -R /sys/devices/system/cpu
+
 # Best effort limiting for first time boot if msm_performance module is absent
 write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 960000
 
@@ -51,6 +56,7 @@ write /sys/module/lpm_levels/system/a57/a57-l2-retention/idle_enabled 0
 
 # configure governor settings for little cluster
 write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
+restorecon -R /sys/devices/system/cpu # must restore after interactive
 write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load 1
 write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_migration_notif 1
 write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay 19000
@@ -68,6 +74,7 @@ write /sys/devices/system/cpu/cpu4/online 1
 
 # configure governor settings for big cluster
 write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor interactive
+restorecon -R /sys/devices/system/cpu # must restore after interactive
 write /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_sched_load 1
 write /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_migration_notif 1
 write /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay 19000
