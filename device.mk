@@ -325,6 +325,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.custom_ecc=1
 
+# IMS over WiFi
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.data.iwlan.enable=true
+
 # Request modem to send PLMN name always irrespective
 # of display condition in EFSPN.
 # RIL uses this property.
