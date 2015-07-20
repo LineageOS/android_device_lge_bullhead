@@ -233,11 +233,6 @@ PRODUCT_PACKAGES += \
     keystore.msm8992 \
     gatekeeper.msm8992
 
-# Verified boot
-PRODUCT_PACKAGES += \
-    slideshow \
-    verity_warning_images
-
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
    fs_config_files
