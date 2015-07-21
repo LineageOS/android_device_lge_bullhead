@@ -10,11 +10,8 @@ allow camera system_file:file execmod;
 allow camera { gpu_device video_device camera_device }:chr_file rw_file_perms;
 allow camera { mediaserver surfaceflinger }:fd use;
 
-# Create front and back camera sockets (/data/cam_socket[12])
-type_transition camera camera_data_file:sock_file camera_socket "cam_socket1";
-type_transition camera camera_data_file:sock_file camera_socket "cam_socket2";
-allow camera camera_socket:sock_file { create unlink };
-allow camera camera_data_file:sock_file unlink;
+# Create camera socket
+allow camera camera_data_file:sock_file { create unlink };
 
 # read/write to /data/misc/camera
 allow camera camera_data_file:dir w_dir_perms;
