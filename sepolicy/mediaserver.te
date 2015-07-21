@@ -1,2 +1,4 @@
 unix_socket_connect(mediaserver, thermal, thermal-engine)
 allow mediaserver thermal_socket:sock_file w_file_perms;
+
+unix_socket_send(mediaserver, camera, camera)
