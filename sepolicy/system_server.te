@@ -6,8 +6,8 @@ allow system_server self:netlink_socket create_socket_perms;
 
 allow system_server per_mgr_service:service_manager find;
 
-# Fingerprint device
-allow system_server fpc_device:chr_file rw_file_perms;
+# Fingerprint access
+allow system_server fingerprint_device:chr_file rw_file_perms;
 
 #Needed by libmdmdetect to get subsystem info and to check their states
 allow system_server sysfs_ssr:dir r_dir_perms;
