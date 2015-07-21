@@ -76,6 +76,7 @@
 /dev/qseecom                           u:object_r:tee_device:s0
 
 /dev/spich                             u:object_r:sensors_device:s0
+/dev/fpc1020                           u:object_r:fingerprint_device:s0
 
 # MSM camera related
 /dev/media[0-9]+                       u:object_r:camera_device:s0
@@ -140,10 +141,8 @@
 /sys/module/lpm_levels(/.*)?                                        u:object_r:sysfs_power_management:s0
 /sys/module/cpu_boost(/.*)?                                         u:object_r:sysfs_devices_system_cpu:s0
 /sys/devices/virtual/net/rmnet_ipa0/queues/rx-0/rps_cpus            u:object_r:sysfs_devices_system_cpu:s0
-/sys/devices/soc\.0/qcom,cpubw.26/devfreq/qcom,cpubw[^/]*(/.*)?      u:object_r:sysfs_devices_system_cpu:s0
-
-# Fingerprint device
-/dev/fpc1020                                                        u:object_r:fpc_device:s0
+/sys/devices/soc\.0/qcom,cpubw.26/devfreq/qcom,cpubw[^/]*(/.*)?     u:object_r:sysfs_devices_system_cpu:s0
+/sys/devices/soc\.0/f9966000\.spi_fpc(/.*)?                         u:object_r:sysfs_devices_fingerprint:s0
 
 # Persist files
 /persist(/.*)?                     u:object_r:persist_file:s0
