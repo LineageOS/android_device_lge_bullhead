@@ -12,6 +12,7 @@ type cnd_socket, file_type;
 type adspd_socket, file_type;
 type mpdecision_socket, file_type;
 type qmuxd_socket, file_type;
+type location_data_file, file_type, data_file_type;
 # Socket node needed by ims_data daemon
 type ims_socket, file_type;
 
