@@ -8,4 +8,7 @@ init_daemon_domain(cnd)
 file_type_auto_trans(cnd, socket_device, cnd_socket);
 
 # cnd is started as root uid/gid and transitions to system
-allow cnd self:capability { setuid setgid };
+allow cnd self:capability { setuid setgid net_raw };
+
+# create upd_socket to gather network info via ioctls (e.g. MTU size)
+allow cnd self:udp_socket { create ioctl };
