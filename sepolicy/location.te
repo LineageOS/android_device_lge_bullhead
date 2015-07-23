@@ -4,6 +4,12 @@ type location_exec, exec_type, file_type;
 
 init_daemon_domain(location)
 
+binder_use(location)
+binder_call(location, per_mgr)
+binder_call(location, system_server)
+
+qmux_socket(location)
+
 allow location location_data_file:dir rw_dir_perms;
 allow location location_data_file:file create_file_perms;
 
@@ -13,7 +19,16 @@ allow location location_data_file:sock_file { create setattr unlink };
 # daemon starts as root to obtain all DAC capabilities
 # TODO start as gps user and use filesystem-config to give
 # proper DAC capabilities.
-allow location self:capability { setuid setgid };
+allow location self:capability { setuid setgid net_raw};
 
 # execute /system/bin/lowi-server and /vendor/bin/slim_daemon
 allow location location_exec:file rx_file_perms;
+
+# slim_daemon receives data from Loc_hal_worker
+allow location self:socket create_socket_perms;
+
+# subsystem ramdump for debug builds
+userdebug_or_eng(`
+    allow location sysfs_ssr:dir r_dir_perms;
+    allow location sysfs_ssr:lnk_file read;
+')
