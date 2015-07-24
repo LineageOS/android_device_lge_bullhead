@@ -91,7 +91,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="489600" />
             <Limit name="bitrate" range="1-60000000" />
-            <Limit name="concurrent-instances" max="8" />
+            <Limit name="concurrent-instances" max="13" />
         </MediaCodec>
         <MediaCodec name="OMX.qcom.video.encoder.h263" type="video/3gpp" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -99,7 +99,7 @@ Only the three quirks included above are recognized at this point:
             <Quirk name="requires-loaded-to-idle-after-allocation" />
             <Limit name="size" min="96x64" max="720x576" />
             <Limit name="alignment" value="2x2" />
-            <Limit name="concurrent-instances" max="8" />
+            <Limit name="concurrent-instances" max="13" />
         </MediaCodec>
         <MediaCodec name="OMX.qcom.video.encoder.avc" type="video/avc" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -110,7 +110,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="972000" />
             <Limit name="bitrate" range="1-100000000" />
-            <Limit name="concurrent-instances" max="8" />
+            <Limit name="concurrent-instances" max="13" />
         </MediaCodec>
         <MediaCodec name="OMX.qcom.video.encoder.vp8" type="video/x-vnd.on2.vp8" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -121,7 +121,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="777600" />
             <Limit name="bitrate" range="1-20000000" />
-            <Limit name="concurrent-instances" max="8" />
+            <Limit name="concurrent-instances" max="13" />
         </MediaCodec>
     </Encoders>
     <Decoders>
@@ -135,7 +135,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="blocks-per-second" min="1" max="972000" />
             <Limit name="bitrate" range="1-100000000" />
             <Feature name="adaptive-playback" />
-            <Limit name="concurrent-instances" max="8" />
+            <Limit name="concurrent-instances" max="13" />
         </MediaCodec>
         <MediaCodec name="OMX.qcom.video.decoder.avc.secure" type="video/avc" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -160,7 +160,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="blocks-per-second" min="1" max="489600" />
             <Limit name="bitrate" range="1-60000000" />
             <Feature name="adaptive-playback" />
-            <Limit name="concurrent-instances" max="7" />
+            <Limit name="concurrent-instances" max="12" />
         </MediaCodec>
         <MediaCodec name="OMX.qcom.video.decoder.h263" type="video/3gpp" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -169,7 +169,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="size" min="64x64" max="720x576" />
             <Limit name="alignment" value="2x2" />
             <Feature name="adaptive-playback" />
-            <Limit name="concurrent-instances" max="7" />
+            <Limit name="concurrent-instances" max="12" />
         </MediaCodec>
         <MediaCodec name="OMX.qcom.video.decoder.vp8" type="video/x-vnd.on2.vp8" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -181,7 +181,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="blocks-per-second" min="1" max="777600" />
             <Limit name="bitrate" range="1-20000000" />
             <Feature name="adaptive-playback" />
-            <Limit name="concurrent-instances" max="7" />
+            <Limit name="concurrent-instances" max="12" />
         </MediaCodec>
         <MediaCodec name="OMX.qcom.video.decoder.hevc" type="video/hevc" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -192,7 +192,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="blocks-per-second" min="1" max="972000" />
             <Limit name="bitrate" range="1-100000000" />
             <Feature name="adaptive-playback" />
-            <Limit name="concurrent-instances" max="7" />
+            <Limit name="concurrent-instances" max="12" />
         </MediaCodec>
         <MediaCodec name="OMX.qcom.video.decoder.hevc.secure" type="video/hevc" >
             <Quirk name="requires-allocate-on-input-ports" />
