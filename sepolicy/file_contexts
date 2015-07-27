@@ -109,6 +109,7 @@
 /system/bin/init.bullhead.power.sh u:object_r:init-power-sh_exec:s0
 /system/bin/init.bullhead.sh       u:object_r:bullhead-sh_exec:s0
 /system/bin/cnss-daemon            u:object_r:wcnss_service_exec:s0
+/system/bin/cnss_diag              u:object_r:cnss_diag_exec:s0
 /system/bin/loc_launcher           u:object_r:location_exec:s0
 /system/bin/location-mq            u:object_r:location_exec:s0
 /system/bin/lowi-server            u:object_r:location_exec:s0
