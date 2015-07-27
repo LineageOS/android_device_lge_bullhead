@@ -17,6 +17,7 @@ type location_data_file, file_type, data_file_type;
 type ims_socket, file_type;
 
 type ramdump_data_file, file_type, data_file_type;
+type diag_logs, file_type, data_file_type, mlstrustedobject;
 
 type mpctl_data_file, file_type, data_file_type;
 type mpctl_socket, file_type;
