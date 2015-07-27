@@ -19,6 +19,11 @@
 /dev/block/platform/soc.0/f9824900.sdhci/by-name/sdi          /sdi            emmc    defaults                                                        defaults
 /dev/block/platform/soc.0/f9824900.sdhci/by-name/aboot        /aboot          emmc    defaults                                                        defaults
 /dev/block/platform/soc.0/f9824900.sdhci/by-name/imgdata      /imgdata        emmc    defaults                                                        defaults
+/dev/block/platform/soc.0/f9824900.sdhci/by-name/pmic         /pmic           emmc    defaults                                                        defaults
+/dev/block/platform/soc.0/f9824900.sdhci/by-name/hyp          /hyp            emmc    defaults                                                        defaults
+/dev/block/platform/soc.0/f9824900.sdhci/by-name/sec          /sec            emmc    defaults                                                        defaults
+/dev/block/platform/soc.0/f9824900.sdhci/by-name/keymaster    /keymaster      emmc    defaults                                                        defaults
+/dev/block/platform/soc.0/f9824900.sdhci/by-name/cmnlib       /cmnlib         emmc    defaults                                                        defaults
 /dev/block/platform/soc.0/f9824900.sdhci/by-name/persistent   /persistent     emmc    defaults                                                        defaults
 /devices/soc.0/f9200000.ssusb/f9200000.dwc3/xhci-hcd.0.auto/usb*    auto      auto    defaults                                                        voldmanaged=usb:auto
 /dev/block/zram0                                              none            swap    defaults                                                        zramsize=533413200,notrim

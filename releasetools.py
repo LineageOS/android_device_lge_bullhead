@@ -129,9 +129,9 @@ def WriteRadio(info, radio_img):
 #    sbl1, tz, rpm, aboot, pmic, hyp, keymaster, cmnlib
 #
 
-release_partitions = "sbl1, tz, rpm, aboot, sdi, imgdata, pmic, hyp, sec, keymaster, cmnlib"
-debug_partitions = "sbl1, tz, rpm, aboot, sdi, imgdata, pmic, hyp, sec, keymaster, cmnlib"
-backup_partitions = "sbl1, tz, rpm, aboot, pmic, hyp, keymaster, cmnlib"
+release_partitions = "sbl1 tz rpm aboot sdi imgdata pmic hyp sec keymaster cmnlib"
+debug_partitions = "sbl1 tz rpm aboot sdi imgdata pmic hyp sec keymaster cmnlib"
+backup_partitions = "sbl1 tz rpm aboot pmic hyp keymaster cmnlib"
 
 def WriteBootloader(info, bootloader):
   info.script.Print("Writing bootloader...")
