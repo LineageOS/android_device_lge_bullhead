@@ -2,6 +2,8 @@
 type thermal-engine, domain;
 type thermal-engine_exec, exec_type, file_type;
 
+permissive thermal-engine;
+
 # Started by init
 init_daemon_domain(thermal-engine)
 
