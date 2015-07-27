@@ -1,6 +1,8 @@
 type ssr, domain;
 type ssr_exec, exec_type, file_type;
 
+permissive ssr;
+
 # Started by init
 init_daemon_domain(ssr);
 
