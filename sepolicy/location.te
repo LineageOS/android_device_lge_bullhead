@@ -28,6 +28,8 @@ allow location location_exec:file rx_file_perms;
 # slim_daemon receives data from Loc_hal_worker
 allow location self:socket create_socket_perms;
 
+allow location sensorservice_service:service_manager find;
+
 # subsystem ramdump for debug builds
 userdebug_or_eng(`
     allow location sysfs_ssr:dir r_dir_perms;
