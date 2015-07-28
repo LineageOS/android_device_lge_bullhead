@@ -20,3 +20,4 @@ on boot
 
 on post-fs-data
     mkdir /data/fpc_tpl 770 system system
+    mkdir /data/fpc 0660 system system
