@@ -19,11 +19,6 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Flag specifying whether VoLTE should be available for carrier: independent of
-         carrier provisioning. If false: hard disabled. If true: then depends on carrier
-         provisioning, availability etc -->
-    <bool name="config_carrier_volte_available">true</bool>
-
     <!-- Values for GPS Test configuration -->
     <string-array translatable="false" name="config_gpsParameters">
         <item>SUPL_HOST=www.spirent-lcs.com</item>

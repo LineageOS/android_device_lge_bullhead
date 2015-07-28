@@ -25,9 +25,4 @@
         <item>SUPL_PORT=7275</item>
     </string-array>
 
-    <!-- Flag specifying whether VoLTE should be available for carrier: independent of
-         carrier provisioning. If false: hard disabled. If true: then depends on carrier
-         provisioning, availability etc -->
-    <bool name="config_carrier_volte_available">true</bool>
-
 </resources>
