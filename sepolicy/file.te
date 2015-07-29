@@ -26,6 +26,8 @@ type sysfs_smdcntl_open_timeout, fs_type, sysfs_type;
 
 type sysfs_devices_fingerprint,  sysfs_type, file_type;
 
+type sysfs_camera, sysfs_type, file_type;
+
 #type for persist partition
 type persist_file, file_type;
 type persist_data_file, file_type;

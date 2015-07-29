@@ -4,7 +4,12 @@ type camera_exec, exec_type, file_type;
 
 init_daemon_domain(camera)
 
+binder_use(camera)
+binder_call(camera, system_server)
+
 allow camera system_file:file execmod;
+
+allow camera system_server:unix_stream_socket { read write };
 
 # Interact with other media devices
 allow camera { gpu_device video_device camera_device }:chr_file rw_file_perms;
@@ -16,3 +21,13 @@ allow camera camera_data_file:sock_file { create unlink };
 # read/write to /data/misc/camera
 allow camera camera_data_file:dir w_dir_perms;
 allow camera camera_data_file:file create_file_perms;
+
+# write to /sys/kernel/range/enable_ps_sensor
+allow camera sysfs_camera:file rw_file_perms;
+
+# Read to /dev/input
+allow camera input_device:dir r_dir_perms;
+allow camera input_device:chr_file r_file_perms;
+
+# Find sensorservice
+allow camera sensorservice_service:service_manager find;
