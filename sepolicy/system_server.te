@@ -22,5 +22,7 @@ allow system_server location:unix_stream_socket connectto;
 allow system_server location_data_file: { fifo_file sock_file } { create_file_perms };
 allow system_server location_data_file:dir rw_dir_perms;
 
+allow system_server mpctl_data_file:dir search;
+
 # talk to perfd
 unix_socket_connect(system_server, mpctl, perfd)
