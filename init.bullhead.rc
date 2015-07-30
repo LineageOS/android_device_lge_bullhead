@@ -96,7 +96,7 @@ on boot
 
     # execute script to set initial CPU settings
     # don't run as a service to avoid race conditions
-    exec /system/bin/init.bullhead.power.sh
+    exec - root root system -- /system/bin/init.bullhead.power.sh
 
     # update foreground cpuset now that processors are up
     write /dev/cpuset/foreground/cpus 0-5
