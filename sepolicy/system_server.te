@@ -15,6 +15,7 @@ allow system_server sysfs_ssr:lnk_file r_file_perms;
 
 # Needed by hubconnection for sensor hub
 allow system_server sensors_device:chr_file rw_file_perms;
+allow system_server persist_file:dir search;
 allow system_server persist_sensortool_file:file r_file_perms;
 
 # need access to files/socket in /data/misc/location

@@ -5,4 +5,6 @@ init_daemon_domain(sensortool)
 
 allow sensortool sensors_device:chr_file rw_file_perms;
 allow sensortool self:capability { dac_override sys_nice };
+
+allow sensortool persist_file:dir search;
 allow sensortool persist_sensortool_file:file r_file_perms;
