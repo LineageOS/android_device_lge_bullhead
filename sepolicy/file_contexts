@@ -158,3 +158,4 @@
 /persist/data/tz(/.*)?             u:object_r:persist_drm_file:s0
 /persist/wlan_mac\.bin             u:object_r:persist_wifi_file:s0
 /persist/sensorcal\.json           u:object_r:persist_sensortool_file:s0
+/persist/calibration(/.*)?         u:object_r:persist_camera_file:s0

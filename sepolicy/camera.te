@@ -31,3 +31,8 @@ allow camera input_device:chr_file r_file_perms;
 
 # Find sensorservice
 allow camera sensorservice_service:service_manager find;
+
+# Read persist_camera_file
+allow camera persist_file:dir search;
+allow camera persist_camera_file:dir search;
+allow camera persist_camera_file:file r_file_perms;
