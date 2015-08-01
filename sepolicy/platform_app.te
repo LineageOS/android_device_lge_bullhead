@@ -1,3 +1,5 @@
+permissive platform_app;
+
 userdebug_or_eng(`
   # qxdmlogger access to /data/diag_logs.
   allow platform_app diag_logs:dir rw_dir_perms;
