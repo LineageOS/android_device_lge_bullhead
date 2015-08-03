@@ -394,7 +394,7 @@ on property:ro.debuggable=1
 service ss_ramdump /system/bin/subsystem_ramdump
     class main
     user root
-    group root
+    group root system
     disabled
 
 service cnd /system/bin/cnd
