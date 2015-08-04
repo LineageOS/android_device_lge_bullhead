@@ -91,10 +91,8 @@ OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
-  ifeq ($(TARGET_BUILD_VARIANT),user)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
+  ifeq ($(WITH_DEXPREOPT),)
+    WITH_DEXPREOPT := true
   endif
 endif
 
