@@ -1702,6 +1702,12 @@
         <path name="handset" />
     </path>
 
+    <path name="voice-handset-vzwusc">
+        <path name="handset" />
+        <ctl name="RX1 Digital Volume" value="84" />
+        <ctl name="EAR PA Gain" value="POS_6_DB" />
+    </path>
+
     <path name="voice-speaker">
         <path name="speaker" />
         <ctl name="COMP0 Switch" value="0" />
@@ -1724,12 +1730,26 @@
         <ctl name="RX2 Digital Volume" value="84" />
     </path>
 
+    <path name="voice-headphones-vzwusc">
+        <path name="headphones" />
+        <ctl name="COMP1 Switch" value="1" />
+        <ctl name="HPHL Volume" value="20" />
+        <ctl name="HPHR Volume" value="20" />
+        <ctl name="RX1 Digital Volume" value="84" />
+        <ctl name="RX2 Digital Volume" value="84" />
+    </path>
+
     <path name="voice-headset-mic">
         <path name="headset-mic" />
         <ctl name="ADC2 Volume" value="10" />
         <ctl name="DEC5 Volume" value="84" />
     </path>
 
+    <path name="voice-headset-mic-vzwusc">
+        <path name="headset-mic" />
+        <ctl name="ADC2 Volume" value="10" />
+        <ctl name="DEC5 Volume" value="84" />
+    </path>
 
     <path name="speaker-and-headphones">
         <path name="headphones" />
@@ -1983,6 +2003,12 @@
     </path>
 
     <path name="voice-dmic-ef">
+        <path name="dmic-endfire" />
+        <ctl name="DEC7 Volume" value="84" />
+        <ctl name="DEC10 Volume" value="84" />
+    </path>
+
+    <path name="voice-dmic-ef-vzwusc">
         <path name="dmic-endfire" />
         <ctl name="DEC7 Volume" value="84" />
         <ctl name="DEC10 Volume" value="84" />
