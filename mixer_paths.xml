@@ -2045,6 +2045,20 @@
         <path name="dmic-broadside" />
     </path>
 
+    <!-- Three MIC devices -->
+    <path name="speaker-tmic">
+        <ctl name="AIF1_CAP Mixer SLIM TX7" value="1" />
+        <ctl name="AIF1_CAP Mixer SLIM TX8" value="1" />
+        <ctl name="AIF1_CAP Mixer SLIM TX9" value="1" />
+        <ctl name="SLIM_0_TX Channels" value="Three" />
+        <ctl name="SLIM TX7 MUX" value="DEC10" />
+        <ctl name="DEC10 MUX" value="DMIC3" />
+        <ctl name="SLIM TX8 MUX" value="DEC5" />
+        <ctl name="DEC5 MUX" value="DMIC5" />
+        <ctl name="SLIM TX9 MUX" value="DEC7" />
+        <ctl name="DEC7 MUX" value="DMIC1" />
+    </path>
+
     <!-- Quad MIC devices -->
     <path name="speaker-qmic">
         <ctl name="AIF1_CAP Mixer SLIM TX7" value="1" />
@@ -2096,6 +2110,10 @@
 
     <path name="voice-speaker-qmic">
         <path name="speaker-qmic" />
+    </path>
+
+    <path name="three-mic">
+        <path name="speaker-tmic" />
     </path>
 
     <path name="quad-mic">
