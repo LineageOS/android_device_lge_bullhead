@@ -138,7 +138,4 @@ BOARD_QTI_CAMERA_32BIT_ONLY := true
 #Enable peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
-# Include an expanded selection of fonts
-EXTENDED_FONT_FOOTPRINT := true
-
 -include vendor/lge/bullhead/BoardConfigVendor.mk
