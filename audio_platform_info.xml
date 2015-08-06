@@ -47,5 +47,6 @@
     <config_params>
         <!-- If sound card name is not known, remove this entry -->
         <param key="snd_card_name" value="msm8994-tomtom-snd-card"/>
+        <param key="input_mic_max_count" value="3"/>
     </config_params>
 </audio_platform_info>
