@@ -106,6 +106,21 @@ write /proc/sys/kernel/sched_upmigrate 95
 write /proc/sys/kernel/sched_downmigrate 85
 write /proc/sys/kernel/sched_freq_inc_notify 400000
 write /proc/sys/kernel/sched_freq_dec_notify 400000
+write /proc/sys/kernel/sched_small_task 51
+
+write /sys/devices/system/cpu/cpu0/sched_mostly_idle_load 20
+write /sys/devices/system/cpu/cpu1/sched_mostly_idle_load 20
+write /sys/devices/system/cpu/cpu2/sched_mostly_idle_load 20
+write /sys/devices/system/cpu/cpu3/sched_mostly_idle_load 20
+write /sys/devices/system/cpu/cpu4/sched_mostly_idle_load 20
+write /sys/devices/system/cpu/cpu5/sched_mostly_idle_load 20
+
+write /sys/devices/system/cpu/cpu0/sched_mostly_idle_nr_run 5
+write /sys/devices/system/cpu/cpu1/sched_mostly_idle_nr_run 5
+write /sys/devices/system/cpu/cpu2/sched_mostly_idle_nr_run 5
+write /sys/devices/system/cpu/cpu3/sched_mostly_idle_nr_run 5
+write /sys/devices/system/cpu/cpu4/sched_mostly_idle_nr_run 5
+write /sys/devices/system/cpu/cpu5/sched_mostly_idle_nr_run 5
 
 #enable rps static configuration
 write /sys/class/net/rmnet_ipa0/queues/rx-0/rps_cpus 8
