@@ -1536,12 +1536,21 @@
         <ctl name="IIR1 INP1 MUX" value="DEC6" />
     </path>
 
+    <path name="spkr-gain-in-headphone-combo">
+        <ctl name="RX7 Digital Volume" value="90" />
+        <ctl name="SPK DRV Volume" value="8" />
+    </path>
+
+    <path name="speaker-gain-default">
+        <ctl name="RX7 Digital Volume" value="84" />
+        <ctl name="SPK DRV Volume" value="8" />
+    </path>
+
     <path name="speaker">
         <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
         <ctl name="SLIM_0_RX Channels" value="One" />
         <ctl name="RX7 MIX1 INP1" value="RX1" />
-        <ctl name="RX7 Digital Volume" value="84" />
-        <ctl name="SPK DRV Volume" value="8" />
+        <path name="speaker-gain-default" />
         <ctl name="COMP0 Switch" value="1" />
     </path>
 
