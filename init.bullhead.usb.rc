@@ -29,6 +29,7 @@ on post-fs
     write /sys/class/android_usb/android0/f_ffs/aliases adb
 
 on post-fs-data
+    write /sys/module/g_android/parameters/min_cpu_freq 1036800
     write /sys/class/android_usb/android0/f_rndis_qc/rndis_transports BAM2BAM_IPA
 
 # MTP
