@@ -3,3 +3,5 @@ allow mediaserver thermal_socket:sock_file w_file_perms;
 
 allow mediaserver camera:unix_dgram_socket sendto;
 allow mediaserver camera_data_file:sock_file write;
+
+allow mediaserver mpctl_data_file:dir search;

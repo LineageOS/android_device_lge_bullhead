@@ -2,6 +2,9 @@
 type cnd, domain;
 type cnd_exec, exec_type, file_type;
 
+# STOPSHIP - all domains must be enforcing
+permissive cnd;
+
 # cnd is started by init, type transit from init domain to cnd domain
 init_daemon_domain(cnd)
 
