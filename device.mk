@@ -68,7 +68,7 @@ PRODUCT_PACKAGES += \
 
 # Prebuilt input device calibration files
 PRODUCT_COPY_FILES += \
-    device/lge/bullhead/touch_dev.idc:system/usr/idc/touch_dev.idc
+    device/lge/bullhead/synaptics_rmi4_i2c.idc:system/usr/idc/synaptics_rmi4_i2c.idc
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
