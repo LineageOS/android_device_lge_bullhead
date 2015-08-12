@@ -48,5 +48,17 @@
         <!-- If sound card name is not known, remove this entry -->
         <param key="snd_card_name" value="msm8994-tomtom-snd-card"/>
         <param key="input_mic_max_count" value="3"/>
+        <param key="operator_info" value="verizon;310004;311480"/>
+        <param key="operator_info" value="uscellular;311220;311580"/>
     </config_params>
+    <operator_specific>
+        <device name="SND_DEVICE_IN_VOICE_DMIC" operator="verizon" mixer_path="voice-dmic-ef-vzwusc" acdb_id="130"/>
+        <device name="SND_DEVICE_IN_VOICE_DMIC" operator="uscellular" mixer_path="voice-dmic-ef-vzwusc" acdb_id="130"/>
+        <device name="SND_DEVICE_OUT_VOICE_HANDSET" operator="verizon" mixer_path="voice-handset-vzwusc" acdb_id="131"/>
+        <device name="SND_DEVICE_OUT_VOICE_HANDSET" operator="uscellular" mixer_path="voice-handset-vzwusc" acdb_id="131"/>
+        <device name="SND_DEVICE_IN_VOICE_HEADSET_MIC" operator="verizon" mixer_path="voice-headset-mic-vzwusc" acdb_id="132"/>
+        <device name="SND_DEVICE_IN_VOICE_HEADSET_MIC" operator="uscellular" mixer_path="voice-headset-mic-vzwusc" acdb_id="132"/>
+        <device name="SND_DEVICE_OUT_VOICE_HEADPHONES" operator="verizon" mixer_path="voice-headphones-vzwusc" acdb_id="133"/>
+        <device name="SND_DEVICE_OUT_VOICE_HEADPHONES" operator="uscellular" mixer_path="voice-headphones-vzwusc" acdb_id="133"/>
+    </operator_specific>
 </audio_platform_info>
