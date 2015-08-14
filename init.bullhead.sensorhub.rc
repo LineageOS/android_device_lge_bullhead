@@ -1,8 +1,4 @@
-
 on post-fs
-    ## set gpio75 as input to power the hall sensor when connected to AP
-    write /sys/class/gpio/export 75
-    write /sys/class/gpio/gpio75/direction in
     ## ensure correct calibration file permissions
     chown root system /persist/sensorcal.json
     chmod 0640 /persist/sensorcal.json
