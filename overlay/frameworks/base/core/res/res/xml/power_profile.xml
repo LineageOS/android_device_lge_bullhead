@@ -40,40 +40,59 @@
     <!-- Different CPU speeds as reported in
          /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state -->
     <array name="cpu.speeds">
-        <value>300000</value> <!-- 300 MHz CPU speed -->
-        <value>422400</value> <!-- 422.4 MHz CPU speed -->
-        <value>652800</value> <!-- 652.8 MHz CPU speed -->
-        <value>729600</value> <!-- 729.6 MHz CPU speed -->
-        <value>883200</value> <!-- 883.2 MHz CPU speed -->
-        <value>960000</value> <!-- 960.0 MHz CPU speed -->
-        <value>1036800</value> <!-- 1036.8 MHz CPU speed -->
-        <value>1190400</value> <!-- 1190.4 MHz CPU speed -->
-        <value>1267200</value> <!-- 1267.2 MHz CPU speed -->
-        <value>1497600</value> <!-- 1497.6 MHz CPU speed -->
-        <value>1574000</value> <!-- 1574.0 MHz CPU speed -->
-        <value>1728000</value> <!-- 1728.0 MHz CPU speed -->
-        <value>1958400</value> <!-- 1958.4 MHz CPU speed -->
-        <value>2265600</value> <!-- 2265.6 MHz CPU speed -->
+        <value>384000</value> <!-- 384 MHz CPU speed -->
+        <value>460800</value> <!-- 460.8 MHz CPU speed -->
+        <value>600000</value> <!-- 600 MHz CPU speed -->
+        <value>672000</value> <!-- 672 MHz CPU speed -->
+        <value>787200</value> <!-- 787.2 MHz CPU speed -->
+        <value>864000</value> <!-- 864 MHz CPU speed -->
+        <value>960000</value> <!-- 960 MHz CPU speed -->
+        <value>1248000</value> <!-- 1248 MHz CPU speed -->
+        <value>1440000</value> <!-- 1440 MHz CPU speed -->
+    </array>
+    <array name="cpu.speeds.big">
+        <value>384000</value> <!-- 384 MHz CPU speed -->
+        <value>480000</value> <!-- 480 MHz CPU speed -->
+        <value>633600</value> <!-- 633.6 MHz CPU speed -->
+        <value>768000</value> <!-- 768 MHz CPU speed -->
+        <value>960000</value> <!-- 960 MHz CPU speed -->
+        <value>1248000</value> <!-- 1248 MHz CPU speed -->
+        <value>1344000</value> <!-- 1344 MHz CPU speed -->
+        <value>1440000</value> <!-- 1440 MHz CPU speed -->
+        <value>1536000</value> <!-- 1536 MHz CPU speed -->
+        <value>1632000</value> <!-- 1632 MHz CPU speed -->
+        <value>1689600</value> <!-- 1689.6 MHz CPU speed -->
+        <value>1824000</value> <!-- 1824 MHz CPU speed -->
     </array>
     <!-- Power consumption when CPU is idle -->
     <item name="cpu.idle">3.2</item>
     <item name="cpu.awake">17.4</item>
     <!-- Power consumption at different speeds -->
     <array name="cpu.active">
-        <value>57.9</value> <!-- 300 MHz CPU speed -->
-        <value>88.2</value> <!-- 422.4 MHz CPU speed -->
-        <value>99.6</value> <!-- 652.8 MHz CPU speed -->
-        <value>138.8</value> <!-- 729.6 MHz CPU speed -->
-        <value>149.6</value> <!-- 883.2 MHz CPU speed -->
-        <value>170.2</value> <!-- 960.0 MHz CPU speed -->
-        <value>178.3</value> <!-- 1036.8 MHz CPU speed -->
-        <value>189.1</value> <!-- 1190.4 MHz CPU speed -->
-        <value>232.1</value> <!-- 1267.2 MHz CPU speed -->
-        <value>256.5</value> <!-- 1497.6 MHz CPU speed -->
-        <value>266.4</value> <!-- 1574.0 MHz CPU speed -->
-        <value>287.7</value> <!-- 1728.0 MHz CPU speed -->
-        <value>325.7</value> <!-- 1958.4 MHz CPU speed -->
-        <value>386.2</value> <!-- 2265.6 MHz CPU speed -->
+        <value>18.25</value> <!-- 384 MHz CPU speed -->
+        <value>24.35</value> <!-- 460.8 MHz CPU speed -->
+        <value>26.92</value> <!-- 600 MHz CPU speed -->
+        <value>34.6</value> <!-- 672 MHz CPU speed -->
+        <value>38.15</value> <!-- 787.2 MHz CPU speed -->
+        <value>46.88</value> <!-- 864 MHz CPU speed -->
+        <value>55.94</value> <!-- 960 MHz CPU speed -->
+        <value>81.74</value> <!-- 1248 MHz CPU speed -->
+        <value>105.87</value> <!-- 1440 MHz CPU speed -->
+    </array>
+    <array name="cpu.active.big">
+        <value>67.74</value> <!-- 384 MHz CPU speed -->
+        <value>82.96</value> <!-- 480 MHz CPU speed -->
+        <value>105.87</value> <!-- 633.6 MHz CPU speed -->
+        <value>133.16</value> <!-- 768 MHz CPU speed -->
+        <value>150.16</value> <!-- 864 MHz CPU speed -->
+        <value>167.18</value> <!-- 960 MHz CPU speed -->
+        <value>230.04</value> <!-- 1248 MHz CPU speed -->
+        <value>261.43</value> <!-- 1344 MHz CPU speed -->
+        <value>290.46</value> <!-- 1440 MHz CPU speed -->
+        <value>317.2</value> <!-- 1536 MHz CPU speed -->
+        <value>352.87</value> <!-- 1632 MHz CPU speed -->
+        <value>374.36</value> <!-- 1689.6 MHz CPU speed -->
+        <value>443.88</value> <!-- 1824 MHz CPU speed -->
     </array>
     <!-- This is the battery capacity in mAh -->
     <item name="battery.capacity">2700</item>
