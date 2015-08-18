@@ -30,3 +30,6 @@ allow system_server mpctl_data_file:dir search;
 
 # talk to perfd
 unix_socket_connect(system_server, mpctl, perfd)
+
+# hubconnection to get and set sensors.contexthub.* properties
+set_prop(system_server, contexthub_prop);
