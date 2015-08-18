@@ -1579,14 +1579,12 @@
         <ctl name="IIR1 Enable Band5" value="1" />
     </path>
 
-    <path name="sidetone-headphones">
-        <path name="sidetone-iir" />
-        <ctl name="RX1 MIX2 INP1" value="IIR1" />
-        <ctl name="RX2 MIX2 INP1" value="IIR1" />
-        <ctl name="IIR1 INP1 Volume" value="84" />
-    </path>
+    <!-- Sidetone for headphone/headset not needed on bullhead, meets spec  -->
+    <path name="sidetone-headphones" />
+    <path name="sidetone-handset" />
 
-    <path name="sidetone-handset">
+     <!-- sidetone needed for hac-headset on bullhead -->
+    <path name="sidetone-hac-handset">
         <path name="sidetone-iir" />
         <ctl name="RX1 MIX2 INP1" value="IIR1" />
         <ctl name="IIR1 INP1 Volume" value="84" />
