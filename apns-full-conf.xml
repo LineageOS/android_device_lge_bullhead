@@ -15465,6 +15465,47 @@
       type="mms"
   />
 
+  <apn carrier="TRACFONE"
+      mcc="330"
+      mnc="110"
+      apn="wap.tracfone"
+      type="default,supl,hipri,fota"
+      mvno_type="gid"
+      mvno_match_data="deff"
+  />
+
+  <apn carrier="TRACFONE MMS"
+      mcc="330"
+      mnc="110"
+      apn="wap.tracfone"
+      mmsproxy="10.50.38.3"
+      mmsport="8799"
+      mmsc="http://mmsg.claropr.com:10021/mmsc"
+      type="mms"
+      mvno_type="gid"
+      mvno_match_data="deff"
+  />
+
+    <apn carrier="TRACFONE"
+      mcc="330"
+      mnc="110"
+      apn="wap.tracfone"
+      type="default,supl,hipri,fota"
+      mvno_type="gid"
+      mvno_match_data="ddff"
+  />
+
+  <apn carrier="TRACFONE MMS"
+      mcc="330"
+      mnc="110"
+      apn="wap.tracfone"
+      mmsproxy="10.50.38.3"
+      mmsport="8799"
+      mmsc="http://mmsg.claropr.com:10021/mmsc"
+      type="mms"
+      mvno_type="gid"
+      mvno_match_data="ddff"
+  />
 
   <apn carrier="Internet"
       mcc="334"
