@@ -5,4 +5,5 @@ allow mediaserver camera:unix_dgram_socket sendto;
 allow mediaserver camera_data_file:sock_file write;
 
 allow mediaserver mpctl_data_file:dir search;
+unix_socket_connect(mediaserver, mpctl, perfd)
 unix_socket_send(mediaserver, mpctl, perfd)
