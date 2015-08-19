@@ -18,6 +18,7 @@ allow location location_exec:file x_file_perms;
 allow location self:{
     socket
     netlink_socket
+    udp_socket
 } create_socket_perms;
 
 # create location socket location-mq-s
@@ -26,7 +27,7 @@ allow location location_data_file:sock_file { create setattr unlink };
 # daemon starts as root to obtain all DAC capabilities
 # TODO start as gps user and use filesystem-config to give
 # proper DAC capabilities.
-allow location self:capability { setuid setgid net_raw};
+allow location self:capability { setuid setgid net_admin net_raw };
 
 # execute /system/bin/lowi-server and /vendor/bin/slim_daemon
 allow location location_exec:file rx_file_perms;
