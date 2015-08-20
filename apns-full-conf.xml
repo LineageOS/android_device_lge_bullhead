@@ -758,7 +758,7 @@
   <apn carrier="Px MMS"
       mcc="206"
       mnc="01"
-      apn="EVENT.PROXIMUS.BE"
+      apn="event.proximus.be"
       user="mms"
       password="mms"
       authtype="1"
@@ -780,6 +780,39 @@
       mnc="01"
       apn="INTERNET.PROXIMUS.BE"
       type="default,supl"
+  />
+
+  <apn carrier="Px MMS"
+      mcc="206"
+      mnc="01"
+      apn="event.proximus.be"
+      user="mms"
+      password="mms"
+      authtype="1"
+      mmsc="http://mmsc.proximus.be/mms"
+      mmsproxy="10.55.14.75"
+      mmsport="8080"
+      type="mms"
+      mvno_match_data="4E"
+      mvno_type="gid"
+  />
+
+  <apn carrier="NRJ-ESM"
+      mcc="206"
+      mnc="01"
+      apn=""
+      type="ia"
+      mvno_match_data="4E"
+      mvno_type="gid"
+  />
+
+  <apn carrier="Px Internet"
+      mcc="206"
+      mnc="01"
+      apn="INTERNET.PROXIMUS.BE"
+      type="default,supl"
+      mvno_match_data="4E"
+      mvno_type="gid"
   />
 
   <apn carrier="Telenet Internet"
@@ -1927,7 +1960,7 @@
       mvno_type="spn"
   />
 
-  <apn carrier="Conexióompartida"
+  <apn carrier="Conexión Compartid"
       mcc="214"
       mnc="07"
       apn="movistar.es"
@@ -2009,6 +2042,9 @@
       mcc="214"
       mnc="18"
       apn="internet.ono.com"
+      user="wap@wap"
+      password="wap125"
+      authtype="1"
       type="default,supl"
   />
 
@@ -2016,6 +2052,7 @@
       mcc="214"
       mnc="18"
       apn="mms.ono.com"
+      authtype="1"
       mmsc="http://mms.ono.com/"
       mmsproxy="10.126.0.50"
       mmsport="8080"
@@ -2167,20 +2204,6 @@
       mvno_type="imsi"
   />
 
-  <apn carrier="Vodafone Live!"
-      mcc="216"
-      mnc="70"
-      apn="wap.vodafone.net"
-      user="vodawap"
-      password="vodawap"
-      proxy="10.9.8.7"
-      port="8080"
-      type="default,supl"
-      authtype="1"
-      mvno_match_data="21670xx2xxx"
-      mvno_type="imsi"
-  />
-
   <apn carrier="Vodafone Internet VitaMAX"
       mcc="216"
       mnc="70"
@@ -2216,23 +2239,42 @@
       mvno_type="imsi"
   />
 
-  <apn carrier="HT Eronet WAP"
-      mcc="218"
-      mnc="03"
-      apn="wap.eronet.ba"
-      proxy="10.12.3.10"
-      port="8080"
-      type="default,supl"
+  <apn carrier="UPC Mobil Internet"
+      mcc="216"
+      mnc="71"
+      apn="Internet.hu.upcmobile.com"
+      type="default"
+      protocol="IPV4V6"
+      authtype="0"
   />
 
-  <apn carrier="HT Eronet GPRS"
+  <apn carrier="UPC MMS"
+      mcc="216"
+      mnc="71"
+      apn="mms.hu.upcmobile.com"
+      mmsc="http://mms.hu.upcmobile.com:8080/servlets/mms"
+      mmsproxy="62.179.127.18"
+      mmsport="8080"
+      type="mms"
+      authtype="0"
+      protocol="IPV4V6"
+  />
+
+  <apn carrier="ERONET WEB"
+      mcc="218"
+      mnc="03"
+      apn="web.eronet.ba"
+      type="default"
+  />
+
+  <apn carrier="ERONET START"
       mcc="218"
       mnc="03"
       apn="gprs.eronet.ba"
-      type="default,supl"
+      type="default"
   />
 
-  <apn carrier="Ht Eronet MMS"
+  <apn carrier="MMS-ERONET"
       mcc="218"
       mnc="03"
       apn="mms.eronet.ba"
@@ -2240,15 +2282,6 @@
       mmsproxy="10.12.3.11"
       mmsport="8080"
       type="mms"
-  />
-
-  <apn carrier="m:tel"
-      mcc="218"
-      mnc="05"
-      apn="3g1"
-      proxy="192.168.61.10"
-      port="80"
-      type="default,supl"
   />
 
   <apn carrier="mtelgprs"
@@ -2287,7 +2320,7 @@
       protocol="IPV4V6"
   />
 
-  <apn carrier="T-Mobile MMS"
+  <apn carrier="MMS"
       mcc="219"
       mnc="01"
       apn="mms.htgprs"
@@ -2305,7 +2338,7 @@
       type="ia"
   />
 
-  <apn carrier="T-Mobile Internet"
+  <apn carrier="Internet"
       mcc="219"
       mnc="01"
       apn="internet.ht.hr"
@@ -2313,7 +2346,7 @@
       type="default,supl"
   />
 
-  <apn carrier="bonbon Internet"
+  <apn carrier="Internet"
       mcc="219"
       mnc="01"
       apn="web.htgprs"
@@ -2323,7 +2356,7 @@
       mvno_match_data="bonbon"
   />
 
-  <apn carrier="bonbon MMS"
+  <apn carrier="MMS"
       mcc="219"
       mnc="01"
       apn="mms.htgprs"
@@ -3132,7 +3165,7 @@
       type="default,supl"
   />
 
-  <apn carrier="T-Mobile internet"
+  <apn carrier="Telekom Internet"
       mcc="231"
       mnc="02"
       apn="internet"
@@ -3140,7 +3173,7 @@
       type="default,supl"
   />
 
-  <apn carrier="T-Mobile MMS"
+  <apn carrier="Telekom MMS"
       mcc="231"
       mnc="02"
       apn="mms"
@@ -4610,20 +4643,20 @@
       mvno_type="spn"
   />
 
-  <apn carrier="Ventelo Internett"
+  <apn carrier="Phonero Internett"
       mcc="242"
       mnc="01"
-      apn="internet.ventelo.no"
+      apn="internet.phonero.no"
       type="default,supl"
       mvno_match_data="24201700xxxxxxx"
       mvno_type="imsi"
   />
 
-  <apn carrier="Ventelo MMS"
+  <apn carrier="Phonero MMS"
       mcc="242"
       mnc="01"
-      apn="mms.ventelo.no"
-      user="ventelo"
+      apn="mms.phonero.no"
+      user="phonero"
       password="1111"
       mmsc="http://mmsc/"
       mmsproxy="10.10.10.11"
@@ -6431,9 +6464,7 @@
       mcc="284"
       mnc="05"
       apn="telenorbg"
-      authtype="1"
-      proxy="192.168.88.11"
-      port="8004"
+      authtype="0"
       type="default,supl"
   />
 
@@ -25600,7 +25631,7 @@
       type="default,supl"
   />
 
-  <apn carrier="one2free"
+  <apn carrier="csl"
       mcc="454"
       mnc="10"
       apn="hkcsl"
@@ -25652,15 +25683,15 @@
       type="default,supl,mms"
   />
 
-  <apn carrier="PCCW-HKT"
+  <apn carrier="csl"
       mcc="454"
       mnc="16"
       apn="pccw"
-      mmsc="http://3gmms.pccwmobile.com:8080/was"
+      mmsc="http://mms.hkcsl.com:8080"
       mmsproxy="10.140.14.10"
       mmsport="8080"
-      authtype="1"
-      type="default,supl,mms"
+      authtype="3"
+      type="default,hipri,mms"
   />
 
   <apn carrier="SmarTone"
@@ -25707,15 +25738,15 @@
       type="default,supl,mms"
   />
 
-  <apn carrier="PCCW-HKT"
+  <apn carrier="csl"
       mcc="454"
       mnc="19"
       apn="pccw"
-      mmsc="http://3gmms.pccwmobile.com:8080/was"
+      mmsc="http://mms.hkcsl.com:8080"
       mmsproxy="10.140.14.10"
       mmsport="8080"
-      authtype="1"
-      type="default,supl,mms"
+      authtype="3"
+      type="default,hipri,mms"
   />
 
   <apn carrier="SmarTone Macau"
