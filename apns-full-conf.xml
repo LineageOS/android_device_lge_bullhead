@@ -1616,14 +1616,6 @@
       type="mms"
   />
 
-  <apn carrier="IMS Vodafone"
-      mcc="214"
-      mnc="01"
-      apn="ims"
-      type="ims"
-      protocol="IPV4V6"
-  />
-
   <apn carrier="Orange Internet Móvil"
       mcc="214"
       mnc="03"
@@ -1949,7 +1941,7 @@
       mvno_type="spn"
   />
 
-  <apn carrier="Conexión Compartid"
+  <apn carrier="Conexión Compartida"
       mcc="214"
       mnc="07"
       apn="movistar.es"
@@ -2031,9 +2023,7 @@
       mcc="214"
       mnc="18"
       apn="internet.ono.com"
-      user="wap@wap"
-      password="wap125"
-      authtype="1"
+      authtype="0"
       type="default,supl"
   />
 
@@ -2041,7 +2031,7 @@
       mcc="214"
       mnc="18"
       apn="mms.ono.com"
-      authtype="1"
+      authtype="0"
       mmsc="http://mms.ono.com/"
       mmsproxy="10.126.0.50"
       mmsport="8080"
@@ -2338,7 +2328,7 @@
   <apn carrier="Internet"
       mcc="219"
       mnc="01"
-      apn="web.htgprs"
+      apn="internet.ht.hr"
       authtype="1"
       type="default,supl,agps,fota,dun"
       mvno_type="spn"
@@ -2722,14 +2712,6 @@
       type="dun"
   />
 
-  <apn carrier="IMS Vodafone"
-      mcc="222"
-      mnc="10"
-      apn="ims"
-      type="ims"
-      protocol="IPV4V6"
-  />
-
   <apn carrier="PosteMobile"
       mcc="222"
       mnc="10"
@@ -3051,14 +3033,6 @@
       mnc="01"
       apn=""
       type="ia"
-      protocol="IPV4V6"
-  />
-
-  <apn carrier="T-Mobile IMS"
-      mcc="230"
-      mnc="01"
-      apn="IMS"
-      type="ims"
       protocol="IPV4V6"
   />
 
@@ -4290,6 +4264,7 @@
       mmsproxy="193.209.134.132"
       mmsport="80"
       type="mms"
+      authtype="0"
   />
 
   <apn carrier="Telia"
@@ -4297,18 +4272,20 @@
       mnc="01"
       apn="online.telia.se"
       type="default,supl"
+      authtype="0"
   />
 
-  <apn carrier="Halebop Internet"
+  <apn carrier="Internet"
       mcc="240"
       mnc="01"
       apn="halebop.telia.se"
       type="default,supl"
+      authtype="0"
       mvno_match_data="240017xxxxxxxxx"
       mvno_type="imsi"
   />
 
-  <apn carrier="Halebop MMS"
+  <apn carrier="MMS"
       mcc="240"
       mnc="01"
       apn="mms.telia.se"
@@ -4316,6 +4293,7 @@
       mmsproxy="193.209.134.132"
       mmsport="80"
       type="mms"
+      authtype="0"
       mvno_match_data="240017xxxxxxxxx"
       mvno_type="imsi"
   />
@@ -4328,6 +4306,7 @@
       mmsproxy="mmsproxy.tre.se"
       mmsport="8799"
       type="default,supl,mms"
+      authtype="0"
   />
 
   <apn carrier="3"
@@ -4338,6 +4317,7 @@
       mmsproxy="mmsproxy.tre.se"
       mmsport="8799"
       type="default,supl,mms"
+      authtype="0"
   />
 
   <apn carrier="Telenor SE"
@@ -4348,6 +4328,7 @@
       mmsproxy="172.30.253.241"
       mmsport="8799"
       type="default,supl,mms"
+      authtype="0"
       mvno_match_data="Telenor SE"
       mvno_type="spn"
   />
@@ -4357,6 +4338,8 @@
       mnc="05"
       apn="4g.tele2.se"
       type="default,supl"
+      authtype="0"
+      protocol="IPV4V6"
       mvno_match_data="Tele2"
       mvno_type="spn"
   />
@@ -4369,6 +4352,8 @@
       mmsproxy="130.244.202.30"
       mmsport="8080"
       type="mms"
+      authtype="0"
+      protocol="IPV4V6"
       mvno_match_data="Tele2"
       mvno_type="spn"
   />
@@ -4378,6 +4363,8 @@
       mnc="05"
       apn="internet.tele2.se"
       type="default,supl"
+      authtype="0"
+      protocol="IPV4V6"
       mvno_match_data="Tele2"
       mvno_type="spn"
   />
@@ -4390,6 +4377,7 @@
       mmsproxy="130.244.202.30"
       mmsport="8080"
       type="mms"
+      authtype="0"
       mvno_match_data="Tele2"
       mvno_type="spn"
   />
@@ -4402,6 +4390,7 @@
       mmsproxy="193.209.134.132"
       mmsport="80"
       type="mms"
+      authtype="0"
       mvno_match_data="Telia"
       mvno_type="spn"
   />
@@ -4411,20 +4400,22 @@
       mnc="05"
       apn="online.telia.se"
       type="default,supl"
+      authtype="0"
       mvno_match_data="Telia"
       mvno_type="spn"
   />
 
-  <apn carrier="Halebop Internet"
+  <apn carrier="Internet"
       mcc="240"
       mnc="05"
       apn="halebop.telia.se"
       type="default,supl"
+      authtype="0"
       mvno_match_data="Halebop"
       mvno_type="spn"
   />
 
-  <apn carrier="Halebop MMS"
+  <apn carrier="MMS"
       mcc="240"
       mnc="05"
       apn="mms.telia.se"
@@ -4432,6 +4423,7 @@
       mmsproxy="193.209.134.132"
       mmsport="80"
       type="mms"
+      authtype="0"
       mvno_match_data="Halebop"
       mvno_type="spn"
   />
@@ -4460,6 +4452,8 @@
       mnc="07"
       apn="4g.tele2.se"
       type="default,supl"
+      authtype="0"
+      protocol="IPV4V6"
   />
 
   <apn carrier="Tele2 MMS"
@@ -4470,6 +4464,8 @@
       mmsproxy="130.244.202.30"
       mmsport="8080"
       type="mms"
+      authtype="0"
+      protocol="IPV4V6"
   />
 
   <apn carrier="Tele2 Internet 3G"
@@ -4477,6 +4473,8 @@
       mnc="07"
       apn="internet.tele2.se"
       type="default,supl"
+      authtype="0"
+      protocol="IPV4V6"
   />
 
   <apn carrier="Tele2 MMS 3G"
@@ -4487,6 +4485,7 @@
       mmsproxy="130.244.202.30"
       mmsport="8080"
       type="mms"
+      authtype="0"
   />
 
   <apn carrier="Tele2 Internet"
@@ -4521,6 +4520,7 @@
       mmsproxy="172.30.253.241"
       mmsport="8799"
       type="default,supl,mms"
+      authtype="0"
   />
 
   <apn carrier="TelenorMobilsurf"
@@ -4559,14 +4559,15 @@
       type="mms"
   />
 
-  <apn carrier="Halebop Internet"
+  <apn carrier="Internet"
       mcc="240"
       mnc="017"
       apn="halebop.telia.se"
       type="default,supl"
+      authtype="0"
   />
 
-  <apn carrier="Halebop MMS"
+  <apn carrier="MMS"
       mcc="240"
       mnc="017"
       apn="mms.telia.se"
@@ -4576,6 +4577,7 @@
       mmsproxy="193.209.134.132"
       mmsport="9201"
       type="mms"
+      authtype="0"
   />
 
   <apn carrier="Tele2 Internet"
@@ -4583,6 +4585,8 @@
       mnc="24"
       apn="4g.tele2.se"
       type="default,supl"
+      authtype="0"
+      protocol="IPV4V6"
       mvno_match_data="Tele2"
       mvno_type="spn"
   />
@@ -4595,6 +4599,8 @@
       mmsproxy="130.244.202.30"
       mmsport="8080"
       type="mms"
+      authtype="0"
+      protocol="IPV4V6"
       mvno_match_data="Tele2"
       mvno_type="spn"
   />
@@ -4604,6 +4610,8 @@
       mnc="24"
       apn="internet.tele2.se"
       type="default,supl"
+      authtype="0"
+      protocol="IPV4V6"
       mvno_match_data="Tele2"
       mvno_type="spn"
   />
@@ -4616,6 +4624,7 @@
       mmsproxy="130.244.202.30"
       mmsport="8080"
       type="mms"
+      authtype="0"
       mvno_match_data="Tele2"
       mvno_type="spn"
   />
@@ -4628,6 +4637,7 @@
       mmsproxy="172.30.253.241"
       mmsport="8799"
       type="default,supl,mms"
+      authtype="0"
       mvno_match_data="Telenor SE"
       mvno_type="spn"
   />
@@ -5870,6 +5880,7 @@
       mnc="06"
       apn="internet"
       type="default,supl"
+      protocol="IPV4V6"
   />
 
   <apn carrier="Play MMS"
@@ -5878,6 +5889,7 @@
       apn="mms"
       mmsc="http://mmsc.play.pl/mms/wapenc"
       type="mms"
+      protocol="IPV4V6"
   />
 
   <apn carrier="Truphone"
@@ -15642,16 +15654,6 @@
       type="mms"
   />
 
-  <apn carrier='Localización'
-      mcc='334'
-      mnc='090'
-      apn='location.nexteldata.com.mx'
-      server='http://supl.nexteldata.com.mx'
-      authtype='0'
-      type='supl'
-      port='7275'
-  />
-
   <apn carrier='MMS'
       mcc='334'
       mnc='090'
@@ -15676,7 +15678,7 @@
       mnc='090'
       apn='wap.nexteldata.com.mx'
       authtype='0'
-      type='default'
+      type='default,supl'
   />
 
   <apn carrier="INTERNET Digicel"
@@ -17115,19 +17117,19 @@
       type="default,supl"
   />
 
+  <apn carrier="Vodafonemobileconnect"
+      mcc="404"
+      mnc="01"
+      apn="www"
+      type="default,supl"
+  />
+
   <apn carrier="Vodafone live"
       mcc="404"
       mnc="01"
       apn="portalnmms"
       proxy="10.10.1.100"
       port="9401"
-      type="default,supl"
-  />
-
-  <apn carrier="Vodafonemobileconnect"
-      mcc="404"
-      mnc="01"
-      apn="www"
       type="default,supl"
   />
 
@@ -24936,6 +24938,7 @@
       mnc="10"
       apn=""
       type="ia"
+      protocol="IPV4V6"
   />
 
   <apn carrier="IMS"
@@ -24997,6 +25000,7 @@
       server=""
       password="mobile"
       authtype="2"
+      type="default,supl"
   />
 
   <apn carrier="OCN モバイル ONE (LTE)"
@@ -25007,6 +25011,7 @@
       server=""
       password="mobile"
       authtype="2"
+      type="default,supl"
   />
 
   <apn carrier="IMS"
@@ -25148,15 +25153,6 @@
       mmsc="http://mms-s"
       type="default,mms,supl,hipri"
       authtype="2"
-  />
-
-  <apn carrier="SKT IA"
-      mcc="450"
-      mnc="05"
-      apn=""
-      type="ia"
-      protocol="IPV4V6"
-      roaming_protocol="IP"
   />
 
   <apn carrier="SKT IMS"
@@ -25190,10 +25186,20 @@
       server="*"
   />
 
+  <apn carrier="SKT IA"
+      mcc="450"
+      mnc="05"
+      apn=""
+      type="ia"
+      protocol="IPV4V6"
+      roaming_protocol="IP"
+  />
+
   <apn carrier="SKT LTE Roaming"
       mcc="450"
       mnc="05"
       apn="lte-roaming.sktelecom.com"
+      type="default,mms,supl,fota,cbs"
       mmsc="http://omms.nate.com:9082/oma_mms"
       mmsproxy="smart.nate.com"
       mmsport="9093"
@@ -25204,6 +25210,7 @@
       mcc="450"
       mnc="05"
       apn="roaming.sktelecom.com"
+      type="default,mms,supl,fota,cbs"
       mmsc="http://omms.nate.com:9082/oma_mms"
       mmsproxy="smart.nate.com"
       mmsport="9093"
@@ -25225,6 +25232,7 @@
       mcc="450"
       mnc="11"
       apn="lte-roaming.sktelecom.com"
+      type="default,mms,supl,fota,cbs"
       mmsc="http://omms.nate.com:9082/oma_mms"
       mmsproxy="smart.nate.com"
       mmsport="9093"
@@ -25235,19 +25243,11 @@
       mcc="450"
       mnc="11"
       apn="roaming.sktelecom.com"
+      type="default,mms,supl,fota,cbs"
       mmsc="http://omms.nate.com:9082/oma_mms"
       mmsproxy="smart.nate.com"
       mmsport="9093"
       server="*"
-  />
-
-  <apn carrier="LG uplus IA"
-      mcc="450"
-      mnc="06"
-      apn=""
-      type="ia"
-      protocol="IPV4V6"
-      roaming_protocol="IP"
   />
 
   <apn carrier="LG uplus IMS"
@@ -25257,6 +25257,7 @@
       type="ims"
       mmsc="http://omammsc.uplus.co.kr:9084"
       protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
   />
 
   <apn carrier="LG uplus"
@@ -25266,31 +25267,16 @@
       type="default,mms,supl,fota,cbs"
       mmsc="http://omammsc.uplus.co.kr:9084"
       protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
   />
 
-  <apn carrier="LG uplus LTE Roaming"
+  <apn carrier="LG uplus IA"
       mcc="450"
       mnc="06"
-      apn="lte-roaming.lguplus.co.kr"
-      mmsc="http://omammsc.uplus.co.kr:9084"
-      authtype="0"
-  />
-
-  <apn carrier="LG uplus Roaming"
-      mcc="450"
-      mnc="06"
-      apn="wroaming.lguplus.co.kr"
-      mmsc="http://omammsc.uplus.co.kr:9084"
-      authtype="0"
-  />
-
-  <apn carrier="KT IA"
-      mcc="450"
-      mnc="08"
       apn=""
       type="ia"
       protocol="IPV4V6"
-      roaming_protocol="IP"
+      roaming_protocol="IPV4V6"
   />
 
   <apn carrier="KT IMS"
@@ -25313,7 +25299,7 @@
 
   <apn carrier="KT IA"
       mcc="450"
-      mnc="02"
+      mnc="08"
       apn=""
       type="ia"
       protocol="IPV4V6"
@@ -25336,6 +25322,15 @@
       mmsc="http://mmsc.ktfwing.com:9082"
       port="80"
       server="*"
+  />
+
+  <apn carrier="KT IA"
+      mcc="450"
+      mnc="02"
+      apn=""
+      type="ia"
+      protocol="IPV4V6"
+      roaming_protocol="IP"
   />
 
   <apn carrier="Mobi-wap-gprs 2"
@@ -25520,6 +25515,17 @@
       type="mms"
   />
 
+  <apn carrier="csl"
+      mcc="454"
+      mnc="00"
+      apn="mobile"
+      mmsproxy="192.168.59.51"
+      mmsport="8080"
+      mmsc="http://192.168.58.171:8002"
+      authtype="3"
+      type="default,supl,mms"
+  />
+
   <apn carrier="1O1O"
       mcc="454"
       mnc="00"
@@ -25531,21 +25537,10 @@
       type="default,supl,mms"
   />
 
-  <apn carrier="one2free"
+  <apn carrier="SUN Mobile"
       mcc="454"
       mnc="00"
-      apn="mobile"
-      mmsproxy="192.168.59.51"
-      mmsport="8080"
-      mmsc="http://192.168.58.171:8002"
-      authtype="3"
-      type="default,supl,mms"
-  />
-
-  <apn carrier="NWMOBILE"
-      mcc="454"
-      mnc="00"
-      apn="NWMOBILE"
+      apn="SUNMobile"
       mmsproxy="192.168.59.61"
       mmsport="8080"
       mmsc="http://192.168.58.171:8002"
@@ -25553,6 +25548,17 @@
       type="default,supl,mms"
   />
 
+  <apn carrier="csl"
+      mcc="454"
+      mnc="02"
+      apn="mobile"
+      mmsproxy="192.168.59.51"
+      mmsport="8080"
+      mmsc="http://192.168.58.171:8002"
+      authtype="3"
+      type="default,supl,mms"
+  />
+
   <apn carrier="1O1O"
       mcc="454"
       mnc="02"
@@ -25564,21 +25570,10 @@
       type="default,supl,mms"
   />
 
-  <apn carrier="one2free"
+  <apn carrier="SUN Mobile"
       mcc="454"
       mnc="02"
-      apn="mobile"
-      mmsproxy="192.168.59.51"
-      mmsport="8080"
-      mmsc="http://192.168.58.171:8002"
-      authtype="3"
-      type="default,supl,mms"
-  />
-
-  <apn carrier="NWMOBILE"
-      mcc="454"
-      mnc="02"
-      apn="NWMOBILE"
+      apn="SUNMobile"
       mmsproxy="192.168.59.61"
       mmsport="8080"
       mmsc="http://192.168.58.171:8002"
@@ -25719,6 +25714,17 @@
       type="default,supl,mms"
   />
 
+  <apn carrier="csl"
+      mcc="454"
+      mnc="18"
+      apn="mobile"
+      mmsproxy="192.168.59.51"
+      mmsport="8080"
+      mmsc="http://192.168.58.171:8002"
+      authtype="3"
+      type="default,supl,mms"
+  />
+
   <apn carrier="1O1O"
       mcc="454"
       mnc="18"
@@ -25730,21 +25736,10 @@
       type="default,supl,mms"
   />
 
-  <apn carrier="one2free"
+  <apn carrier="SUN Mobile"
       mcc="454"
       mnc="18"
-      apn="mobile"
-      mmsproxy="192.168.59.51"
-      mmsport="8080"
-      mmsc="http://192.168.58.171:8002"
-      authtype="3"
-      type="default,supl,mms"
-  />
-
-  <apn carrier="NWMOBILE"
-      mcc="454"
-      mnc="18"
-      apn="NWMOBILE"
+      apn="SUNMobile"
       mmsproxy="192.168.59.61"
       mmsport="8080"
       mmsc="http://192.168.58.171:8002"
@@ -25798,6 +25793,17 @@
       mmsc="http://mms.wap.ctm.net:8002"
       mmsproxy="192.168.99.3"
       mmsport="8080"
+      type="default,supl,mms"
+  />
+
+  <apn carrier="3 Macau LTE"
+      mcc="455"
+      mnc="03"
+      apn="3mobile.three.com.mo"
+      mmsc="http://mms.three.com.mo:10021/mmsc"
+      mmsproxy="mms.three.com.mo"
+      mmsport="8080"
+      authtype="1"
       type="default,supl,mms"
   />
 
