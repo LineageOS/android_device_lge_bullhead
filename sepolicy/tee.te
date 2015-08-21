@@ -41,12 +41,6 @@ allow tee system_app:unix_dgram_socket sendto;
 
 allow tee time_daemon:unix_stream_socket connectto;
 
-userdebug_or_eng(`
-  allow tee su:unix_dgram_socket sendto;
-  allow tee shell_data_file:file rw_file_perms;
-  allow tee shell_data_file:dir search;
-')
-
 # allow tee to access data partition
 allow tee system_data_file:dir r_dir_perms;
 allow tee fingerprintd_data_file:dir rw_dir_perms;
