@@ -9885,16 +9885,6 @@
       roaming_protocol="IPV4V6"
   />
 
- <apn carrier="ATT IMS"
-      mcc="310"
-      mnc="410"
-      apn="ims"
-      type="ims"
-      modem_cognitive="true"
-      protocol="IPV4V6"
-      roaming_protocol="IPV4V6"
-  />
-
   <apn carrier="Defense Mobile"
       mcc="310"
       mnc="410"
