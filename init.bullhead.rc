@@ -153,6 +153,11 @@ on boot
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth
     write /proc/sys/net/ipv4/tcp_adv_win_scale 2
 
+    # Assign TCP buffer thresholds to be ceiling value of technology maximums
+    # Increased technology maximums should be reflected here.
+    write /proc/sys/net/core/rmem_max  8388608
+    write /proc/sys/net/core/wmem_max  8388608
+
     # Leds
     chown system system /sys/class/leds/red/on_off_ms
     chown system system /sys/class/leds/green/on_off_ms
@@ -411,6 +416,7 @@ service ss_ramdump /system/bin/subsystem_ramdump
 
 service cnd /system/bin/cnd
     class late_start
+    group system inet
     socket cnd stream 660 root inet
 
 service imsqmidaemon /system/bin/imsqmidaemon
