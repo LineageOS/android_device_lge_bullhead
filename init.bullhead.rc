@@ -416,7 +416,6 @@ service ss_ramdump /system/bin/subsystem_ramdump
 
 service cnd /system/bin/cnd
     class late_start
-    group system inet
     socket cnd stream 660 root inet
 
 service imsqmidaemon /system/bin/imsqmidaemon
