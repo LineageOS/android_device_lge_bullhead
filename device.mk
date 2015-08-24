@@ -163,13 +163,18 @@ PRODUCT_PACKAGES += \
     libOmxVdecHevc \
     libOmxVenc
 
+# Audio HAL and utilities
 PRODUCT_PACKAGES += \
     audio.primary.msm8992 \
     audio.a2dp.default \
     audio.usb.default \
     audio.r_submix.default \
-    libaudio-resampler \
+    libaudio-resampler
+
+# Audio effects
+PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
+    libqcomvoiceprocessingdescriptors \
     libqcomvisualizer \
     libqcompostprocbundle \
     libvolumelistener
