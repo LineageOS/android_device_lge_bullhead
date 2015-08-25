@@ -22,8 +22,8 @@
     <item name="screen.on">82.75</item>
     <item name="screen.full">201.16</item>
     <item name="bluetooth.active">51.55</item>
-    <item name="bluetooth.on">0.79</item>
-    <item name="wifi.on">3.5</item>
+    <item name="bluetooth.on">0.57</item>
+    <item name="wifi.on">.52</item>
     <item name="wifi.active">73.24</item>
     <item name="wifi.scan">75.48</item>
     <item name="dsp.audio">0.1</item>
@@ -65,7 +65,7 @@
         <value>1824000</value> <!-- 1824 MHz CPU speed -->
     </array>
     <!-- Power consumption when CPU is idle -->
-    <item name="cpu.idle">3.2</item>
+    <item name="cpu.idle">3.88</item>
     <item name="cpu.awake">17.4</item>
     <!-- Power consumption at different speeds -->
     <array name="cpu.active">
