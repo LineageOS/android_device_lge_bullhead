@@ -9,6 +9,7 @@ qmux_socket(atfwd);
 
 binder_use(atfwd);
 binder_call(atfwd, servicemanager);
+binder_call(atfwd, system_app);
 
 allow atfwd self:udp_socket create;
 
