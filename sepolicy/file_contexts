@@ -11,6 +11,7 @@
 /data/ramdump(/.*)?            u:object_r:ramdump_data_file:s0
 /data/diag_logs(/.*)?          u:object_r:diag_logs:s0
 /data/fpc.*                    u:object_r:fingerprintd_data_file:s0
+/data/connectivity(/.*)?       u:object_r:cnd_data_file:s0
 
 # GPU device
 /dev/kgsl-3d0                  u:object_r:gpu_device:s0
