@@ -1541,6 +1541,10 @@
         <ctl name="SPK DRV Volume" value="8" />
     </path>
 
+    <path name="spkr-gain-in-line-combo">
+        <path name="spkr-gain-in-headphone-combo" />
+    </path>
+
     <path name="speaker-gain-default">
         <ctl name="RX7 Digital Volume" value="84" />
         <ctl name="SPK DRV Volume" value="8" />
@@ -1682,6 +1686,10 @@
         <ctl name="COMP1 Switch" value="1" />
     </path>
 
+    <path name="line">
+        <path name="headphones" />
+    </path>
+
     <path name="headset-mic">
         <path name="adc2" />
         <ctl name="ADC2 Volume" value="12" />
@@ -1737,6 +1745,10 @@
         <ctl name="RX2 Digital Volume" value="84" />
     </path>
 
+    <path name="voice-line">
+        <path name="voice-headphones" />
+    </path>
+
     <path name="voice-headphones-vzwusc">
         <path name="headphones" />
         <ctl name="COMP1 Switch" value="1" />
@@ -1767,6 +1779,10 @@
         <ctl name="RX2 Digital Volume" value="66" />
         <ctl name="RX7 Digital Volume" value="72" />
         <ctl name="SPK DRV Volume" value="8" />
+    </path>
+
+    <path name="speaker-and-line">
+        <path name="speaker-and-headphones" />
     </path>
 
     <path name="speaker-and-headphones-liquid">
