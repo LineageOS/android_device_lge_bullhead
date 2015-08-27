@@ -124,3 +124,6 @@ get-set-forall /sys/devices/soc.0/qcom,bcl.*/mode disable
 get-set-forall /sys/devices/soc.0/qcom,bcl.*/hotplug_mask $bcl_hotplug_mask
 get-set-forall /sys/devices/soc.0/qcom,bcl.*/hotplug_soc_mask $bcl_hotplug_soc_mask
 get-set-forall /sys/devices/soc.0/qcom,bcl.*/mode enable
+
+# set GPU default power level to 5 (180MHz) instead of 4 (305MHz)
+write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 5
