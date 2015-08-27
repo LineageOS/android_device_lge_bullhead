@@ -1,5 +1,4 @@
 #
-
 # Copyright (C) 2015 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -337,8 +336,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # If data_no_toggle is 0 there are no reports if the screen is off.
 # If data_no_toggle is 1 then dormancy indications will come with screen off.
-#PRODUCT_PROPERTY_OVERRIDES += \
-#    persist.radio.data_no_toggle=1
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.data_no_toggle=1
 
 # Set bluetooth soc to rome
 PRODUCT_PROPERTY_OVERRIDES += \
