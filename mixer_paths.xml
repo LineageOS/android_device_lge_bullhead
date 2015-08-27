@@ -186,7 +186,7 @@
     <ctl name="SPK DRV Volume" value="8" />
     <ctl name="AIF1_CAP Mixer SLIM TX7" value="0" />
     <ctl name="AIF1_CAP Mixer SLIM TX8" value="0"/>
-    <ctl name="CLASS_H_DSM MUX" value="ZERO" />
+    <ctl name="CLASS_H_DSM MUX" value="DSM_HPHL_RX1" />
     <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia4" value="0" />
     <ctl name="AFE_PCM_RX Audio Mixer MultiMedia4" value="0" />
     <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia4" value="0" />
@@ -1675,8 +1675,8 @@
         <ctl name="SLIM RX3 MUX" value="AIF3_PB" />
         <ctl name="SLIM RX4 MUX" value="AIF3_PB" />
         <ctl name="SLIM_5_RX Channels" value="Two" />
-        <ctl name="RX1 MIX1 INP1" value="RX3" />
-        <ctl name="RX2 MIX1 INP1" value="RX4" />
+        <ctl name="RX1 MIX1 INP2" value="RX3" />
+        <ctl name="RX2 MIX1 INP2" value="RX4" />
         <ctl name="CLASS_H_DSM MUX" value="DSM_HPHL_RX1" />
         <ctl name="HPHL DAC Switch" value="1" />
         <ctl name="HPHL Volume" value="20" />
