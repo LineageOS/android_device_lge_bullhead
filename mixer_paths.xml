@@ -393,7 +393,7 @@
 
     <!-- These are audio route (FE to BE) specific mixer settings -->
     <path name="audio-tts-playback">
-        <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia3" value="1" />
+        <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia2" value="1" />
     </path>
 
     <path name="deep-buffer-playback">
