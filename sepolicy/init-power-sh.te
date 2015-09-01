@@ -6,7 +6,6 @@ init_daemon_domain(init-power-sh)
 allow init-power-sh proc_kernel_sched:file w_file_perms;
 allow init-power-sh self:capability net_admin;
 allow init-power-sh shell_exec:file r_file_perms;
-allow init-power-sh sysfs_thermal:file w_file_perms;
 allow init-power-sh sysfs_devices_system_cpu:file w_file_perms;
 allow init-power-sh sysfs_performance:dir search;
 allow init-power-sh sysfs_performance:file w_file_perms;
