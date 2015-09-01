@@ -27,4 +27,5 @@ void dumpstate_board()
     dump_file("IPC Router Log", "/d/ipc_logging/ipc_router/log");
     run_command("ION HEAPS", 5, SU_PATH, "root", "/system/bin/sh", "-c", "for f in $(ls /d/ion/*); do echo $f; cat $f; done", NULL);
     dump_file("Battery Type", "/sys/class/power_supply/bms/battery_type");
+    run_command("Temperatures", 5, SU_PATH, "root", "/system/bin/sh", "-c", "for f in emmc_therm msm_therm pa_therm0 xo_therm ; do echo -n \"$f : \" ; cat /sys/class/hwmon/hwmon2/device/$f ; done ; for f in `ls /sys/class/thermal` ; do type=`cat /sys/class/thermal/$f/type` ; temp=`cat /sys/class/thermal/$f/temp` ; echo \"$type: $temp\" ; done", NULL);
 };
