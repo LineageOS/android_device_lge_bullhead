@@ -275,6 +275,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true
 
+# Enable low power video mode for 4K encode
+PRODUCT_PROPERTY_OVERRIDES += \
+    vidc.debug.perf.mode=2 \
+    vidc.enc.dcvs.extra-buff-count=2
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.texture_cache_size=56 \
     ro.hwui.layer_cache_size=32 \
