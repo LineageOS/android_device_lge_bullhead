@@ -29,7 +29,7 @@
          Or string format of ApnSettingV3.
          note that empty fields can be ommitted: "name,apn,,,,,,,,,310,260,,DUN" -->
     <string-array translatable="false" name="config_tether_apndata">
-      <item>Tethering Internet,web.omnitel.it,,,,,,,,,222,10,,DUN</item>
+        <item>TIM Web,ibox.tim.it,,,,,,,,,222,01,,DUN</item>
     </string-array>
 
 </resources>
