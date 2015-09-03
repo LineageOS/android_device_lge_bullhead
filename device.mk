@@ -340,6 +340,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=0
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.use_cc_names=true
+
 # Update 1x signal strength after 10s
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.radio.snapshot_enabled=1 \
