@@ -4,6 +4,8 @@ allow mediaserver thermal_socket:sock_file w_file_perms;
 allow mediaserver camera:unix_dgram_socket sendto;
 allow mediaserver camera_data_file:sock_file write;
 
-allow mediaserver mpctl_data_file:dir search;
-unix_socket_connect(mediaserver, mpctl, perfd)
-unix_socket_send(mediaserver, mpctl, perfd)
+# allow communication w/perfd
+allow mediaserver perfd_data_file:dir search;
+allow mediaserver perfd_data_file:sock_file write;
+allow mediaserver perfd:unix_dgram_socket sendto;
+allow mediaserver perfd:unix_stream_socket connectto;
