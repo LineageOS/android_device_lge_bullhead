@@ -12,12 +12,11 @@ init_daemon_domain(perfd)
 dontaudit perfd self:capability fsetid;
 
 # Data file accesses.
-allow perfd mpctl_data_file:dir create_dir_perms;
-allow perfd mpctl_data_file:file create_file_perms;
+allow perfd perfd_data_file:dir create_dir_perms;
+allow perfd perfd_data_file:file create_file_perms;
 
 # Socket creation under /data/misc/perfd
-type_transition perfd mpctl_data_file:sock_file mpctl_socket;
-allow perfd mpctl_socket:sock_file create_file_perms;
+allow perfd perfd_data_file:sock_file create_file_perms;
 
 allow perfd sysfs_performance:dir search;
 allow perfd sysfs_performance:file rw_file_perms;
@@ -29,3 +28,6 @@ allow perfd proc_kernel_sched:file r_file_perms;
 
 # allow writing to /sys/devices/system/cpu/*
 allow perfd sysfs_devices_system_cpu:file rw_file_perms;
+
+# access to /sys/module/lpm_levels/parameters/sleep_disabled
+allow perfd sysfs_power_management:file w_file_perms;
