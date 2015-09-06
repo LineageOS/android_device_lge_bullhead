@@ -149,7 +149,7 @@ on boot
     write /sys/module/msm_poweroff/parameters/download_mode 0
 
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth
-    write /proc/sys/net/ipv4/tcp_adv_win_scale 2
+    write /proc/sys/net/ipv4/tcp_adv_win_scale 1
 
     # Assign TCP buffer thresholds to be ceiling value of technology maximums
     # Increased technology maximums should be reflected here.
