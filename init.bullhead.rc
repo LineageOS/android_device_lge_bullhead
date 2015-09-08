@@ -68,7 +68,6 @@ on init
 
 on fs
     mount_all ./fstab.bullhead
-    swapon_all ./fstab.bullhead
 
     restorecon_recursive /persist
 
