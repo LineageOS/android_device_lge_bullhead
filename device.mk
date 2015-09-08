@@ -353,6 +353,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.data_no_toggle=1
 
+# Adjust STK popup operation
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.process_sups_ind=1
+
 # Set bluetooth soc to rome
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=rome
