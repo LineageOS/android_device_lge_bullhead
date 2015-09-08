@@ -290,6 +290,9 @@ on property:init.svc.per_mgr=running
 on property:sys.shutdown.requested=*
     stop per_proxy
 
+on property:ro.boot.hardware.sku=LGH790
+    setprop ro.boot.wificountrycode US
+
 service thermal-engine /system/bin/thermal-engine
     class main
     user root
