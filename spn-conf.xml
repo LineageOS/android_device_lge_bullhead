@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spnOverrides>
+    <spnOverride numeric="24001" spn="Telia SE"/>
+    <spnOverride numeric="24002" spn="3SE"/>
+    <spnOverride numeric="24004" spn="3SE"/>
+    <spnOverride numeric="24005" spn="Tele2 SE"/>
+    <spnOverride numeric="24007" spn="Tele2 SE"/>
+    <spnOverride numeric="24024" spn="Tele2 SE"/>
     <spnOverride numeric="40402" spn="airtel"/>
     <spnOverride numeric="40403" spn="airtel"/>
     <spnOverride numeric="40410" spn="airtel"/>
@@ -29,5 +35,7 @@
     <spnOverride numeric="42515" spn="Home Cellular"/>
     <spnOverride numeric="42516" spn="Rami Levy"/>
     <spnOverride numeric="45006" spn="LG U+"/>
+    <spnOverride numeric="45501" spn="CSL"/>
+    <spnOverride numeric="45504" spn="CSL"/>
     <spnOverride numeric="46689" spn="台灣之星"/>
 </spnOverrides>
