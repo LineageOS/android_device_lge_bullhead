@@ -640,8 +640,8 @@
       mnc="12"
       apn="internet"
       mmsc="http://mms"
-      mmsproxy="193.113.200.195"
-      mmsport="8080"
+      mmsproxy="10.10.100.20"
+      mmsport="5080"
       type="default,supl,mms"
   />
 
@@ -24429,7 +24429,7 @@
       type="default,supl"
   />
 
-  <apn carrier="PC HOT mobile"
+  <apn carrier="HOT mobile PC"
       mcc="425"
       mnc="07"
       apn="pc.hotm"
@@ -25081,8 +25081,6 @@
       type="default,mms,supl,hipri"
       protocol="IPV4V6"
       roaming_protocol="IP"
-      defaultflag="0"
-      preferapp=""
   />
 
   <apn carrier="LTE NET for DATA"
@@ -25098,8 +25096,36 @@
       type="default,mms,supl,hipri"
       protocol="IPV4V6"
       roaming_protocol="IP"
-      defaultflag="0"
-      preferapp=""
+  />
+
+  <apn carrier="UQ mobile"
+      mcc="440"
+      mnc="50"
+      apn="uqmobile.jp"
+      user="uq@uqmobile.jp"
+      password="uq"
+      authtype="2"
+      mmsproxy=""
+      mmsport="80"
+      mmsc="http://mms.ezweb.ne.jp/MMS"
+      type="default,mms,supl,hipri"
+      protocol="IPV4V6"
+      roaming_protocol="IP"
+  />
+
+  <apn carrier="mineo"
+      mcc="440"
+      mnc="50"
+      apn="mineo.jp"
+      user="mineo@k-opti.com"
+      password="mineo"
+      authtype="2"
+      mmsproxy=""
+      mmsport="80"
+      mmsc="http://mms.ezweb.ne.jp/MMS"
+      type="default,mms,supl,hipri"
+      protocol="IPV4V6"
+      roaming_protocol="IP"
   />
 
   <apn carrier="LTE NET"
@@ -25115,8 +25141,6 @@
       type="default,mms,supl,hipri"
       protocol="IPV4V6"
       roaming_protocol="IP"
-      defaultflag="0"
-      preferapp=""
   />
 
   <apn carrier="LTE NET for DATA"
@@ -25132,8 +25156,6 @@
       type="default,mms,supl,hipri"
       protocol="IPV4V6"
       roaming_protocol="IP"
-      defaultflag="0"
-      preferapp=""
   />
 
   <apn carrier="SKT IMS"
@@ -25198,10 +25220,10 @@
       server="*"
   />
 
-  <apn carrier="SKT 3G INTERNET"
+  <apn carrier="SKT LTE INTERNET"
       mcc="450"
       mnc="11"
-      apn="web.sktelecom.com"
+      apn="lte.sktelecom.com"
       type="default,mms,supl,fota,cbs"
       mmsc="http://omms.nate.com:9082/oma_mms"
       mmsproxy="smart.nate.com"
