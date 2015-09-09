@@ -11,7 +11,7 @@ file_type_auto_trans(cnd, socket_device, cnd_socket);
 qmux_socket(cnd)
 
 # cnd is started as root uid/gid and transitions to system
-allow cnd self:capability { setuid setgid net_raw dac_override };
+allow cnd self:capability { setuid setgid net_raw };
 
 # Note: fsetid is deliberately not included above. fsetid checks are
 # triggered by chmod on a directory or file owned by a group other
