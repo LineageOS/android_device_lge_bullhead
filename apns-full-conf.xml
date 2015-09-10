@@ -25002,6 +25002,61 @@
       type="default,supl"
   />
 
+  <apn carrier="mopera U"
+      mcc="440"
+      mnc="10"
+      apn="mopera.net"
+      user=""
+      server=""
+      password=""
+      type="default,supl"
+  />
+
+  <apn carrier="b-mobile for Nexus"
+      mcc="440"
+      mnc="10"
+      apn="bmobile.ne.jp"
+      user="bmobile@nx"
+      server=""
+      password="bmobile"
+      authtype="3"
+      type="default,supl"
+  />
+
+  <apn carrier="IIJmio"
+      mcc="440"
+      mnc="10"
+      apn="iijmio.jp"
+      user="mio@iij"
+      server=""
+      password="iij"
+      authtype="3"
+      protocol="IPV4V6"
+      type="default,supl"
+  />
+
+  <apn carrier="OCN モバイル ONE (3G)"
+      mcc="440"
+      mnc="10"
+      apn="3g-d-2.ocn.ne.jp"
+      user="mobileid@ocn"
+      server=""
+      password="mobile"
+      authtype="2"
+      type="default,supl"
+  />
+
+  <apn carrier="OCN モバイル ONE (LTE)"
+      mcc="440"
+      mnc="10"
+      apn="lte-d.ocn.ne.jp"
+      user="mobileid@ocn"
+      server=""
+      password="mobile"
+      authtype="2"
+      type="default,supl"
+  />
+
   <apn carrier="IMS"
       mcc="440"
       mnc="00"
