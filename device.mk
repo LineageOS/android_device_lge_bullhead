@@ -362,9 +362,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.process_sups_ind=1
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    mdc_initial_max_retry=10
-
 # Set bluetooth soc to rome
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=rome
