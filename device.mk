@@ -383,6 +383,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-threads=4 \
     dalvik.vm.image-dex2oat-threads=4
 
+# Disable Camera TNR
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.tnr.preview=0 \
+    persist.camera.tnr.video=0
+
 # Power HAL
 PRODUCT_PACKAGES += \
     power.bullhead
