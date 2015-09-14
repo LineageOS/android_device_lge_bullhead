@@ -1741,8 +1741,8 @@
         <ctl name="COMP1 Switch" value="1" />
         <ctl name="HPHL Volume" value="20" />
         <ctl name="HPHR Volume" value="20" />
-        <ctl name="RX1 Digital Volume" value="84" />
-        <ctl name="RX2 Digital Volume" value="84" />
+        <ctl name="RX1 Digital Volume" value="78" />
+        <ctl name="RX2 Digital Volume" value="78" />
     </path>
 
     <path name="voice-line">
@@ -1754,8 +1754,8 @@
         <ctl name="COMP1 Switch" value="1" />
         <ctl name="HPHL Volume" value="20" />
         <ctl name="HPHR Volume" value="20" />
-        <ctl name="RX1 Digital Volume" value="84" />
-        <ctl name="RX2 Digital Volume" value="84" />
+        <ctl name="RX1 Digital Volume" value="78" />
+        <ctl name="RX2 Digital Volume" value="78" />
     </path>
 
     <path name="voice-headset-mic">
