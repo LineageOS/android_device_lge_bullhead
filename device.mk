@@ -314,8 +314,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Emergency call overrides for Korea
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.ecc_hard_count=1 \
-    persist.radio.ecc_hard_1=111,113,117,122,125
+    ril.nosim.ecc_list_count=1 \
+    ril.nosim.ecclist_1=111,113,117,122,125
 
 # low audio flinger standby delay to reduce power consumption
 PRODUCT_PROPERTY_OVERRIDES += \
