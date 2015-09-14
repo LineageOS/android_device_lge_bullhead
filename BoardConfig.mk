@@ -115,8 +115,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.bullhead
 
-TARGET_RECOVERY_UPDATER_LIBS := liblg_recovery_updater_$(TARGET_DEVICE)
-
 TARGET_RECOVERY_FSTAB = device/lge/bullhead/fstab.bullhead
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/lge/bullhead
