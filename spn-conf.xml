@@ -6,6 +6,24 @@
     <spnOverride numeric="24005" spn="Tele2 SE"/>
     <spnOverride numeric="24007" spn="Tele2 SE"/>
     <spnOverride numeric="24024" spn="Tele2 SE"/>
+    <spnOverride numeric="310160" spn="T-Mobile"/>
+    <spnOverride numeric="310200" spn="T-Mobile"/>
+    <spnOverride numeric="310210" spn="T-Mobile"/>
+    <spnOverride numeric="310220" spn="T-Mobile"/>
+    <spnOverride numeric="310230" spn="T-Mobile"/>
+    <spnOverride numeric="310240" spn="T-Mobile"/>
+    <spnOverride numeric="310250" spn="T-Mobile"/>
+    <spnOverride numeric="310260" spn="T-Mobile"/>
+    <spnOverride numeric="310270" spn="T-Mobile"/>
+    <spnOverride numeric="310300" spn="T-Mobile"/>
+    <spnOverride numeric="310310" spn="T-Mobile"/>
+    <spnOverride numeric="310490" spn="T-Mobile USA"/>
+    <spnOverride numeric="310530" spn="T-Mobile"/>
+    <spnOverride numeric="310580" spn="T-Mobile"/>
+    <spnOverride numeric="310590" spn="T-Mobile"/>
+    <spnOverride numeric="310640" spn="T-Mobile"/>
+    <spnOverride numeric="310660" spn="T-Mobile"/>
+    <spnOverride numeric="310800" spn="T-Mobile"/>
     <spnOverride numeric="40402" spn="airtel"/>
     <spnOverride numeric="40403" spn="airtel"/>
     <spnOverride numeric="40410" spn="airtel"/>
