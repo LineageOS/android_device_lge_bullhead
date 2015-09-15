@@ -1,6 +1,3 @@
-# STOPSHIP: all domains must be in enforcing mode.
-permissive fingerprintd;
-
 binder_service(fingerprintd)
 
 # Access to /dev/tee
