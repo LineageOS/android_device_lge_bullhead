@@ -387,6 +387,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.redir_party_num=0
 
+# NFC/camera interaction workaround - DO NOT COPY TO NEW DEVICES
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.camera.notify_nfc=1
+
 # Power HAL
 PRODUCT_PACKAGES += \
     power.bullhead
