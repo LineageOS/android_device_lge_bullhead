@@ -359,6 +359,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.process_sups_ind=1
 
+# VZW voice roaming issue
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.eri64_as_home=1
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.data_con_rprt=true
 
