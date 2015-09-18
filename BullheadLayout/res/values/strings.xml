@@ -15,7 +15,7 @@
 -->
 
 <resources>
-    <string name="app_label">Nexus 5 Home Screen</string>
+    <string name="app_label">Nexus 5X Home Screen</string>
     <string name="google_folder_title">Google</string>
     <string name="create_folder_title">Create</string>
     <!--Play here refers to the brand -->
