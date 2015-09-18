@@ -65,4 +65,10 @@
     <string translatable="false" name="config_mobile_hotspot_provision_app_no_ui">com.lge.entitlement.SILENT_ENTITLEMENT_CHECK</string>
     <string translatable="false" name="config_mobile_hotspot_provision_response">com.lge.entitlement.SILENT_ENTITLEMENT_CHECK_RESULT</string>
 
+    <!-- MMS user agent string -->
+    <string name="config_mms_user_agent" translatable="false">nexus5x</string>
+
+    <!-- MMS user agent prolfile url -->
+    <string name="config_mms_user_agent_profile_url" translatable="false">http://uaprof.vtext.com/lg/nexus5x/nexus5x.xml</string>
+
 </resources>
