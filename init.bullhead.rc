@@ -269,6 +269,7 @@ service qmuxd /system/bin/qmuxd
 service perfd /system/bin/perfd
     class main
     user root
+    group system
 
 service qti /system/vendor/bin/qti
     class main
