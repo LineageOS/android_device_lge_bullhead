@@ -24992,13 +24992,79 @@
       protocol="IPV6"
   />
 
-  <apn carrier="SP-MODE"
+  <apn carrier="sp-mode"
       mcc="440"
       mnc="10"
       apn="spmode.ne.jp"
       user=""
       server=""
       password=""
+      type="default,supl"
+  />
+
+  <apn carrier="Umobile"
+      mcc="440"
+      mnc="10"
+      apn="umobile.jp"
+      user="umobile@umobile.jp"
+      server=""
+      password="umobile"
+      authtype="3"
+      type="default,supl"
+  />
+
+  <apn carrier="Nifmo"
+      mcc="440"
+      mnc="10"
+      apn="mda.nifty.com"
+      user="mda@nifty"
+      server=""
+      password="nifty"
+      authtype="3"
+      type="default,supl"
+  />
+
+  <apn carrier="DMM mobile"
+      mcc="440"
+      mnc="10"
+      apn="dmm.com"
+      user="dmm@dmm.com"
+      server=""
+      password="dmm"
+      authtype="3"
+      type="default,supl"
+  />
+
+  <apn carrier="Plala mobile"
+      mcc="440"
+      mnc="10"
+      apn="lte.nttplala.com"
+      user="735fy3724@plala.or.jp"
+      server=""
+      password="tekg5gjks3het"
+      authtype="3"
+      type="default,supl"
+  />
+
+  <apn carrier="Rakuten mobile"
+      mcc="440"
+      mnc="10"
+      apn="vdm.jp"
+      user="rakuten@vdm"
+      server=""
+      password="vrkt"
+      authtype="3"
+      type="default,supl"
+  />
+
+  <apn carrier="Biglobe"
+      mcc="440"
+      mnc="10"
+      apn="biglobe.jp"
+      user="user"
+      server=""
+      password="0000"
+      authtype="3"
       type="default,supl"
   />
 
@@ -25016,7 +25082,7 @@
       mcc="440"
       mnc="10"
       apn="bmobile.ne.jp"
-      user="bmobile@nx"
+      user="bmobile@spd"
       server=""
       password="bmobile"
       authtype="3"
