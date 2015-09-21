@@ -2163,6 +2163,9 @@
 
     <path name="three-mic">
         <path name="speaker-tmic" />
+        <ctl name="DEC10 Volume" value="89" />
+        <ctl name="DEC5 Volume" value="94" />
+        <ctl name="DEC7 Volume" value="94" />
     </path>
 
     <path name="quad-mic">
