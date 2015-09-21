@@ -104,6 +104,7 @@ on boot
     write /dev/cpuset/foreground/cpus 0-5
     write /dev/cpuset/foreground/boost/cpus 4-5
     write /dev/cpuset/background/cpus 0
+    write /dev/cpuset/system-background/cpus 0-3
 
     # Bluetooth
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
@@ -270,6 +271,7 @@ service perfd /system/bin/perfd
     class main
     user root
     group system
+    writepid /dev/cpuset/system-background/tasks
 
 service qti /system/vendor/bin/qti
     class main
@@ -397,6 +399,7 @@ service msm_irqbalance /system/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.
     class core
     user root
     group root
+    writepid /dev/cpuset/system-background/tasks
 
 service time_daemon /system/bin/time_daemon
     class late_start
