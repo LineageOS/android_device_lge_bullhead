@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spnOverrides>
-    <spnOverride numeric="24001" spn="Telia SE"/>
-    <spnOverride numeric="24002" spn="3SE"/>
-    <spnOverride numeric="24004" spn="3SE"/>
-    <spnOverride numeric="24005" spn="Tele2 SE"/>
-    <spnOverride numeric="24007" spn="Tele2 SE"/>
-    <spnOverride numeric="24024" spn="Tele2 SE"/>
     <spnOverride numeric="310160" spn="T-Mobile"/>
     <spnOverride numeric="310200" spn="T-Mobile"/>
     <spnOverride numeric="310210" spn="T-Mobile"/>
