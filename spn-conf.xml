@@ -53,7 +53,5 @@
     <spnOverride numeric="42515" spn="Home Cellular"/>
     <spnOverride numeric="42516" spn="Rami Levy"/>
     <spnOverride numeric="45006" spn="LG U+"/>
-    <spnOverride numeric="45501" spn="CSL"/>
-    <spnOverride numeric="45504" spn="CSL"/>
     <spnOverride numeric="46689" spn="台灣之星"/>
 </spnOverrides>
