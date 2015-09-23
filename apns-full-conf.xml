@@ -571,7 +571,7 @@
       protocol="IPV4V6"
   />
 
-  <apn carrier="KPN/Hi Mobiel Internet"
+  <apn carrier="KPN Mobiel Internet"
       mcc="204"
       mnc="08"
       apn="portalmmm.nl"
@@ -2544,7 +2544,7 @@
       type="mms"
   />
 
-  <apn carrier="TIM WAP"
+  <apn carrier="WAP TIM"
       mcc="222"
       mnc="01"
       apn="wap.tim.it"
@@ -3675,6 +3675,18 @@
       apn="3hotspot"
       authtype="0"
       type="dun"
+  />
+
+  <apn carrier="iD"
+      mcc="234"
+      mnc="20"
+      apn="id"
+      mmsc="http://mms.um.idmobile.co.uk:10021/mmsc"
+      mmsproxy="mms.idmobile.co.uk"
+      mmsport="8799"
+      type="default,supl,mms"
+      mvno_type="gid"
+      mvno_match_data="0305"
   />
 
   <apn carrier="Lycamobile"
@@ -15722,7 +15734,7 @@
       type='mms'
   />
 
-  <apn carrier='Internet'
+  <apn carrier='Modem'
       mcc='334'
       mnc='090'
       apn='modem.nexteldata.com.mx'
@@ -17280,16 +17292,6 @@
       type="mms"
   />
 
-  <apn carrier="Vodafone_MMS"
-      mcc="404"
-      mnc="05"
-      apn="portalnmms"
-      mmsc="http://mms1.live.vodafone.in/mms/"
-      mmsproxy="10.10.1.100"
-      mmsport="9401"
-      type="mms"
-  />
-
   <apn carrier="Vodafonemobileconnect"
       mcc="404"
       mnc="05"
@@ -17304,6 +17306,16 @@
       proxy="10.10.1.100"
       port="9401"
       type="default,supl"
+  />
+
+  <apn carrier="Vodafone_MMS"
+      mcc="404"
+      mnc="05"
+      apn="portalnmms"
+      mmsc="http://mms1.live.vodafone.in/mms/"
+      mmsproxy="10.10.1.100"
+      mmsport="9401"
+      type="mms"
   />
 
   <apn carrier="Idea_Internet"
@@ -17386,16 +17398,6 @@
       type="mms"
   />
 
-  <apn carrier="Vodafone_MMS"
-      mcc="404"
-      mnc="11"
-      apn="portalnmms"
-      mmsc="http://mms1.live.vodafone.in/mms/"
-      mmsproxy="10.10.1.100"
-      mmsport="9401"
-      type="mms"
-  />
-
   <apn carrier="Vodafonemobileconnect"
       mcc="404"
       mnc="11"
@@ -17410,6 +17412,16 @@
       proxy="10.10.1.100"
       port="9401"
       type="default,supl"
+  />
+
+  <apn carrier="Vodafone_MMS"
+      mcc="404"
+      mnc="11"
+      apn="portalnmms"
+      mmsc="http://mms1.live.vodafone.in/mms/"
+      mmsproxy="10.10.1.100"
+      mmsport="9401"
+      type="mms"
   />
 
   <apn carrier="Idea_Internet"
@@ -17438,16 +17450,6 @@
       type="mms"
   />
 
-  <apn carrier="Vodafone_MMS"
-      mcc="404"
-      mnc="13"
-      apn="portalnmms"
-      mmsc="http://mms1.live.vodafone.in/mms/"
-      mmsproxy="10.10.1.100"
-      mmsport="9401"
-      type="mms"
-  />
-
   <apn carrier="Vodafonemobileconnect"
       mcc="404"
       mnc="13"
@@ -17462,6 +17464,16 @@
       proxy="10.10.1.100"
       port="9401"
       type="default,supl"
+  />
+
+  <apn carrier="Vodafone_MMS"
+      mcc="404"
+      mnc="13"
+      apn="portalnmms"
+      mmsc="http://mms1.live.vodafone.in/mms/"
+      mmsproxy="10.10.1.100"
+      mmsport="9401"
+      type="mms"
   />
 
   <apn carrier="IDEA MMS"
@@ -17490,16 +17502,6 @@
       type="default,supl"
   />
 
-  <apn carrier="Vodafone_MMS"
-      mcc="404"
-      mnc="15"
-      apn="portalnmms"
-      mmsc="http://mms1.live.vodafone.in/mms/"
-      mmsproxy="10.10.1.100"
-      mmsport="9401"
-      type="mms"
-  />
-
   <apn carrier="Vodafonemobileconnect"
       mcc="404"
       mnc="15"
@@ -17514,6 +17516,16 @@
       proxy="10.10.1.100"
       port="9401"
       type="default,supl"
+  />
+
+  <apn carrier="Vodafone_MMS"
+      mcc="404"
+      mnc="15"
+      apn="portalnmms"
+      mmsc="http://mms1.live.vodafone.in/mms/"
+      mmsproxy="10.10.1.100"
+      mmsport="9401"
+      type="mms"
   />
 
   <apn carrier="Mobile Office"
@@ -17656,16 +17668,6 @@
       type="mms"
   />
 
-  <apn carrier="Vodafone_MMS"
-      mcc="404"
-      mnc="20"
-      apn="portalnmms"
-      mmsc="http://mms1.live.vodafone.in/mms/"
-      mmsproxy="10.10.1.100"
-      mmsport="9401"
-      type="mms"
-  />
-
   <apn carrier="Vodafonemobileconnect"
       mcc="404"
       mnc="20"
@@ -17680,6 +17682,16 @@
       proxy="10.10.1.100"
       port="9401"
       type="default,supl"
+  />
+
+  <apn carrier="Vodafone_MMS"
+      mcc="404"
+      mnc="20"
+      apn="portalnmms"
+      mmsc="http://mms1.live.vodafone.in/mms/"
+      mmsproxy="10.10.1.100"
+      mmsport="9401"
+      type="mms"
   />
 
   <apn carrier="Loop Mobile MMS"
@@ -17803,16 +17815,6 @@
       type="mms"
   />
 
-  <apn carrier="Vodafone_MMS"
-      mcc="404"
-      mnc="27"
-      apn="portalnmms"
-      mmsc="http://mms1.live.vodafone.in/mms/"
-      mmsproxy="10.10.1.100"
-      mmsport="9401"
-      type="mms"
-  />
-
   <apn carrier="Vodafonemobileconnect"
       mcc="404"
       mnc="27"
@@ -17828,6 +17830,17 @@
       port="9401"
       type="default,supl"
   />
+
+  <apn carrier="Vodafone_MMS"
+      mcc="404"
+      mnc="27"
+      apn="portalnmms"
+      mmsc="http://mms1.live.vodafone.in/mms/"
+      mmsproxy="10.10.1.100"
+      mmsport="9401"
+      type="mms"
+  />
+
 
   <apn carrier="Aircel-GPRS-Postpaid"
       mcc="404"
@@ -17940,16 +17953,6 @@
       type="mms"
   />
 
-  <apn carrier="Vodafone_MMS"
-      mcc="404"
-      mnc="30"
-      apn="portalnmms"
-      mmsc="http://mms1.live.vodafone.in/mms/"
-      mmsproxy="10.10.1.100"
-      mmsport="9401"
-      type="mms"
-  />
-
   <apn carrier="Vodafonemobileconnect"
       mcc="404"
       mnc="30"
@@ -17964,6 +17967,16 @@
       proxy="10.10.1.100"
       port="9401"
       type="default,supl"
+  />
+
+  <apn carrier="Vodafone_MMS"
+      mcc="404"
+      mnc="30"
+      apn="portalnmms"
+      mmsc="http://mms1.live.vodafone.in/mms/"
+      mmsproxy="10.10.1.100"
+      mmsport="9401"
+      type="mms"
   />
 
   <apn carrier="Mobile Office"
@@ -18414,16 +18427,6 @@
       type="mms"
   />
 
-  <apn carrier="Vodafone_MMS"
-      mcc="404"
-      mnc="43"
-      apn="portalnmms"
-      mmsc="http://mms1.live.vodafone.in/mms/"
-      mmsproxy="10.10.1.100"
-      mmsport="9401"
-      type="mms"
-  />
-
   <apn carrier="Vodafonemobileconnect"
       mcc="404"
       mnc="43"
@@ -18438,6 +18441,16 @@
       proxy="10.10.1.100"
       port="9401"
       type="default,supl"
+  />
+
+  <apn carrier="Vodafone_MMS"
+      mcc="404"
+      mnc="43"
+      apn="portalnmms"
+      mmsc="http://mms1.live.vodafone.in/mms/"
+      mmsproxy="10.10.1.100"
+      mmsport="9401"
+      type="mms"
   />
 
   <apn carrier="Idea_Internet"
@@ -18493,16 +18506,6 @@
       type="mms"
   />
 
-  <apn carrier="Vodafone_MMS"
-      mcc="404"
-      mnc="46"
-      apn="portalnmms"
-      mmsc="http://mms1.live.vodafone.in/mms/"
-      mmsproxy="10.10.1.100"
-      mmsport="9401"
-      type="mms"
-  />
-
   <apn carrier="Vodafonemobileconnect"
       mcc="404"
       mnc="46"
@@ -18517,6 +18520,16 @@
       proxy="10.10.1.100"
       port="9401"
       type="default,supl"
+  />
+
+  <apn carrier="Vodafone_MMS"
+      mcc="404"
+      mnc="46"
+      apn="portalnmms"
+      mmsc="http://mms1.live.vodafone.in/mms/"
+      mmsproxy="10.10.1.100"
+      mmsport="9401"
+      type="mms"
   />
 
   <apn carrier="Mobile Office"
@@ -18808,16 +18821,6 @@
       type="default,supl"
   />
 
-  <apn carrier="Vodafone_MMS"
-      mcc="404"
-      mnc="60"
-      apn="portalnmms"
-      mmsc="http://mms1.live.vodafone.in/mms/"
-      mmsproxy="10.10.1.100"
-      mmsport="9401"
-      type="mms"
-  />
-
   <apn carrier="Vodafonemobileconnect"
       mcc="404"
       mnc="60"
@@ -18832,6 +18835,16 @@
       proxy="10.10.1.100"
       port="9401"
       type="default,supl"
+  />
+
+  <apn carrier="Vodafone_MMS"
+      mcc="404"
+      mnc="60"
+      apn="portalnmms"
+      mmsc="http://mms1.live.vodafone.in/mms/"
+      mmsproxy="10.10.1.100"
+      mmsport="9401"
+      type="mms"
   />
 
   <apn carrier="bsnlmms"
@@ -19333,16 +19346,6 @@
       type="default,supl"
   />
 
-  <apn carrier="Vodafone_MMS"
-      mcc="404"
-      mnc="84"
-      apn="portalnmms"
-      mmsc="http://mms1.live.vodafone.in/mms/"
-      mmsproxy="10.10.1.100"
-      mmsport="9401"
-      type="mms"
-  />
-
   <apn carrier="Vodafonemobileconnect"
       mcc="404"
       mnc="84"
@@ -19357,6 +19360,16 @@
       proxy="10.10.1.100"
       port="9401"
       type="default,supl"
+  />
+
+  <apn carrier="Vodafone_MMS"
+      mcc="404"
+      mnc="84"
+      apn="portalnmms"
+      mmsc="http://mms1.live.vodafone.in/mms/"
+      mmsproxy="10.10.1.100"
+      mmsport="9401"
+      type="mms"
   />
 
   <apn carrier="Reliance MMS"
@@ -19386,16 +19399,6 @@
       type="default,supl"
   />
 
-  <apn carrier="Vodafone_MMS"
-      mcc="404"
-      mnc="86"
-      apn="portalnmms"
-      mmsc="http://mms1.live.vodafone.in/mms/"
-      mmsproxy="10.10.1.100"
-      mmsport="9401"
-      type="mms"
-  />
-
   <apn carrier="Vodafonemobileconnect"
       mcc="404"
       mnc="86"
@@ -19410,6 +19413,16 @@
       proxy="10.10.1.100"
       port="9401"
       type="default,supl"
+  />
+
+  <apn carrier="Vodafone_MMS"
+      mcc="404"
+      mnc="86"
+      apn="portalnmms"
+      mmsc="http://mms1.live.vodafone.in/mms/"
+      mmsproxy="10.10.1.100"
+      mmsport="9401"
+      type="mms"
   />
 
   <apn carrier="Idea_Internet"
@@ -19438,16 +19451,6 @@
       type="mms"
   />
 
-  <apn carrier="Vodafone_MMS"
-      mcc="404"
-      mnc="88"
-      apn="portalnmms"
-      mmsc="http://mms1.live.vodafone.in/mms/"
-      mmsproxy="10.10.1.100"
-      mmsport="9401"
-      type="mms"
-  />
-
   <apn carrier="Vodafonemobileconnect"
       mcc="404"
       mnc="88"
@@ -19462,6 +19465,16 @@
       proxy="10.10.1.100"
       port="9401"
       type="default,supl"
+  />
+
+  <apn carrier="Vodafone_MMS"
+      mcc="404"
+      mnc="88"
+      apn="portalnmms"
+      mmsc="http://mms1.live.vodafone.in/mms/"
+      mmsproxy="10.10.1.100"
+      mmsport="9401"
+      type="mms"
   />
 
   <apn carrier="Idea_Internet"
@@ -21054,16 +21067,6 @@
       type="mms"
   />
 
-  <apn carrier="Vodafone_MMS"
-      mcc="405"
-      mnc="66"
-      apn="portalnmms"
-      mmsc="http://mms1.live.vodafone.in/mms/"
-      mmsproxy="10.10.1.100"
-      mmsport="9401"
-      type="mms"
-  />
-
   <apn carrier="Vodafonemobileconnect"
       mcc="405"
       mnc="66"
@@ -21082,7 +21085,7 @@
 
   <apn carrier="Vodafone_MMS"
       mcc="405"
-      mnc="67"
+      mnc="66"
       apn="portalnmms"
       mmsc="http://mms1.live.vodafone.in/mms/"
       mmsproxy="10.10.1.100"
@@ -21104,6 +21107,16 @@
       proxy="10.10.1.100"
       port="9401"
       type="default,supl"
+  />
+
+  <apn carrier="Vodafone_MMS"
+      mcc="405"
+      mnc="67"
+      apn="portalnmms"
+      mmsc="http://mms1.live.vodafone.in/mms/"
+      mmsproxy="10.10.1.100"
+      mmsport="9401"
+      type="mms"
   />
 
   <apn carrier="Idea_Internet"
@@ -21132,16 +21145,6 @@
       type="mms"
   />
 
-  <apn carrier="Vodafone_MMS"
-      mcc="405"
-      mnc="750"
-      apn="portalnmms"
-      mmsc="http://mms1.live.vodafone.in/mms/"
-      mmsproxy="10.10.1.100"
-      mmsport="9401"
-      type="mms"
-  />
-
   <apn carrier="Vodafonemobileconnect"
       mcc="405"
       mnc="750"
@@ -21160,7 +21163,7 @@
 
   <apn carrier="Vodafone_MMS"
       mcc="405"
-      mnc="751"
+      mnc="750"
       apn="portalnmms"
       mmsc="http://mms1.live.vodafone.in/mms/"
       mmsproxy="10.10.1.100"
@@ -21186,7 +21189,7 @@
 
   <apn carrier="Vodafone_MMS"
       mcc="405"
-      mnc="752"
+      mnc="751"
       apn="portalnmms"
       mmsc="http://mms1.live.vodafone.in/mms/"
       mmsproxy="10.10.1.100"
@@ -21212,7 +21215,7 @@
 
   <apn carrier="Vodafone_MMS"
       mcc="405"
-      mnc="753"
+      mnc="752"
       apn="portalnmms"
       mmsc="http://mms1.live.vodafone.in/mms/"
       mmsproxy="10.10.1.100"
@@ -21238,7 +21241,7 @@
 
   <apn carrier="Vodafone_MMS"
       mcc="405"
-      mnc="754"
+      mnc="753"
       apn="portalnmms"
       mmsc="http://mms1.live.vodafone.in/mms/"
       mmsproxy="10.10.1.100"
@@ -21264,7 +21267,7 @@
 
   <apn carrier="Vodafone_MMS"
       mcc="405"
-      mnc="755"
+      mnc="754"
       apn="portalnmms"
       mmsc="http://mms1.live.vodafone.in/mms/"
       mmsproxy="10.10.1.100"
@@ -21290,7 +21293,7 @@
 
   <apn carrier="Vodafone_MMS"
       mcc="405"
-      mnc="756"
+      mnc="755"
       apn="portalnmms"
       mmsc="http://mms1.live.vodafone.in/mms/"
       mmsproxy="10.10.1.100"
@@ -21312,6 +21315,16 @@
       proxy="10.10.1.100"
       port="9401"
       type="default,supl"
+  />
+
+  <apn carrier="Vodafone_MMS"
+      mcc="405"
+      mnc="756"
+      apn="portalnmms"
+      mmsc="http://mms1.live.vodafone.in/mms/"
+      mmsproxy="10.10.1.100"
+      mmsport="9401"
+      type="mms"
   />
 
   <apn carrier="Idea_Internet"
@@ -23739,18 +23752,6 @@
       type="default,supl"
   />
 
-  <apn carrier="Zain JO WAP"
-      mcc="416"
-      mnc="01"
-      apn="zain"
-      user="zain"
-      password="zain"
-      authtype="1"
-      proxy="192.168.55.10"
-      port="80"
-      type="default,supl"
-  />
-
   <apn carrier="Zain JO MMS"
       mcc="416"
       mnc="01"
@@ -24773,12 +24774,10 @@
       type="mms"
   />
 
-  <apn carrier="Irancell-GPRS"
+  <apn carrier="Irancell-Internet"
       mcc="432"
       mnc="35"
       apn="mtnirancell"
-      proxy="10.131.26.138"
-      port="8080"
       type="default,supl"
   />
 
