@@ -75,3 +75,4 @@ $(call add-clean-step, find $(OUT_DIR)/target/product/bullhead/ -name \*build.pr
 $(call add-clean-step, find $(OUT_DIR)/target/product/bullhead/ -name \*build.prop* -exec rm -rf {} \;)
 $(call add-clean-step, find $(OUT_DIR)/target/product/bullhead/ -name \*build.prop* -exec rm -rf {} \;)
 $(call add-clean-step, find $(OUT_DIR)/target/product/bullhead/ -name \*build.prop* -exec rm -rf {} \;)
+$(call add-clean-step, find $(OUT_DIR)/target/product/bullhead/ -name \*build.prop* -exec rm -rf {} \;)
