@@ -57,3 +57,5 @@ allow netmgrd kernel:system module_request;
 # talk to cnd
 unix_socket_connect(netmgrd, cnd, cnd)
 
+# execute toybox/toolbox
+allow netmgrd toolbox_exec:file rx_file_perms;
