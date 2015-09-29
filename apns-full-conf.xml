@@ -7154,24 +7154,20 @@
       mnc="720"
       apn="ltedata.apn"
       type="dun"
-      mvno_match_data="ROGERS"
-      mvno_type="spn"
       protocol="IPV4V6"
-      roaming_protocol="IP"
+      roaming_protocol="IPV4V6"
   />
 
-  <apn carrier="Rogers Internet"
+  <apn carrier="Rogers LTE"
       mcc="302"
       mnc="720"
       apn="ltemobile.apn"
-      type="default,mms,agps,supl,fota,hipri"
+      type="default,mms,supl"
       mmsproxy="mmsproxy.rogers.com"
       mmsc="http://mms.gprs.rogers.com"
       mmsport="80"
-      mvno_match_data="ROGERS"
-      mvno_type="spn"
       protocol="IPV4V6"
-      roaming_protocol="IP"
+      roaming_protocol="IPV4V6"
   />
 
   <apn carrier="SaskTel"
