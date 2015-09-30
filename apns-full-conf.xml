@@ -25030,17 +25030,6 @@
       type="default,supl"
   />
 
-  <apn carrier="Plala mobile"
-      mcc="440"
-      mnc="10"
-      apn="lte.nttplala.com"
-      user="735fy3724@plala.or.jp"
-      server=""
-      password="tekg5gjks3het"
-      authtype="3"
-      type="default,supl"
-  />
-
   <apn carrier="Rakuten mobile"
       mcc="440"
       mnc="10"
