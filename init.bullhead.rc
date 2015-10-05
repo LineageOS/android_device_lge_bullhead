@@ -415,6 +415,7 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
+    writepid /dev/cpuset/system-background/tasks
 
 on property:persist.radio.atfwd.start=false
     stop atfwd
