@@ -23,7 +23,7 @@
 
     <string-array translatable="false" name="config_default_vm_number">
         <!-- SBM -->
-        <item>09066517000</item>
+        <item>1416</item>
     </string-array>
 
     <!-- Set initial MaxRetry value for operators -->
