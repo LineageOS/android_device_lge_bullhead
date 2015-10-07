@@ -149,6 +149,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.sh:system/bin/init.bullhead.sh
 
+# Qseecomd configuration file
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/init.bullhead.qseecomd.sh:system/bin/init.bullhead.qseecomd.sh
+
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_AAPT_CONFIG := normal

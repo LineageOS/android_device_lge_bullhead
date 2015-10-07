@@ -94,8 +94,6 @@ on early-boot
     verity_update_state
 
 on boot
-    symlink /dev/block/platform/soc.0/f9824900.sdhci /dev/block/bootdevice
-
     # execute script to set initial CPU settings
     # don't run as a service to avoid race conditions
     exec - root root system -- /system/bin/init.bullhead.power.sh
@@ -168,6 +166,18 @@ on boot
     chown system system /sys/class/leds/blue/on_off_ms
     chown system system /sys/class/leds/red/rgb_start
 
+on post-fs
+    symlink /dev/block/platform/soc.0/f9824900.sdhci /dev/block/bootdevice
+
+    mkdir /persist/data 0700 system system
+    mkdir /persist/data/sfs 0700 system system
+    mkdir /persist/data/tz 0700 system system
+    mkdir /persist/data/app_g 0700 system system
+    mkdir /persist/widevine 0770 drm system
+
+    start qseecomd
+    exec - root root system -- /system/bin/init.bullhead.qseecomd.sh
+
 on post-fs-data
     # Mark the copy complete flag to not completed
     mkdir /data/misc/radio 0770 radio radio
@@ -180,12 +190,6 @@ on post-fs-data
     #Update touch firmware if required
     write /sys/bus/i2c/devices/2-0020/check_fw 1
     write /sys/devices/soc.0/f9924000.i2c/power/control on
-
-    mkdir /persist/data 0700 system system
-    mkdir /persist/data/sfs 0700 system system
-    mkdir /persist/data/tz 0700 system system
-    mkdir /persist/data/app_g 0700 system system
-    mkdir /persist/widevine 0770 drm system
 
     # Create /data/time folder for time-services
     mkdir /data/time/ 0700 system system
