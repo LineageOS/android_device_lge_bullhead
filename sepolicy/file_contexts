@@ -102,7 +102,7 @@
 /system/bin/ATFWD-daemon           u:object_r:atfwd_exec:s0
 /system/bin/subsystem_ramdump      u:object_r:ssr_exec:s0
 /system/bin/sensortool\.bullhead   u:object_r:sensortool_exec:s0
-/system/bin/mm-qcamera-daemon      u:object_r:camera_exec:s0
+/vendor/bin/mm-qcamera-daemon      u:object_r:camera_exec:s0
 
 /vendor/bin/qti                    u:object_r:qti_exec:s0
 /system/bin/imsdatadaemon          u:object_r:ims_exec:s0
