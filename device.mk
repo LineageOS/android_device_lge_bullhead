@@ -19,11 +19,17 @@
 #
 # Everything in this directory will become public
 
+# Enable support for chinook sensorhub
+TARGET_USES_CHINOOK_SENSORHUB := true
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/lge/bullhead-kernel/Image.gz-dtb
+  ifeq ($(TARGET_USES_CHINOOK_SENSORHUB),true)
+    LOCAL_KERNEL := device/lge/bullhead-kernel/Image.gz-dtb
+  else
+    LOCAL_KERNEL := vendor/google_contexthub/linux/bullhead/Image.gz-dtb
+  endif
 else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+  LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
 PRODUCT_COPY_FILES := \
@@ -34,9 +40,16 @@ PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.usb.rc:root/init.bullhead.usb.rc \
     device/lge/bullhead/fstab.bullhead:root/fstab.bullhead \
     device/lge/bullhead/ueventd.bullhead.rc:root/ueventd.bullhead.rc \
-    device/lge/bullhead/init.bullhead.sensorhub.rc:root/init.bullhead.sensorhub.rc \
     device/lge/bullhead/init.bullhead.ramdump.rc:root/init.bullhead.ramdump.rc \
     device/lge/bullhead/init.bullhead.fp.rc:root/init.bullhead.fp.rc
+
+ifeq ($(TARGET_USES_CHINOOK_SENSORHUB),true)
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/init.bullhead.sensorhub.rc:root/init.bullhead.sensorhub.rc
+else
+PRODUCT_COPY_FILES += \
+    device/lge/bullhead/init.bullhead.nanohub.rc:root/init.bullhead.sensorhub.rc
+endif
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
@@ -218,10 +231,16 @@ PRODUCT_PACKAGES += \
     mm-qcamera-app
 
 # Sensor & activity_recognition HAL
+ifeq ($(TARGET_USES_CHINOOK_SENSORHUB),true)
 PRODUCT_PACKAGES += \
     sensors.bullhead \
     activity_recognition.bullhead \
     sensortool.bullhead
+else
+PRODUCT_PACKAGES += \
+    sensors.default \
+    nanoapp_cmd
+endif
 
 PRODUCT_PACKAGES += \
     keystore.msm8992 \
