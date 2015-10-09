@@ -22,7 +22,7 @@ allow tee persist_drm_file:dir create_dir_perms;
 allow tee persist_drm_file:file create_file_perms;
 
 # allow tee to access persist_data_file
-allow tee persist_data_file:dir w_dir_perms;
+allow tee persist_data_file:dir create_dir_perms;
 allow tee persist_data_file:file create_file_perms;
 
 # allow tee to operate tee device
