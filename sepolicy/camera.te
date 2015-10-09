@@ -7,8 +7,6 @@ init_daemon_domain(camera)
 binder_use(camera)
 binder_call(camera, system_server)
 
-allow camera system_file:file execmod;
-
 allow camera system_server:unix_stream_socket { read write };
 
 # Interact with other media devices
