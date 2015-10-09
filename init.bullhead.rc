@@ -184,6 +184,7 @@ on post-fs-data
     mkdir /persist/data 0700 system system
     mkdir /persist/data/sfs 0700 system system
     mkdir /persist/data/tz 0700 system system
+    mkdir /persist/data/app_g 0700 system system
     mkdir /persist/widevine 0770 drm system
 
     # Create /data/time folder for time-services
