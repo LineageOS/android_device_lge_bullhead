@@ -140,6 +140,4 @@ BOARD_QTI_CAMERA_32BIT_ONLY := true
 #Enable peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
-USE_CLANG_PLATFORM_BUILD := true
-
 -include vendor/lge/bullhead/BoardConfigVendor.mk
