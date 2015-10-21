@@ -281,7 +281,7 @@ service qti /system/vendor/bin/qti
 
 service netmgrd /system/bin/netmgrd
     class main
-    group radio
+    group radio system
 
 service per_mgr /system/bin/pm-service
     class core
