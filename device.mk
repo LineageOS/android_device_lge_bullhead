@@ -235,14 +235,15 @@ PRODUCT_PACKAGES += \
     mm-qcamera-app
 
 # Sensor & activity_recognition HAL
-ifeq ($(TARGET_USES_CHINOOK_SENSORHUB),true)
 PRODUCT_PACKAGES += \
     sensors.bullhead \
-    activity_recognition.bullhead \
+    activity_recognition.bullhead
+
+ifeq ($(TARGET_USES_CHINOOK_SENSORHUB),true)
+PRODUCT_PACKAGES += \
     sensortool.bullhead
 else
 PRODUCT_PACKAGES += \
-    sensors.default \
     nanoapp_cmd
 endif
 
