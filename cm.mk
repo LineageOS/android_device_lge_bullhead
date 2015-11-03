@@ -1,3 +1,6 @@
+# inherit CM-specific board config
+include device/lge/bullhead/BoardConfigCM.mk
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
