@@ -184,6 +184,7 @@ on post-fs-data
     mkdir /persist/data 0700 system system
     mkdir /persist/data/sfs 0700 system system
     mkdir /persist/data/tz 0700 system system
+    mkdir /persist/data/app_g 0700 system system
     mkdir /persist/widevine 0770 drm system
 
     # Create /data/time folder for time-services
@@ -280,7 +281,7 @@ service qti /system/vendor/bin/qti
 
 service netmgrd /system/bin/netmgrd
     class main
-    group radio
+    group radio system
 
 service per_mgr /system/bin/pm-service
     class core
@@ -411,7 +412,7 @@ service charger /sbin/healthd -c
     critical
     seclabel u:r:healthd:s0
 
-service qcamerasvr /system/bin/mm-qcamera-daemon
+service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics

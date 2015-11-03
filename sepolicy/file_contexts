@@ -101,8 +101,8 @@
 /system/bin/msm_irqbalance         u:object_r:msm_irqbalanced_exec:s0
 /system/bin/ATFWD-daemon           u:object_r:atfwd_exec:s0
 /system/bin/subsystem_ramdump      u:object_r:ssr_exec:s0
-/system/bin/sensortool\.bullhead   u:object_r:sensortool_exec:s0
-/system/bin/mm-qcamera-daemon      u:object_r:camera_exec:s0
+/vendor/bin/mm-qcamera-daemon      u:object_r:camera_exec:s0
+/vendor/bin/sensortool\.bullhead   u:object_r:sensortool_exec:s0
 
 /vendor/bin/qti                    u:object_r:qti_exec:s0
 /system/bin/imsdatadaemon          u:object_r:ims_exec:s0
@@ -157,6 +157,7 @@
 /persist(/.*)?                     u:object_r:persist_file:s0
 /persist/data(/.*)?                u:object_r:persist_data_file:s0
 /persist/data/tz(/.*)?             u:object_r:persist_drm_file:s0
+/persist/data/app_g(/.*)?          u:object_r:persist_drm_file:s0
 /persist/wlan_mac\.bin             u:object_r:persist_wifi_file:s0
 /persist/sensorcal\.json           u:object_r:persist_sensortool_file:s0
 /persist/calibration(/.*)?         u:object_r:persist_camera_file:s0
