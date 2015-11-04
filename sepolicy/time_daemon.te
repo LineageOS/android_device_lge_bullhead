@@ -1,5 +1,5 @@
 # Policies for time daemon
-type time_daemon, domain;
+type time_daemon, domain, domain_deprecated;
 type time_daemon_exec, exec_type, file_type;
 type time_data_file, file_type, data_file_type;
 

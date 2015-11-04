@@ -1,5 +1,5 @@
 # Policy for qti
-type qti, domain;
+type qti, domain, domain_deprecated;
 type qti_exec, exec_type, file_type;
 
 # Started by init

@@ -1,7 +1,7 @@
 type cnss_diag_exec, exec_type, file_type;
 
 userdebug_or_eng(`
-  type cnss_diag, domain;
+  type cnss_diag, domain, domain_deprecated;
 
   init_daemon_domain(cnss_diag)
 
