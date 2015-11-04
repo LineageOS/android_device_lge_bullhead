@@ -1,4 +1,4 @@
-type bullhead-sh, domain;
+type bullhead-sh, domain, domain_deprecated;
 type bullhead-sh_exec, exec_type, file_type;
 
 # Started by init
