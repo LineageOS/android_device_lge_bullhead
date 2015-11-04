@@ -1,4 +1,4 @@
-type msm_irqbalanced, domain;
+type msm_irqbalanced, domain, domain_deprecated;
 type msm_irqbalanced_exec, exec_type, file_type;
 init_daemon_domain(msm_irqbalanced)
 
