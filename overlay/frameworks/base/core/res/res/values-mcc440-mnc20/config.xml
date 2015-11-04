@@ -27,7 +27,7 @@
     </string-array>
 
     <!-- Set initial MaxRetry value for operators -->
-    <integer name="config_mdc_initial_max_retry">10</integer>
+    <!--integer name="config_mdc_initial_max_retry">10</integer-->
 
     <!-- Entitlement APP provisioning for Tethering -->
     <string-array translatable="false" name="config_mobile_hotspot_provision_app">

@@ -20,7 +20,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- The name of the window orientation sensor to use instead of the accelerometer. -->
-    <string name="config_orientationSensorType">com.google.sensor.window_orientation</string>
+    <!--string name="config_orientationSensorType">com.google.sensor.window_orientation</string-->
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
@@ -215,7 +215,7 @@
 
     <!-- Boolean indicating whether or not to revert to default country code when cellular
          radio is unable to find any MCC information to infer wifi country code from -->
-    <bool translatable="false" name="config_wifi_revert_country_code_on_cellular_loss">true</bool>
+    <!--bool translatable="false" name="config_wifi_revert_country_code_on_cellular_loss">true</bool-->
 
     <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
