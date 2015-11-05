@@ -112,6 +112,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Build a separate vendor.img
 TARGET_COPY_OUT_VENDOR := vendor
+BOARD_NEEDS_VENDORIMAGE_SYMLINK := true
 
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.bullhead
 
