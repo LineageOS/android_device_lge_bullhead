@@ -1,5 +1,22 @@
+#
+# Copyright (C) 2015 The Android Open-Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
 import common
 import struct
+
 
 def FindRadio(zipfile):
   try:
@@ -31,7 +48,8 @@ def IncrementalOTA_VerifyEnd(info):
     else:
       return
   source_radio_img = FindRadio(info.source_zip)
-  if not target_radio_img or not source_radio_img: return
+  if not target_radio_img or not source_radio_img:
+    return
   if source_radio_img != target_radio_img:
     info.script.CacheFreeSpaceCheck(len(source_radio_img))
     radio_type, radio_device = common.GetTypeAndDevice("/radio", info.info_dict)
@@ -121,6 +139,31 @@ def WriteRadio(info, radio_img):
 #         } img_info[];
 # };
 #
+def ParseBootloaderHeader(bootloader):
+  header_fmt = "<8sIII"
+  header_size = struct.calcsize(header_fmt)
+  magic, num_images, start_offset, bootloader_size = struct.unpack(
+      header_fmt, bootloader[:header_size])
+  assert magic == "BOOTLDR!", "bootloader.img bad magic value"
+
+  img_info_fmt = "<64sI"
+  img_info_size = struct.calcsize(img_info_fmt)
+
+  imgs = [struct.unpack(img_info_fmt,
+                        bootloader[header_size+i*img_info_size:
+                                   header_size+(i+1)*img_info_size])
+          for i in range(num_images)]
+
+  p = start_offset
+  img_dict = {}
+  for name, size in imgs:
+    img_dict[trunc_to_null(name)] = p, size
+    p += size
+  assert p - start_offset == bootloader_size, "bootloader.img corrupted"
+
+  return img_dict
+
+
 # bullhead's bootloader.img contains 11 separate images.
 # Each goes to its own partition:
 #    sbl1, tz, rpm, aboot, sdi, imgdata, pmic, hyp, sec, keymaster, cmnlib
@@ -133,31 +176,11 @@ debug_backup_partitions = "sbl1 tz rpm aboot pmic hyp keymaster cmnlib"
 release_nobackup_partitions = "sdi imgdata sec"
 debug_nobackup_partitions = "sdi imgdata sec"
 
+
 def WriteBootloader(info, bootloader):
   info.script.Print("Writing bootloader...")
 
-  header_fmt = "<8sIII"
-  header_size = struct.calcsize(header_fmt)
-  magic, num_images, start_offset, bootloader_size = struct.unpack(
-      header_fmt, bootloader[:header_size])
-  assert magic == "BOOTLDR!", "bootloader.img bad magic value"
-
-  img_info_fmt = "<64sI"
-  img_info_size = struct.calcsize(img_info_fmt)
-
-  imgs = [struct.unpack(img_info_fmt,
-                        bootloader[header_size+i*img_info_size:
-                                     header_size+(i+1)*img_info_size])
-          for i in range(num_images)]
-
-  total = 0
-  p = start_offset
-  img_dict = {}
-  for name, size in imgs:
-    img_dict[trunc_to_null(name)] = p, size
-    p += size
-  assert p - start_offset == bootloader_size, "bootloader.img corrupted"
-  imgs = img_dict
+  img_dict = ParseBootloaderHeader(bootloader)
 
   common.ZipWriteStr(info.output_zip, "bootloader-flag.txt",
                      "updating-bootloader" + "\0" * 13)
@@ -166,8 +189,7 @@ def WriteBootloader(info, bootloader):
   _, misc_device = common.GetTypeAndDevice("/misc", info.info_dict)
 
   info.script.AppendExtra(
-      'package_extract_file("bootloader-flag.txt", "%s");' %
-      (misc_device,))
+      'package_extract_file("bootloader-flag.txt", "%s");' % (misc_device,))
 
   # failed sbl updates, may render the handset unusable/unrestorable.
   # Hence adopt below strategy for updates,enabling restore at all times.
@@ -196,10 +218,11 @@ def WriteBootloader(info, bootloader):
       print "skipping flash of %s; not in recovery.fstab" % (i,)
       continue
     common.ZipWriteStr(info.output_zip, "bootloader.%s.img" % (i,),
-                       bootloader[imgs[i][0]:imgs[i][0]+imgs[i][1]])
+                       bootloader[img_dict[i][0]:
+                                  img_dict[i][0]+img_dict[i][1]])
 
-    info.script.AppendExtra('package_extract_file("bootloader.%s.img", "%s");' %
-                            (i, device))
+    info.script.AppendExtra(
+        'package_extract_file("bootloader.%s.img", "%s");' % (i, device))
 
   target_device = info.info_dict["build.prop"]["ro.product.device"]
   # swap ptes in secondary and force secondary gpt
@@ -213,8 +236,8 @@ def WriteBootloader(info, bootloader):
     except KeyError:
       print "skipping flash of %s; not in recovery.fstab" % (i,)
       continue
-    info.script.AppendExtra('package_extract_file("bootloader.%s.img", "%s");' %
-                            (i, device))
+    info.script.AppendExtra(
+        'package_extract_file("bootloader.%s.img", "%s");' % (i, device))
 
   # restore secondary gpt for correct mappings and enable primary gpt
   info.script.AppendExtra("lge_"+target_device+"_recover_gpt();")
@@ -227,10 +250,11 @@ def WriteBootloader(info, bootloader):
       print "skipping flash of %s; not in recovery.fstab" % (i,)
       continue
     common.ZipWriteStr(info.output_zip, "bootloader.%s.img" % (i,),
-                       bootloader[imgs[i][0]:imgs[i][0]+imgs[i][1]])
+                       bootloader[img_dict[i][0]:
+                                  img_dict[i][0]+img_dict[i][1]])
 
-    info.script.AppendExtra('package_extract_file("bootloader.%s.img", "%s");' %
-                            (i, device))
+    info.script.AppendExtra(
+        'package_extract_file("bootloader.%s.img", "%s");' % (i, device))
 
   info.script.AppendExtra(
       'package_extract_file("bootloader-flag-clear.txt", "%s");' %
