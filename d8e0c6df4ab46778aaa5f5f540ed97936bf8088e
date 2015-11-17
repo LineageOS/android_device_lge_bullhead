@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff5d4b2f_7ed1b957",
+        "filename": "init.bullhead.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 398,
+      "author": {
+        "id": 848
+      },
+      "writtenOn": "2015-11-17T20:06:31Z",
+      "side": 1,
+      "message": "should probably be system/vendor/etc to read from the one already on /vendor symlink",
+      "range": {
+        "startLine": 398,
+        "startChar": 53,
+        "endLine": 398,
+        "endChar": 61
+      },
+      "revId": "d8e0c6df4ab46778aaa5f5f540ed97936bf8088e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
