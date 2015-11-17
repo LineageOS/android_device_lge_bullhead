@@ -57,6 +57,7 @@ system/bin/subsystem_ramdump
 system/bin/thermal-engine
 system/bin/time_daemon
 system/bin/wcnss_filter
+system/bin/qmuxd
 system/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
 system/etc/acdbdata/MTP/MTP_General_cal.acdb
 system/etc/acdbdata/MTP/MTP_Global_cal.acdb
@@ -88,12 +89,6 @@ system/etc/thermal-engine-8992.conf
 system/framework/cneapiclient.jar
 system/framework/com.android.nfc_extras.jar
 system/framework/com.google.widevine.software.drm.jar
-system/framework/oat/arm/com.android.nfc_extras.odex
-system/framework/oat/arm/com.google.widevine.software.drm.odex
-system/framework/oat/arm/qcrilhook.odex
-system/framework/oat/arm64/com.android.nfc_extras.odex
-system/framework/oat/arm64/com.google.widevine.software.drm.odex
-system/framework/oat/arm64/qcrilhook.odex
 system/framework/qcrilhook.jar
 system/framework/rcsimssettings.jar
 system/framework/rcsservice.jar
