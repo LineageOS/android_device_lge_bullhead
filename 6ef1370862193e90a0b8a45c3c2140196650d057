@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f515b1d_4699921d",
+        "filename": "proprietary-blobs.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 5544
+      },
+      "writtenOn": "2015-11-18T20:57:23Z",
+      "side": 1,
+      "message": "maybe all /etc/diag can go too, i\u0027ll grep for these and make sure they\u0027re not depended on by anything, but i highly doubt it",
+      "revId": "6ef1370862193e90a0b8a45c3c2140196650d057",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
