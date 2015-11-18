@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff5d4b2f_c44e92c0",
+        "filename": "proprietary-blobs.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 848
+      },
+      "writtenOn": "2015-11-18T08:01:35Z",
+      "side": 1,
+      "message": "can be removed",
+      "range": {
+        "startLine": 86,
+        "startChar": 0,
+        "endLine": 86,
+        "endChar": 36
+      },
+      "revId": "1e200c80f2957e026efc5ba6fdbf5c8f0c2854fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
