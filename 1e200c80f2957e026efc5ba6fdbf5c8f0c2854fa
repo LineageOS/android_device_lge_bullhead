@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "ff5d4b2f_e484f6b3",
+        "filename": "proprietary-blobs.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 5544
+      },
+      "writtenOn": "2015-11-18T08:07:46Z",
+      "side": 1,
+      "message": "can remove this too",
+      "revId": "1e200c80f2957e026efc5ba6fdbf5c8f0c2854fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff5d4b2f_04882ac4",
+        "filename": "proprietary-blobs.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 5544
+      },
+      "writtenOn": "2015-11-18T08:07:46Z",
+      "side": 1,
+      "message": "and this",
+      "revId": "1e200c80f2957e026efc5ba6fdbf5c8f0c2854fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ff5d4b2f_c44e92c0",
         "filename": "proprietary-blobs.txt",
         "patchSetId": 1
