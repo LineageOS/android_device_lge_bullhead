@@ -245,7 +245,7 @@ service irsc_util /system/bin/irsc_util "/etc/sec_config"
 service rmt_storage /system/bin/rmt_storage
     class core
     user root
-    group system
+    group system wakelock
 
 service start_hci_filter /system/bin/wcnss_filter
     class late_start
@@ -271,7 +271,7 @@ service iprenew_bt-pan /system/bin/dhcpcd -n
 service qmuxd /system/bin/qmuxd
     class main
     user radio
-    group radio audio bluetooth gps
+    group radio audio bluetooth wakelock gps
 
 service perfd /system/bin/perfd
     class main
@@ -286,7 +286,7 @@ service qti /system/vendor/bin/qti
 
 service netmgrd /system/bin/netmgrd
     class main
-    group radio system
+    group radio system wakelock
 
 service per_mgr /system/bin/pm-service
     class core
@@ -443,6 +443,7 @@ service ss_ramdump /system/bin/subsystem_ramdump
 service cnd /system/bin/cnd
     class late_start
     socket cnd stream 660 root inet
+    group root wakelock
 
 service imsqmidaemon /system/bin/imsqmidaemon
     class main
