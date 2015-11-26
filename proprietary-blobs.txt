@@ -63,10 +63,6 @@ etc/cne/profile.txt
 etc/data/dsi_config.xml
 etc/data/netmgr_config.xml
 etc/data/qmi_config.xml
-etc/diag/Bullhead_radio-general.cfg
-etc/diag/IMS_DS_CM_NAS.cfg
-etc/diag/radio_ims.cfg
-etc/diag/wlan.cfg
 etc/flp.conf
 etc/izat.conf
 etc/lowi.conf
