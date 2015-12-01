@@ -11,7 +11,7 @@ $(call inherit-product, device/lge/bullhead/aosp_bullhead.mk)
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_bullhead
 PRODUCT_BRAND := google
-PRODUCT_MODEL := Nexus 5x
+PRODUCT_MODEL := Nexus 5X
 TARGET_MANUFACTURER := LGE
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
