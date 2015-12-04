@@ -400,6 +400,10 @@ PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.diag.rc.user:root/init.bullhead.diag.rc
 endif
 
+# Do not dexopt DMService and DMConfigUpdate
+$(call add-product-dex-preopt-module-config,DMService,disable)
+$(call add-product-dex-preopt-module-config,DMConfigUpdate,disable)
+
 # setup dm-verity configs.
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc.0/f9824900.sdhci/by-name/system
 PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/platform/soc.0/f9824900.sdhci/by-name/vendor
