@@ -2532,7 +2532,7 @@
       apn="vipmobile.mms"
       user="vipmobile"
       password="vipmobile"
-      mmsc="http://mmsc.vipmobile.rs"
+      mmsc="http://mms.vipmobile.rs"
       authtype="1"
       type="mms"
   />
@@ -3707,6 +3707,17 @@
       mvno_type="gid"
   />
 
+  <apn carrier="IMS"
+      mcc="234"
+      mnc="30"
+      apn="ims"
+      user="eesecure"
+      password="secure"
+      authtype="1"
+      type="ims"
+      protocol="IPV6"
+  />
+
   <apn carrier="EE Internet"
       mcc="234"
       mnc="30"
@@ -3849,6 +3860,17 @@
       mmsport="8080"
       authtype="1"
       type="mms"
+  />
+
+  <apn carrier="IMS"
+      mcc="234"
+      mnc="33"
+      apn="ims"
+      user="eesecure"
+      password="secure"
+      authtype="1"
+      type="ims"
+      protocol="IPV6"
   />
 
   <apn carrier="EE Internet"
