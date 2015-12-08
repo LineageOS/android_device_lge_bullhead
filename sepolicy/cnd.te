@@ -29,3 +29,5 @@ allow cnd self:udp_socket { create ioctl };
 userdebug_or_eng(`
   allow cnd smem_log_device:chr_file rw_file_perms;
 ')
+
+wakelock_use(cnd)
