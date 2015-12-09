@@ -569,6 +569,7 @@
       mvno_match_data="U.S. Cellular"
       type="mms,fota,default,supl"
       protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
   />
 
   <apn carrier="KPN Mobiel Internet"
@@ -6169,26 +6170,10 @@
       type="mms"
   />
 
-  <apn carrier="LUXGSM MMS"
+  <apn carrier="POST Internet"
       mcc="270"
       mnc="01"
-      apn="mms.pt.lu"
-      user="mms"
-      password="mms"
-      mmsc="http://mmsc.pt.lu"
-      mmsproxy="194.154.192.88"
-      mmsport="8080"
-      type="mms"
-  />
-
-  <apn carrier="LUXGSM WAP"
-      mcc="270"
-      mnc="01"
-      apn="wap.pt.lu"
-      user="wap"
-      password="wap"
-      proxy="194.154.192.98"
-      port="8080"
+      apn="web.pt.lu"
       type="default,supl"
   />
 
