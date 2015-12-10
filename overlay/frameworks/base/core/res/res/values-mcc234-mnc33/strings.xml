@@ -17,10 +17,9 @@
 */
 -->
 
-<!-- These resources are around just to allow their values to be customized
-     for different hardware and product builds. -->
-<resources>
-    <string-array translatable="false" name="config_default_vm_number">
-        <item>121</item>
-    </string-array>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Template for showing cellular network operator name while WFC is active -->
+    <string name="wfcSpnFormat">%s Wi-Fi Calling</string>
+
 </resources>

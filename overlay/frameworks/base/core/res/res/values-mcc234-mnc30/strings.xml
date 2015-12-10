@@ -17,8 +17,9 @@
 */
 -->
 
-<resources>
-    <!-- Do not flag indicating emergency calls will always use IMS irrespective of the state of
-         the IMS connection -->
-    <bool name="useImsAlwaysForEmergencyCall">false</bool>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Template for showing cellular network operator name while WFC is active -->
+    <string name="wfcSpnFormat">%s Wi-Fi Calling</string>
+
 </resources>
