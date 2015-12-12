@@ -427,16 +427,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     power.bullhead
 
-# Modem debugger
+# Modem debugger/misc
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += \
     QXDMLogger
 
 PRODUCT_COPY_FILES += \
-    device/lge/bullhead/init.bullhead.diag.rc.userdebug:root/init.bullhead.diag.rc
+    device/lge/bullhead/init.bullhead.diag.rc.userdebug:root/init.bullhead.diag.rc \
+    device/lge/bullhead/init.bullhead.misc.rc.userdebug:root/init.bullhead.misc.rc
 else
 PRODUCT_COPY_FILES += \
-    device/lge/bullhead/init.bullhead.diag.rc.user:root/init.bullhead.diag.rc
+    device/lge/bullhead/init.bullhead.diag.rc.user:root/init.bullhead.diag.rc \
+    device/lge/bullhead/init.bullhead.misc.rc.user:root/init.bullhead.misc.rc
 endif
 
 # setup dm-verity configs.
