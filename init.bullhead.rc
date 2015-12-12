@@ -19,6 +19,7 @@ import init.bullhead.diag.rc
 import init.bullhead.fp.rc
 import init.bullhead.sensorhub.rc
 import init.bullhead.ramdump.rc
+import init.bullhead.misc.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
