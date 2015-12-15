@@ -57,14 +57,6 @@
         <item>SUPL_ES=1</item>
     </string-array>
 
-    <!-- Entitlement APP provisioning for Tethering -->
-    <string-array translatable="false" name="config_mobile_hotspot_provision_app">
-        <item>com.lge.entitlement</item>
-        <item>com.lge.entitlement.EntitlementDialogActivity</item>
-    </string-array>
-    <string translatable="false" name="config_mobile_hotspot_provision_app_no_ui">com.lge.entitlement.SILENT_ENTITLEMENT_CHECK</string>
-    <string translatable="false" name="config_mobile_hotspot_provision_response">com.lge.entitlement.SILENT_ENTITLEMENT_CHECK_RESULT</string>
-
     <!-- MMS user agent string -->
     <string name="config_mms_user_agent" translatable="false">nexus5x</string>
 
