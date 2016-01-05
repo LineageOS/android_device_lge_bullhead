@@ -142,4 +142,6 @@ TARGET_PER_MGR_ENABLED := true
 
 USE_CLANG_PLATFORM_BUILD := true
 
+USE_CLANG_PLATFORM_BUILD := true
+
 -include vendor/lge/bullhead/BoardConfigVendor.mk
