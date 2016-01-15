@@ -24967,21 +24967,6 @@
       authtype="2"
   />
 
-  <apn carrier="LTE NET"
-      mcc="440"
-      mnc="50"
-      apn="uno.au-net.ne.jp"
-      user="685840734641020@uno.au-net.ne.jp"
-      password="KpyrR6BP"
-      authtype="2"
-      mmsproxy=""
-      mmsport="80"
-      mmsc="http://mms.ezweb.ne.jp/MMS"
-      type="default,mms,supl,hipri"
-      protocol="IPV4V6"
-      roaming_protocol="IP"
-  />
-
   <apn carrier="LTE NET for DATA"
       mcc="440"
       mnc="50"
@@ -25018,21 +25003,6 @@
       apn="mineo.jp"
       user="mineo@k-opti.com"
       password="mineo"
-      authtype="2"
-      mmsproxy=""
-      mmsport="80"
-      mmsc="http://mms.ezweb.ne.jp/MMS"
-      type="default,mms,supl,hipri"
-      protocol="IPV4V6"
-      roaming_protocol="IP"
-  />
-
-  <apn carrier="LTE NET"
-      mcc="440"
-      mnc="51"
-      apn="uno.au-net.ne.jp"
-      user="685840734641020@uno.au-net.ne.jp"
-      password="KpyrR6BP"
       authtype="2"
       mmsproxy=""
       mmsport="80"
