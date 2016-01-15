@@ -10,7 +10,7 @@ binder_call(camera, system_server)
 allow camera system_server:unix_stream_socket { read write };
 
 # Interact with other media devices
-allow camera { gpu_device video_device camera_device }:chr_file rw_file_perms;
+allow camera { gpu_device video_device }:chr_file rw_file_perms;
 allow camera { mediaserver surfaceflinger }:fd use;
 
 # Create camera socket
