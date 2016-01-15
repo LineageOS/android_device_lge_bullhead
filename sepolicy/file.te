@@ -56,6 +56,7 @@ type sysfs_performance, sysfs_type, fs_type;
 
 #SurfaceFlinger file type for sysfs access
 type sysfs_graphics, sysfs_type, fs_type;
+type sysfs_display, sysfs_type, fs_type;
 
 # Files accessed by qcom-system-daemon
 type sysfs_socinfo, fs_type, sysfs_type;
