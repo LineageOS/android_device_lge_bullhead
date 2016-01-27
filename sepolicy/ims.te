@@ -34,3 +34,6 @@ allow ims system_file:file rx_file_perms;
 # address qualcomm proprietary binary denials
 allow ims self:netlink_socket create_socket_perms;
 allow ims self:netlink_route_socket { create_socket_perms nlmsg_write nlmsg_read };
+
+# Inherit and use open files from radio.	64
+allow ims radio:fd use;
