@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fcbff3d_af630c1a",
+        "filename": "cm.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 7202
+      },
+      "writtenOn": "2016-02-04T04:04:10Z",
+      "side": 0,
+      "message": "typo?",
+      "range": {
+        "startLine": 24,
+        "startChar": 73,
+        "endLine": 24,
+        "endChar": 74
+      },
+      "revId": "819cdbf0a79e58d53c407f30d3933537862476f8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
