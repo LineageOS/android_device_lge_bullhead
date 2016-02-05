@@ -1,2 +1,3 @@
 on post-fs
 	write /sys/class/nanohub/nanohub/download_bl 1
+	write /sys/class/nanohub/nanohub/reset 1

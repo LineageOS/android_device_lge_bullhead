@@ -20,14 +20,10 @@
 # Everything in this directory will become public
 
 # Enable support for chinook sensorhub
-TARGET_USES_CHINOOK_SENSORHUB := true
+TARGET_USES_CHINOOK_SENSORHUB := false
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-  ifeq ($(TARGET_USES_CHINOOK_SENSORHUB),true)
-    LOCAL_KERNEL := device/lge/bullhead-kernel/Image.gz-dtb
-  else
-    LOCAL_KERNEL := vendor/google_contexthub/linux/bullhead/Image.gz-dtb
-  endif
+  LOCAL_KERNEL := device/lge/bullhead-kernel/Image.gz-dtb
 else
   LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
