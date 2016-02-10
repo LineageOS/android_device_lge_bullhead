@@ -1,8 +1,4 @@
 unix_socket_connect(audioserver, thermal, thermal-engine)
-allow audioserver thermal_socket:sock_file w_file_perms;
-
-allow audioserver camera:unix_dgram_socket sendto;
-allow audioserver camera_data_file:sock_file write;
 
 # allow communication w/perfd
 allow audioserver perfd_data_file:dir search;
