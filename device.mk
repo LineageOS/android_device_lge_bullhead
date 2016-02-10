@@ -20,7 +20,7 @@
 # Everything in this directory will become public
 
 # Enable support for chinook sensorhub
-TARGET_USES_CHINOOK_SENSORHUB := false
+TARGET_USES_CHINOOK_SENSORHUB := true
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
   LOCAL_KERNEL := device/lge/bullhead-kernel/Image.gz-dtb
