@@ -1,11 +1,5 @@
-unix_socket_connect(cameraserver, thermal, thermal-engine)
-allow cameraserver thermal_socket:sock_file w_file_perms;
-
 allow cameraserver camera:unix_dgram_socket sendto;
 allow cameraserver camera_data_file:sock_file write;
-
-# allow communication w/perfd
-allow cameraserver perfd_data_file:dir search;
 allow cameraserver perfd_data_file:sock_file write;
-allow cameraserver perfd:unix_dgram_socket sendto;
 allow cameraserver perfd:unix_stream_socket connectto;
+allow cameraserver scheduling_policy_service:service_manager find;

@@ -28,3 +28,5 @@ allow perfd sysfs_power_management:file w_file_perms;
 # Determining if a process exists does not require the kill capability
 # since a permission denied indicates the process exists.
 dontaudit perfd self:capability kill;
+
+allow perfd cameraserver:process signull;
