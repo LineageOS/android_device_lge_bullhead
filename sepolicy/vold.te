@@ -9,3 +9,6 @@ get_prop(vold, qseecomtee_prop)
 
 # Allow vold to access zram
 allow vold swap_block_device:blk_file getattr;
+
+# read sys.listeners. sys.keymaster. properties
+get_prop(vold, qseecomtee_prop)
