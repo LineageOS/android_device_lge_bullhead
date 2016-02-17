@@ -105,6 +105,7 @@
 /system/bin/subsystem_ramdump      u:object_r:ssr_exec:s0
 /vendor/bin/mm-qcamera-daemon      u:object_r:camera_exec:s0
 /vendor/bin/sensortool\.bullhead   u:object_r:sensortool_exec:s0
+/vendor/bin/nanoapp_cmd            u:object_r:nanoapp_cmd_exec:s0
 
 /vendor/bin/qti                    u:object_r:qti_exec:s0
 /system/bin/imsdatadaemon          u:object_r:ims_exec:s0
@@ -157,6 +158,7 @@
 /sys/kernel/range/enable_ps_sensor                                  u:object_r:sysfs_camera:s0
 /sys/devices/soc\.0/fd900000\.qcom,mdss_mdp/qcom,mdss_fb_primary\.[0-9]+/leds/lcd-backlight/max_brightness u:object_r:sysfs_thermal:s0
 /sys/devices/soc\.0/qpnp-smbcharger-[^/]*/power_supply/battery/system_temp_level                           u:object_r:sysfs_thermal:s0
+/sys/devices/virtual/nanohub/nanohub/download_bl u:object_r:sysfs_nanoapp_cmd:s0
 
 # Persist files
 /persist(/.*)?                     u:object_r:persist_file:s0
