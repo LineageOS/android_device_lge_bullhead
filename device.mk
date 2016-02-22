@@ -243,7 +243,8 @@ PRODUCT_PACKAGES += \
     sensortool.bullhead
 else
 PRODUCT_PACKAGES += \
-    nanoapp_cmd
+    nanoapp_cmd \
+    nanotool
 endif
 
 PRODUCT_PACKAGES += \
