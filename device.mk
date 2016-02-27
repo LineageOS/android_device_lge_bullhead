@@ -279,7 +279,12 @@ PRODUCT_PACKAGES += \
     libqomx_core \
     mm-qcamera-app \
     android.hardware.camera.provider@2.4-impl \
-    camera.device@3.2-impl
+    camera.device@3.2-impl \
+    Snap
+
+# Snap Config
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.cpp.duplication=false
 
 # Sensor & activity_recognition HAL
 TARGET_USES_NANOHUB_SENSORHAL := true
