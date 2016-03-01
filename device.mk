@@ -231,6 +231,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
    fs_config_files
 
+# For wlan_mac.bin symlink
+PRODUCT_PACKAGES += \
+    bullhead_wlan_mac
+
 DEVICE_PACKAGE_OVERLAYS := \
     device/lge/bullhead/overlay
 
