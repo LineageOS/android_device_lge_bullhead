@@ -19,6 +19,7 @@ import init.bullhead.diag.rc
 import init.bullhead.fp.rc
 import init.bullhead.sensorhub.rc
 import init.bullhead.ramdump.rc
+import init.bullhead.misc.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -130,6 +131,10 @@ on boot
     chmod 0664 /sys/devices/virtual/graphics/fb1/hpd
     chmod 0664 /sys/devices/virtual/graphics/fb1/vendor_name
     chmod 0664 /sys/devices/virtual/graphics/fb1/product_description
+
+    # Grant permission to modify the color_temp setting
+    chown system graphics /sys/class/graphics/fb0/color_temp
+    chmod 0664 /sys/class/graphics/fb0/color_temp
 
     # Allow QMUX daemon to assign port open wait time
     chown radio radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait

@@ -16,8 +16,8 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_label" msgid="614640082478513253">"Pantalla d\'inici de Nexus 5X"</string>
-    <string name="google_folder_title" msgid="6258334799796580150">"Google"</string>
-    <string name="create_folder_title" msgid="716293706928877256">"Creació"</string>
-    <string name="play_folder_title" msgid="7329781018270852139">"Play"</string>
+    <string name="app_label" msgid="4827444239162090155">"Pantalla d\'inici de Nexus 5X"</string>
+    <string name="google_folder_title" msgid="3050712152111669078">"Google"</string>
+    <string name="create_folder_title" msgid="1626185277541881691">"Creació"</string>
+    <string name="play_folder_title" msgid="8796147714003891112">"Play"</string>
 </resources>
