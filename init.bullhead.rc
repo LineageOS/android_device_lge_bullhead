@@ -255,7 +255,7 @@ service rmt_storage /system/bin/rmt_storage
     group system wakelock
 
 service start_hci_filter /system/bin/wcnss_filter
-#    class late_start
+    class late_start
     user bluetooth
     group bluetooth system
     disabled

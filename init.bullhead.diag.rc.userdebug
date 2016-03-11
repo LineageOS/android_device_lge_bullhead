@@ -8,7 +8,7 @@ on boot
     chmod 666 /dev/diag
 
 service cnss_diag /system/bin/cnss_diag --q
-#    class late_start
+    class late_start
     user root
     group root
     oneshot
