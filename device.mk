@@ -69,8 +69,8 @@ PRODUCT_COPY_FILES += \
     device/lge/bullhead/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl
 
 # for launcher layout
-PRODUCT_PACKAGES += \
-    BullheadLayout
+#PRODUCT_PACKAGES += \
+#    BullheadLayout
 
 # Prebuilt input device calibration files
 PRODUCT_COPY_FILES += \
