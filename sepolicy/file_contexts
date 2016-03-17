@@ -82,6 +82,7 @@
 
 /dev/spich                             u:object_r:sensors_device:s0
 /dev/nanohub                           u:object_r:sensors_device:s0
+/dev/nanohub_comms                     u:object_r:sensors_device:s0
 /dev/fpc1020                           u:object_r:fingerprint_device:s0
 
 # MSM camera related
