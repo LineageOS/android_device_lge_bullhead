@@ -80,3 +80,4 @@
 # sensor HUB
 /dev/spich                0640   system     system
 /dev/nanohub              0640   system     system
+/dev/nanohub_comms        0640   system     system
