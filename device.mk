@@ -436,7 +436,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Power HAL
 PRODUCT_PACKAGES += \
     power.bullhead \
-    hardware_properties.bullhead
+    thermal.bullhead
 
 # Modem debugger/misc
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
