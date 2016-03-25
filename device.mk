@@ -244,7 +244,8 @@ PRODUCT_PACKAGES += \
 # Sensor & activity_recognition HAL
 PRODUCT_PACKAGES += \
     sensors.bullhead \
-    activity_recognition.bullhead
+    activity_recognition.bullhead \
+    context_hub.bullhead
 
 ifeq ($(TARGET_USES_CHINOOK_SENSORHUB),true)
 PRODUCT_PACKAGES += \
