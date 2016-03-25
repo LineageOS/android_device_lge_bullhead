@@ -95,7 +95,8 @@ static ssize_t read_temperature(const char *file_name, const char *temperature_f
         .name = name,
         .current_value = temp * mult,
         .throttling_threshold = throttling_threshold,
-        .shutdown_threshold = shutdown_threshold
+        .shutdown_threshold = shutdown_threshold,
+        .vr_throttling_threshold = UNKNOWN_TEMPERATURE
     };
 
     return 0;
