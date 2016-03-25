@@ -45,8 +45,6 @@ bin/port-bridge
 bin/qmakernote-xtract
 bin/radish
 bin/rmt_storage
-bin/service
-bin/servicemanager
 bin/subsystem_ramdump
 bin/thermal-engine
 bin/time_daemon
