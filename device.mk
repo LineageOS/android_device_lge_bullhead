@@ -253,7 +253,8 @@ PRODUCT_PACKAGES += \
 else
 PRODUCT_PACKAGES += \
     nanoapp_cmd \
-    nanotool
+    nanotool \
+    sensortest
 endif
 
 PRODUCT_PACKAGES += \
