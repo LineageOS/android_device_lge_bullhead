@@ -251,7 +251,12 @@ PRODUCT_PACKAGES += \
     sensortool.bullhead
 else
 PRODUCT_PACKAGES += \
-    nanoapp_cmd \
+    nanoapp_cmd
+endif
+
+# sensor utilities (only for userdebug and eng builds)
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+PRODUCT_PACKAGES += \
     nanotool \
     sensortest
 endif
