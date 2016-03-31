@@ -562,10 +562,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vts.coverage=1
 endif
 
+# only include verity on user builds for LineageOS
+ifeq ($(TARGET_BUILD_VARIANT),user)
+   PRODUCT_COPY_FILES += device/lge/bullhead/fstab-verity.bullhead:root/fstab.bullhead
+
 # setup dm-verity configs.
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc.0/f9824900.sdhci/by-name/system
 #PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/platform/soc.0/f9824900.sdhci/by-name/vendor
 $(call inherit-product, build/target/product/verity.mk)
+endif
 
 # OEM Unlock reporting
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
