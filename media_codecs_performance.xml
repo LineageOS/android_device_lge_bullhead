@@ -17,10 +17,10 @@
 <MediaCodecs>
     <Encoders>
         <MediaCodec name="OMX.qcom.video.encoder.avc" type="video/avc" update="true">
-            <Limit name="measured-frame-rate-320x240" range="383-383" />
-            <Limit name="measured-frame-rate-720x480" range="103-103" />
-            <Limit name="measured-frame-rate-1280x720" range="60-60" />
-            <Limit name="measured-frame-rate-1920x1080" range="27-27" />
+            <Limit name="measured-frame-rate-320x240" range="468-468" />
+            <Limit name="measured-frame-rate-720x480" range="240-240" />
+            <Limit name="measured-frame-rate-1280x720" range="123-123" />
+            <Limit name="measured-frame-rate-1920x1080" range="57-57" />
         </MediaCodec>
         <MediaCodec name="OMX.qcom.video.encoder.h263" type="video/3gpp" update="true">
             <Limit name="measured-frame-rate-176x144" range="625-625" />
