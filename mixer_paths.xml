@@ -1950,8 +1950,7 @@
     </path>
 
     <path name="camcorder-mic">
-        <path name="dmic3" />
-        <ctl name="DEC10 Volume" value="84" />
+        <path name="handset-mic" />
     </path>
 
     <path name="hdmi-tx">
