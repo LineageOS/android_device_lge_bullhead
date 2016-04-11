@@ -242,6 +242,10 @@ PRODUCT_PACKAGES += \
     mm-qcamera-app
 
 # Sensor & activity_recognition HAL
+TARGET_USES_NANOHUB_SENSORHAL := true
+NANOHUB_SENSORHAL_LID_STATE_ENABLED := true
+NANOHUB_SENSORHAL_SENSORLIST := $(LOCAL_PATH)/sensorhal/sensorlist.cpp
+
 PRODUCT_PACKAGES += \
     sensors.bullhead \
     activity_recognition.bullhead \
