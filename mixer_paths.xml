@@ -1652,6 +1652,12 @@
         <path name="dmic1" />
         <ctl name="DEC7 Volume" value="70" />
     </path>
+
+    <path name="camcorder-handset-mic">
+        <path name="dmic1" />
+        <ctl name="DEC7 Volume" value="78" />
+    </path>
+
     <path name="handset-mic-cdp">
         <path name="adc1" />
         <ctl name="ADC1 Volume" value="20" />
@@ -1950,7 +1956,7 @@
     </path>
 
     <path name="camcorder-mic">
-        <path name="handset-mic" />
+        <path name="camcorder-handset-mic" />
     </path>
 
     <path name="hdmi-tx">
