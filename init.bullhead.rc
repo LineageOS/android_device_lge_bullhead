@@ -60,8 +60,6 @@ on init
     mkdir /persist 0771 system system
     mkdir /firmware 0771 system system
 
-    # Support legacy paths
-    symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
 
     # NXP HAL expects /dev/pn54x
