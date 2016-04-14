@@ -111,7 +111,6 @@
 /vendor/bin/qti                    u:object_r:qti_exec:s0
 /system/bin/imsdatadaemon          u:object_r:ims_exec:s0
 /system/bin/imsqmidaemon           u:object_r:ims_exec:s0
-/system/bin/imscmservice           u:object_r:imscm_exec:s0
 /system/bin/cnd                    u:object_r:cnd_exec:s0
 /system/bin/init\.bullhead\.power\.sh           u:object_r:init-power-sh_exec:s0
 /system/bin/init\.bullhead\.sh                  u:object_r:bullhead-sh_exec:s0
