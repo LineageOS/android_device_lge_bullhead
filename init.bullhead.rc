@@ -425,11 +425,6 @@ service imsdatadaemon /system/bin/imsdatadaemon
 on property:sys.ims.QMI_DAEMON_STATUS=1
     start imsdatadaemon
 
-service imscmservice /system/bin/imscmservice
-    class main
-    user system
-    group radio net_raw diag log
-
 service bullhead-sh /system/bin/init.bullhead.sh
     class late_start
     user radio
