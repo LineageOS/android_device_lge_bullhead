@@ -7,3 +7,4 @@ allow ueventd persist_file:dir search;
 allow ueventd persist_wifi_file:file r_file_perms;
 
 allow ueventd sysfs_devices_fingerprint:file w_file_perms;
+allow ueventd sysfs_nanoapp_cmd:file w_file_perms;
