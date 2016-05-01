@@ -172,6 +172,10 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     rmnetcli
 
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
+
 # GPS configuration
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/gps.conf:system/etc/gps.conf
