@@ -2,7 +2,7 @@
 # (e.g., LocationManager)
 qmux_socket(system_server)
 
-allow system_server self:netlink_socket create_socket_perms;
+allow system_server self:netlink_socket create_socket_perms_no_ioctl;
 
 allow system_server per_mgr_service:service_manager find;
 
@@ -37,3 +37,6 @@ set_prop(system_server, contexthub_prop);
 # run on big cores for app launch (sched_boost) - instead of just
 # boosting them to make it "more likely" to run on big cores.
 allow system_server zygote:process setsched;
+
+allowxperm system_server self:udp_socket ioctl { SIOCSIFFLAGS SIOCDEVPRIVATE_D };
+allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;

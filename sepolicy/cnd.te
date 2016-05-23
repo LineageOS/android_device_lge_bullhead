@@ -21,6 +21,7 @@ allow cnd self:capability { setuid setgid net_raw };
 dontaudit cnd self:capability fsetid;
 
 allow cnd self:socket create_socket_perms;
+allowxperm cnd self:socket ioctl msm_sock_ipc_ioctls;
 
 # create upd_socket to gather network info via ioctls (e.g. MTU size)
 allow cnd self:udp_socket { create ioctl };
