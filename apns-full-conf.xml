@@ -36,7 +36,7 @@
       mtu="1410"
   />
 
-  <apn carrier="T-Mobie TEST SIM"
+  <apn carrier="T-Mobile TEST SIM"
       mcc="001"
       mnc="01"
       apn="phone"
@@ -9196,8 +9196,19 @@
       apn="ims"
       type="ims"
       protocol="IPV6"
+      mtu="1440"
+      bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17"
+  />
+
+  <apn carrier="T-Mobile US 260 IMS"
+      mcc="310"
+      mnc="260"
+      apn="ims"
+      type="ims"
+      protocol="IPV6"
       roaming_protocol="IPV6"
       mtu="1440"
+      bearer_bitmask="18"
   />
 
   <apn carrier="T-Mobile MMS"
