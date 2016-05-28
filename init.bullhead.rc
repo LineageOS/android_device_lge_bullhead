@@ -68,7 +68,6 @@ on init
     symlink /dev/pn548 /dev/pn54x
 
     write /sys/block/zram0/comp_algorithm lz4
-    write /sys/block/zram0/max_comp_streams 4
 
     write /proc/sys/vm/page-cluster 0
 
