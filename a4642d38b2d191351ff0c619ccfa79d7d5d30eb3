@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_dd54bd00",
+        "filename": "cm.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 7118
+      },
+      "writtenOn": "2016-06-08T11:15:57Z",
+      "side": 0,
+      "message": "put back",
+      "range": {
+        "startLine": 24,
+        "startChar": 72,
+        "endLine": 24,
+        "endChar": 74
+      },
+      "revId": "a4642d38b2d191351ff0c619ccfa79d7d5d30eb3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
