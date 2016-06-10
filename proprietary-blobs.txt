@@ -17,8 +17,8 @@
 #
 # <src relative to root of extracted filesystem>:<dst relative to system>
 
--app/datastatusnotification/datastatusnotification.apk
--app/ims/ims.apk
+-vendor/app/datastatusnotification/datastatusnotification.apk
+-vendor/app/ims/ims.apk
 -app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -app/TimeService/TimeService.apk
 -priv-app/CNEService/CNEService.apk
@@ -89,8 +89,8 @@ lib/lib_fpc_tac_shared.so
 lib/libdmengine.so
 lib/libdmjavaplugin.so
 lib/libgps.utils.so
-lib/libimscamera_jni.so
-lib/libimsmedia_jni.so
+vendor/lib/libimscamera_jni.so
+vendor/lib/libimsmedia_jni.so
 lib/libloc_api_v02.so
 lib/libloc_core.so
 lib/libloc_ds_api.so
@@ -104,8 +104,8 @@ lib64/hw/gps.msm8992.so
 lib64/hw/nfc_nci.bullhead.so
 lib64/lib_fpc_tac_shared.so
 lib64/libgps.utils.so
-lib64/libimscamera_jni.so
-lib64/libimsmedia_jni.so
+vendor/lib64/libimscamera_jni.so
+vendor/lib64/libimsmedia_jni.so
 lib64/libloc_api_v02.so
 lib64/libloc_core.so
 lib64/libloc_ds_api.so
