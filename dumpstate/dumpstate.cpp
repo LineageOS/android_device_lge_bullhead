@@ -15,7 +15,6 @@
  */
 
 #include <dumpstate.h>
-#include <dumpstate_google.h>
 
 void dumpstate_board()
 {
@@ -37,7 +36,4 @@ void dumpstate_board()
     run_command("LITTLE cluster cpuidle", 5, SU_PATH, "root", "/system/bin/sh", "-c", "for d in $(ls -d /sys/devices/system/cpu/cpu0/cpuidle/state*); do echo \"$d: `cat $d/name` `cat $d/desc` `cat $d/time` `cat $d/usage`\"; done", NULL);
     dump_file("big cluster time-in-state", "/sys/devices/system/cpu/cpu4/cpufreq/stats/time_in_state");
     run_command("big cluster cpuidle", 5, SU_PATH, "root", "/system/bin/sh", "-c", "for d in $(ls -d /sys/devices/system/cpu/cpu4/cpuidle/state*); do echo \"$d: `cat $d/name` `cat $d/desc` `cat $d/time` `cat $d/usage`\"; done", NULL);
-
-    // Dump Google-specific info.
-    dumpstate_google();
 };
