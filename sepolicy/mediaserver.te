@@ -9,3 +9,6 @@ allow mediaserver perfd_data_file:dir search;
 allow mediaserver perfd_data_file:sock_file write;
 allow mediaserver perfd:unix_dgram_socket sendto;
 allow mediaserver perfd:unix_stream_socket connectto;
+
+# needed for widevine classic
+allow mediaserver tee_device:chr_file { ioctl open read write };
