@@ -154,6 +154,7 @@
 /sys/module/cpu_boost(/.*)?                                         u:object_r:sysfs_devices_system_cpu:s0
 /sys/devices/virtual/net/rmnet_ipa0/queues/rx-0/rps_cpus            u:object_r:sysfs_devices_system_cpu:s0
 /sys/devices/soc\.0/qcom,cpubw\.[0-9]+/devfreq/qcom,cpubw\.[0-9]+(/.*)? u:object_r:sysfs_devices_system_cpu:s0
+/sys/devices/soc\.0/f9200000\.ssusb(/.*)?                           u:object_r:sysfs_usb:s0
 /sys/devices/soc\.0/f9966000\.spi_fpc(/.*)?                         u:object_r:sysfs_devices_fingerprint:s0
 /sys/kernel/range/enable_ps_sensor                                  u:object_r:sysfs_camera:s0
 /sys/devices/soc\.0/fd900000\.qcom,mdss_mdp/qcom,mdss_fb_primary\.[0-9]+/leds/lcd-backlight/max_brightness u:object_r:sysfs_thermal:s0
