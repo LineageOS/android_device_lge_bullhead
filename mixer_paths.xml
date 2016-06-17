@@ -1650,7 +1650,7 @@
 
     <path name="unprocessed-handset-mic">
         <path name="dmic1" />
-        <ctl name="DEC7 Volume" value="70" />
+        <ctl name="DEC7 Volume" value="76" />
     </path>
 
     <path name="camcorder-handset-mic">
@@ -1949,6 +1949,7 @@
 
     <path name="voice-rec-mic">
         <path name="handset-mic" />
+        <ctl name="DEC7 Volume" value="82" />
     </path>
 
     <path name="unprocessed-mic">
@@ -2351,10 +2352,15 @@
 
     <path name="unprocessed-stereo-mic">
         <path name="voice-rec-dmic-ef" />
+        <ctl name="DEC7 Volume" value="76" />
+        <ctl name="DEC10 Volume" value="77" />
     </path>
 
     <path name="unprocessed-three-mic">
         <path name="three-mic" />
+        <ctl name="DEC7 Volume" value="76" />
+        <ctl name="DEC10 Volume" value="77" />
+        <ctl name="DEC5 Volume" value="75" />
     </path>
 
     <path name="unprocessed-quad-mic">
