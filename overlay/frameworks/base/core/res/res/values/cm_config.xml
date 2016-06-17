@@ -29,4 +29,7 @@
 
     <!-- Does the battery LED support multiple colors? Used to decide if the user can change the colors -->
     <bool name="config_multiColorBatteryLed">true</bool>
+
+    <!-- Enable UI blur feature -->
+    <bool name="config_ui_blur_enabled">true</bool>
 </resources>

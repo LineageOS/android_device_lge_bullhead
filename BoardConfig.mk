@@ -164,4 +164,7 @@ EXTENDED_FONT_FOOTPRINT := true
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS := hardware/cyanogen/cmhw
 
+# UI blur
+TARGET_HAVE_UI_BLUR := true
+
 -include vendor/lge/bullhead/BoardConfigVendor.mk
