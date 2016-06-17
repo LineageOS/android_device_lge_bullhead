@@ -53,6 +53,7 @@ allow netmgrd shell_exec:file { execute r_file_perms execute_no_trans };
 r_dir_file(netmgrd, sysfs_ssr);
 
 allow netmgrd sysfs:file write;
+allow netmgrd sysfs_usb:file write;
 
 allow netmgrd kernel:system module_request;
 
