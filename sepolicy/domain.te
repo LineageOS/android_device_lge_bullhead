@@ -1,5 +1,5 @@
 userdebug_or_eng(`
-  allow domain diag_device:chr_file rw_file_perms;
+  allow { domain -appdomain } diag_device:chr_file rw_file_perms;
 ')
 
 r_dir_file(domain, sysfs_socinfo);
