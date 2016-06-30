@@ -1718,6 +1718,107 @@
       type="mms"
   />
 
+  <apn carrier="internet simyo"
+      mcc="214"
+      mnc="03"
+      apn="gprs-service.com"
+      mvno_type="spn"
+      mvno_match_data="simyo"
+      type="default,supl"
+  />
+
+  <apn carrier="simyo MMS"
+      mcc="214"
+      mnc="03"
+      apn="mms-service.com"
+      authtype="1"
+      mmsc="http://mms.orange.es"
+      mmsproxy="172.22.188.25"
+      mmsport="8080"
+      mvno_type="spn"
+      mvno_match_data="simyo"
+      type="mms"
+  />
+
+  <apn carrier="Jazztel Internet"
+      mcc="214"
+      mnc="03"
+      apn=""
+      type="ia"
+      mvno_match_data="JAZZTEL"
+      mvno_type="spn"
+  />
+
+  <apn carrier="jazzinternet"
+      mcc="214"
+      mnc="03"
+      apn="jazzinternet"
+      type="default,supl"
+      mvno_match_data="JAZZTEL"
+      mvno_type="spn"
+  />
+
+  <apn carrier="MMS"
+      mcc="214"
+      mnc="03"
+      apn="jazzmms"
+      user=""
+      password=""
+      mmsc="http://jazztelmms.com/servlets/mms"
+      mmsproxy="37.132.0.10"
+      mmsport="8080"
+      authtype="1"
+      type="mms"
+      mvno_match_data="JAZZTEL"
+      mvno_type="spn"
+  />
+
+  <apn carrier="INTERNET R"
+      mcc="214"
+      mnc="03"
+      apn="internet.mundo-r.com"
+      authtype="1"
+      type="default,supl"
+      mvno_type="imsi"
+      mvno_match_data="21403508xxxxxxx"
+  />
+
+  <apn carrier="MMS R"
+      mcc="214"
+      mnc="03"
+      apn="mms.mundo-r.com"
+      authtype="1"
+      mmsc="http://mms.mundo-r.com"
+      mmsproxy="010.000.157.169"
+      mmsport="8080"
+      mvno_type="imsi"
+      mvno_match_data="21403508xxxxxxx"
+      type="mms"
+  />
+
+  <apn carrier="INTERNET R"
+      mcc="214"
+      mnc="03"
+      apn="internet.mundo-r.com"
+      authtype="1"
+      type="default,supl"
+      mvno_type="imsi"
+      mvno_match_data="21403509xxxxxxx"
+  />
+
+  <apn carrier="MMS R"
+      mcc="214"
+      mnc="03"
+      apn="mms.mundo-r.com"
+      authtype="1"
+      mmsc="http://mms.mundo-r.com"
+      mmsproxy="010.000.157.169"
+      mmsport="8080"
+      mvno_type="imsi"
+      mvno_match_data="21403509xxxxxxx"
+      type="mms"
+  />
+
   <apn carrier="Yoigo Internet"
       mcc="214"
       mnc="04"
@@ -1930,13 +2031,22 @@
   <apn carrier="Jazztel Internet"
       mcc="214"
       mnc="07"
+      apn=""
+      type="ia"
+      mvno_match_data="JAZZTEL"
+      mvno_type="spn"
+  />
+
+  <apn carrier="jazzinternet"
+      mcc="214"
+      mnc="07"
       apn="jazzinternet"
       type="default,supl"
       mvno_match_data="JAZZTEL"
       mvno_type="spn"
   />
 
-  <apn carrier="Jazztel MMS"
+  <apn carrier="MMS"
       mcc="214"
       mnc="07"
       apn="jazzmms"
@@ -2048,14 +2158,26 @@
       type="mms"
   />
 
-  <apn carrier="Simyo Internet"
+  <apn carrier="internet simyo"
       mcc="214"
       mnc="19"
       apn="gprs-service.com"
-      mmsc="http://217.18.32.180:8080"
-      mmsproxy="217.18.32.181"
+      mvno_type="spn"
+      mvno_match_data="simyo"
+      type="default,supl"
+  />
+
+  <apn carrier="simyo MMS"
+      mcc="214"
+      mnc="19"
+      apn="mms-service.com"
+      authtype="1"
+      mmsc="http://mms.orange.es"
+      mmsproxy="172.22.188.25"
       mmsport="8080"
-      type="default,supl,mms"
+      mvno_type="spn"
+      mvno_match_data="simyo"
+      type="mms"
   />
 
   <apn carrier="Jazztel Internet"
@@ -2083,6 +2205,39 @@
       mmsproxy="37.132.0.10"
       mmsport="8080"
       type="mms"
+  />
+
+  <apn carrier="Jazztel Internet"
+      mcc="214"
+      mnc="21"
+      apn=""
+      type="ia"
+      mvno_match_data="JAZZTEL"
+      mvno_type="spn"
+  />
+
+  <apn carrier="jazzinternet"
+      mcc="214"
+      mnc="21"
+      apn="jazzinternet"
+      type="default,supl"
+      mvno_match_data="JAZZTEL"
+      mvno_type="spn"
+  />
+
+  <apn carrier="MMS"
+      mcc="214"
+      mnc="21"
+      apn="jazzmms"
+      user=""
+      password=""
+      mmsc="http://jazztelmms.com/servlets/mms"
+      mmsproxy="37.132.0.10"
+      mmsport="8080"
+      authtype="1"
+      type="mms"
+      mvno_match_data="JAZZTEL"
+      mvno_type="spn"
   />
 
   <apn carrier="Truphone"
@@ -3168,6 +3323,13 @@
       type="mms"
   />
 
+  <apn carrier="A1 Internet"
+      mcc="232"
+      mnc="01"
+      apn=""
+      type="ia"
+  />
+
   <apn carrier="live!"
       mcc="232"
       mnc="01"
@@ -3253,6 +3415,13 @@
       password="web"
       type="default,supl,agps,fota,dun"
   /-->
+
+  <apn carrier="tele.ring ia"
+      mcc="232"
+      mnc="07"
+      apn=""
+      type="ia"
+  />
 
   <apn carrier="tele.ring mms"
       mcc="232"
@@ -24041,12 +24210,12 @@
       type="mms"
   />
 
-  <apn carrier="3G Portal"
+  <apn carrier="Partner"
       mcc="425"
       mnc="01"
-      apn="uwap.orange.co.il"
+      apn="uinternet"
       mmsc="http://192.168.220.15/servlets/mms"
-      mmsproxy="192.118.11.55"
+      mmsproxy=""
       mmsport="8080"
       type="default,supl,mms"
   />
@@ -24171,11 +24340,11 @@
       type="mms"
   />
 
-  <apn carrier="3G Portal"
+  <apn carrier="Partner"
       mcc="425"
       mnc="10"
-      apn="uwap.orange.co.il"
-      mmsc="http://192.168.220.15/servlets/mms"
+      apn="uinternet"
+      mmsc=""
       mmsport="8080"
       type="default,supl,mms"
   />
