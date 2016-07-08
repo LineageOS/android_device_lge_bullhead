@@ -17,11 +17,25 @@
 #
 # <src relative to root of extracted filesystem>:<dst relative to system>
 
+-app/atfwd/atfwd.apk
 -app/datastatusnotification/datastatusnotification.apk
+-app/HiddenMenu/HiddenMenu.apk
 -app/ims/ims.apk
 -app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-app/RCSBootstraputil/RCSBootstraputil.apk
+-app/RcsImsBootstraputil/RcsImsBootstraputil.apk
 -app/TimeService/TimeService.apk
+-app/Tycho/Tycho.apk
 -priv-app/CNEService/CNEService.apk
+-priv-app/ConnMO/ConnMO.apk
+-priv-app/DCMO/DCMO.apk
+-priv-app/DiagMon/DiagMon.apk
+-priv-app/DMConfigUpdate/DMConfigUpdate.apk
+-priv-app/DMService/DMService.apk
+-priv-app/GCS/GCS.apk
+-priv-app/HotwordEnrollment/HotwordEnrollment.apk
+-priv-app/LifeTimerService/LifeTimerService.apk
+-priv-app/SprintDM/SprintDM.apk
 bin/ATFWD-daemon
 bin/btnvtool
 bin/cnd
@@ -43,13 +57,13 @@ bin/pm-proxy
 bin/pm-service
 bin/port-bridge
 bin/qmakernote-xtract
+bin/qmuxd
 bin/radish
 bin/rmt_storage
 bin/subsystem_ramdump
 bin/thermal-engine
 bin/time_daemon
 bin/wcnss_filter
-bin/qmuxd
 etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
 etc/acdbdata/MTP/MTP_General_cal.acdb
 etc/acdbdata/MTP/MTP_Global_cal.acdb
@@ -82,7 +96,6 @@ framework/rcsservice.jar
 lib/hw/camera.msm8992.so
 lib/hw/fingerprint.bullhead.so
 lib/hw/gps.msm8992.so
-lib/hw/lights.bullhead.so
 lib/hw/local_time.default.so
 lib/hw/nfc_nci.bullhead.so
 lib/lib_fpc_tac_shared.so
@@ -110,4 +123,3 @@ lib64/libloc_api_v02.so
 lib64/libloc_core.so
 lib64/libloc_ds_api.so
 lib64/libloc_eng.so
-
