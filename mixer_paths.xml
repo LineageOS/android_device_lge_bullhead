@@ -1546,7 +1546,7 @@
     </path>
 
     <path name="speaker-gain-default">
-        <ctl name="RX7 Digital Volume" value="88" />
+        <ctl name="RX7 Digital Volume" value="84" />
         <ctl name="SPK DRV Volume" value="8" />
     </path>
 
