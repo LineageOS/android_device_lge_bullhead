@@ -15,5 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_bullhead.mk \
-    $(LOCAL_DIR)/aosp_bullhead_vts.mk
+    $(LOCAL_DIR)/aosp_bullhead.mk
