@@ -18,9 +18,7 @@
 # <src relative to root of extracted filesystem>:<dst relative to system>
 
 -app/atfwd/atfwd.apk
--app/datastatusnotification/datastatusnotification.apk
 -app/HiddenMenu/HiddenMenu.apk
--app/ims/ims.apk
 -app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -app/RCSBootstraputil/RCSBootstraputil.apk
 -app/RcsImsBootstraputil/RcsImsBootstraputil.apk
@@ -88,11 +86,11 @@ etc/qcril.db
 etc/sap.conf
 etc/sysconfig/whitelist_com.android.omadm.service.xml
 etc/thermal-engine-8992.conf
-framework/cneapiclient.jar
-framework/com.google.widevine.software.drm.jar
-framework/qcrilhook.jar
-framework/rcsimssettings.jar
-framework/rcsservice.jar
+-framework/cneapiclient.jar
+-framework/com.google.widevine.software.drm.jar
+-framework/qcrilhook.jar
+-framework/rcsimssettings.jar
+-framework/rcsservice.jar
 lib/hw/camera.msm8992.so
 lib/hw/fingerprint.bullhead.so
 lib/hw/gps.msm8992.so
@@ -102,8 +100,6 @@ lib/lib_fpc_tac_shared.so
 lib/libdmengine.so
 lib/libdmjavaplugin.so
 lib/libgps.utils.so
-lib/libimscamera_jni.so
-lib/libimsmedia_jni.so
 lib/libloc_api_v02.so
 lib/libloc_core.so
 lib/libloc_ds_api.so
@@ -117,8 +113,6 @@ lib64/hw/gps.msm8992.so
 lib64/hw/nfc_nci.bullhead.so
 lib64/lib_fpc_tac_shared.so
 lib64/libgps.utils.so
-lib64/libimscamera_jni.so
-lib64/libimsmedia_jni.so
 lib64/libloc_api_v02.so
 lib64/libloc_core.so
 lib64/libloc_ds_api.so
