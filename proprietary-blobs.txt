@@ -91,7 +91,6 @@ etc/thermal-engine-8992.conf
 -framework/qcrilhook.jar
 -framework/rcsimssettings.jar
 -framework/rcsservice.jar
-lib/hw/camera.msm8992.so
 lib/hw/fingerprint.bullhead.so
 lib/hw/gps.msm8992.so
 lib/hw/local_time.default.so
