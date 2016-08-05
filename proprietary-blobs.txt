@@ -98,7 +98,9 @@ lib/hw/local_time.default.so
 lib/hw/nfc_nci.bullhead.so
 lib/lib_fpc_tac_shared.so
 lib/libdmengine.so
+lib/libdmengine.so:priv-app/DMService/lib/arm/libdmengine.so
 lib/libdmjavaplugin.so
+lib/libdmjavaplugin.so:priv-app/DMService/lib/arm/libdmjavaplugin.so
 lib/libgps.utils.so
 lib/libloc_api_v02.so
 lib/libloc_core.so
