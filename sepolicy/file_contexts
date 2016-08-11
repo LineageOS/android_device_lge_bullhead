@@ -160,6 +160,9 @@
 /sys/devices/soc\.0/qpnp-smbcharger-[^/]*/power_supply/battery/system_temp_level                           u:object_r:sysfs_thermal:s0
 /sys/devices/virtual/nanohub/nanohub(/.*)? u:object_r:sysfs_nanoapp_cmd:s0
 
+# NFC hal
+/system/bin/hw/nfc_hal_pn54x       u:object_r:nfc_hal_pn54x_exec:s0
+
 # Persist files
 /persist(/.*)?                     u:object_r:persist_file:s0
 /persist/data(/.*)?                u:object_r:persist_data_file:s0

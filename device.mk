@@ -23,7 +23,11 @@
 TARGET_USES_CHINOOK_SENSORHUB := false
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-  LOCAL_KERNEL := device/lge/bullhead-kernel/Image.gz-dtb
+  ifeq ($(TARGET_PRODUCT),bullhead_treble)
+    LOCAL_KERNEL := device/lge/bullhead-kernel/Image_treble.gz-dtb
+  else
+    LOCAL_KERNEL := device/lge/bullhead-kernel/Image.gz-dtb
+  endif
 else
   LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -217,9 +221,16 @@ PRODUCT_COPY_FILES += \
 
 # NFC packages
 PRODUCT_PACKAGES += \
-    nfc_nci.bullhead \
     NfcNci \
     Tag
+
+ifeq ($(TARGET_PRODUCT), bullhead_treble)
+PRODUCT_PACKAGES += \
+    nfc_hal_pn54x
+else
+PRODUCT_PACKAGES += \
+    nfc_nci.bullhead
+endif
 
 # Fingerprint Sensor
 PRODUCT_PACKAGES += \
