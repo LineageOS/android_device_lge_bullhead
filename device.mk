@@ -132,10 +132,6 @@ PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 
 PRODUCT_CHARACTERISTICS := nosdcard
 
-# for off charging mode
-PRODUCT_PACKAGES += \
-    charger_res_images
-
 PRODUCT_PACKAGES += \
     gralloc.msm8992 \
     hwcomposer.msm8992 \
