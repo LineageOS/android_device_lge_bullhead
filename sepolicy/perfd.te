@@ -1,4 +1,4 @@
-type perfd, domain;
+type perfd, domain, domain_deprecated;
 type perfd_exec, exec_type, file_type;
 
 init_daemon_domain(perfd)
@@ -23,3 +23,10 @@ allow perfd sysfs_devices_system_cpu:file rw_file_perms;
 
 # access to /sys/module/lpm_levels/parameters/sleep_disabled
 allow perfd sysfs_power_management:file w_file_perms;
+
+# perfd uses kill(pid, 0) to determine if a process exists.
+# Determining if a process exists does not require the kill capability
+# since a permission denied indicates the process exists.
+dontaudit perfd self:capability kill;
+
+allow perfd cameraserver:process signull;

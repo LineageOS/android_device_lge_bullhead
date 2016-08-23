@@ -50,6 +50,7 @@
 /dev/block/platform/soc\.0/f9824900\.sdhci/by-name/ssd          u:object_r:ssd_block_device:s0
 /dev/block/platform/soc\.0/f9824900\.sdhci/by-name/metadata     u:object_r:metadata_block_device:s0
 /dev/block/platform/soc\.0/f9824900\.sdhci/by-name/recovery     u:object_r:recovery_block_device:s0
+/dev/block/platform/soc\.0/f9824900\.sdhci/by-name/misc         u:object_r:misc_block_device:s0
 
 /dev/subsys_.*                         u:object_r:ssr_device:s0
 /dev/ramdump_.*                        u:object_r:ramdump_device:s0
@@ -72,7 +73,7 @@
 /dev/msm_audio_cal                     u:object_r:audio_device:s0
 /dev/msm_rtac                          u:object_r:audio_device:s0
 /dev/v4l-subdev[0-9]*                  u:object_r:video_device:s0
-/dev/media([0-9])+                     u:object_r:camera_device:s0
+/dev/media([0-9])+                     u:object_r:video_device:s0
 
 /dev/ttyHS0                            u:object_r:ttyHS0_device:s0
 /dev/subsys_modem                      u:object_r:subsys_modem_device:s0
@@ -80,11 +81,13 @@
 /dev/qseecom                           u:object_r:tee_device:s0
 
 /dev/spich                             u:object_r:sensors_device:s0
+/dev/nanohub                           u:object_r:sensors_device:s0
+/dev/nanohub_comms                     u:object_r:sensors_device:s0
 /dev/fpc1020                           u:object_r:fingerprint_device:s0
 
 # MSM camera related
-/dev/media[0-9]+                       u:object_r:camera_device:s0
-/dev/jpeg[0-9]+                        u:object_r:camera_device:s0
+/dev/media[0-9]+                       u:object_r:video_device:s0
+/dev/jpeg[0-9]+                        u:object_r:video_device:s0
 
 # System files
 /system/bin/perfd                  u:object_r:perfd_exec:s0
@@ -101,16 +104,17 @@
 /system/bin/msm_irqbalance         u:object_r:msm_irqbalanced_exec:s0
 /system/bin/ATFWD-daemon           u:object_r:atfwd_exec:s0
 /system/bin/subsystem_ramdump      u:object_r:ssr_exec:s0
+/system/bin/nanoapp_cmd            u:object_r:nanoapp_cmd_exec:s0
 /vendor/bin/mm-qcamera-daemon      u:object_r:camera_exec:s0
 /vendor/bin/sensortool\.bullhead   u:object_r:sensortool_exec:s0
 
 /vendor/bin/qti                    u:object_r:qti_exec:s0
 /system/bin/imsdatadaemon          u:object_r:ims_exec:s0
 /system/bin/imsqmidaemon           u:object_r:ims_exec:s0
-/system/bin/imscmservice           u:object_r:imscm_exec:s0
 /system/bin/cnd                    u:object_r:cnd_exec:s0
-/system/bin/init.bullhead.power.sh u:object_r:init-power-sh_exec:s0
-/system/bin/init.bullhead.sh       u:object_r:bullhead-sh_exec:s0
+/system/bin/init\.bullhead\.power\.sh           u:object_r:init-power-sh_exec:s0
+/system/bin/init\.bullhead\.sh                  u:object_r:bullhead-sh_exec:s0
+/system/bin/init\.bullhead\.qseecomd\.sh        u:object_r:init-bullhead-qseecomd-sh_exec:s0
 /system/bin/cnss-daemon            u:object_r:wcnss_service_exec:s0
 /system/bin/cnss_diag              u:object_r:cnss_diag_exec:s0
 /system/bin/loc_launcher           u:object_r:location_exec:s0
@@ -145,14 +149,17 @@
 /sys/devices/soc\.0/qcom,bcl[^/]*(/.*)?                             u:object_r:sysfs_thermal:s0
 /sys/devices/soc\.0/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel  u:object_r:sysfs_thermal:s0
 /sys/devices/soc\.0/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk        u:object_r:sysfs_thermal:s0
+/sys/devices/soc\.0/qpnp-smbcharger-[0-9a-f]+/power_supply/battery/capacity   u:object_r:sysfs_batteryinfo:s0
 /sys/module/lpm_levels(/.*)?                                        u:object_r:sysfs_power_management:s0
 /sys/module/cpu_boost(/.*)?                                         u:object_r:sysfs_devices_system_cpu:s0
 /sys/devices/virtual/net/rmnet_ipa0/queues/rx-0/rps_cpus            u:object_r:sysfs_devices_system_cpu:s0
 /sys/devices/soc\.0/qcom,cpubw\.[0-9]+/devfreq/qcom,cpubw\.[0-9]+(/.*)? u:object_r:sysfs_devices_system_cpu:s0
+/sys/devices/soc\.0/f9200000\.ssusb(/.*)?                           u:object_r:sysfs_usb:s0
 /sys/devices/soc\.0/f9966000\.spi_fpc(/.*)?                         u:object_r:sysfs_devices_fingerprint:s0
 /sys/kernel/range/enable_ps_sensor                                  u:object_r:sysfs_camera:s0
 /sys/devices/soc\.0/fd900000\.qcom,mdss_mdp/qcom,mdss_fb_primary\.[0-9]+/leds/lcd-backlight/max_brightness u:object_r:sysfs_thermal:s0
 /sys/devices/soc\.0/qpnp-smbcharger-[^/]*/power_supply/battery/system_temp_level                           u:object_r:sysfs_thermal:s0
+/sys/devices/virtual/nanohub/nanohub(/.*)? u:object_r:sysfs_nanoapp_cmd:s0
 
 # Persist files
 /persist(/.*)?                     u:object_r:persist_file:s0

@@ -60,8 +60,6 @@ on init
     mkdir /persist 0771 system system
     mkdir /firmware 0771 system system
 
-    # Support legacy paths
-    symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
 
     # NXP HAL expects /dev/pn54x
@@ -87,24 +85,22 @@ on early-boot
     write /sys/module/pil_msa/parameters/modem_auth_timeout_ms ${persist.sys.modem_auth_timeout}
     write /sys/module/peripheral_loader/parameters/proxy_timeout_ms ${persist.sys.pil_proxy_timeout}
 
-    # Adjust parameters for dm-verity device
-    write /sys/block/dm-0/queue/read_ahead_kb 2048
-
     # Update dm-verity state and set partition.*.verified properties
     verity_update_state
 
 on boot
-    symlink /dev/block/platform/soc.0/f9824900.sdhci /dev/block/bootdevice
-
     # execute script to set initial CPU settings
     # don't run as a service to avoid race conditions
     exec - root root system -- /system/bin/init.bullhead.power.sh
 
     # update foreground cpuset now that processors are up
-    write /dev/cpuset/foreground/cpus 0-5
+    # foreground gets all CPUs except CPU 3
+    # CPU 3 is reserved for the top app
+    write /dev/cpuset/foreground/cpus 0-2,4-5
     write /dev/cpuset/foreground/boost/cpus 4-5
     write /dev/cpuset/background/cpus 0
-    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/system-background/cpus 0-2
+    write /dev/cpuset/top-app/cpus 0-5
 
     # Bluetooth
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
@@ -172,6 +168,21 @@ on boot
     chown system system /sys/class/leds/blue/on_off_ms
     chown system system /sys/class/leds/red/rgb_start
 
+    write /sys/block/mmcblk0/queue/rq_affinity 0
+    write /sys/block/mmcblk0/queue/scheduler noop
+
+on post-fs
+    symlink /dev/block/platform/soc.0/f9824900.sdhci /dev/block/bootdevice
+
+    mkdir /persist/data 0700 system system
+    mkdir /persist/data/sfs 0700 system system
+    mkdir /persist/data/tz 0700 system system
+    mkdir /persist/data/app_g 0700 system system
+    mkdir /persist/widevine 0770 drm system
+
+    start qseecomd
+    exec - root root system -- /system/bin/init.bullhead.qseecomd.sh
+
 on post-fs-data
     # Mark the copy complete flag to not completed
     mkdir /data/misc/radio 0770 radio radio
@@ -184,12 +195,6 @@ on post-fs-data
     #Update touch firmware if required
     write /sys/bus/i2c/devices/2-0020/check_fw 1
     write /sys/devices/soc.0/f9924000.i2c/power/control on
-
-    mkdir /persist/data 0700 system system
-    mkdir /persist/data/sfs 0700 system system
-    mkdir /persist/data/tz 0700 system system
-    mkdir /persist/data/app_g 0700 system system
-    mkdir /persist/widevine 0770 drm system
 
     # Create /data/time folder for time-services
     mkdir /data/time/ 0700 system system
@@ -244,7 +249,7 @@ service irsc_util /system/bin/irsc_util "/etc/sec_config"
 service rmt_storage /system/bin/rmt_storage
     class core
     user root
-    group system
+    group system wakelock
 
 service start_hci_filter /system/bin/wcnss_filter
     class late_start
@@ -258,19 +263,11 @@ on property:wc_transport.start_hci=true
 on property:wc_transport.start_hci=false
     stop start_hci_filter
 
-service dhcpcd_bt-pan /system/bin/dhcpcd -BKLG
-    disabled
-    oneshot
-
-service iprenew_bt-pan /system/bin/dhcpcd -n
-    disabled
-    oneshot
-
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /system/bin/qmuxd
     class main
     user radio
-    group radio audio bluetooth gps
+    group radio audio bluetooth wakelock gps
 
 service perfd /system/bin/perfd
     class main
@@ -285,7 +282,7 @@ service qti /system/vendor/bin/qti
 
 service netmgrd /system/bin/netmgrd
     class main
-    group radio system
+    group radio system wakelock
 
 service per_mgr /system/bin/pm-service
     class core
@@ -324,9 +321,6 @@ service thermal-engine /system/bin/thermal-engine
     socket thermal-recv-passive-client stream 0666 system system
     group root
 
-on property:init.svc.wpa_supplicant=stopped
-    stop dhcpcd
-
 service wpa_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf \
@@ -353,36 +347,6 @@ service p2p_supplicant /system/bin/wpa_supplicant \
 #   group wifi inet keystore
     class main
     socket wpa_wlan0 dgram 660 wifi wifi
-    disabled
-    oneshot
-
-service dhcpcd_wlan0 /system/bin/dhcpcd -aABDKL
-    class late_start
-    disabled
-    oneshot
-
-service dhcpcd_p2p /system/bin/dhcpcd -aABKL
-    class late_start
-    disabled
-    oneshot
-
-service iprenew_wlan0 /system/bin/dhcpcd -n
-    class late_start
-    disabled
-    oneshot
-
-service iprenew_p2p /system/bin/dhcpcd -n
-    class late_start
-    disabled
-    oneshot
-
-service dhcpcd_eth0 /system/bin/dhcpcd -aABDKL
-    class late_start
-    disabled
-    oneshot
-
-service iprenew_eth0 /system/bin/dhcpcd -n
-    class late_start
     disabled
     oneshot
 
@@ -442,6 +406,7 @@ service ss_ramdump /system/bin/subsystem_ramdump
 service cnd /system/bin/cnd
     class late_start
     socket cnd stream 660 root inet
+    group root wakelock
 
 service imsqmidaemon /system/bin/imsqmidaemon
     class main
@@ -459,11 +424,6 @@ service imsdatadaemon /system/bin/imsdatadaemon
 on property:sys.ims.QMI_DAEMON_STATUS=1
     start imsdatadaemon
 
-service imscmservice /system/bin/imscmservice
-    class main
-    user system
-    group radio net_raw diag log
-
 service bullhead-sh /system/bin/init.bullhead.sh
     class late_start
     user radio
@@ -471,8 +431,8 @@ service bullhead-sh /system/bin/init.bullhead.sh
     oneshot
 
 # bugreport is triggered by holding down volume down, volume up and power
-service bugreport /system/bin/dumpstate -d -p -B \
-        -o /data/data/com.android.shell/files/bugreports/bugreport
+service bugreport /system/bin/dumpstate -d -p -B -z \
+        -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
     class main
     disabled
     oneshot

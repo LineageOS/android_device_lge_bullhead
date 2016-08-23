@@ -1,5 +1,5 @@
 # loc_launcher service
-type location, domain;
+type location, domain, domain_deprecated;
 type location_exec, exec_type, file_type;
 
 init_daemon_domain(location)
@@ -18,6 +18,7 @@ allow location location_exec:file x_file_perms;
 allow location self:{
     socket
     netlink_socket
+    netlink_route_socket
     udp_socket
 } create_socket_perms;
 

@@ -1,4 +1,4 @@
-type wcnss_service, domain;
+type wcnss_service, domain, domain_deprecated;
 type wcnss_service_exec, exec_type, file_type;
 
 init_daemon_domain(wcnss_service)
@@ -10,3 +10,6 @@ allow wcnss_service self:netlink_socket create_socket_perms;
 allow wcnss_service smem_log_device:chr_file rw_file_perms;
 allow wcnss_service self:capability { setuid net_admin setgid };
 allow wcnss_service sysfs:file w_file_perms;
+allow wcnss_service sysfs_usb:file w_file_perms;
+
+qmux_socket(wcnss_service)

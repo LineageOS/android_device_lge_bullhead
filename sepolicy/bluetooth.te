@@ -1,4 +1,5 @@
 allow bluetooth sysfs:file rw_file_perms;
+allow bluetooth sysfs_usb:file w_file_perms;
 
 allow bluetooth ttyHS0_device:chr_file rw_file_perms;
 allow bluetooth start_hci_filter:unix_stream_socket connectto;

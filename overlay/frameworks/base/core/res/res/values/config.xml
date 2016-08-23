@@ -19,9 +19,6 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- The name of the window orientation sensor to use instead of the accelerometer. -->
-    <string name="config_orientationSensorType">com.google.sensor.window_orientation</string>
-
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
@@ -120,9 +117,9 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>1</item>
-        <item>8</item>
+        <item>15</item>
         <item>40</item>
+        <item>190</item>
         <item>350</item>
         <item>600</item>
         <item>1000</item>
@@ -133,18 +130,17 @@
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
          in the config_autoBrightnessLevels array.  This array should have size one greater
-         than the size of the config_autoBrightnessLevels array.
-         This must be overridden in platform specific overlays -->
+         than the size of the config_autoBrightnessLevels array. -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>13</item>   <!-- 0-1 -->
-        <item>26</item>   <!-- 1-8 -->
-        <item>55</item>   <!-- 8-40 -->
-        <item>88</item>   <!-- 40-350 -->
-        <item>130</item>  <!-- 350-600 -->
-        <item>167</item>  <!-- 600-1000 -->
-        <item>204</item>  <!-- 1000-1600 -->
-        <item>240</item>  <!-- 1600-3000 -->
-        <item>254</item>  <!-- 3000-10000 -->
+        <item>10</item>   <!-- 0-15 -->
+        <item>20</item>   <!-- 15-40 -->
+        <item>40</item>   <!-- 40-190 -->
+        <item>55</item>   <!-- 190-350 -->
+        <item>88</item>   <!-- 350-600 -->
+        <item>130</item>  <!-- 600-1000 -->
+        <item>167</item>  <!-- 1000-1600 -->
+        <item>204</item>  <!-- 1600-3000 -->
+        <item>240</item>  <!-- 3000-10000 -->
         <item>255</item>  <!-- 10000+ -->
     </integer-array>
 
@@ -410,5 +406,13 @@
          * The device must be provisioned with HDCP keys (for protected content).
     -->
     <bool name="config_enableWifiDisplay">true</bool>
+
+    <!-- Default list of files pinned by the Pinner Service -->
+    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>"/system/framework/arm64/boot-framework.oat"</item>
+        <item>"/system/framework/oat/arm64/services.odex"</item>
+        <item>"/system/framework/arm64/boot.oat"</item>
+        <item>"/system/framework/arm64/boot-core-libart.oat"</item>
+   </string-array>
 
 </resources>
