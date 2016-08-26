@@ -339,6 +339,10 @@
     <!-- Flag specifying whether WFC over IMS is available on device -->
     <bool name="config_device_wfc_ims_available">true</bool>
 
+    <!-- Flag specifying that this device will NOT use the "allow_hold_in_ims_call" carrier config
+         option. -->
+    <bool name="config_device_respects_hold_carrier_config">false</bool>
+
     <!-- Values for GPS configuration -->
     <string-array translatable="false" name="config_gpsParameters">
         <item>SUPL_HOST=supl.google.com</item>
