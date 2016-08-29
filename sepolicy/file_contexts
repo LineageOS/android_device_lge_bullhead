@@ -73,7 +73,6 @@
 /dev/msm_audio_cal                     u:object_r:audio_device:s0
 /dev/msm_rtac                          u:object_r:audio_device:s0
 /dev/v4l-subdev[0-9]*                  u:object_r:video_device:s0
-/dev/media([0-9])+                     u:object_r:video_device:s0
 
 /dev/ttyHS0                            u:object_r:ttyHS0_device:s0
 /dev/subsys_modem                      u:object_r:subsys_modem_device:s0
@@ -86,8 +85,8 @@
 /dev/fpc1020                           u:object_r:fingerprint_device:s0
 
 # MSM camera related
-/dev/media[0-9]+                       u:object_r:video_device:s0
-/dev/jpeg[0-9]+                        u:object_r:video_device:s0
+/dev/media[0-9]+                       u:object_r:camera_device:s0
+/dev/jpeg[0-9]+                        u:object_r:camera_device:s0
 
 # System files
 /system/bin/perfd                  u:object_r:perfd_exec:s0
