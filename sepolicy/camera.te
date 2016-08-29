@@ -12,7 +12,9 @@ allow camera self:capability { sys_nice };
 allow camera system_server:unix_stream_socket { read write };
 
 # Interact with other media devices
-allow camera { gpu_device video_device }:chr_file rw_file_perms;
+allow camera camera_device:chr_file rw_file_perms;
+allow camera gpu_device:chr_file rw_file_perms;
+allow camera video_device:chr_file rw_file_perms;
 allow camera { audioserver cameraserver mediaserver surfaceflinger }:fd use;
 
 # Create camera socket
