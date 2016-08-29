@@ -1,5 +1,5 @@
 # loc_launcher service
-type location, domain, domain_deprecated;
+type location, domain, device_domain_deprecated;
 type location_exec, exec_type, file_type;
 
 init_daemon_domain(location)
