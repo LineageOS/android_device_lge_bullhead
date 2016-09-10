@@ -15,12 +15,12 @@ allow location location_data_file:dir rw_dir_perms;
 allow location location_data_file:file create_file_perms;
 allow location location_data_file:sock_file create_file_perms;
 allow location location_exec:file x_file_perms;
-allow location self:socket create_socket_perms;
-allowxperm location self:socket ioctl msm_sock_ipc_ioctls;
-allow location self:netlink_socket create_socket_perms_no_ioctl;
-allow location self:netlink_route_socket create_socket_perms_no_ioctl;
-allow location self:udp_socket create_socket_perms;
-allowxperm location self:udp_socket ioctl { SIOCGIFINDEX SIOCGIFHWADDR SIOCIWFIRSTPRIV_05 };
+allow location self:{
+    socket
+    netlink_socket
+    netlink_route_socket
+    udp_socket
+} create_socket_perms;
 
 # create location socket location-mq-s
 allow location location_data_file:sock_file { create setattr unlink };
