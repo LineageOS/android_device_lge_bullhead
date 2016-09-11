@@ -23,6 +23,7 @@ allow rmt self:capability sys_admin;
 allow rmt ssd_block_device:blk_file rw_file_perms;
 
 allow rmt self:socket create_socket_perms;
+allowxperm rmt self:socket ioctl msm_sock_ipc_ioctls;
 
 # Wake lock access
 wakelock_use(rmt)
