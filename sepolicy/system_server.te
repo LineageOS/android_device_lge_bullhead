@@ -39,4 +39,7 @@ set_prop(system_server, contexthub_prop);
 allow system_server zygote:process setsched;
 
 allowxperm system_server self:udp_socket ioctl { SIOCSIFFLAGS SIOCDEVPRIVATE_D };
+
+# use MSM ipc router ioctls
+allow system_server self:socket ioctl;
 allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;
