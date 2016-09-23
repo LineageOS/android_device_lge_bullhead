@@ -17,13 +17,12 @@
 #
 # <src relative to root of extracted filesystem>:<dst relative to system>
 
--app/atfwd/atfwd.apk
 -app/HiddenMenu/HiddenMenu.apk
--app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -app/RCSBootstraputil/RCSBootstraputil.apk
 -app/RcsImsBootstraputil/RcsImsBootstraputil.apk
 -app/TimeService/TimeService.apk
 -app/Tycho/Tycho.apk
+-priv-app/atfwd/atfwd.apk
 -priv-app/CNEService/CNEService.apk
 -priv-app/ConnMO/ConnMO.apk
 -priv-app/DCMO/DCMO.apk
@@ -34,19 +33,19 @@
 -priv-app/HotwordEnrollment/HotwordEnrollment.apk
 -priv-app/LifeTimerService/LifeTimerService.apk
 -priv-app/SprintDM/SprintDM.apk
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 bin/ATFWD-daemon
 bin/btnvtool
 bin/cnd
 bin/cnss-daemon
 bin/fingerprintd
 bin/ims_rtp_daemon
-bin/imscmservice
 bin/imsdatadaemon
 bin/imsqmidaemon
 bin/irsc_util
 bin/loc_launcher
 bin/location-mq
-bin/mm-qcamera-app
+bin/lowi-server
 bin/msm_irqbalance
 bin/netmgrd
 bin/nl_listener
@@ -91,6 +90,7 @@ etc/thermal-engine-8992.conf
 -framework/qcrilhook.jar
 -framework/rcsimssettings.jar
 -framework/rcsservice.jar
+lib/hw/activity_recognition.bullhead.so
 lib/hw/camera.msm8992.so
 lib/hw/fingerprint.bullhead.so
 lib/hw/gps.msm8992.so
@@ -110,6 +110,7 @@ lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so
 lib/libqomx_core.so
 lib/soundfx/libfmas.so
+lib64/hw/activity_recognition.bullhead.so
 lib64/hw/fingerprint.bullhead.so
 lib64/hw/gps.msm8992.so
 lib64/hw/nfc_nci.bullhead.so
