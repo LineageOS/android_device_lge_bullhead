@@ -222,14 +222,19 @@ PRODUCT_COPY_FILES += \
 # NFC packages
 PRODUCT_PACKAGES += \
     NfcNci \
-    Tag
+    Tag \
+    nfc_nci.bullhead \
+    android.hardware.nfc@1.0-impl \
 
+ifeq ($(ENABLE_TREBLE), true)
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.0-service
+endif
+
+# TODO(b/31817599) remove when bullhead_treble goes away
 ifeq ($(TARGET_PRODUCT), bullhead_treble)
 PRODUCT_PACKAGES += \
-    nfc_hal_pn54x
-else
-PRODUCT_PACKAGES += \
-    nfc_nci.bullhead
+    android.hardware.nfc@1.0-service
 endif
 
 # Fingerprint Sensor
