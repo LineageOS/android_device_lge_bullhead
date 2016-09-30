@@ -448,8 +448,10 @@ PRODUCT_PACKAGES += \
 
 # Modem debugger/misc
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifeq (,$(filter aosp_bullhead, $(TARGET_PRODUCT)))
 PRODUCT_PACKAGES += \
-    QXDMLogger
+    QXDMLoggerV2
+endif # aosp_bullhead
 
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.diag.rc.userdebug:root/init.bullhead.diag.rc \
