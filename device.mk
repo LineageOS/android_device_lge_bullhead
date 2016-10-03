@@ -470,10 +470,10 @@ PRODUCT_PACKAGES += \
 
 # Modem debugger/misc
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-ifeq (,$(filter aosp_bullhead, $(TARGET_PRODUCT)))
+ifeq (,$(filter aosp_bullhead aosp_bullhead_treble, $(TARGET_PRODUCT)))
 PRODUCT_PACKAGES += \
-    QXDMLoggerV2
-endif # aosp_bullhead
+    NexusLogger
+endif # aosp_bullhead || aosp_bullhead_treble
 
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.diag.rc.userdebug:root/init.bullhead.diag.rc \
