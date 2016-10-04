@@ -183,7 +183,8 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8992 \
     libgenlock \
     memtrack.msm8992 \
-    lights.bullhead
+    lights.bullhead \
+    lights.vts
 
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
