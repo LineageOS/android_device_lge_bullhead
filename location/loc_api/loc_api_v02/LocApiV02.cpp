@@ -376,7 +376,10 @@ enum loc_api_adapter_err LocApiV02 :: startFix(const LocPosMode& fixCriteria)
       start_msg.minInterval_valid = 1;
       start_msg.minInterval = fixCriteria.min_interval;
 
-      if (fixCriteria.preferred_accuracy >= 0) {
+      // Because fixCriteria.preferred_accuracy is an unsigned int,
+      // the following conditional test will always be true.
+      // if (fixCriteria.preferred_accuracy >= 0)
+      {
           start_msg.horizontalAccuracyLevel_valid = 1;
 
           if (fixCriteria.preferred_accuracy <= 100)
@@ -2852,8 +2855,8 @@ int LocApiV02 :: openAndStartDataCall()
         ret = LOC_API_ADAPTER_ERR_ENGINE_BUSY;
     }
     else {
-        LOC_LOGE("%s:%d]: Unable to bring up emergency call using DS. ret = %d",
-                 __func__, __LINE__, (int)ret);
+        LOC_LOGE("%s:%d]: Unable to bring up emergency call using DS. result = %d",
+                 __func__, __LINE__, (int)result);
         ret = LOC_API_ADAPTER_ERR_UNSUPPORTED;
     }
 
