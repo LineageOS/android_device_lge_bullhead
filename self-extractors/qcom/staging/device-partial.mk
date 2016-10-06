@@ -61,9 +61,7 @@ PRODUCT_COPY_FILES := \
     vendor/qcom/bullhead/proprietary/qmi_simple_ril_test:system/bin/qmi_simple_ril_test:qcom \
     vendor/qcom/bullhead/proprietary/qmuxd:system/bin/qmuxd:qcom \
     vendor/qcom/bullhead/proprietary/radish:system/bin/radish:qcom \
-    vendor/qcom/bullhead/proprietary/reserveblocks:system/bin/reserveblocks:qcom \
     vendor/qcom/bullhead/proprietary/rmt_storage:system/bin/rmt_storage:qcom \
-    vendor/qcom/bullhead/proprietary/rundiag:system/bin/rundiag:qcom \
     vendor/qcom/bullhead/proprietary/subsystem_ramdump:system/bin/subsystem_ramdump:qcom \
     vendor/qcom/bullhead/proprietary/test_diag:system/bin/test_diag:qcom \
     vendor/qcom/bullhead/proprietary/thermal-engine:system/bin/thermal-engine:qcom \
