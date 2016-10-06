@@ -45,9 +45,7 @@ system/bin/qmi-framework-tests/qmi_test_service_test:qcom
 system/bin/qmi_simple_ril_test:qcom
 system/bin/qmuxd:qcom
 system/bin/radish:qcom
-system/bin/reserveblocks:qcom
 system/bin/rmt_storage:qcom
-system/bin/rundiag:qcom
 system/bin/subsystem_ramdump:qcom
 system/bin/test_diag:qcom
 system/bin/thermal-engine:qcom

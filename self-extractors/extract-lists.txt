@@ -52,9 +52,7 @@
             system/bin/qmi_simple_ril_test \
             system/bin/qmuxd \
             system/bin/radish \
-            system/bin/reserveblocks \
             system/bin/rmt_storage \
-            system/bin/rundiag \
             system/bin/subsystem_ramdump \
             system/bin/test_diag \
             system/bin/thermal-engine \
