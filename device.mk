@@ -482,7 +482,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Power HAL
 PRODUCT_PACKAGES += \
     power.bullhead \
-    thermal.bullhead
+    thermal.bullhead \
+    android.hardware.power@1.0-impl \
+
+ifeq ($(ENABLE_TREBLE), true)
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-service
+endif
 
 # Modem debugger/misc
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
