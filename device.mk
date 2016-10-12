@@ -243,6 +243,10 @@ PRODUCT_PACKAGES += \
     nfc_nci.bullhead
 endif
 
+# Vibrator HAL
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl
+
 # Fingerprint Sensor
 PRODUCT_PACKAGES += \
     fingerprint.bullhead
