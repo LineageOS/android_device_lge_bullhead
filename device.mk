@@ -182,9 +182,13 @@ PRODUCT_PACKAGES += \
     gralloc.msm8992 \
     hwcomposer.msm8992 \
     libgenlock \
-    memtrack.msm8992 \
+    memtrack.msm8992
+
+# Light HAL
+PRODUCT_PACKAGES += \
     lights.bullhead \
-    lights.vts
+    lights.vts \
+    android.hardware.light@2.0-impl
 
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
