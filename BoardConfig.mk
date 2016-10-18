@@ -154,3 +154,6 @@ USE_CLANG_PLATFORM_BUILD := true
 TARGET_FS_CONFIG_GEN += device/lge/bullhead/config.fs
 
 -include vendor/lge/bullhead/BoardConfigVendor.mk
+
+# Testing related defines
+BOARD_PERFSETUP_SCRIPT := platform_testing/scripts/perf-setup/bullhead-setup.sh
