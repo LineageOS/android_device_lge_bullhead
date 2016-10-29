@@ -152,6 +152,9 @@ TARGET_USES_INTERACTION_BOOST := true
 # 32-bit or 64-bit), the following line should be deleted
 BOARD_QTI_CAMERA_32BIT_ONLY := true
 
+#NFC
+NXP_CHIP_TYPE := 2
+
 #Enable peripheral manager
 TARGET_PER_MGR_ENABLED := true
 

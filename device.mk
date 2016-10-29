@@ -66,7 +66,8 @@ PRODUCT_COPY_FILES += \
 # Input device files
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    device/lge/bullhead/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl
+    device/lge/bullhead/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl \
+    device/lge/bullhead/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl
 
 # for launcher layout
 #PRODUCT_PACKAGES += \
