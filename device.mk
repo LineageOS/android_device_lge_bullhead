@@ -484,8 +484,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Power HAL
 PRODUCT_PACKAGES += \
     power.bullhead \
-    thermal.bullhead \
     android.hardware.power@1.0-impl \
+
+# Thermal HAL
+PRODUCT_PACKAGES += \
+    thermal.bullhead \
+    android.hardware.thermal@1.0-impl \
 
 ifeq ($(ENABLE_TREBLE), true)
 PRODUCT_PACKAGES += \
