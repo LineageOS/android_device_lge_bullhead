@@ -492,11 +492,6 @@ PRODUCT_PACKAGES += \
     thermal.bullhead \
     android.hardware.thermal@1.0-impl \
 
-ifeq ($(ENABLE_TREBLE), true)
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-service
-endif
-
 # Modem debugger/misc
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 ifeq (,$(filter aosp_bullhead aosp_bullhead_treble, $(TARGET_PRODUCT)))
