@@ -105,8 +105,6 @@ HAVE_ADRENO_SOURCE:= false
 
 OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
 
-TARGET_BOOTANIMATION_MULTITHREAD_DECODE := true
-
 # Enable dex-preoptimization to speed up first boot sequence
 #ifeq ($(HOST_OS),linux)
 #  ifneq ($(TARGET_BUILD_VARIANT),eng)
