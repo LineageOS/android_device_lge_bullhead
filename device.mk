@@ -222,6 +222,9 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     rmnetcli
 
+PRODUCT_PACKAGES += \
+    android.hardware.audio.effect@2.0-impl
+
 # GPS configuration
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/gps.conf:system/etc/gps.conf
