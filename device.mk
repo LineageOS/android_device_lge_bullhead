@@ -23,11 +23,7 @@
 TARGET_USES_CHINOOK_SENSORHUB := false
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-  ifeq ($(TARGET_PRODUCT),bullhead_treble)
-    LOCAL_KERNEL := device/lge/bullhead-kernel/Image_treble.gz-dtb
-  else
-    LOCAL_KERNEL := device/lge/bullhead-kernel/Image.gz-dtb
-  endif
+  LOCAL_KERNEL := device/lge/bullhead-kernel/Image.gz-dtb
 else
   LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -237,6 +233,7 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag \
     android.hardware.nfc@1.0-impl \
+    nfc_nci.bullhead \
 
 ifeq ($(ENABLE_TREBLE), true)
 PRODUCT_PACKAGES +=                         \
@@ -244,19 +241,6 @@ PRODUCT_PACKAGES +=                         \
     android.hardware.vibrator@1.0-service   \
     android.hardware.gatekeeper@1.0-service \
 
-endif
-
-# TODO(b/31817599) remove when bullhead_treble goes away
-ifeq ($(TARGET_PRODUCT), bullhead_treble)
-PRODUCT_PACKAGES += \
-    nfc_nci.bullhead_treble \
-    android.hardware.nfc@1.0-service \
-    android.hardware.vibrator@1.0-service
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.nfc_nci=bullhead_treble
-else
-PRODUCT_PACKAGES += \
-    nfc_nci.bullhead
 endif
 
 # Vibrator HAL
@@ -507,10 +491,10 @@ PRODUCT_PACKAGES += \
 
 # Modem debugger/misc
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-ifeq (,$(filter aosp_bullhead aosp_bullhead_treble, $(TARGET_PRODUCT)))
+ifeq (,$(filter aosp_bullhead, $(TARGET_PRODUCT)))
 PRODUCT_PACKAGES += \
     NexusLogger
-endif # aosp_bullhead || aosp_bullhead_treble
+endif # aosp_bullhead
 
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.diag.rc.userdebug:root/init.bullhead.diag.rc \

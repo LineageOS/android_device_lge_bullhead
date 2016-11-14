@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifneq ($(filter bullhead bullhead_treble, $(TARGET_DEVICE)),)
+ifneq ($(filter bullhead, $(TARGET_DEVICE)),)
 
 LOCAL_PATH:= $(call my-dir)
 
