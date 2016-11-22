@@ -114,6 +114,8 @@
 /system/bin/init\.bullhead\.power\.sh           u:object_r:init-power-sh_exec:s0
 /system/bin/init\.bullhead\.sh                  u:object_r:bullhead-sh_exec:s0
 /system/bin/init\.bullhead\.qseecomd\.sh        u:object_r:init-bullhead-qseecomd-sh_exec:s0
+/system/bin/init\.qcom\.devstart\.sh            u:object_r:init-qcom-devstart-sh_exec:s0
+/system/bin/init\.qcom\.devwait\.sh             u:object_r:init-qcom-devwait-sh_exec:s0
 /system/bin/cnss-daemon            u:object_r:wcnss_service_exec:s0
 /system/bin/cnss_diag              u:object_r:cnss_diag_exec:s0
 /system/bin/loc_launcher           u:object_r:location_exec:s0
@@ -159,6 +161,7 @@
 /sys/devices/soc\.0/fd900000\.qcom,mdss_mdp/qcom,mdss_fb_primary\.[0-9]+/leds/lcd-backlight/max_brightness u:object_r:sysfs_thermal:s0
 /sys/devices/soc\.0/qpnp-smbcharger-[^/]*/power_supply/battery/system_temp_level                           u:object_r:sysfs_thermal:s0
 /sys/devices/virtual/nanohub/nanohub(/.*)? u:object_r:sysfs_nanoapp_cmd:s0
+/sys/kernel/boot_adsp/boot         u:object_r:sysfs_audio:s0
 
 # NFC hal
 /system/bin/hw/nfc_hal_pn54x       u:object_r:nfc_hal_pn54x_exec:s0

@@ -42,7 +42,9 @@ PRODUCT_COPY_FILES += \
     device/lge/bullhead/ueventd.bullhead.rc:root/ueventd.bullhead.rc \
     device/lge/bullhead/init.recovery.bullhead.rc:root/init.recovery.bullhead.rc \
     device/lge/bullhead/init.bullhead.ramdump.rc:root/init.bullhead.ramdump.rc \
-    device/lge/bullhead/init.bullhead.fp.rc:root/init.bullhead.fp.rc
+    device/lge/bullhead/init.bullhead.fp.rc:root/init.bullhead.fp.rc \
+    device/lge/bullhead/init.qcom.devwait.sh:system/bin/init.qcom.devwait.sh \
+    device/lge/bullhead/init.qcom.devstart.sh:system/bin/init.qcom.devstart.sh
 
 ifeq ($(TARGET_USES_CHINOOK_SENSORHUB),true)
 PRODUCT_COPY_FILES += \
