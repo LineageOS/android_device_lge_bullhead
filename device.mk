@@ -249,7 +249,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint Sensor
 PRODUCT_PACKAGES += \
-    fingerprint.bullhead
+    fingerprint.bullhead \
+    android.hardware.biometrics.fingerprint@2.1-impl
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
