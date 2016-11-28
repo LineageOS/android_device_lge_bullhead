@@ -51,6 +51,14 @@ on charger
 on property:sys.boot_completed=1
     # allow CPUs to go in deeper idle state than C0
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
+    #end boot time fs tune
+    write /sys/block/mmcblk0/queue/scheduler noop
+    write /sys/block/mmcblk0/queue/rq_affinity 0
+    write /sys/block/mmcblk0/queue/read_ahead_kb 128
+    write /sys/block/dm-0/queue/read_ahead_kb 128
+    write /sys/block/dm-1/queue/read_ahead_kb 128
+    write /sys/block/dm-2/queue/read_ahead_kb 128
+    write /sys/block/mmcblk0/queue/iostats 1
 
 on init
     # Load persistent dm-verity state
@@ -169,9 +177,6 @@ on boot
     chown system system /sys/class/leds/blue/on_off_ms
     chown system system /sys/class/leds/red/rgb_start
 
-    write /sys/block/mmcblk0/queue/rq_affinity 0
-    write /sys/block/mmcblk0/queue/scheduler noop
-
 on post-fs
     symlink /dev/block/platform/soc.0/f9824900.sdhci /dev/block/bootdevice
 
@@ -185,6 +190,15 @@ on post-fs
     exec - root root system -- /system/bin/init.bullhead.qseecomd.sh
 
 on post-fs-data
+    # boot time fs tune
+    write /sys/block/mmcblk0/queue/iostats 0
+    write /sys/block/mmcblk0/queue/scheduler cfq
+    write /sys/block/mmcblk0/queue/iosched/slice_idle 0
+    write /sys/block/mmcblk0/queue/read_ahead_kb 2048
+    write /sys/block/dm-0/queue/read_ahead_kb 2048
+    write /sys/block/dm-1/queue/read_ahead_kb 2048
+    write /sys/block/dm-2/queue/read_ahead_kb 2048
+
     # Mark the copy complete flag to not completed
     mkdir /data/misc/radio 0770 radio radio
     write /data/misc/radio/copy_complete 0
