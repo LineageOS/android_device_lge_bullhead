@@ -97,6 +97,9 @@ on early-boot
     # Update dm-verity state and set partition.*.verified properties
     verity_update_state
 
+    # Busy loop to wait for devices booted by devstart_sh just in case device not ready
+    exec - root root system -- /system/bin/init.qcom.devwait.sh
+
 on boot
     # execute script to set initial CPU settings
     # don't run as a service to avoid race conditions
@@ -187,7 +190,10 @@ on post-fs
     mkdir /persist/widevine 0770 drm system
 
     start qseecomd
+    # Busy loop to wait for qseecomd started
     exec - root root system -- /system/bin/init.bullhead.qseecomd.sh
+    # Start devices by sysfs trigger
+    start devstart_sh
 
 on post-fs-data
     # boot time fs tune
@@ -204,8 +210,6 @@ on post-fs-data
     write /data/misc/radio/copy_complete 0
     chown radio radio /data/misc/radio/copy_complete
     chmod 0660 /data/misc/radio/copy_complete
-
-    write /sys/kernel/boot_adsp/boot 1
 
     #Update touch firmware if required
     write /sys/bus/i2c/devices/2-0020/check_fw 1
@@ -445,3 +449,9 @@ service fingerprintd /system/bin/fingerprintd
     user system
     group system input
 
+service devstart_sh /system/bin/init.qcom.devstart.sh
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
