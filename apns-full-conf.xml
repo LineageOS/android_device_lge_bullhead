@@ -9473,7 +9473,7 @@
       protocol="IPV6"
       roaming_protocol="IPV6"
       mtu="1440"
-      bearer_bitmask="18"
+      bearer="18"
   />
 
   <apn carrier="T-Mobile MMS"
@@ -9495,7 +9495,7 @@
        type="mms"
        protocol="IPV6"
        roaming_protocol="IPV6"
-       bearer_bitmask="18"
+       bearer="18"
   />
 
   <apn carrier="Project Fi - T"
