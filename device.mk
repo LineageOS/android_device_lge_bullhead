@@ -489,6 +489,10 @@ PRODUCT_PACKAGES += \
     thermal.bullhead \
     android.hardware.thermal@1.0-impl \
 
+#GNSS HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl
+
 # Modem debugger/misc
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 ifeq (,$(filter aosp_bullhead, $(TARGET_PRODUCT)))
