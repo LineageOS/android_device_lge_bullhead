@@ -61,9 +61,7 @@ PRODUCT_COPY_FILES := \
     vendor/qcom/bullhead/proprietary/qmi_simple_ril_test:system/bin/qmi_simple_ril_test:qcom \
     vendor/qcom/bullhead/proprietary/qmuxd:system/bin/qmuxd:qcom \
     vendor/qcom/bullhead/proprietary/radish:system/bin/radish:qcom \
-    vendor/qcom/bullhead/proprietary/reserveblocks:system/bin/reserveblocks:qcom \
     vendor/qcom/bullhead/proprietary/rmt_storage:system/bin/rmt_storage:qcom \
-    vendor/qcom/bullhead/proprietary/rundiag:system/bin/rundiag:qcom \
     vendor/qcom/bullhead/proprietary/subsystem_ramdump:system/bin/subsystem_ramdump:qcom \
     vendor/qcom/bullhead/proprietary/test_diag:system/bin/test_diag:qcom \
     vendor/qcom/bullhead/proprietary/thermal-engine:system/bin/thermal-engine:qcom \
@@ -105,7 +103,9 @@ PRODUCT_COPY_FILES := \
     vendor/qcom/bullhead/proprietary/lib64/lib_fpc_tac_shared.so:system/lib64/lib_fpc_tac_shared.so:qcom \
     vendor/qcom/bullhead/proprietary/lib64/libgps.utils.so:system/lib64/libgps.utils.so:qcom \
     vendor/qcom/bullhead/proprietary/lib64/libiperf.so:system/lib64/libiperf.so:qcom \
+    vendor/qcom/bullhead/proprietary/lib64/libloc_api_v02.so:system/lib64/libloc_api_v02.so:qcom \
     vendor/qcom/bullhead/proprietary/lib64/libloc_core.so:system/lib64/libloc_core.so:qcom \
+    vendor/qcom/bullhead/proprietary/lib64/libloc_ds_api.so:system/lib64/libloc_ds_api.so:qcom \
     vendor/qcom/bullhead/proprietary/lib64/libloc_eng.so:system/lib64/libloc_eng.so:qcom \
     vendor/qcom/bullhead/proprietary/lib64/libwifi-hal-qcom.so:system/lib64/libwifi-hal-qcom.so:qcom \
     vendor/qcom/bullhead/proprietary/fingerprint.bullhead.so:system/lib/hw/fingerprint.bullhead.so:qcom \
@@ -113,7 +113,9 @@ PRODUCT_COPY_FILES := \
     vendor/qcom/bullhead/proprietary/lib_fpc_tac_shared.so:system/lib/lib_fpc_tac_shared.so:qcom \
     vendor/qcom/bullhead/proprietary/libgps.utils.so:system/lib/libgps.utils.so:qcom \
     vendor/qcom/bullhead/proprietary/libiperf.so:system/lib/libiperf.so:qcom \
+    vendor/qcom/bullhead/proprietary/libloc_api_v02.so:system/lib/libloc_api_v02.so:qcom \
     vendor/qcom/bullhead/proprietary/libloc_core.so:system/lib/libloc_core.so:qcom \
+    vendor/qcom/bullhead/proprietary/libloc_ds_api.so:system/lib/libloc_ds_api.so:qcom \
     vendor/qcom/bullhead/proprietary/libloc_eng.so:system/lib/libloc_eng.so:qcom \
     vendor/qcom/bullhead/proprietary/libwifi-hal-qcom.so:system/lib/libwifi-hal-qcom.so:qcom \
     vendor/qcom/bullhead/proprietary/iperf3:system/xbin/iperf3:qcom \

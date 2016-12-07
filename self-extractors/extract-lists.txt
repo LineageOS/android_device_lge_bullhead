@@ -52,9 +52,7 @@
             system/bin/qmi_simple_ril_test \
             system/bin/qmuxd \
             system/bin/radish \
-            system/bin/reserveblocks \
             system/bin/rmt_storage \
-            system/bin/rundiag \
             system/bin/subsystem_ramdump \
             system/bin/test_diag \
             system/bin/thermal-engine \
@@ -96,7 +94,9 @@
             system/lib64/lib_fpc_tac_shared.so \
             system/lib64/libgps.utils.so \
             system/lib64/libiperf.so \
+            system/lib64/libloc_api_v02.so \
             system/lib64/libloc_core.so \
+            system/lib64/libloc_ds_api.so \
             system/lib64/libloc_eng.so \
             system/lib64/libwifi-hal-qcom.so \
             system/lib/hw/fingerprint.bullhead.so \
@@ -104,7 +104,9 @@
             system/lib/lib_fpc_tac_shared.so \
             system/lib/libgps.utils.so \
             system/lib/libiperf.so \
+            system/lib/libloc_api_v02.so \
             system/lib/libloc_core.so \
+            system/lib/libloc_ds_api.so \
             system/lib/libloc_eng.so \
             system/lib/libwifi-hal-qcom.so \
             system/xbin/iperf3 \
