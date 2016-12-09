@@ -172,6 +172,9 @@ on boot
     write /sys/block/mmcblk0/queue/rq_affinity 0
     write /sys/block/mmcblk0/queue/scheduler noop
 
+    # Wifi firmware reload path
+    chown wifi wifi /sys/module/wlan/parameters/fwpath
+
 on post-fs
     symlink /dev/block/platform/soc.0/f9824900.sdhci /dev/block/bootdevice
 
