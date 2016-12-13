@@ -15,7 +15,6 @@
             system/bin/diag_mdlog \
             system/bin/diag_qshrink4_daemon \
             system/bin/fingerprintd \
-            system/bin/hal_proxy_daemon \
             system/bin/halutil \
             system/bin/imsdatadaemon \
             system/bin/imsqmidaemon \
@@ -94,13 +93,11 @@
             system/lib64/lib_fpc_tac_shared.so \
             system/lib64/libgps.utils.so \
             system/lib64/libiperf.so \
-            system/lib64/libwifi-hal-qcom.so \
             system/lib/hw/fingerprint.bullhead.so \
             system/lib/hw/gps.msm8992.so \
             system/lib/lib_fpc_tac_shared.so \
             system/lib/libgps.utils.so \
             system/lib/libiperf.so \
-            system/lib/libwifi-hal-qcom.so \
             system/xbin/iperf3 \
             "
     ;;

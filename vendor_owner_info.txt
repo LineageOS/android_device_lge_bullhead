@@ -8,7 +8,6 @@ system/bin/diag_klog:qcom
 system/bin/diag_mdlog:qcom
 system/bin/diag_qshrink4_daemon:qcom
 system/bin/fingerprintd:qcom
-system/bin/hal_proxy_daemon:qcom
 system/bin/halutil:qcom
 system/bin/imsdatadaemon:qcom
 system/bin/imsqmidaemon:qcom
@@ -87,12 +86,10 @@ system/lib64/hw/gps.msm8992.so:qcom
 system/lib64/lib_fpc_tac_shared.so:qcom
 system/lib64/libgps.utils.so:qcom
 system/lib64/libiperf.so:qcom
-system/lib64/libwifi-hal-qcom.so:qcom
 system/lib/hw/fingerprint.bullhead.so:qcom
 system/lib/hw/gps.msm8992.so:qcom
 system/lib/lib_fpc_tac_shared.so:qcom
 system/lib/libgps.utils.so:qcom
 system/lib/libiperf.so:qcom
-system/lib/libwifi-hal-qcom.so:qcom
 system/xbin/iperf3:qcom
 IMAGES/vendor.img:lge
