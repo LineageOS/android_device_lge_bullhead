@@ -50,6 +50,7 @@ const int CPU_SENSORS[] = {8, 8, 9, 10, 13, 14};
 #define BATTERY_SHUTDOWN_THRESHOLD      60
 // vendor/lge/bullhead/proprietary/thermal-engine/thermal-engine-8992.conf
 #define SKIN_THROTTLING_THRESHOLD       37
+#define VR_THROTTLED_BELOW_MIN          47
 
 #define GPU_LABEL                       "GPU"
 #define BATTERY_LABEL                   "battery"
@@ -72,7 +73,7 @@ const char *CPU_LABEL[] = {"CPU0", "CPU1", "CPU2", "CPU3", "CPU4", "CPU5"};
  * @return 0 on success or negative value -errno on error.
  */
 static ssize_t read_temperature(const char *file_name, const char *temperature_format, int type,
-        const char *name, float mult, float throttling_threshold, float shutdown_threshold,
+        const char *name, float mult, float throttling_threshold, float shutdown_threshold, float vr_throttling_threshold,
         temperature_t *out) {
     FILE *file;
     float temp;
@@ -96,7 +97,7 @@ static ssize_t read_temperature(const char *file_name, const char *temperature_f
         .current_value = temp * mult,
         .throttling_threshold = throttling_threshold,
         .shutdown_threshold = shutdown_threshold,
-        .vr_throttling_threshold = UNKNOWN_TEMPERATURE
+        .vr_throttling_threshold = vr_throttling_threshold
     };
 
     return 0;
@@ -115,7 +116,7 @@ static ssize_t get_cpu_temperatures(temperature_t *list, size_t size) {
         sprintf(file_name, TEMPERATURE_FILE_FORMAT, CPU_SENSORS[cpu]);
         // tsens_tz_sensor[7, 7, 9, 10, 13, 14]: temperature in Celsius.
         ssize_t result = read_temperature(file_name, "%f", DEVICE_TEMPERATURE_CPU, CPU_LABEL[cpu],
-                1, CPU_THROTTLING_THRESHOLD, CPU_SHUTDOWN_THRESHOLD, &list[cpu]);
+                1, CPU_THROTTLING_THRESHOLD, CPU_SHUTDOWN_THRESHOLD, UNKNOWN_TEMPERATURE, &list[cpu]);
         if (result != 0) {
             return result;
         }
@@ -143,7 +144,7 @@ static ssize_t get_temperatures(thermal_module_t *module, temperature_t *list, s
         // tsens_tz_sensor12: temperature in Celsius.
         sprintf(file_name, TEMPERATURE_FILE_FORMAT, GPU_SENSOR_NUM);
         result = read_temperature(file_name, "%f", DEVICE_TEMPERATURE_GPU, GPU_LABEL, 1,
-                UNKNOWN_TEMPERATURE, UNKNOWN_TEMPERATURE, &list[current_index]);
+                UNKNOWN_TEMPERATURE, UNKNOWN_TEMPERATURE, UNKNOWN_TEMPERATURE, &list[current_index]);
         if (result != 0) {
             return result;
         }
@@ -155,7 +156,7 @@ static ssize_t get_temperatures(thermal_module_t *module, temperature_t *list, s
         // hwmon sensor: battery: temperature in millidegrees Celsius.
         sprintf(file_name, TEMPERATURE_FILE_FORMAT, BATTERY_SENSOR_NUM);
         result = read_temperature(file_name, "%f", DEVICE_TEMPERATURE_BATTERY, BATTERY_LABEL,
-                0.001, UNKNOWN_TEMPERATURE, BATTERY_SHUTDOWN_THRESHOLD, &list[current_index]);
+                0.001, UNKNOWN_TEMPERATURE, BATTERY_SHUTDOWN_THRESHOLD, UNKNOWN_TEMPERATURE, &list[current_index]);
         if (result != 0) {
             return result;
         }
@@ -167,7 +168,7 @@ static ssize_t get_temperatures(thermal_module_t *module, temperature_t *list, s
         // xo_therm: temperature in Celsius.
         result = read_temperature(SKIN_TEMPERATURE_FILE, SKIN_TEMPERATURE_FORMAT,
                 DEVICE_TEMPERATURE_SKIN, SKIN_LABEL, 1, SKIN_THROTTLING_THRESHOLD,
-                UNKNOWN_TEMPERATURE, &list[current_index]);
+                UNKNOWN_TEMPERATURE, VR_THROTTLED_BELOW_MIN, &list[current_index]);
         if (result != 0) {
             return result;
         }
