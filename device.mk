@@ -120,6 +120,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/spn-conf.xml:system/etc/spn-conf.xml
 
+# VR HAL
+PRODUCT_PACKAGES += \
+    vr.bullhead
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.vr.high_performance:system/etc/permissions/android.hardware.vr.high_performance.xml
+
 # For GPS
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/sec_config:system/etc/sec_config
