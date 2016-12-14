@@ -49,6 +49,9 @@
 #include "performance.h"
 #include "power-common.h"
 
+#define GPU_MAX_FREQ_PATH "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq"
+#define GPU_MIN_FREQ_PATH "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq"
+
 #define PLATFORM_SLEEP_MODES 2
 #define XO_VOTERS 3
 #define VMIN_VOTERS 0
@@ -92,7 +95,10 @@ static int saved_mpdecision_slack_min = -1;
 static int saved_interactive_mode = -1;
 static int slack_node_rw_failed = 0;
 static int display_hint_sent;
+static int sustained_performance_mode = 0;
+static int vr_mode = 0;
 int display_boost;
+static pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 
 static struct hw_module_methods_t power_module_methods = {
     .open = NULL,
@@ -258,6 +264,15 @@ static void power_hint(struct power_module *module, power_hint_t hint,
         {
             int duration_hint = 0;
 
+            // If we are in sustained performance mode or VR mode, touch boost
+            // should be ignored.
+            pthread_mutex_lock(&lock);
+            if (sustained_performance_mode || vr_mode) {
+                pthread_mutex_unlock(&lock);
+                return;
+            }
+            pthread_mutex_unlock(&lock);
+
             // little core freq bump for 1.5s
             int resources[] = {0x20C};
             int duration = 1500;
@@ -341,6 +356,70 @@ static void power_hint(struct power_module *module, power_hint_t hint,
         case POWER_HINT_VIDEO_DECODE:
             process_video_decode_hint(data);
         break;
+	
+	/* While the system is Sustained Performance Mode:
+         * CPUfreq for the little cores are capped to 864MHz
+         * Big cores are hotplugged out
+         * GPU frequency is capped to 305 MHz
+         */
+        case POWER_HINT_SUSTAINED_PERFORMANCE:
+        {
+            static int handle = 0;
+
+            pthread_mutex_lock(&lock);
+            if (data && sustained_performance_mode == 0) {
+                int resources[] = {0x1509};
+                int duration = 0;
+                handle = interaction_with_handle(handle, duration,
+                                        sizeof(resources)/sizeof(resources[0]),
+                                        resources);
+                sysfs_write(GPU_MAX_FREQ_PATH, "450000000");
+                if (vr_mode == 0) {
+                    handle_hotplug = interaction_with_handle(handle_hotplug, duration,
+                                        sizeof(resources_hotplug)/sizeof(resources_hotplug[0]),
+                                        resources_hotplug);
+                }
+                sustained_performance_mode = 1;
+            } else if (sustained_performance_mode == 1){
+                release_request(handle);
+                sysfs_write(GPU_MAX_FREQ_PATH, "500000000");
+                if (vr_mode == 0) {
+                    release_request(handle_hotplug);
+                }
+                sustained_performance_mode = 0;
+           }
+           pthread_mutex_unlock(&lock);
+        }
+        break;
+
+	        case POWER_HINT_VR_MODE:
+        {
+            static int handle_vr = 0;
+            pthread_mutex_lock(&lock);
+            if (data && vr_mode == 0) {
+                int resources[] = {0x206};
+                int duration = 0;
+                handle_vr = interaction_with_handle(handle_vr, duration,
+                                        sizeof(resources)/sizeof(resources[0]),
+                                        resources);
+                sysfs_write(GPU_MIN_FREQ_PATH, "305000000");
+                if (sustained_performance_mode == 0) {
+                    handle_hotplug = interaction_with_handle(handle_hotplug, duration,
+                                        sizeof(resources_hotplug)/sizeof(resources_hotplug[0]),
+                                        resources_hotplug);
+                }
+                vr_mode = 1;
+            } else if (vr_mode == 1){
+                release_request(handle_vr);
+                sysfs_write(GPU_MIN_FREQ_PATH, "180000000");
+                if (sustained_performance_mode == 0) {
+                    release_request(handle_hotplug);
+                }
+                vr_mode = 0;
+            }
+            pthread_mutex_unlock(&lock);
+        }
+
     }
 }
 
