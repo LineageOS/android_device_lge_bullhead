@@ -180,6 +180,9 @@ on boot
     chown system system /sys/class/leds/blue/on_off_ms
     chown system system /sys/class/leds/red/rgb_start
 
+    # Wifi firmware reload path
+    chown wifi wifi /sys/module/wlan/parameters/fwpath
+
 on post-fs
     symlink /dev/block/platform/soc.0/f9824900.sdhci /dev/block/bootdevice
 
