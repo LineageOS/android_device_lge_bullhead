@@ -1,3 +1,9 @@
+# Debug files
+/sys/kernel/debug/rpm_stats            u:object_r:debugfs_rpm:s0
+/sys/kernel/debug/rpm_master_stats     u:object_r:debugfs_rpm:s0
+/sys/kernel/debug/ipc_logging(/.*)?    u:object_r:debugfs_ipc:s0
+/sys/kernel/debug/dma_buf/bufinfo      u:object_r:debugfs_bufinfo:s0
+
 # NFC labeling
 /dev/pn548          u:object_r:nfc_device:s0
 /data/nfc(/.*)?     u:object_r:nfc_data_file:s0
@@ -123,11 +129,15 @@
 /system/bin/lowi-server            u:object_r:location_exec:s0
 /vendor/bin/slim_daemon            u:object_r:location_exec:s0
 
+/vendor/bin/hw/android\.hardware\.dumpstate@1\.0-service.bullhead      u:object_r:hal_dumpstate_impl_exec:s0
+
 # Sysfs files used by qmuxd
 /sys/devices/virtual/smdpkt/smdcntl([0-9])+/open_timeout u:object_r:sysfs_smdcntl_open_timeout:s0
 
 /sys/class/graphics/fb0/mdp/caps                                    u:object_r:sysfs_graphics:s0
+/sys/class/hwmon/hwmon2/device(/.*)?                                u:object_r:sysfs_hwmon:s0
 /sys/class/thermal(/.*)?                                            u:object_r:sysfs_thermal:s0
+/sys/devices/soc.0/qpnp-fg-18/power_supply/bms/battery_type         u:object_r:sysfs_batteryinfo:s0
 /sys/devices/platform/battery_current_limit                         u:object_r:sysfs_thermal:s0
 /sys/devices/virtual/graphics/fb([0-2])+/idle_time                  u:object_r:sysfs_graphics:s0
 /sys/devices/virtual/graphics/fb([0-2])+/dynamic_fps                u:object_r:sysfs_graphics:s0
