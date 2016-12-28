@@ -13,3 +13,6 @@ allow start_hci_filter ttyHS0_device:chr_file rw_file_perms;
 allow start_hci_filter sysfs_msmuart_file:file rw_file_perms;
 
 set_prop(start_hci_filter, wc_transport_prop)
+
+# Allow reading Bluetooth-related system properties
+get_prop(start_hci_filter, bluetooth_prop)
