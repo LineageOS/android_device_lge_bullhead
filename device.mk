@@ -464,7 +464,7 @@ PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.misc.rc.user:root/init.bullhead.misc.rc
 endif
 
-# only include verity on user builds for CM
+# only include verity on user builds for LineageOS
 ifeq ($(TARGET_BUILD_VARIANT),user)
    PRODUCT_COPY_FILES += device/lge/bullhead/fstab-verity.bullhead:root/fstab.bullhead
 
