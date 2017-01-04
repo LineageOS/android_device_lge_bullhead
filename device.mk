@@ -244,6 +244,15 @@ PRODUCT_PACKAGES +=                         \
 
 endif
 
+# Keymaster HAL
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@2.0-impl
+
+ifeq ($(ENABLE_TREBLE), true)
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@2.0-service
+endif
+
 # Vibrator HAL
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl
