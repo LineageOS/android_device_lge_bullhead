@@ -447,11 +447,6 @@ service bugreport /system/bin/dumpstate -d -p -B -z \
     oneshot
     keycodes 114 115 116
 
-service fingerprintd /system/bin/fingerprintd
-    class late_start
-    user system
-    group system input
-
 service devstart_sh /system/bin/init.qcom.devstart.sh
     class main
     user root

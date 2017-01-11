@@ -266,10 +266,10 @@ endif
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl
 
-# Fingerprint Sensor
+# Fingerprint HIDL implementation
 PRODUCT_PACKAGES += \
     fingerprint.bullhead \
-    android.hardware.biometrics.fingerprint@2.1-impl
+    android.hardware.biometrics.fingerprint@2.1-service
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
