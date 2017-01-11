@@ -481,7 +481,7 @@ PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/platform/soc.0/f9824900.sdhci/by-n
 $(call inherit-product, build/target/product/verity.mk)
 
 # OEM Unlock reporting
-ADDITIONAL_DEFAULT_PROPERTIES += \
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.oem_unlock_supported=1
 
 # In userdebug, add minidebug info the the boot image and the system server to support
