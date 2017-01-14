@@ -215,6 +215,10 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libvolumelistener
 
+# Dumpstate HAL
+PRODUCT_PACKAGES += \
+    android.hardware.dumpstate@1.0-service.bullhead
+
 PRODUCT_PACKAGES += \
     librmnetctl \
     rmnetcli
