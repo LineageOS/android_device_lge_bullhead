@@ -18,6 +18,7 @@
 /data/diag_logs(/.*)?          u:object_r:diag_logs:s0
 /data/fpc.*                    u:object_r:fingerprintd_data_file:s0
 /data/connectivity(/.*)?       u:object_r:cnd_data_file:s0
+/data/system/nanohub_lock(/.*)?  u:object_r:nanohub_lock_file:s0
 
 # GPU device
 /dev/kgsl-3d0                  u:object_r:gpu_device:s0
@@ -168,6 +169,7 @@
 /sys/kernel/range/enable_ps_sensor                                  u:object_r:sysfs_camera:s0
 /sys/devices/soc\.0/fd900000\.qcom,mdss_mdp/qcom,mdss_fb_primary\.[0-9]+/leds/lcd-backlight/max_brightness u:object_r:sysfs_thermal:s0
 /sys/devices/soc\.0/qpnp-smbcharger-[^/]*/power_supply/battery/system_temp_level                           u:object_r:sysfs_thermal:s0
+
 /sys/devices/virtual/nanohub/nanohub(/.*)? u:object_r:sysfs_nanoapp_cmd:s0
 /sys/kernel/boot_adsp/boot         u:object_r:sysfs_audio:s0
 

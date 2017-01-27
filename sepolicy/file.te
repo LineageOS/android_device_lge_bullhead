@@ -63,6 +63,8 @@ type thermal_socket, file_type;
 # type for perfd
 type sysfs_performance, sysfs_type, fs_type;
 
+type nanohub_lock_file, file_type, data_file_type;
+
 # SurfaceFlinger file type for sysfs access
 type sysfs_graphics, sysfs_type, fs_type;
 type sysfs_display, sysfs_type, fs_type;
