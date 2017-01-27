@@ -288,6 +288,7 @@ PRODUCT_PACKAGES += \
     activity_recognition.bullhead \
     android.hardware.sensors@1.0-impl \
     android.hardware.contexthub@1.0-impl.nanohub \
+    android.hardware.contexthub@1.0-service
 
 # new gatekeeper HAL
 PRODUCT_PACKAGES +=                         \
