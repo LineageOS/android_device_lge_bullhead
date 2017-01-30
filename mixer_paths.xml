@@ -412,6 +412,7 @@
         <path name="deep-buffer-playback" />
         <path name="deep-buffer-playback headphones" />
     </path>
+
     <path name="echo-reference">
         <ctl name="AUDIO_REF_EC_UL1 MUX" value="SLIM_RX" />
     </path>
@@ -467,6 +468,16 @@
         <path name="deep-buffer-playback" />
     </path>
 
+    <path name="deep-buffer-playback speaker-and-bt-sco">
+      <path name="deep-buffer-playback" />
+      <path name="deep-buffer-playback bt-sco" />
+    </path>
+
+    <path name="deep-buffer-playback speaker-and-bt-sco-wb">
+      <path name="deep-buffer-playback" />
+      <path name="deep-buffer-playback bt-sco-wb" />
+    </path>
+
     <path name="low-latency-playback">
         <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia5" value="1" />
     </path>
@@ -515,6 +526,16 @@
         <path name="low-latency-playback" />
     </path>
 
+    <path name="low-latency-playback speaker-and-bt-sco">
+      <path name="low-latency-playback" />
+      <path name="low-latency-playback bt-sco"  />
+    </path>
+
+    <path name="low-latency-playback speaker-and-bt-sco-wb">
+      <path name="low-latency-playback" />
+      <path name="low-latency-playback bt-sco-wb"  />
+    </path>
+
     <path name="audio-ull-playback">
         <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia3" value="1" />
     </path>
@@ -552,6 +573,16 @@
 
     <path name="audio-ull-playback afe-proxy">
         <ctl name="AFE_PCM_RX Audio Mixer MultiMedia3" value="1" />
+    </path>
+
+    <path name="audio-ull-playback speaker-and-bt-sco">
+      <path name="audio-ull-playback" />
+      <path name="audio-ull-playback bt-sco"  />
+    </path>
+
+    <path name="audio-ull-playback speaker-and-bt-sco-wb">
+      <path name="audio-ull-playback" />
+      <path name="audio-ull-playback bt-sco-wb"  />
     </path>
 
     <path name="multi-channel-playback hdmi">
@@ -603,6 +634,16 @@
 
     <path name="compress-offload-playback usb-headphones">
         <path name="compress-offload-playback afe-proxy" />
+    </path>
+
+    <path name="compress-offload-playback speaker-and-bt-sco">
+      <path name="compress-offload-playback" />
+      <path name="compress-offload-playback bt-sco"  />
+    </path>
+
+    <path name="compress-offload-playback speaker-and-bt-sco-wb">
+      <path name="compress-offload-playback" />
+      <path name="compress-offload-playback bt-sco-wb"  />
     </path>
 
     <path name="compress-offload-playback speaker-and-usb-headphones">
@@ -2270,75 +2311,6 @@
     </path>
 
     <path name="voice-tx">
-    </path>
-
-
-    <path name="deep-buffer-playback bt-sco-and-speaker">
-        <path name="deep-buffer-playback bt-sco" />
-        <path name="deep-buffer-playback" />
-    </path>
-
-    <path name="low-latency-playback bt-sco-and-speaker">
-        <path name="low-latency-playback bt-sco" />
-        <path name="low-latency-playback" />
-    </path>
-
-    <path name="deep-buffer-playback bt-sco-and-headphones">
-        <path name="deep-buffer-playback bt-sco" />
-        <path name="deep-buffer-playback" />
-    </path>
-
-    <path name="low-latency-playback bt-sco-and-headphones">
-        <path name="low-latency-playback bt-sco" />
-        <path name="low-latency-playback" />
-    </path>
-
-    <path name="deep-buffer-playback bt-sco-and-headphones-and-speaker">
-        <path name="deep-buffer-playback bt-sco" />
-        <path name="deep-buffer-playback" />
-    </path>
-
-    <path name="low-latency-playback bt-sco-and-headphones-and-speaker">
-        <path name="low-latency-playback bt-sco" />
-        <path name="low-latency-playback" />
-    </path>
-
-    <path name="voice-call bt-sco-and-speaker">
-        <path name="voice-call bt-sco" />
-    </path>
-
-    <path name="deep-buffer-playback bt-sco-wb-and-speaker">
-        <path name="deep-buffer-playback bt-sco-wb" />
-        <path name="deep-buffer-playback" />
-    </path>
-
-    <path name="low-latency-playback bt-sco-wb-and-speaker">
-        <path name="low-latency-playback bt-sco-wb" />
-        <path name="low-latency-playback" />
-    </path>
-
-    <path name="deep-buffer-playback bt-sco-wb-and-headphones">
-        <path name="deep-buffer-playback bt-sco-wb" />
-        <path name="deep-buffer-playback" />
-    </path>
-
-    <path name="low-latency-playback bt-sco-wb-and-headphones">
-        <path name="low-latency-playback bt-sco-wb" />
-        <path name="low-latency-playback" />
-    </path>
-
-    <path name="deep-buffer-playback bt-sco-wb-and-headphones-and-speaker">
-        <path name="deep-buffer-playback bt-sco-wb" />
-        <path name="deep-buffer-playback" />
-    </path>
-
-    <path name="low-latency-playback bt-sco-wb-and-headphones-and-speaker">
-        <path name="low-latency-playback bt-sco-wb" />
-        <path name="low-latency-playback" />
-    </path>
-
-    <path name="voice-call bt-sco-wb-and-speaker">
-        <path name="voice-call bt-sco-wb" />
     </path>
 
     <!-- voip loopback -->
