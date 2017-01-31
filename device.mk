@@ -301,10 +301,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.device@3.2-impl
 
-# Disable camera Treble path temporarily, b/34786432
-PRODUCT_PROPERTY_OVERRIDES += \
-    camera.disable_treble=1
-
 # Sensor & activity_recognition HAL
 TARGET_USES_NANOHUB_SENSORHAL := true
 NANOHUB_SENSORHAL_LID_STATE_ENABLED := true
