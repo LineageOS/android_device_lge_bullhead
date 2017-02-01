@@ -1,5 +1,5 @@
 #
-# Copyright 2015 The Android Open Source Project
+# Copyright 2017 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,6 +14,18 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_bullhead.mk \
-    $(LOCAL_DIR)/aosp_bullhead_svelte.mk
+# Sample: This is where we'd set a backup provider if we had one
+# $(call inherit-product, device/sample/products/backup_overlay.mk)
+
+PRODUCT_PROPERTY_OVERRIDES = ro.sf.lcd_density=525
+
+$(call inherit-product, device/lge/bullhead/aosp_bullhead.mk)
+
+PRODUCT_NAME := aosp_bullhead_svelte
+PRODUCT_DEVICE := bullhead
+PRODUCT_BRAND := Android
+PRODUCT_MODEL := AOSP svelte on BullHead
+PRODUCT_MANUFACTURER := LGE
+PRODUCT_RESTRICT_VENDOR_FILES := true
+
+PRODUCT_PROPERTY_OVERRIDES += ro.config.low_ram=true
