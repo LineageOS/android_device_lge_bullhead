@@ -22,7 +22,4 @@
     <!-- Enable color temperature setting. -->
     <bool name="config_enableColorTemperature">true</bool>
 
-    <!-- Enable gesture setting. -->
-    <bool name="config_gesture_settings_enabled">true</bool>
-
 </resources>
