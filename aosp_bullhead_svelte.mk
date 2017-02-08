@@ -19,6 +19,8 @@
 
 PRODUCT_PROPERTY_OVERRIDES = ro.sf.lcd_density=525
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES = ro.adb.secure=0
+
 $(call inherit-product, device/lge/bullhead/aosp_bullhead.mk)
 
 PRODUCT_NAME := aosp_bullhead_svelte
