@@ -103,7 +103,7 @@
 /system/bin/irsc_util              u:object_r:irsc_util_exec:s0
 /system/bin/pm-service             u:object_r:per_mgr_exec:s0
 /system/bin/pm-proxy               u:object_r:per_mgr_exec:s0
-/system/bin/wcnss_filter           u:object_r:start_hci_filter_exec:s0
+/vendor/bin/wcnss_filter           u:object_r:start_hci_filter_exec:s0
 /vendor/bin/qseecomd               u:object_r:tee_exec:s0
 /system/bin/thermal-engine         u:object_r:thermal-engine_exec:s0
 /system/bin/msm_irqbalance         u:object_r:msm_irqbalanced_exec:s0

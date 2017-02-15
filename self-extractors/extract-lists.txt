@@ -54,7 +54,7 @@
             system/bin/test_diag \
             system/bin/thermal-engine \
             system/bin/time_daemon \
-            system/bin/wcnss_filter \
+            vendor/bin/wcnss_filter \
             system/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
             system/etc/acdbdata/MTP/MTP_General_cal.acdb \
             system/etc/acdbdata/MTP/MTP_Global_cal.acdb \
