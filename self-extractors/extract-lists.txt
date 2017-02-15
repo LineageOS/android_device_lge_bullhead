@@ -7,7 +7,6 @@
     TO_EXTRACT="\
             system/bin/ATFWD-daemon \
             system/bin/athdiag \
-            system/bin/btnvtool \
             system/bin/cnd \
             system/bin/cnss-daemon \
             system/bin/cnss_diag \

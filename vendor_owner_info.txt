@@ -1,6 +1,5 @@
 system/bin/ATFWD-daemon:qcom
 system/bin/athdiag:qcom
-system/bin/btnvtool:qcom
 system/bin/cnd:qcom
 system/bin/cnss-daemon:qcom
 system/bin/cnss_diag:qcom
