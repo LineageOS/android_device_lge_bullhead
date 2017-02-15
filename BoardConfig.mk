@@ -159,3 +159,7 @@ ifeq ($(TARGET_PRODUCT),aosp_bullhead_svelte)
 BOARD_KERNEL_CMDLINE += mem=1024M maxcpus=2
 MALLOC_SVELTE := true
 endif
+ifeq ($(TARGET_PRODUCT),bullhead_svelte)
+BOARD_KERNEL_CMDLINE += mem=1024M
+MALLOC_SVELTE := true
+endif
