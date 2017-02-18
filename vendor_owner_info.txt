@@ -47,7 +47,6 @@ system/bin/subsystem_ramdump:qcom
 system/bin/test_diag:qcom
 system/bin/thermal-engine:qcom
 system/bin/time_daemon:qcom
-vendor/bin/wcnss_filter:qcom
 system/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb:qcom
 system/etc/acdbdata/MTP/MTP_General_cal.acdb:qcom
 system/etc/acdbdata/MTP/MTP_Global_cal.acdb:qcom
