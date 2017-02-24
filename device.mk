@@ -599,6 +599,14 @@ BULLHEAD_DONT_DEXPREOPT_MODULES := \
     GoogleHindiIME \
     CloudPrint2
 
+ifneq (,$(filter address,$(SANITIZE_TARGET)))
+# Blacklist more apps in ASANitized builds.
+BULLHEAD_DONT_DEXPREOPT_MODULES += \
+    GooglePinyinIME \
+    KoreanIME \
+    Volta
+endif
+
 $(call add-product-dex-preopt-module-config,$(BULLHEAD_DONT_DEXPREOPT_MODULES),disable)
 
 # setup dalvik vm configs.
