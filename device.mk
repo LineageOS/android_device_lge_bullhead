@@ -599,7 +599,11 @@ endif
 BULLHEAD_DONT_DEXPREOPT_MODULES := \
     BetterBug \
     GoogleHindiIME \
-    CloudPrint2
+    CloudPrint2 \
+    KoreanIME \
+    PlayGames \
+    Videos \
+    Volta
 
 ifneq (,$(filter address,$(SANITIZE_TARGET)))
 # Blacklist more apps in ASANitized builds.
