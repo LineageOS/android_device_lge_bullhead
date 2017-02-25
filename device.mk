@@ -608,9 +608,7 @@ BULLHEAD_DONT_DEXPREOPT_MODULES := \
 ifneq (,$(filter address,$(SANITIZE_TARGET)))
 # Blacklist more apps in ASANitized builds.
 BULLHEAD_DONT_DEXPREOPT_MODULES += \
-    GooglePinyinIME \
-    KoreanIME \
-    Volta
+    GooglePinyinIME
 endif
 
 $(call add-product-dex-preopt-module-config,$(BULLHEAD_DONT_DEXPREOPT_MODULES),disable)
