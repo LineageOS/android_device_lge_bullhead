@@ -607,6 +607,20 @@ BULLHEAD_DONT_DEXPREOPT_MODULES += \
     GooglePinyinIME
 endif
 
+ifeq ($(NATIVE_COVERAGE),true)
+# Blacklist more apps in GCOV builds.
+BULLHEAD_DONT_DEXPREOPT_MODULES += \
+    Maps \
+    Velvet \
+    YouTube \
+    Photos \
+    Hangouts \
+    Phonesky \
+    Music2 \
+    Drive \
+    Chrome
+endif
+
 $(call add-product-dex-preopt-module-config,$(BULLHEAD_DONT_DEXPREOPT_MODULES),disable)
 
 # setup dalvik vm configs.
