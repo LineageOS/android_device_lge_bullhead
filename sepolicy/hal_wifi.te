@@ -1,0 +1,5 @@
+# Allow wifi hal access to LOWI
+allow hal_wifi location:unix_stream_socket connectto;
+allow hal_wifi location_data_file:{ file fifo_file } create_file_perms;
+allow hal_wifi location_data_file:dir rw_dir_perms;
+allow hal_wifi location_data_file:sock_file create_file_perms;
