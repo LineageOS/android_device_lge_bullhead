@@ -19,12 +19,6 @@ allow system_server uhid_device:chr_file rw_file_perms;
 allow system_server persist_file:dir search;
 allow system_server persist_sensortool_file:file r_file_perms;
 
-# For location
-allow system_server location:unix_stream_socket connectto;
-allow system_server location_data_file:{ file fifo_file } create_file_perms;
-allow system_server location_data_file:dir rw_dir_perms;
-allow system_server location_data_file:sock_file create_file_perms;
-
 # talk to perfd
 allow system_server perfd_data_file:dir search;
 allow system_server perfd_data_file:sock_file write;

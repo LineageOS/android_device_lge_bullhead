@@ -9,7 +9,7 @@ binder_call(location, per_mgr)
 binder_call(location, system_server)
 
 qmux_socket(location)
-allow location system_server:unix_stream_socket { read write };
+allow location hal_wifi:unix_stream_socket { read write };
 
 allow location location_data_file:dir rw_dir_perms;
 allow location location_data_file:file create_file_perms;
