@@ -98,4 +98,8 @@ PRODUCT_COPY_FILES := \
     vendor/qcom/bullhead/proprietary/libgps.utils.so:system/lib/libgps.utils.so:qcom \
     vendor/qcom/bullhead/proprietary/libiperf.so:system/lib/libiperf.so:qcom \
     vendor/qcom/bullhead/proprietary/iperf3:system/xbin/iperf3:qcom \
+    vendor/qcom/bullhead/proprietary/lib64/android.hardware.biometrics.fingerprint@2.1.so:system/lib64/android.hardware.biometrics.fingerprint@2.1.so:qcom \
+    vendor/qcom/bullhead/proprietary/lib64/android.hardware.configstore@1.0.so:system/lib64/android.hardware.configstore@1.0.so:qcom \
+    vendor/qcom/bullhead/proprietary/lib64/android.hardware.usb@1.0.so:system/lib64/android.hardware.usb@1.0.so:qcom \
+    vendor/qcom/bullhead/proprietary/lib64/android.hardware.wifi@1.0.so:system/lib64/android.hardware.wifi@1.0.so:qcom \
 
