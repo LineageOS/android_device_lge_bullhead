@@ -598,13 +598,17 @@ endif
 # Sorted by *.odex size
 BULLHEAD_DONT_DEXPREOPT_MODULES := \
     BetterBug \
+    CloudPrint2 \
     GoogleHindiIME \
-    CloudPrint2
+    GooglePinyinIME \
+    KoreanIME \
+    PlayGames \
+    Volta
 
 ifneq (,$(filter address,$(SANITIZE_TARGET)))
 # Blacklist more apps in ASANitized builds.
 BULLHEAD_DONT_DEXPREOPT_MODULES += \
-    GooglePinyinIME
+    Videos
 endif
 
 ifeq ($(NATIVE_COVERAGE),true)
