@@ -74,9 +74,6 @@ PRODUCT_COPY_FILES := \
     vendor/qcom/bullhead/proprietary/dsi_config.xml:system/etc/data/dsi_config.xml:qcom \
     vendor/qcom/bullhead/proprietary/netmgr_config.xml:system/etc/data/netmgr_config.xml:qcom \
     vendor/qcom/bullhead/proprietary/qmi_config.xml:system/etc/data/qmi_config.xml:qcom \
-    vendor/qcom/bullhead/proprietary/Bullhead_radio-general.cfg:system/etc/diag/Bullhead_radio-general.cfg:qcom \
-    vendor/qcom/bullhead/proprietary/ims_epdg.cfg:system/etc/diag/ims_epdg.cfg:qcom \
-    vendor/qcom/bullhead/proprietary/wlan.cfg:system/etc/diag/wlan.cfg:qcom \
     vendor/qcom/bullhead/proprietary/flp.conf:system/etc/flp.conf:qcom \
     vendor/qcom/bullhead/proprietary/izat.conf:system/etc/izat.conf:qcom \
     vendor/qcom/bullhead/proprietary/lowi.conf:system/etc/lowi.conf:qcom \

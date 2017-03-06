@@ -58,9 +58,6 @@ system/etc/cne/profile.txt:qcom
 system/etc/data/dsi_config.xml:qcom
 system/etc/data/netmgr_config.xml:qcom
 system/etc/data/qmi_config.xml:qcom
-system/etc/diag/Bullhead_radio-general.cfg:qcom
-system/etc/diag/ims_epdg.cfg:qcom
-system/etc/diag/wlan.cfg:qcom
 system/etc/flp.conf:qcom
 system/etc/izat.conf:qcom
 system/etc/lowi.conf:qcom
