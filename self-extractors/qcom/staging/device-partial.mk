@@ -24,7 +24,6 @@ PRODUCT_COPY_FILES := \
     vendor/qcom/bullhead/proprietary/diag_mdlog:system/bin/diag_mdlog:qcom \
     vendor/qcom/bullhead/proprietary/diag_qshrink4_daemon:system/bin/diag_qshrink4_daemon:qcom \
     vendor/qcom/bullhead/proprietary/fingerprintd:system/bin/fingerprintd:qcom \
-    vendor/qcom/bullhead/proprietary/hal_proxy_daemon:system/bin/hal_proxy_daemon:qcom \
     vendor/qcom/bullhead/proprietary/halutil:system/bin/halutil:qcom \
     vendor/qcom/bullhead/proprietary/imsdatadaemon:system/bin/imsdatadaemon:qcom \
     vendor/qcom/bullhead/proprietary/imsqmidaemon:system/bin/imsqmidaemon:qcom \
@@ -107,7 +106,6 @@ PRODUCT_COPY_FILES := \
     vendor/qcom/bullhead/proprietary/lib64/libloc_core.so:system/lib64/libloc_core.so:qcom \
     vendor/qcom/bullhead/proprietary/lib64/libloc_ds_api.so:system/lib64/libloc_ds_api.so:qcom \
     vendor/qcom/bullhead/proprietary/lib64/libloc_eng.so:system/lib64/libloc_eng.so:qcom \
-    vendor/qcom/bullhead/proprietary/lib64/libwifi-hal-qcom.so:system/lib64/libwifi-hal-qcom.so:qcom \
     vendor/qcom/bullhead/proprietary/fingerprint.bullhead.so:system/lib/hw/fingerprint.bullhead.so:qcom \
     vendor/qcom/bullhead/proprietary/gps.msm8992.so:system/lib/hw/gps.msm8992.so:qcom \
     vendor/qcom/bullhead/proprietary/lib_fpc_tac_shared.so:system/lib/lib_fpc_tac_shared.so:qcom \
@@ -117,6 +115,5 @@ PRODUCT_COPY_FILES := \
     vendor/qcom/bullhead/proprietary/libloc_core.so:system/lib/libloc_core.so:qcom \
     vendor/qcom/bullhead/proprietary/libloc_ds_api.so:system/lib/libloc_ds_api.so:qcom \
     vendor/qcom/bullhead/proprietary/libloc_eng.so:system/lib/libloc_eng.so:qcom \
-    vendor/qcom/bullhead/proprietary/libwifi-hal-qcom.so:system/lib/libwifi-hal-qcom.so:qcom \
     vendor/qcom/bullhead/proprietary/iperf3:system/xbin/iperf3:qcom \
 

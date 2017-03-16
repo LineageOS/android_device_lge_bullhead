@@ -8,7 +8,6 @@ system/bin/diag_klog:qcom
 system/bin/diag_mdlog:qcom
 system/bin/diag_qshrink4_daemon:qcom
 system/bin/fingerprintd:qcom
-system/bin/hal_proxy_daemon:qcom
 system/bin/halutil:qcom
 system/bin/imsdatadaemon:qcom
 system/bin/imsqmidaemon:qcom
@@ -91,7 +90,6 @@ system/lib64/libloc_api_v02.so:qcom
 system/lib64/libloc_core.so:qcom
 system/lib64/libloc_ds_api.so:qcom
 system/lib64/libloc_eng.so:qcom
-system/lib64/libwifi-hal-qcom.so:qcom
 system/lib/hw/fingerprint.bullhead.so:qcom
 system/lib/hw/gps.msm8992.so:qcom
 system/lib/lib_fpc_tac_shared.so:qcom
@@ -101,6 +99,5 @@ system/lib/libloc_api_v02.so:qcom
 system/lib/libloc_core.so:qcom
 system/lib/libloc_ds_api.so:qcom
 system/lib/libloc_eng.so:qcom
-system/lib/libwifi-hal-qcom.so:qcom
 system/xbin/iperf3:qcom
 IMAGES/vendor.img:lge
