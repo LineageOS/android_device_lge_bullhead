@@ -579,7 +579,9 @@ BULLHEAD_DONT_DEXPREOPT_MODULES := \
     GooglePinyinIME \
     KoreanIME \
     PlayGames \
-    Volta
+    Videos \
+    Volta \
+    Wallet
 
 ifneq (,$(filter address,$(SANITIZE_TARGET)))
 # Blacklist more apps in ASANitized builds.
