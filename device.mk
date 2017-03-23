@@ -578,6 +578,7 @@ BULLHEAD_DONT_DEXPREOPT_MODULES := \
     GoogleHindiIME \
     GooglePinyinIME \
     KoreanIME \
+    Photos \
     PlayGames \
     Videos \
     Volta \
