@@ -15,7 +15,7 @@ allow camera system_server:unix_stream_socket { read write };
 allow camera camera_device:chr_file rw_file_perms;
 allow camera gpu_device:chr_file rw_file_perms;
 allow camera video_device:chr_file rw_file_perms;
-allow camera { audioserver cameraserver mediaserver surfaceflinger }:fd use;
+allow camera { audioserver cameraserver mediaserver surfaceflinger hal_graphics_allocator }:fd use;
 
 # Create camera socket
 allow camera camera_data_file:sock_file { create unlink };
