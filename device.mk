@@ -50,10 +50,6 @@ PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.nanohub.rc:root/init.bullhead.sensorhub.rc
 endif
 
-# Vendor Interface Manifest
-PRODUCT_COPY_FILES += \
-    device/lge/bullhead/manifest.xml:vendor/manifest.xml
-
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
@@ -183,7 +179,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gralloc.msm8992 \
     android.hardware.graphics.allocator@2.0-impl \
-    android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.mapper@2.0-impl \
     hwcomposer.msm8992 \
     libgenlock \
