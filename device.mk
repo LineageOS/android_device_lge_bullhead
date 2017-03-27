@@ -319,6 +319,9 @@ ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += \
     libvts_profiling \
     libvts_multidevice_proto
+# Test HAL for FMQ performance benchmark.
+PRODUCT_PACKAGES += \
+    android.hardware.tests.msgq@1.0-impl
 endif
 
 PRODUCT_PACKAGES += \
