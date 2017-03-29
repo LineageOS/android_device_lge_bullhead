@@ -83,6 +83,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/bullhead/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     device/lge/bullhead/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl \
+    device/lge/bullhead/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc \
     device/lge/bullhead/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl
 
 # for launcher layout
