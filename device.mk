@@ -358,6 +358,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.speaker.prot.enable=true \
     ro.config.vc_call_vol_steps=7
 
+# Default OMX service to non-Treble
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.media.treble_omx=false
+
 # Reduce client buffer size for fast audio output tracks
 PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1
