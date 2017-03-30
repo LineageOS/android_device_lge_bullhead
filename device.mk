@@ -577,44 +577,6 @@ ifneq (,$(filter userdebug, $(TARGET_BUILD_VARIANT)))
     $(call add-product-dex-preopt-module-config,wifi-service,--generate-mini-debug-info)
 endif
 
-# Get rid of dex preoptimization to save space within system.img at the one
-# time cost of dexing on first boot.  This list can be found by running:
-# grep odex $ANDROID_PRODUCT_OUT/installed-files.txt
-# Sorted by *.odex size
-BULLHEAD_DONT_DEXPREOPT_MODULES := \
-    BetterBug \
-    CloudPrint2 \
-    GoogleHindiIME \
-    GooglePinyinIME \
-    KoreanIME \
-    Photos \
-    PlayGames \
-    Videos \
-    Volta \
-    Wallet
-
-ifneq (,$(filter address,$(SANITIZE_TARGET)))
-# Blacklist more apps in ASANitized builds.
-BULLHEAD_DONT_DEXPREOPT_MODULES += \
-    Videos
-endif
-
-ifeq ($(NATIVE_COVERAGE),true)
-# Blacklist more apps in GCOV builds.
-BULLHEAD_DONT_DEXPREOPT_MODULES += \
-    Maps \
-    Velvet \
-    YouTube \
-    Photos \
-    Hangouts \
-    Phonesky \
-    Music2 \
-    Drive \
-    Chrome
-endif
-
-$(call add-product-dex-preopt-module-config,$(BULLHEAD_DONT_DEXPREOPT_MODULES),disable)
-
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
