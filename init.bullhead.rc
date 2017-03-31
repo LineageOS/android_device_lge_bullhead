@@ -229,6 +229,7 @@ on post-fs-data
 
     # NFC: create data/nfc for nv storage
     mkdir /data/nfc 0770 nfc nfc
+    mkdir /data/vendor/nfc 0770 nfc nfc
     mkdir /data/nfc/param 0770 nfc nfc
 
     # use qcril.db to handle Ecc and load MBN
