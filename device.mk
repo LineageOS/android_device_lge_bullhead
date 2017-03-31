@@ -441,6 +441,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Bluetooth HAL
 PRODUCT_PACKAGES += \
+    libbt-vendor \
     android.hardware.bluetooth@1.0-impl
 
 # limit dex2oat threads to improve thermals
