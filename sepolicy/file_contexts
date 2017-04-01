@@ -7,6 +7,7 @@
 # NFC labeling
 /dev/pn548          u:object_r:nfc_device:s0
 /data/nfc(/.*)?     u:object_r:nfc_data_file:s0
+/data/vendor/nfc(/.*)? u:object_r:nfc_vendor_data_file:s0
 
 # Data files
 /data/misc/perfd(/.*)?         u:object_r:perfd_data_file:s0
