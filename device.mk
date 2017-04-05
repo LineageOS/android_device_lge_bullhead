@@ -50,10 +50,6 @@ PRODUCT_COPY_FILES += \
     device/lge/bullhead/init.bullhead.nanohub.rc:root/init.bullhead.sensorhub.rc
 endif
 
-# Vendor Interface Manifest
-PRODUCT_COPY_FILES += \
-    device/lge/bullhead/manifest.xml:vendor/manifest.xml
-
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
