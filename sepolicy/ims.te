@@ -32,6 +32,7 @@ allow ims shell_exec:file rx_file_perms;
 
 # Runs /system/bin/ndc
 allow ims system_file:file rx_file_perms;
+allow ims vendor_file_type:file rx_file_perms;
 
 # address qualcomm proprietary binary denials
 allow ims self:netlink_socket create_socket_perms_no_ioctl;
