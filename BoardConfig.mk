@@ -97,9 +97,7 @@ TARGET_AUX_OS_VARIANT_LIST := bullhead
 
 HAVE_ADRENO_SOURCE:= false
 
-# Bug: 36902991
-# Disable the GPU RS driver until we get a working drop.
-# OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
+OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
