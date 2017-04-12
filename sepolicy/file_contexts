@@ -110,7 +110,7 @@
 /system/bin/msm_irqbalance         u:object_r:msm_irqbalanced_exec:s0
 /system/bin/ATFWD-daemon           u:object_r:atfwd_exec:s0
 /system/bin/subsystem_ramdump      u:object_r:ssr_exec:s0
-/system/bin/nanoapp_cmd            u:object_r:nanoapp_cmd_exec:s0
+/vendor/bin/nanoapp_cmd            u:object_r:nanoapp_cmd_exec:s0
 /vendor/bin/mm-qcamera-daemon      u:object_r:camera_exec:s0
 /vendor/bin/sensortool\.bullhead   u:object_r:sensortool_exec:s0
 
