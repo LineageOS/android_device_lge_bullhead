@@ -17,6 +17,8 @@
 
 set -e
 
+INITIAL_COPYRIGHT_YEAR=2015
+
 # Required!
 VENDOR=lge
 DEVICE=bullhead
