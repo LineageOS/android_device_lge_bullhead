@@ -206,7 +206,7 @@ PRODUCT_PACKAGES += \
 # NFC packages
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
-    nfc_nci.bullhead \
+    nfc_nci.pn54x.default \
     NfcNci \
     Tag
 
