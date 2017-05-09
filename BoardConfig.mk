@@ -165,6 +165,7 @@ TARGET_FS_CONFIG_GEN += device/lge/bullhead/config.fs
 BOARD_PERFSETUP_SCRIPT := platform_testing/scripts/perf-setup/bullhead-setup.sh
 
 DEVICE_MANIFEST_FILE := device/lge/bullhead/manifest.xml
+DEVICE_MATRIX_FILE := device/lge/bullhead/compatibility_matrix.xml
 
 ifeq ($(TARGET_PRODUCT),aosp_bullhead_svelte)
 BOARD_KERNEL_CMDLINE += mem=1024M maxcpus=2
