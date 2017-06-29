@@ -114,7 +114,7 @@
         <MediaCodec name="OMX.google.vp8.decoder" type="video/x-vnd.on2.vp8" update="true">
             <!-- measured 95%:383-730 med:397 SLOW -->
             <Limit name="measured-frame-rate-320x180" range="397-529" /> <!-- N=40 v95%=1.4 -->
-            <Limit name="measured-frame-rate-640x360" range="107-108" /> <!-- N=40 v95%=1.0 -->
+            <Limit name="measured-frame-rate-640x360" range="118-119" /> <!-- TWEAKED -->
             <Limit name="measured-frame-rate-1280x720" range="25-26" /> <!-- N=40 v95%=1.0 -->
             <Limit name="measured-frame-rate-1920x1080" range="10-10" /> <!-- N=40 v95%=1.0 -->
         </MediaCodec>
