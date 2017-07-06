@@ -276,6 +276,7 @@ service rmt_storage /system/bin/rmt_storage
     class core
     user root
     group system wakelock
+    shutdown critical
 
 service start_hci_filter /vendor/bin/wcnss_filter
     class late_start
