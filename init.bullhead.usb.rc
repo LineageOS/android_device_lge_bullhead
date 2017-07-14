@@ -38,6 +38,8 @@ on post-fs
     setprop sys.usb.mtp.device_type 3
     write /sys/class/android_usb/android0/f_ffs/aliases adb,mtp
 
+    setprop sys.usb.ffs.aio_compat 1
+
 on post-fs-data
     write /sys/module/rndis_ipa/parameters/min_cpu_freq 1036800
     write /sys/class/android_usb/android0/f_rndis_qc/rndis_transports BAM2BAM_IPA
