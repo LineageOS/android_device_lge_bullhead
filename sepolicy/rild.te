@@ -27,6 +27,10 @@ allow rild time_daemon:unix_stream_socket connectto;
 # rild reads qcril.db linked to /system/etc/qcril.db
 allow rild radio_data_file:lnk_file read;
 
+# allow rild to access radio data file
+allow rild radio_data_file:dir rw_dir_perms;
+allow rild radio_data_file:file create_file_perms;
+
 userdebug_or_eng(`
   allow rild ssr_device:chr_file { open read };
 
