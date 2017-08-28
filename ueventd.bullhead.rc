@@ -79,5 +79,5 @@
 /dev/block/platform/soc.0/f9824900.sdhci/by-name/persistent 0600 system system
 # sensor HUB
 /dev/spich                0640   system     system
-/dev/nanohub              0640   system     system
-/dev/nanohub_comms        0640   system     system
+/dev/nanohub              0660   system     system
+/dev/nanohub_comms        0660   system     system
