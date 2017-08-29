@@ -42,7 +42,7 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Vendor Interface Manifest
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     device/lge/bullhead/manifest.xml:vendor/manifest.xml
 
 PRODUCT_COPY_FILES += \
