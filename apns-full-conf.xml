@@ -2340,7 +2340,7 @@
       mnc="30"
       apn="internet.telekom"
       protocol="IPV4V6"
-      type="default,dun,supl"
+      type="default,supl"
       authtype="1"
   />
 
