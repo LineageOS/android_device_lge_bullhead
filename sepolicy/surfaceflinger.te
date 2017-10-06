@@ -1,1 +1,2 @@
 allow surfaceflinger sysfs_display:file rw_file_perms;
+r_dir_file(surfaceflinger, sysfs_graphics)
