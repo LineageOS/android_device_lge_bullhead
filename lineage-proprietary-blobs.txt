@@ -81,6 +81,7 @@ etc/permissions/cneapiclient.xml
 etc/permissions/com.android.omadm.service.xml
 etc/permissions/com.android.sdm.plugins.connmo.xml
 etc/permissions/com.android.sdm.plugins.sprintdm.xml
+etc/permissions/com.google.android.camera.experimental2016.xml
 etc/permissions/privapp-permissions-bullhead.xml
 etc/permissions/qcrilhook.xml
 etc/permissions/qti_permissions.xml
@@ -91,6 +92,7 @@ etc/sysconfig/bullhead_common.xml
 etc/sysconfig/whitelist_com.android.omadm.service.xml
 etc/thermal-engine-8992.conf
 -framework/cneapiclient.jar;PRESIGNED
+-framework/com.google.android.camera.experimental2016.jar;PRESIGNED
 -framework/qcrilhook.jar;PRESIGNED
 -framework/rcsimssettings.jar;PRESIGNED
 -framework/rcsservice.jar;PRESIGNED
