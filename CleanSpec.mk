@@ -77,3 +77,5 @@ $(call add-clean-step, find $(OUT_DIR)/target/product/bullhead/ -name \*build.pr
 $(call add-clean-step, find $(OUT_DIR)/target/product/bullhead/ -name \*build.prop* -exec rm -rf {} \;)
 $(call add-clean-step, find $(OUT_DIR)/target/product/bullhead/ -name \*build.prop* -exec rm -rf {} \;)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/etc/permissions/android.hardware.wifi.aware.xml)
+$(call add-clean-step, rm -f $(PRODUCT_OUT)/system/lib/hw/android.hardware.broadcastradio@1.0-impl.so)
+$(call add-clean-step, rm -f $(PRODUCT_OUT)/system/lib64/hw/android.hardware.broadcastradio@1.0-impl.so)

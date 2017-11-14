@@ -1742,7 +1742,10 @@
   <apn carrier="internet simyo"
       mcc="214"
       mnc="03"
-      apn="gprs-service.com"
+      apn="orange"
+      user="orange"
+      password="telecable"
+      authtype="1"
       mvno_type="spn"
       mvno_match_data="simyo"
       type="default,supl"
@@ -1751,7 +1754,7 @@
   <apn carrier="simyo MMS"
       mcc="214"
       mnc="03"
-      apn="mms-service.com"
+      apn="orangemms"
       authtype="1"
       mmsc="http://mms.orange.es"
       mmsproxy="172.22.188.25"
@@ -2082,16 +2085,6 @@
       mvno_type="spn"
   />
 
-  <apn carrier="Conexión Compartida"
-      mcc="214"
-      mnc="07"
-      apn="movistar.es"
-      authtype="1"
-      user="MOVISTAR"
-      password="MOVISTAR"
-      type="dun"
-  />
-
   <apn carrier="T-2"
       mcc="214"
       mnc="07"
@@ -2182,7 +2175,10 @@
   <apn carrier="internet simyo"
       mcc="214"
       mnc="19"
-      apn="gprs-service.com"
+      apn="orange"
+      user="orange"
+      password="telecable"
+      authtype="1"
       mvno_type="spn"
       mvno_match_data="simyo"
       type="default,supl"
@@ -2191,7 +2187,7 @@
   <apn carrier="simyo MMS"
       mcc="214"
       mnc="19"
-      apn="mms-service.com"
+      apn="orangemms"
       authtype="1"
       mmsc="http://mms.orange.es"
       mmsproxy="172.22.188.25"
@@ -2334,6 +2330,7 @@
       mmsc="http://mms.t-mobile.hu/servlets/mms"
       mmsproxy="212.51.126.10"
       mmsport="8080"
+      protocol="IPV4V6"
       type="mms"
       authtype="1"
   />
@@ -2342,7 +2339,8 @@
       mcc="216"
       mnc="30"
       apn="internet.telekom"
-      type="default,dun,supl"
+      protocol="IPV4V6"
+      type="default,supl"
       authtype="1"
   />
 
@@ -2452,7 +2450,7 @@
   <apn carrier="mtelgprs"
       mcc="218"
       mnc="05"
-      apn="3g1"
+      apn="mtelsmart"
       type="default,supl"
   />
 
@@ -3045,14 +3043,14 @@
       type="ia"
   />
 
-  <apn carrier="Cosmote Connect Mobile"
+  <apn carrier="Connect Mobile"
       mcc="226"
       mnc="03"
       apn="broadband"
       type="default,supl"
   />
 
-  <apn carrier="Cosmote MMS"
+  <apn carrier="Telekom MMS"
       mcc="226"
       mnc="03"
       apn="mms"
@@ -3071,7 +3069,7 @@
       apn="wnw"
       user="wnw"
       password="wnw"
-      authtype="1"
+      authtype="3"
       type="default,supl"
   />
 
@@ -3100,14 +3098,14 @@
       type="ia"
   />
 
-  <apn carrier="Cosmote Connect Mobile"
+  <apn carrier="Connect Mobile"
       mcc="226"
       mnc="06"
       apn="broadband"
       type="default,supl"
   />
 
-  <apn carrier="Cosmote MMS"
+  <apn carrier="Telekom MMS"
       mcc="226"
       mnc="06"
       apn="mms"
@@ -3125,6 +3123,7 @@
       apn="wnw"
       user="wnw"
       password="wnw"
+      authtype="3"
       type="default,supl"
   />
 
@@ -4999,10 +4998,10 @@
       type="default,supl,mms"
   />
 
-  <apn carrier="NetCom"
+  <apn carrier="Telia Mobil"
       mcc="242"
       mnc="02"
-      apn="netcom"
+      apn="telia"
       mmsc="http://mm/"
       mmsproxy="212.169.66.4"
       mmsport="8080"
@@ -6142,6 +6141,8 @@
       mnc="02"
       apn="heyah.pl"
       type="default,supl"
+      mvno_match_data="23"
+      mvno_type="gid"
   />
 
   <apn carrier="heyahmms"
@@ -6152,6 +6153,8 @@
       mmsproxy="213.158.194.226"
       mmsport="8080"
       type="mms"
+      mvno_match_data="23"
+      mvno_type="gid"
   />
 
   <apn carrier="Orange Internet"
@@ -6216,9 +6219,11 @@
       user="telekom"
       password="telekom"
       mmsc="http://mms.t-mobile.de/servlets/mms"
-      mmsproxy="172.28.23.131"
+      mmsproxy="109.237.176.193"
       mmsport="8008"
       authtype="1"
+      protocol="IPV4V6"
+      roaming_protocol="IP"
       type="default,supl,mms"
   />
 
@@ -6229,12 +6234,13 @@
       user="telekom"
       password="telekom"
       authtype="1"
-      mmsproxy="172.28.23.131"
+      mmsproxy="109.237.176.193"
       mmsc="http://mms.t-mobile.de/servlets/mms"
       mmsport="8008"
       mvno_match_data="debitel"
       mvno_type="spn"
       protocol="IP"
+      type="default,supl,mms"
   />
 
   <apn carrier="Vodafone DE"
@@ -7253,6 +7259,7 @@
       apn="pda.bell.ca"
       type="default,mms,supl"
       mmsc="http://mms.bell.ca/mms/wapenc"
+      protocol="IPV4V6"
   />
 
   <apn carrier="Virgin Mobile"
@@ -7263,6 +7270,7 @@
       mmsc="http://mms.bell.ca/mms/wapenc"
       mvno_match_data="3E"
       mvno_type="gid"
+      protocol="IPV4V6"
   />
 
   <apn carrier="MTS"
@@ -24455,6 +24463,8 @@
       mcc="432"
       mnc="35"
       apn="mtnirancell"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
       type="default,supl"
   />
 
@@ -24465,6 +24475,8 @@
       mmsc="http://mms:8002"
       mmsproxy="10.131.26.138"
       mmsport="8080"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
       type="mms"
   />
 

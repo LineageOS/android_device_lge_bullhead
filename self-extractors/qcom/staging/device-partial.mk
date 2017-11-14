@@ -22,7 +22,6 @@ PRODUCT_COPY_FILES := \
     vendor/qcom/bullhead/proprietary/diag_klog:system/bin/diag_klog:qcom \
     vendor/qcom/bullhead/proprietary/diag_mdlog:system/bin/diag_mdlog:qcom \
     vendor/qcom/bullhead/proprietary/diag_qshrink4_daemon:system/bin/diag_qshrink4_daemon:qcom \
-    vendor/qcom/bullhead/proprietary/halutil:system/bin/halutil:qcom \
     vendor/qcom/bullhead/proprietary/imsdatadaemon:system/bin/imsdatadaemon:qcom \
     vendor/qcom/bullhead/proprietary/imsqmidaemon:system/bin/imsqmidaemon:qcom \
     vendor/qcom/bullhead/proprietary/ims_rtp_daemon:system/bin/ims_rtp_daemon:qcom \
