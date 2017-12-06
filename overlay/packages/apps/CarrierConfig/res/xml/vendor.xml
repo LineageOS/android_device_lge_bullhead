@@ -89,6 +89,9 @@
     <carrier_config mcc="268" mnc="01">
         <boolean name="carrier_volte_available_bool" value="false" />
     </carrier_config>
+    <carrier_config mcc="234" mnc="10" spn="giffgaff">
+        <string name="default_vm_number_string">443</string>
+    </carrier_config>
     <carrier_config mcc="234" mnc="30">
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
         <boolean name="hide_ims_apn_bool" value="true" />

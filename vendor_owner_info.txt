@@ -6,7 +6,6 @@ system/bin/cnss_diag:qcom
 system/bin/diag_klog:qcom
 system/bin/diag_mdlog:qcom
 system/bin/diag_qshrink4_daemon:qcom
-system/bin/halutil:qcom
 system/bin/imsdatadaemon:qcom
 system/bin/imsqmidaemon:qcom
 system/bin/ims_rtp_daemon:qcom
