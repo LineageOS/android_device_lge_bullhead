@@ -135,7 +135,7 @@ PRODUCT_COPY_FILES += \
 
 # NFC config files
 PRODUCT_COPY_FILES += \
-    device/lge/bullhead/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    device/lge/bullhead/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf \
     device/lge/bullhead/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
 
 # For WiFi
