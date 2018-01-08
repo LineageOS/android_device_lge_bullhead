@@ -21,9 +21,6 @@
      for different hardware and product builds. -->
 <resources>
 
-    <!-- The VoiceMail default value is displayed to my own number if it is true -->
-    <bool name="config_telephony_use_own_number_for_voicemail">true</bool>
-
     <!-- Configure mobile network MTU. Carrier specific value is set here. -->
     <integer name="config_mobile_mtu">1422</integer>
 
