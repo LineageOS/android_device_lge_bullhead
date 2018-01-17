@@ -1,6 +1,6 @@
 #Policy for start_hci_filter
 type start_hci_filter, domain, device_domain_deprecated;
-type start_hci_filter_exec, exec_type, file_type;
+type start_hci_filter_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(start_hci_filter);
 
