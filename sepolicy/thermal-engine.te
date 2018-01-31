@@ -9,7 +9,7 @@ allow thermal-engine smem_log_device:chr_file rw_file_perms;
 
 allow thermal-engine thermal_device:chr_file rw_file_perms;
 
-allow thermal-engine self:capability { dac_read_search dac_override fsetid chown };
+allow thermal-engine self:capability { fsetid chown };
 allow thermal-engine self:capability2 wake_alarm;
 
 # Talk to qmuxd (/dev/socket/qmux_radio)
