@@ -1,5 +1,5 @@
 # Copyright (C) 2015 The CyanogenMod Project
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,19 +22,19 @@
 -app/RCSBootstraputil/RCSBootstraputil.apk
 -app/RcsImsBootstraputil/RcsImsBootstraputil.apk
 -app/TimeService/TimeService.apk
--app/Tycho/Tycho.apk:app/Tycho/Tycho.apk:PRESIGNED
+-app/Tycho/Tycho.apk;PRESIGNED
 -priv-app/atfwd/atfwd.apk
--priv-app/CarrierServices/CarrierServices.apk:priv-app/CarrierServices/CarrierServices.apk:PRESIGNED
+-priv-app/CarrierServices/CarrierServices.apk;PRESIGNED
 -priv-app/CNEService/CNEService.apk
 -priv-app/ConnMO/ConnMO.apk
 -priv-app/DCMO/DCMO.apk
 -priv-app/DiagMon/DiagMon.apk
 -priv-app/DMConfigUpdate/DMConfigUpdate.apk
 -priv-app/DMService/DMService.apk
--priv-app/GCS/GCS.apk:priv-app/GCS/GCS.apk:PRESIGNED
--priv-app/HotwordEnrollmentOKGoogleWCD9330/HotwordEnrollmentOKGoogleWCD9330.apk:priv-app/HotwordEnrollmentOKGoogleWCD9330/HotwordEnrollmentOKGoogleWCD9330.apk:PRESIGNED
--priv-app/HotwordEnrollmentTGoogleWCD9330/HotwordEnrollmentTGoogleWCD9330.apk:priv-app/HotwordEnrollmentTGoogleWCD9330/HotwordEnrollmentTGoogleWCD9330.apk:PRESIGNED
--priv-app/HotwordEnrollmentXGoogleWCD9330/HotwordEnrollmentXGoogleWCD9330.apk:priv-app/HotwordEnrollmentXGoogleWCD9330/HotwordEnrollmentXGoogleWCD9330.apk:PRESIGNED
+-priv-app/GCS/GCS.apk;PRESIGNED
+-priv-app/HotwordEnrollmentOKGoogleWCD9330/HotwordEnrollmentOKGoogleWCD9330.apk;PRESIGNED
+-priv-app/HotwordEnrollmentTGoogleWCD9330/HotwordEnrollmentTGoogleWCD9330.apk;PRESIGNED
+-priv-app/HotwordEnrollmentXGoogleWCD9330/HotwordEnrollmentXGoogleWCD9330.apk;PRESIGNED
 -priv-app/LifeTimerService/LifeTimerService.apk
 -priv-app/SprintDM/SprintDM.apk
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
@@ -90,10 +90,10 @@ etc/sap.conf
 etc/sysconfig/bullhead_common.xml
 etc/sysconfig/whitelist_com.android.omadm.service.xml
 etc/thermal-engine-8992.conf
--framework/cneapiclient.jar:PRESIGNED
--framework/qcrilhook.jar:PRESIGNED
--framework/rcsimssettings.jar:PRESIGNED
--framework/rcsservice.jar:PRESIGNED
+-framework/cneapiclient.jar;PRESIGNED
+-framework/qcrilhook.jar;PRESIGNED
+-framework/rcsimssettings.jar;PRESIGNED
+-framework/rcsservice.jar;PRESIGNED
 lib/libdmengine.so
 lib/libdmengine.so:priv-app/DMService/lib/arm/libdmengine.so
 lib/libdmjavaplugin.so
