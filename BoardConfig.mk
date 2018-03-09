@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+USES_DEVICE_LGE_BULLHEAD := true
+
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a

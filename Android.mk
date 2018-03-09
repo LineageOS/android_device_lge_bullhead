@@ -32,7 +32,7 @@ LOCAL_POST_INSTALL_CMD := $(hide) mkdir -p $(dir $(wlan_mac_path)) && ln -sf /pe
 wlan_mac_path :=
 include $(BUILD_PHONY_PACKAGE)
 
-ifneq ($(filter bullhead, $(TARGET_DEVICE)),)
+ifneq ($(filter true, $(USES_DEVICE_LGE_BULLHEAD)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
