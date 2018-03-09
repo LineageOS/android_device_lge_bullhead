@@ -22,6 +22,7 @@ INITIAL_COPYRIGHT_YEAR=2015
 # Required!
 VENDOR=lge
 DEVICE=bullhead
+DEVICE_COMMON=${DEVICE}
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -43,10 +44,10 @@ fi
 
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$REPO_ROOT"
+setup_vendor "$DEVICE" "$VENDOR" "$REPO_ROOT" true
 
 # Copyright headers and guards
-write_headers
+write_headers "true" USES_DEVICE_LGE_BULLHEAD
 
 # The standard blobs
 write_makefiles "$MY_DIR"/lineage-proprietary-blobs.txt
