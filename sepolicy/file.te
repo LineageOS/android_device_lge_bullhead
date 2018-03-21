@@ -36,9 +36,9 @@ type nfc_vendor_data_file, file_type, data_file_type;
 
 type sysfs_smdcntl_open_timeout, fs_type, sysfs_type;
 
-type sysfs_devices_fingerprint,  sysfs_type, file_type;
+type sysfs_devices_fingerprint,  sysfs_type, fs_type;
 
-type sysfs_camera, sysfs_type, file_type;
+type sysfs_camera, sysfs_type, fs_type;
 
 # type for persist partition
 type persist_file, file_type;
@@ -50,9 +50,9 @@ type persist_camera_file, file_type;
 
 # File types required by mdm-helper
 type sysfs_ssr,  sysfs_type, fs_type;
-type sysfs_ssr_toggle,  sysfs_type, file_type;
+type sysfs_ssr_toggle,  sysfs_type, fs_type;
 type sysfs_hsic, sysfs_type, fs_type;
-type sysfs_hsic_host_rdy, sysfs_type, file_type;
+type sysfs_hsic_host_rdy, sysfs_type, fs_type;
 
 # File types required by dumpstate implementation
 type sysfs_hwmon, fs_type, sysfs_type;
