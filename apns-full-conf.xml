@@ -1742,13 +1742,13 @@
   <apn carrier="internet simyo"
       mcc="214"
       mnc="03"
-      apn="orange"
+      apn="orangeworld"
       user="orange"
-      password="telecable"
+      password="orange"
       authtype="1"
       mvno_type="spn"
       mvno_match_data="simyo"
-      type="default,supl"
+      type="default,supl,dun"
   />
 
   <apn carrier="simyo MMS"
@@ -2175,13 +2175,13 @@
   <apn carrier="internet simyo"
       mcc="214"
       mnc="19"
-      apn="orange"
+      apn="orangeworld"
       user="orange"
-      password="telecable"
+      password="orange"
       authtype="1"
       mvno_type="spn"
       mvno_match_data="simyo"
-      type="default,supl"
+      type="default,supl,dun"
   />
 
   <apn carrier="simyo MMS"
@@ -26359,6 +26359,13 @@
       mmsc="http://mmsc.telstra.com:8002/"
       mmsproxy="10.1.1.180"
       mmsport="80"
+  />
+
+  <apn carrier="Telstra Tethering"
+       mcc="505"
+       mnc="01"
+       apn="telstra.internet"
+       type="dun"
   />
 
   <apn carrier="Optus Yes Internet"
