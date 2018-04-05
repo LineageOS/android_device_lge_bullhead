@@ -17,3 +17,7 @@
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_bullhead.mk \
     $(LOCAL_DIR)/aosp_bullhead_svelte.mk
+
+COMMON_LUNCH_CHOICES := \
+    aosp_bullhead-userdebug \
+    aosp_bullhead_svelte-userdebug
