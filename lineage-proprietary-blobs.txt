@@ -95,9 +95,7 @@ etc/thermal-engine-8992.conf
 -framework/rcsimssettings.jar;PRESIGNED
 -framework/rcsservice.jar;PRESIGNED
 lib/libdmengine.so
-lib/libdmengine.so:priv-app/DMService/lib/arm/libdmengine.so
 lib/libdmjavaplugin.so
-lib/libdmjavaplugin.so:priv-app/DMService/lib/arm/libdmjavaplugin.so
 lib/libloc_api_v02.so
 lib/libloc_ds_api.so
 lib64/libloc_api_v02.so
