@@ -16,6 +16,6 @@ TARGET_MANUFACTURER := LGE
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=bullhead \
-    PRIVATE_BUILD_DESC="bullhead-user 8.1.0 OPM2.171019.029 4657601 release-keys"
+    PRIVATE_BUILD_DESC="bullhead-user 8.1.0 OPM4.171019.016.A1 4720815 release-keys"
 
-BUILD_FINGERPRINT := google/bullhead/bullhead:8.1.0/OPM2.171019.029/4657601:user/release-keys
+BUILD_FINGERPRINT := google/bullhead/bullhead:8.1.0/OPM4.171019.016.A1/4720815:user/release-keys
