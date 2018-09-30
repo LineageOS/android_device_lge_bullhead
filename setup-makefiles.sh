@@ -50,6 +50,7 @@ write_headers
 
 # The standard blobs
 write_makefiles "$MY_DIR"/lineage-proprietary-blobs.txt
+write_makefiles "$MY_DIR"/lineage-proprietary-blobs-vendor.txt true
 
 write_makefiles "$MY_DIR"/lineage-proprietary-blobs-vendorimg.txt
 
