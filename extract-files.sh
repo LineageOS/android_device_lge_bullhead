@@ -58,5 +58,6 @@ fi
 setup_vendor "$DEVICE" "$VENDOR" "$REPO_ROOT"
 
 extract "$MY_DIR/lineage-proprietary-blobs.txt" "$SRC"
+extract "$MY_DIR/lineage-proprietary-blobs-vendor.txt" "$SRC"
 
 "$MY_DIR"/setup-makefiles.sh
