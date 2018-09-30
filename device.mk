@@ -51,7 +51,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    device/lge/bullhead/audio_effects.conf:system/etc/audio_effects.conf \
+    device/lge/bullhead/audio_effects.conf:vendor/etc/audio_effects.conf \
     device/lge/bullhead/mixer_paths.xml:system/etc/mixer_paths.xml \
     device/lge/bullhead/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     device/lge/bullhead/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
