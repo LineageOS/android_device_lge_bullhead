@@ -407,7 +407,7 @@ vendor/lib64/libsystem_health_mon.so
 vendor/lib64/libxml.so
 
 # Radio IMS
--vendor/app/ims/ims.apk
+#-vendor/app/ims/ims.apk
 vendor/lib/lib-dplmedia.so
 vendor/lib/lib-ims-rcscmjni.so
 vendor/lib/lib-imsSDP.so
