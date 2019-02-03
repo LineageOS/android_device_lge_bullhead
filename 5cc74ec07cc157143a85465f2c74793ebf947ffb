@@ -16,6 +16,24 @@
       "revId": "5cc74ec07cc157143a85465f2c74793ebf947ffb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c0f6ebf7_0ef54ef1",
+        "filename": "nfc/libnfc-brcm.conf",
+        "patchSetId": 1
+      },
+      "lineNbr": 406,
+      "author": {
+        "id": 21730
+      },
+      "writtenOn": "2019-02-03T03:35:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e81dc8d_5e54c69f",
+      "revId": "5cc74ec07cc157143a85465f2c74793ebf947ffb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
